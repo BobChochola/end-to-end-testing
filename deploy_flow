@@ -1,0 +1,22 @@
+先把要release的卡從 TO BE TEST 拉到 TEST (通常是10~15張左右）
+開啟每張卡的PR >> 把它改成指向beta-test >> 修conflict >> 按merge (要確認如果有指向其他張卡的，指向的那張卡要先上)
+每張都做完之後切到beta-test >> 把剛剛每張卡有改動到的feature加 ＠smokeTest
+加完之後push上去
+到Jenkins跑 at-beta-test（@smokeTest）
+跑完之後看report，修fail的scenario
+修到差不多之後就可以開PR請大家幫你code review
+等大家都approve之後
+把 beta-test merge到 develop
+就可以開始跑develop囉～
+跑develop
+到Jenkins跑 at-develop（@BaseCase/@MesBaseCase/@FeatureCase）
+如果你merge新增的feature這三個都有的話就三個tag都要跑過
+然後跟beta-test的一樣修fail的scenario
+修到差不多之後就一樣開PR請大家幫你code review
+但在開這張PR的時候
+要多加 changelog 跟改 package 的版本然後拿掉 ＠smokeTest 這個tag（這等遇到我在跟你說要怎麼加）
+等大家都approve之後
+把 develop 到 master
+到master之後要把每個branch都 pull master 然後再push 上去
+確保每個branch都是最新版本（beat-test/develop/staging/master)
+NOTE : 要用Jenkins跑的時候要先確認有沒有測試正在跑或等等有測試要跑，如果都沒有才能跑喔～不然會影響到build和fastlane那些的進度
