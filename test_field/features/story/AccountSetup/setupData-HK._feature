@@ -1,0 +1,363 @@
+@SetupData-HK @baseLocation-HK @premiumFeature
+
+Feature: Setup data for testing
+  As a QA
+  I need data let auto test verified can be more fast
+
+  Background:
+    Given I am on Admin Login Page
+    And I fill correct account email to email field
+    And I fill correct account password to password field
+    And I click on login button
+    And I should see successful login
+    Then I check intercom message notification frame and click clear intercom message button
+    Then I check intercom message notification frame and click intercom message close button
+    When I check new feature alert notification frame and click new feature alert close button
+    When I check and click exclude products panel close button
+    When I check and click no thanks button
+
+  @SetupData-HK @SetupData-HK-1
+  Scenario: Create Delivery - HK
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Custom' of delivery type dropdown
+    And I click on language tab included 'English'
+    And I fill "Local Delivery" to name field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    And I click on select shipping countries link
+    Then I should see shipping zone settings popup
+    When I click on applicable shipping countries hong kong
+    And I click on right angle bracket button
+    And I click on ok button
+    Then I should be on Delivery Create Page
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be on Delivery Options Page
+    And 1st row of delivery options list should contain "Local Delivery"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Delivery' of delivery type dropdown
+    Then shipping from edit button should contain 'Hong Kong'
+    Then shipping to edit button should contain 'Hong Kong'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "Zeek2door"
+    And I click on popover ok button
+    And I fill the Shop ID to zeek2door account field
+    And I click on language tab included 'English'
+    And I fill "Zeek2door (Same Day Home Delivery)" to name field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be on Delivery Options Page
+    And 1st row of delivery options list should contain "Zeek2door (Same Day Home Delivery)"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Hong Kong'
+    Then shipping to edit button should contain 'Hong Kong'
+    When I click on search provider button
+    Then I should see popover
+    And I click on 2nd popover row of provider included "S.F. Express"
+    And I click on popover ok button
+    And I select services dropdown option included "Service Points Pickup" of services dropdown
+    And I select pick-up points dropdown option included "7-11 Store Pickup" of pick-up points dropdown
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    And I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be on Delivery Options Page
+    And 1st row of delivery options list should contain "S.F. Express - 7-11 Store Pickup"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Hong Kong'
+    Then shipping to edit button should contain 'Hong Kong'
+    When I click on search provider button
+    Then I should see popover
+    And I click on 2nd popover row of provider included "S.F. Express"
+    And I click on popover ok button
+    And I select services dropdown option included "Business Station Pickup" of services dropdown
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    And I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be on Delivery Options Page
+    And 1st row of delivery options list should contain "S.F. Express - S.F. - Business Station Pickup"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Hong Kong'
+    Then shipping to edit button should contain 'Hong Kong'
+    When I click on search provider button
+    Then I should see popover
+    And I click on 2nd popover row of provider included "S.F. Express"
+    And I click on popover ok button
+    And I select services dropdown option included "EF Locker Pickup" of services dropdown
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    And I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be on Delivery Options Page
+    And 1st row of delivery options list should contain "S.F. Express - EF Locker Pickup"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Delivery' of delivery type dropdown
+    Then shipping from edit button should contain 'Hong Kong'
+    Then shipping to edit button should contain 'Hong Kong'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included 'S.F. Express'
+    And I click on popover ok button
+    And I fill sf merchant id to sf merchant id field
+    And I fill sender name to sf company name field
+    And I fill the Merchant Name to hk sender name field
+    And I fill sender phone to hk sender phone field
+    And I fill sender address to hk sender address field
+    And I select surcharge dropdown option included 'Paid by Shipper' of surcharge dropdown
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    And I fill "20" to delivery fee field
+    Then I should see add button
+    When I click on add button
+    Then I should see confirm adding button
+    When I click on confirm adding button
+    Then I should be on Delivery Options Page
+    And 1st row of delivery options list should contain 'S.F. Express - Office / Home Delivery'
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Hong Kong'
+    Then shipping to edit button should contain 'Hong Kong'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "Zeek2door"
+    And I click on popover ok button
+    And I fill "testuser" to zeek2door account field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be on Delivery Options Page
+    And 1st row of delivery options list should contain "Zeek2door"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Hong Kong'
+    Then shipping to edit button should contain 'Hong Kong'
+    When I click on search provider button
+    Then I should see popover
+    And I click on 2nd popover row of provider included "S.F. Express"
+    And I click on popover ok button
+    And I select services dropdown option included "Store Pickup" of services dropdown
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    And I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be on Delivery Options Page
+    And 1st row of delivery options list should contain "S.F. Express - Store Pickup"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Custom' of delivery type dropdown
+    And I click on requires customer address checkbox
+    And I click on language tab included 'English'
+    And I fill "Custom Delivery" to name field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    And I click on select shipping countries link
+    Then I should see shipping zone settings popup
+    When I click on applicable shipping countries hong kong
+    And I click on right angle bracket button
+    And I click on ok button
+    Then I should not see shipping zone settings popup
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "Custom Delivery"
+
+  @SetupData-HK @SetupData-HK-2
+  Scenario: Create payment - HK
+    Given I am on Payment Create Page
+    And I select payment type dropdown option included "AsiaPay" of payment type dropdown
+    And I fill Asiapay ID to id field
+    And I fill "admin" to login name field
+    And I fill "easypass124" to password field
+    And I select asiapay payments dropdown option included "Credit Card" of asiapay payments dropdown
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Credit Card"
+
+    Given I am on Payment Create Page
+    And I select payment type dropdown option included "AsiaPay" of payment type dropdown
+    And I fill Asiapay ID to id field
+    And I fill "admin" to login name field
+    And I fill "easypass124" to password field
+    And I select asiapay payments dropdown option included "Credit Card" of asiapay payments dropdown
+    And I fill "Credit Card via Asiapay" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Credit Card"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included "Braintree" of payment type dropdown
+    And I fill Braintree ID to id field
+    And I fill Braintree Public Key to public key field
+    And I fill Braintree Private Key to private key field
+    When I click on language tab included 'English'
+    And I fill "Braintree" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Braintree"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'Bank Transfer' of payment type dropdown
+    And I fill instruction to payment instructions field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Bank Transfer"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'PayPal & Credit Card' of payment type dropdown
+    And I fill Paypal email to paypal email field
+    And I fill API Username to api username field
+    And I fill API Password to api password field
+    And I fill API Signature to api signature field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "PayPal & Credit Card"
+
+  @SetupData-HK @SetupData-HK-3
+  Scenario: To Create a full data for product - HK
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "1st Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "1" to regular price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "2nd Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "10" to sale price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "3rd Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "14.9" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+  @SetupData-HK @SetupData-HK-4
+  Scenario: To Create a full data for checkout for promotion - HK
+    Given I am on Promotion Create Page
+    And I fill "1st Promotion" to name field
+    And I click on selected products condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I fill "10" to promotion value field
+    And I fill "3" to promotion condition field
+    And I fill "3rd Product for Checkout" to search field
+    And I click on search button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should see search field
+    Then I should see countinue to button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "2nd Promotion" to name field
+    And I fill "50" to promotion value field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "3rd Promotion" to name field
+    And I select discount amount of benefit type dropdown
+    And I fill "50" to promotion value field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Then I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  @SetupData-HK @SetupData-HK-5
+  Scenario: To Create a full data for checkout, for freeshipping - HK
+    Given I am on Free Shipping Create Page
+    And I fill "2nd Free Shipping" to name field
+    And I click on countinue to button
+    And I click on target group checkbox included 'memberOnly'
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  @SetupData-HK @SetupData-HK-6
+  Scenario: Create staff for testuser@shoplineapp.com
+    Given I am on Staff Setting Add Page
+    When I input 'testuser@shoplineapp.com' to email field
+    Then I should be redirected to Edit Staff Permissions Page
+    When I click on give full access checkbox
+    Then give full access checkbox should be checked
+    When I click on update button
+    Then I should be redirected to Staff Setting Page
+    Then staff of row should contain 'testuser@shoplineapp.com'

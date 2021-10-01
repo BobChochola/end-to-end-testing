@@ -1,0 +1,369 @@
+@RollbackData
+Feature: Rollback data for testing
+  As a QA
+  I need roll back let auto test doesn't exist dirty data
+
+  Background:
+    Given I am on Admin Login Page
+    And I fill correct account email to email field
+    And I fill correct account password to password field
+    And I click on login button
+    Then I should see successful login
+    Then I check intercom message notification frame and click clear intercom message button
+    Then I check intercom message notification frame and click intercom message close button
+    When I check new feature alert notification frame and click new feature alert close button
+    When I check and click exclude products panel close button
+    When I check and click no thanks button
+
+  @RollbackData-CustomerCredit-1 @fixture-shop
+  Scenario: To rollback data for customer credit balance (for basic)
+    Given I am on Customer List Page
+    When I input 'testuser@shoplineapp.com' to search field
+    Then I should see apply filter label
+    When I click view button for the same order of row of select checkbox list included 'testuser@shoplineapp.com'
+    Then I should be redirected to Customer Detail Page
+    When I mark the value of credit balance amount as variable credit balance
+    And I click on assign credits button
+    Then I should see popover
+    When I click on never expires button
+    And I fill minus credit balance to amount of credit field
+    And I fill 'Credit roll back' to reason field
+    And I click on credit save button
+    Then credit balance amount should equal to '0'
+
+  @RollbackData-CustomerCredit-2 @fixture-shop @theme-kingsman
+  Scenario: To rollback data for customer credit balance (for kingsman)
+    Given I am on Customer List Page
+    When I input 'testuser@shoplineapp.com' to search field
+    Then I should see apply filter label
+    When I click view button for the same order of row of select checkbox list included 'testuser@shoplineapp.com'
+    Then I should be redirected to Customer Detail Page
+    When I mark the value of credit balance amount as variable credit balance
+    And I click on assign credits button
+    Then I should see popover
+    When I click on never expires button
+    And I fill minus credit balance to amount of credit field
+    And I fill 'Credit roll back' to reason field
+    And I click on credit save button
+    Then credit balance amount should equal to '0'
+
+  @RollbackData-CustomerCreditMobile-1 @fixture-shop @fixture-mobile-signup-p2
+  Scenario: To rollback data for customer credit balance (for basic)
+    Given I am on Customer List Page
+    When I input '0912345678' to search field
+    Then I should see apply filter label
+    When I click view button for the same order of row of select checkbox list included '0912345678'
+    Then I should be redirected to Customer Detail Page
+    When I mark the value of credit balance amount as variable second credit balance
+    And I click on assign credits button
+    Then I should see popover
+    When I click on never expires button
+    And I fill second minus credit balance to amount of credit field
+    And I fill 'Credit roll back' to reason field
+    And I click on credit save button
+    Then credit balance amount should equal to '0'
+
+  @RollbackData-CustomerCreditMobile-2 @fixture-shop @fixture-mobile-signup-p2 @theme-kingsman
+  Scenario: To rollback data for customer credit balance (for kingsman)
+    Given I am on Customer List Page
+    When I input '0912345678' to search field
+    Then I should see apply filter label
+    When I click view button for the same order of row of select checkbox list included '0912345678'
+    Then I should be redirected to Customer Detail Page
+    When I mark the value of credit balance amount as variable second credit balance
+    And I click on assign credits button
+    Then I should see popover
+    When I click on never expires button
+    And I fill second minus credit balance to amount of credit field
+    And I fill 'Credit roll back' to reason field
+    And I click on credit save button
+    Then credit balance amount should equal to '0'
+
+  @RollbackData-CartItem-1 @fixture-shop
+  Scenario: To rollback data for cart item (for basic)
+    Given I am on Shop Login Page
+    And I fill email to email field
+    And I fill password to password field
+    When I click on submit button
+    Then I should be redirected to Shop Home Page
+    When I click on cart button
+    Then I should see cart panel
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+
+  @RollbackData-CartItem-2 @fixture-shop @theme-kingsman
+  Scenario: To rollback data for cart item (for kingsman)
+    Given I am on Shop Login Layout V Two Page
+    And I fill email to email field
+    And I fill password to password field
+    When I click on submit button
+    Then I should be redirected to Shop Home Layout V Two Page
+    When I click on cart button
+    Then I should see cart panel
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+
+  @RollbackData-CartItem-3 @fixture-shop @baseLocation-HK
+  Scenario: To rollback data for cart item (for HK)
+    Given I am on Shop Login Page
+    And I fill email to email field
+    And I fill password to password field
+    When I click on submit button
+    Then I should be redirected to Shop Home Page
+    When I click on cart button
+    Then I should see cart panel
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+
+  @RollbackData-CartItemMobile-1 @fixture-shop @fixture-mobile-signup-p2
+  Scenario: To rollback data for cart item (for basic)
+    Given I am on Shop Login Page
+    And I fill test phone to email field
+    And I fill password to password field
+    When I click on submit button
+    Then I should be redirected to Shop Home Page
+    When I click on cart button
+    Then I should see cart panel
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+
+  @RollbackData-CartItemMobile-2 @fixture-shop @fixture-mobile-signup-p2 @theme-kingsman
+  Scenario: To rollback data for cart item (for kingsman)
+    Given I am on Shop Login Layout V Two Page
+    And I fill test phone to email field
+    And I fill password to password field
+    When I click on submit button
+    Then I should be redirected to Shop Home Layout V Two Page
+    When I click on cart button
+    Then I should see cart panel
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+
+  @RollbackData-CartItemMobile-3 @fixture-shop @fixture-mobile-signup-p2 @baseLocation-HK
+  Scenario: To rollback data for cart item (for HK)
+    Given I am on Shop Login Page
+    And I fill test phone to email field
+    And I fill password to password field
+    When I click on submit button
+    Then I should be redirected to Shop Home Page
+    When I click on cart button
+    Then I should see cart panel
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+    When I check and click remove button
+
+  @RollbackData-BasicSettingEmail-1
+  Scenario: To rollback data for basic setting email (new account)
+    Given I am on Basic Setting Page
+    And I fill mail to base mail field
+    When I click on basic info update button
+    Then I should be redirected to Dashboard Page
+
+  @RollbackData-BasicSettingEmail-2 @fixture-shop
+  Scenario: To rollback data for basic setting email (other account)
+    Given I am on Basic Setting Page
+    And I fill mail to base mail field
+    When I click on basic info update button
+    Then I should be redirected to Dashboard Page
+
+  @RollbackData-AddonLimitationToggle @fixture-addon
+  Scenario: To rollback data for addon limitation toggle
+    Given I am on Addon Index Page
+    When I check and click addon limitation toggle off
+    Then addon limitation toggle should be checked
+
+  @RollbackData-EmailVerificationToggle @fixture-shop
+  Scenario: To rollback data for email verification toggle
+    Given I am on Customer Settings Page
+    When I check and click verification email toggle off
+    Then verification email toggle should be checked
+    When I check and click verification required before login toggle off
+    Then verification required before login toggle should be checked
+    When I click on verification required before login toggle on
+    And I click on verification email toggle on
+    And I click on update button
+    Then I should be redirected to Customer Settings Page
+    Then verification email toggle should not be checked
+
+  @RollbackData-UpdateDomainAndBasicSetting-1 @theme-kingsman @fixture-shop
+  Scenario: update domain setting and basic setting for kingsman shop
+    Given I am on Basic Setting Page
+    And I click on basic info update button
+    Then I should be redirected to Dashboard Page
+
+    Given I am on Domain Settings Page
+    When I click on update button
+    Then I wait for 5 seconds for update
+
+  @RollbackData-UpdateDomainAndBasicSetting-2 @theme-ultra-chic @fixture-shop
+  Scenario: update domain setting and basic setting for ultra chic shop
+    Given I am on Basic Setting Page
+    And I click on basic info update button
+    Then I should be redirected to Dashboard Page
+
+    Given I am on Domain Settings Page
+    When I click on update button
+    Then I wait for 5 seconds for update
+
+  @RollbackData-MemberPoint @fixture-shop
+  Scenario: To rollback data for member point
+    Given I am on Member Points Setting Page
+    When I fill '1' to amount field
+    And I fill '0' to point field
+    And I fill '0' to point assign day field
+    And I fill '' to point rule field
+    And I click on update button
+    Then I should see alert
+
+    Given I am on Customer List Page
+    When I input 'testuser@shoplineapp.com' to search field
+    Then I should see apply filter label
+    When I click view button for the same order of row of select checkbox list included 'testuser@shoplineapp.com'
+    Then I should be redirected to Customer Detail Page
+    When I mark the value of point balance amount as variable point balance
+    When I click on assign points button
+    Then I should see assign points popover
+    When I fill minus point balance to amount of point field
+    And I fill 'Rollback points' to reason for points field
+    And I click on popover confirm button
+    Then I scroll down to assign points button
+    Then I should see row of point list
+    Then point balance amount should equal to '0'
+
+  @RollbackData-Wishlist-1 @theme-kingsman @fixture-shop
+  Scenario: To rollback data for wishlist (email)
+    Given I am on Shop Login Layout V Two Page
+    And I fill email to email field
+    And I fill password to password field
+    When I click on submit button
+    Then I should be redirected to Shop Home Layout V Two Page
+    When I click on member center button
+    Then I should be redirected to Shop User Profile Layout V Two Page
+    When I click on member center tab included 'Wishlist'
+    Then I should be redirected to Shop Wishlist Layout V Two Page
+    When I check and click row of delete button
+    When I check and click confirm button
+    When I check and click row of delete button
+    When I check and click confirm button
+    When I check and click row of delete button
+    When I check and click confirm button
+    When I check and click row of delete button
+    When I check and click confirm button
+    When I check and click row of delete button
+    When I check and click confirm button
+
+  @RollbackData-Wishlist-2 @theme-kingsman @fixture-shop @fixture-mobile-signup-p2
+  Scenario: To rollback data for wishlist (mobile)
+    Given I am on Shop Login Layout V Two Page
+    And I fill test phone to email field
+    And I fill password to password field
+    When I click on submit button
+    Then I should be redirected to Shop Home Layout V Two Page
+    When I click on member center button
+    Then I should be redirected to Shop User Profile Layout V Two Page
+    When I click on member center tab included 'Wishlist'
+    Then I should be redirected to Shop Wishlist Layout V Two Page
+    When I check and click row of delete button
+    When I check and click confirm button
+    When I check and click row of delete button
+    When I check and click confirm button
+    When I check and click row of delete button
+    When I check and click confirm button
+    When I check and click row of delete button
+    When I check and click confirm button
+    When I check and click row of delete button
+    When I check and click confirm button
+
+  @RollbackData-AdvancedPages-1 @fixture-shop
+  Scenario: To rollback data for advanced pages (basic)
+    Given I am on Pages Page
+    When I check and click delete button
+    And I check and click confirm button
+    And I check and click ok button
+    When I check and click delete button
+    And I check and click confirm button
+    And I check and click ok button
+    When I check and click delete button
+    And I check and click confirm button
+    And I check and click ok button
+
+  @RollbackData-AdvancedPages-2 @fixture-shop @theme-kingsman
+  Scenario: To rollback data for advanced pages (kingsman)
+    Given I am on Pages Page
+    When I check and click delete button
+    And I check and click confirm button
+    And I check and click ok button
+    When I check and click delete button
+    And I check and click confirm button
+    And I check and click ok button
+    When I check and click delete button
+    And I check and click confirm button
+    And I check and click ok button
+
+  @RollbackData-ExpressCheckoutPage-1 @fixture-shop
+  Scenario: To rollback data for express checkout page (basic)
+    Given I am on Express Checkout Pages Page
+    When I check and click delete button
+    And I check and click reconfirm checkbox
+    And I check and click popup ok button
+
+  @RollbackData-ExpressCheckoutPage-2 @fixture-shop @theme-kingsman
+  Scenario: To rollback data for express checkout page (kingsman)
+    Given I am on Express Checkout Pages Page
+    When I check and click delete button
+    And I check and click reconfirm checkbox
+    And I check and click popup ok button
+
+  @RollbackData-QuickAddToCart-1 @fixture-shop
+  Scenario: To rollback data for quick add to cart (basic)
+    Given I am on Design Page
+    When I click on advanced setting tab
+    And I check element instant add to cart sub checkbox group and click instant add to cart checkbox
+    And I check and click save button
+    And I check and click publish button
+
+  @RollbackData-QuickAddToCart-2 @fixture-shop @theme-kingsman
+  Scenario: To rollback data for quick add to cart (kingsman)
+    Given I am on Design Page
+    When I click on advanced setting tab
+    And I check element instant add to cart sub checkbox group and click instant add to cart checkbox
+    And I check and click save button
+    And I check and click publish button
+
+  @RollbackData-subscription-product @fixture-subscription-product
+  Scenario: To rollback data for subscription product
+    Given I am on Product Index Page
+    When I input '18th Product for Checkout' to search field
+    Then 1st row of product name should contain '18th Product for Checkout'
+    When I click on 1st row of edit button
+    Then I should be redirected to Product Edit Page
+    And I click on quantity and pricing tab
+    Then I should see subscription toggle
+    When I check and click product subscription enabled
+    Then I should see product subscription disabled
+    When I click on update button
+    Then I should be redirected to Product Index Page
+
+  @RollbackData-form-builder
+  Scenario: To rollback data for subscription product
+     Given I am on Form Builder Index Page
+     When I check and click delete button
+     When I check and click 2nd popup button
+     Then I should see error of empty form

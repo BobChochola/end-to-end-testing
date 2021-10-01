@@ -1,0 +1,2417 @@
+[
+  {
+    "description": "  As a customer\n  I can go checkout with message of limitation alert",
+    "keyword": "Feature",
+    "name": "Checkout - Shopping Cart Promotion Reminder",
+    "line": 3,
+    "id": "checkout---shopping-cart-promotion-reminder",
+    "tags": [
+      {
+        "name": "@BaseCase",
+        "line": 1
+      },
+      {
+        "name": "@Admin",
+        "line": 1
+      },
+      {
+        "name": "@Storefront",
+        "line": 1
+      },
+      {
+        "name": "@Checkout",
+        "line": 1
+      },
+      {
+        "name": "@Freeshipping",
+        "line": 1
+      },
+      {
+        "name": "@freeShippingCheckoutReminder",
+        "line": 1
+      },
+      {
+        "name": "@fixture-shop",
+        "line": 2
+      },
+      {
+        "name": "@fixture-delivery",
+        "line": 2
+      },
+      {
+        "name": "@fixture-payment",
+        "line": 2
+      },
+      {
+        "name": "@fixture-product",
+        "line": 2
+      }
+    ],
+    "uri": "features/component/Checkout/freeShippingCheckoutReminder.feature",
+    "elements": [
+      {
+        "id": "checkout---shopping-cart-promotion-reminder;checkout---shopping-cart-promotion-reminder",
+        "keyword": "Scenario",
+        "line": 51,
+        "name": "Checkout - Shopping Cart Promotion Reminder",
+        "tags": [
+          {
+            "name": "@BaseCase",
+            "line": 1
+          },
+          {
+            "name": "@Admin",
+            "line": 1
+          },
+          {
+            "name": "@Storefront",
+            "line": 1
+          },
+          {
+            "name": "@Checkout",
+            "line": 1
+          },
+          {
+            "name": "@Freeshipping",
+            "line": 1
+          },
+          {
+            "name": "@freeShippingCheckoutReminder",
+            "line": 1
+          },
+          {
+            "name": "@fixture-shop",
+            "line": 2
+          },
+          {
+            "name": "@fixture-delivery",
+            "line": 2
+          },
+          {
+            "name": "@fixture-payment",
+            "line": 2
+          },
+          {
+            "name": "@fixture-product",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2
+            },
+            "embeddings": [
+              {
+                "data": "{\"account\":{\"email\":\"testuser+7607@shoplineapp.com\",\"notificationEmail\":\"shoplineqa@gmail.com\",\"password\":\"12345678\",\"handle\":\"previewtw1\",\"tags\":[\"non-admin\",\"baseLocation-TW\",\"theme-basic\",\"fixture-payment\",\"fixture-delivery\",\"fixture-product\",\"fixture-addon\",\"fixture-promotion\",\"fixture-shop\",\"fixture-non-basket\"],\"retry\":0}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on Admin Login Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11475
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/users/sign_in?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://sso-preview.shoplineapp.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I fill correct account email to email field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1638
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser+7607@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I fill correct account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1630
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"12345678\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click on login button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3412
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[type=\\\"submit\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should see successful login",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2026
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I check intercom message notification frame and click clear intercom message button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3209
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"clear intercom message button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I check intercom message notification frame and click intercom message close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3203
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"intercom message close button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I check new feature alert notification frame and click new feature alert close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3192
+            },
+            "embeddings": [
+              {
+                "data": "{\"frameLength\":0}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"frameNotFound\":\"new feature alert\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I check and click exclude products panel close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1193
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"exclude products panel close button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I check and click no thanks button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1204
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"no thanks button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I am on Promotion Setting Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7936
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw1/promotions/discount/settings?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw1/promotions/discount/settings?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I should see promotion reminder toggle",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1385
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I check and click promotion reminder toggle off",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3409
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[ng-model=\\\"settings.promotion.data.show_promotion_reminder\\\"] div.switch-off\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValueFound\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "promotion reminder toggle should be checked",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:1091"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1556
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[ng-model=\\\"settings.promotion.data.show_promotion_reminder\\\"]\",\"matchedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I click on update button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1460
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"submitForm()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1395
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "I am on Free Shipping Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7947
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw1/promotions/free_shipping?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw1/promotions/free_shipping?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I click on add promotion button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1491
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[ng-click='addPromotion()'\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should be redirected to Free Shipping Create Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1953
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw1/promotions/free_shipping/new?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw1/promotions/free_shipping/new",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I fill '(dirty data) Enjoy free shipping with purchase over NT$200' to name field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2069
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"(dirty data) Enjoy free shipping with purchase over NT$200\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "I click on subtotal condition checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1511
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[value=\\\"discounted_subtotal\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "I fill '200' to promotion condition field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1651
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"200\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I click on countinue to button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1453
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[ng-click=\\\"nextSection()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I click on 2nd countinue to button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1432
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[ng-click=\\\"nextSection()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I click on unlimited checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1427
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[ng-model=\\\"form.max_use_count_unlimited\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I fill '3' to limited field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1631
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"3\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I click on 3rd countinue to button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1429
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[ng-click=\\\"nextSection()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I scroll down to preview button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:525"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1401
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I click on preview button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1481
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[ng-click=\\\"preview()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "promotion name should contain 'Enjoy free shipping with purchase over NT$200'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1561
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"(dirty data) Enjoy free shipping with purchase over NT$200\",\"expectText\":\"Enjoy free shipping with purchase over NT$200\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 40,
+            "name": "coupon code should equal to 'N/A'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:953"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1596
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"N/A\",\"expectText\":\"N/A\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "promotion limitations start date should contain start date",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:806"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1608
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Start Time: 2021/08/27 02:00 AM\",\"expectText\":\"2021/08/27\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "promotion limitations end date should contain 'Never expires'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1590
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Never expires\",\"expectText\":\"Never expires\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 43,
+            "name": "total usage limit should equal to '3 time(s)'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:953"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1600
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"3 time(s)\",\"expectText\":\"3 time(s)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "target group should equal to 'All Customers'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:953"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1576
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"All Customers\",\"expectText\":\"All Customers\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 45,
+            "name": "discount summary should contain 'Enjoy free shipping with purchase over NT$200'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1589
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Enjoy free shipping with purchase over NT$200\",\"expectText\":\"Enjoy free shipping with purchase over NT$200\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 46,
+            "name": "I click on confirm button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1484
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[type=\\\"submit\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 47,
+            "name": "I should be redirected to Free Shipping Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1694
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw1/promotions/free_shipping?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw1/promotions/free_shipping",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 48,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1404
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 49,
+            "name": "1st row of free shipping list should contain 'Enjoy free shipping with purchase over NT$200'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1584
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"(dirty data) Enjoy free shipping with purchase over NT$200 All Products2021/08/27 02:00 AM toNever expiresAll Customers Auto Apply 0 / 3 Usage Record Edit\",\"expectText\":\"Enjoy free shipping with purchase over NT$200\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 52,
+            "name": "I am on Shop Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8300
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw1.shoplineapp.com/products/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/products?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 53,
+            "name": "I input '18th Product for Checkout' to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6236
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"18th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 54,
+            "name": "1st product of products list should contain \"18th Product for Checkout\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1564
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"18th Product for CheckoutNT$100\",\"expectText\":\"18th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 55,
+            "name": "I click on 1st product of products list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2549
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"li.boxify-item.product-item\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 56,
+            "name": "I should be redirected to Shop Product Show Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1773
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/products/18th-product-for-checkout",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 57,
+            "name": "I click on add to cart button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1409
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"addItemToCart()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 58,
+            "name": "I should see cart panel",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1381
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 59,
+            "name": "I click on checkout button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2510
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[id=\\\"btn-checkout\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 60,
+            "name": "I should be redirected to Shop Cart Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1586
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw1.shoplineapp.com/cart/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/cart",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 61,
+            "name": "unapplied promotion should contain 'Enjoy free shipping with purchase over NT$200'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1605
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"More promotions are waiting for you to enjoy:Continue ShoppingPromotion(dirty data) Enjoy free shipping with purchase over NT$200 Buy NT$100 more to enjoy free shipping\",\"expectText\":\"Enjoy free shipping with purchase over NT$200\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 62,
+            "name": "I am on Shop Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7485
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw1.shoplineapp.com/products/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/products?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 63,
+            "name": "I input '18th Product for Checkout' to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5656
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"18th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 64,
+            "name": "1st product of products list should contain \"18th Product for Checkout\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1571
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"18th Product for CheckoutNT$100\",\"expectText\":\"18th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "I click on 1st product of products list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2311
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"li.boxify-item.product-item\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 66,
+            "name": "I should be redirected to Shop Product Show Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1660
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/products/18th-product-for-checkout",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "I click on add to cart button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1440
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"addItemToCart()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 68,
+            "name": "I should see cart panel",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1400
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 69,
+            "name": "I click on checkout button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2189
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[id=\\\"btn-checkout\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 70,
+            "name": "I should be redirected to Shop Cart Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1568
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw1.shoplineapp.com/cart/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/cart",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 71,
+            "name": "I should not see unapplied promotion",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:763"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51007
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 72,
+            "name": "I click on login button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1997
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".signin-signup-button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 73,
+            "name": "I should be redirected to Shop Login Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1788
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw1.shoplineapp.com/users/sign_in/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":2,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 74,
+            "name": "I fill email to email field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1653
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 75,
+            "name": "I fill password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1619
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"1234567890\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 76,
+            "name": "I click on submit button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1443
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-controller=\\\"SessionsNewController\\\"] button[ng-click=\\\"formSubmit()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 77,
+            "name": "I should be redirected to Shop Cart Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1582
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw1.shoplineapp.com/cart/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 78,
+            "name": "I select language dropdown option included 'English' of language dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9530
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"#fixed-menu-container .dropdown-toggle\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"#fixed-menu-container ul.dropdown-menu li\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"English\",\"繁體中文\"],\"text\":\"English\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 79,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3004
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 80,
+            "name": "language dropdown should contain 'English'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1575
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"English\",\"expectText\":\"English\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 81,
+            "name": "I select country dropdown option included \"Taiwan\" of country list dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8587
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-country\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-country\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Hong Kong\",\"Taiwan\"],\"text\":\"Taiwan\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 82,
+            "name": "I wait for 5 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5007
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 83,
+            "name": "I select delivery dropdown option included 'Local Delivery' of delivery method dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14259
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-method\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-method\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"7-11 Pickup and pay in store (C2C)\",\"7-11 Pickup only (B2C)\",\"7-11 Pickup and pay in store (B2C)\",\"7-11 Pickup only (C2C)\",\"Family Mart Pickup only (C2C)\",\"(DBW) No integration 711 Pickup\",\"Family Mart Pickup and pay in store (C2C)\",\"(DBW) Ezship pickup and pay in store\",\"(DBW) - LocalDelivery\",\"(DBW) Family Mart B2C - Pickup and pay in store\",\"(DBW) CustomDelivery\",\"(DBW) 7-11 B2C - Pickup and pay in store\",\"(DBW) 7-11 C2C - Pickup only\",\"Family Mart Pickup only (B2C)\",\"Family Mart Pickup and pay in store (B2C)\",\"Custom Delivery\",\"Family Mart Pickup (no integration)\",\"7-11 Pickup (no integration)\",\"ezship pickup and pay in store\",\"Local Delivery\"],\"text\":\"Local Delivery\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 84,
+            "name": "I wait for 5 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5007
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 85,
+            "name": "I select payment dropdown option included 'Custom' of payment method dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12289
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-payment-method\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-payment-method\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"CVS via O'Pay\",\"Taishin\",\"Credit Card via O'Pay\",\"ATM via O'Pay\",\"WebATM via O'Pay\",\"Barcode via ECpay\",\"CVS via ECpay\",\"Credit Card via ECpay\",\"LINE Pay\",\"Custom\",\"Cash on Delivery\",\"Bank Transfer\",\"Credit card or Paypal (Paypal Express)\"],\"text\":\"Custom\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 86,
+            "name": "I wait for 5 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5013
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 87,
+            "name": "I click on proceed to checkout button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5151
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[href$=\\\"checkout\\\"]:not(.disabled)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 88,
+            "name": "I should be redirected to Shop Checkout Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1654
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/checkout",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 89,
+            "name": "I check contact number field and fill phone",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:146"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1222
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"contact number field\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 90,
+            "name": "I check and click save number checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2847
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"0912345678\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"order[save_customer_phone]\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValueFound\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 91,
+            "name": "I click on same as checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1403
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[name=\\\"order[delivery_data][recipient_is_customer]\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 92,
+            "name": "I select address region dropdown option included 'Taipei City' of address region dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12329
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[name=\\\"delivery_address[region]\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[name=\\\"delivery_address[region]\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"            State/City\\n          \",\"Taipei City\",\"Keelung City\",\"New Taipei City\",\"Yilan County\",\"Hsinchu City\",\"Hsinchu County\",\"Taoyuan City\",\"Miaoli County\",\"Taichung City\",\"Changhua County\",\"Nantou County\",\"Chiayi City\",\"Chiayi County\",\"Yunlin County\",\"Tainan City\",\"Kaohsiung City\",\"Pingtung County\",\"Taitung County\",\"Hualien County\"],\"text\":\"Taipei City\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 93,
+            "name": "I select address district dropdown option included '100 Zhongzheng District' of address district dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10717
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[name=\\\"delivery_address[district]\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[name=\\\"delivery_address[district]\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"            District\\n          \",\"100 Zhongzheng District\",\"103 Datong District\",\"104 Zhongshan District\",\"105 Songshan District\",\"106 Da'an District\",\"108 Wanhua District\",\"110 Xinyi District\",\"111 Shilin District\",\"112 Beitou District\",\"114 Neihu District\",\"115 Nangang District\",\"116 Wenshan District\"],\"text\":\"100 Zhongzheng District\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 94,
+            "name": "I fill address to delivery address field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1699
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"14F., No.44, Ln. 11, Guangfu N. Rd.\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 95,
+            "name": "I click on agree terms checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1418
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"policy\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 96,
+            "name": "I click on place order button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1445
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".btn.btn-success\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 97,
+            "name": "I should be redirected to Shop Order Confirm Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5136
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/checkout",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 98,
+            "name": "I click on summary collapse",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1417
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div.cart-summary\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 99,
+            "name": "delivery fee should contain 'NT$0'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1577
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Delivery Fee:NT$0\",\"expectText\":\"NT$0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 100,
+            "name": "I am on Orders Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8812
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw1/orders?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw1/orders?locale=en&createdBy=admin",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 101,
+            "name": "I click on 1st row of order links",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1462
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"tr[ng-repeat^=\\\"order in order\\\"] a[href*=\\\"/orders/\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "I should be redirected to Orders Show Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2381
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw1/orders/612855c12f59450011746249",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 103,
+            "name": "order date should contain order date",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:806"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1603
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"2021-08-27 3:02AM\",\"expectText\":\"2021-08-27\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 104,
+            "name": "delivery fee should contain \"NT$0\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1574
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$0\",\"expectText\":\"NT$0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 106,
+            "name": "---ROLL BACK---",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:1245"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 107,
+            "name": "I am on Promotion Setting Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7871
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw1/promotions/discount/settings?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw1/promotions/discount/settings?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 108,
+            "name": "I click on promotion reminder toggle",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1432
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[ng-model=\\\"settings.promotion.data.show_promotion_reminder\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 109,
+            "name": "promotion reminder toggle should not be checked",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:1112"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1573
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[ng-model=\\\"settings.promotion.data.show_promotion_reminder\\\"]\",\"matchedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 110,
+            "name": "I click on update button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1426
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"submitForm()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 111,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1407
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 113,
+            "name": "I am on Free Shipping Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8204
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw1/promotions/free_shipping?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw1/promotions/free_shipping?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 114,
+            "name": "I click on 1st row of select checkbox list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1468
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"td.bulk-edit-checkbox-wrapper:not(hide) input[ng-change=\\\"syncBulkSelectedIds(promotion._id)\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 115,
+            "name": "I select delete of bulk actions dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:467"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6959
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"span[class=\\\"pull-right dropdown\\\"] button.btn.btn-default\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"span[class=\\\"pull-right dropdown open\\\"] li[ng-click*=delete]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 116,
+            "name": "I should see confirmation popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1417
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 117,
+            "name": "I click on delete checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1504
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".recheckbox label\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 118,
+            "name": "I click on confirm delete button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1487
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[class=\\\"dialogbox ng-scope\\\"] button.btn-danger[ng-click=\\\"confirm()\\\"]:not([disabled])\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 119,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1392
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 120,
+            "name": "row of free shipping list should not contain 'Enjoy free shipping with purchase over NT$200'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:893"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2890
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 218
+            },
+            "embeddings": [
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw1/promotions/free_shipping?page=1",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,4548 @@
+[
+  {
+    "description": "  As a merchant\n  I want to add text to Order Confirmation Email footer and header\n  So that shoppers will see it in the email after checkout",
+    "keyword": "Feature",
+    "name": "Add custom text to email order notification header / footer and check email receive correctly（Simplified Chinese)",
+    "line": 3,
+    "id": "add-custom-text-to-email-order-notification-header-/-footer-and-check-email-receive-correctly（simplified-chinese)",
+    "tags": [
+      {
+        "name": "@BaseCase",
+        "line": 1
+      },
+      {
+        "name": "@Admin",
+        "line": 1
+      },
+      {
+        "name": "@Storefront",
+        "line": 1
+      },
+      {
+        "name": "@CRM",
+        "line": 1
+      },
+      {
+        "name": "@CustomNotification",
+        "line": 1
+      },
+      {
+        "name": "@customOrderNotificationEmailSimplifiedChinese",
+        "line": 1
+      },
+      {
+        "name": "@fixture-shop",
+        "line": 2
+      },
+      {
+        "name": "@fixture-product",
+        "line": 2
+      },
+      {
+        "name": "@fixture-delivery",
+        "line": 2
+      },
+      {
+        "name": "@fixture-payment",
+        "line": 2
+      },
+      {
+        "name": "@fixture-multi-lang-zh-cn",
+        "line": 2
+      },
+      {
+        "name": "@EAT-1001",
+        "line": 2
+      }
+    ],
+    "uri": "features/component/CRM/CustomNotification/customOrderNotificationEmailSimplifiedChinese.feature",
+    "elements": [
+      {
+        "id": "add-custom-text-to-email-order-notification-header-/-footer-and-check-email-receive-correctly（simplified-chinese);custom-text-and-simplified-chinese-support-in-order-notification-email-header-and-footer",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Custom Text and Simplified Chinese Support in Order notification email Header and Footer",
+        "tags": [
+          {
+            "name": "@BaseCase",
+            "line": 1
+          },
+          {
+            "name": "@Admin",
+            "line": 1
+          },
+          {
+            "name": "@Storefront",
+            "line": 1
+          },
+          {
+            "name": "@CRM",
+            "line": 1
+          },
+          {
+            "name": "@CustomNotification",
+            "line": 1
+          },
+          {
+            "name": "@customOrderNotificationEmailSimplifiedChinese",
+            "line": 1
+          },
+          {
+            "name": "@fixture-shop",
+            "line": 2
+          },
+          {
+            "name": "@fixture-product",
+            "line": 2
+          },
+          {
+            "name": "@fixture-delivery",
+            "line": 2
+          },
+          {
+            "name": "@fixture-payment",
+            "line": 2
+          },
+          {
+            "name": "@fixture-multi-lang-zh-cn",
+            "line": 2
+          },
+          {
+            "name": "@EAT-1001",
+            "line": 2
+          },
+          {
+            "name": "@EAT-1001-3",
+            "line": 20
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "embeddings": [
+              {
+                "data": "{\"account\":{\"email\":\"testuser+20180126071826850@shoplineapp.com\",\"notificationEmail\":\"shoplineqa@gmail.com\",\"password\":\"12345678\",\"handle\":\"previewtw52\",\"tags\":[\"non-admin\",\"baseLocation-TW\",\"theme-basic\",\"fixture-payment\",\"fixture-delivery\",\"fixture-product\",\"fixture-addon\",\"fixture-promotion\",\"fixture-shop\",\"fixture-tcat-order\",\"fixture-multi-lang-zh-cn\",\"fixture-delivery-with-emap\"],\"retry\":0}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am on Admin Login Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14712
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/users/sign_in?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://sso-preview.shoplineapp.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I fill correct account email to email field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1659
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser+20180126071826850@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I fill correct account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2616
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"12345678\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on login button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5533
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[type=\\\"submit\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see successful login",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1447
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I check intercom message notification frame and click clear intercom message button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4211
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"clear intercom message button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I check intercom message notification frame and click intercom message close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3206
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"intercom message close button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I check new feature alert notification frame and click new feature alert close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4209
+            },
+            "embeddings": [
+              {
+                "data": "{\"frameLength\":0}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"frameNotFound\":\"new feature alert\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I check and click exclude products panel close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5629
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"exclude products panel close button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I check and click no thanks button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2220
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"no thanks button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "I am on Custom Notification Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7987
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw52/custom_notification?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw52/custom_notification?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I click on tab included 'Order'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4689
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div>div:nth-child(2)>div>div>div>div:nth-child(1):not(#sidebar-menu)>div>div\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Member\",\"Order\"],\"text\":\"Order\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "I should see order notification button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2413
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I click on order notification button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2847
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[href=\\\"custom_notification/edit/ORDER_DELIVERY_STATUS_UPDATE\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I should be redirected to Custom Order Notification Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2613
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw52/custom_notification/edit/ORDER_DELIVERY_STATUS_UPDATE?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw52/custom_notification/edit/ORDER_DELIVERY_STATUS_UPDATE",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I click on language tab included 'Simplified Chinese'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6526
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"react-app > div > div > div > div > div > div > div:nth-child(3) > div > div\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"English\",\"Traditional Chinese\",\"Simplified Chinese\"],\"text\":\"Simplified Chinese\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see header edit button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2432
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "I should see footer edit button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1705
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "I should see english email picture",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1377
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I click on header edit button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1448
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div:nth-child(4) > [height=\\\"auto\\\"]:nth-child(1)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "I should see editor toolbar",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2425
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":2,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "I should see html text field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1606
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":2,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 34,
+            "name": "I input 'Order notification email header 简体 test' to 1st html text field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:203"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7023
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"Order notification email header 简体 test\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I click on 1st color button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1455
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[title=\\\"Color Picker\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I click on 1st color option",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1756
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".rdw-colorpicker-cube\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I simply fill 'color ' to 1st html text field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1556
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"color \"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I click on 1st color button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1428
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[title=\\\"Color Picker\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "I click on color tab included 'Highlight'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5818
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".rdw-colorpicker-modal-style-label\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Text\",\"Highlight\"],\"text\":\"Highlight\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I click on 6th color option",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2072
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".rdw-colorpicker-cube\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "I simply fill 'background color ' to 1st html text field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2996
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"background color \"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "I click on 1st link button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3972
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[title=\\\"Link\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 43,
+            "name": "I should see link block",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1417
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 44,
+            "name": "I fill 'shop link' to link title",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1954
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"shop link\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I fill shop URL to link target",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1854
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"https://previewtw52.shoplinetest.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "I click on open link in new window checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3487
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[id=\\\"openLinkInNewWindow\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "I click on link option button included 'Add'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3619
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".rdw-link-modal-btn\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Add\",\"Cancel\"],\"text\":\"Add\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 49,
+            "name": "I should see 1 green color font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1210
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":1,\"expectCount\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 50,
+            "name": "green color font should contain 'color'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3657
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"color \",\"expectText\":\"color\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 51,
+            "name": "I should see 3 blue background color font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1201
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":3,\"expectCount\":\"3\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "1st blue background color font should contain 'background color'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2115
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"background color \",\"expectText\":\"background color\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 53,
+            "name": "2nd blue background color font should contain 'shop link'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1600
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"shop link\",\"expectText\":\"shop link\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 54,
+            "name": "I should see 1 link text",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1211
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":1,\"expectCount\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 55,
+            "name": "1st link text should contain 'shop link'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1590
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"shop link\",\"expectText\":\"shop link\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 56,
+            "name": "I click on link text",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1487
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".rdw-link-decorator-wrapper\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 57,
+            "name": "I check and click on proceed button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1012
+            },
+            "embeddings": [
+              {
+                "data": "{\"errorInfo\":\"{}\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "I switch to 2 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7529
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":2,\"HandlesIdx\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 59,
+            "name": "I should be redirected to Shop Home Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1517
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw52.shoplinetest.com/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw52.shoplinetest.com/",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 60,
+            "name": "I switch to 1 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7507
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":2,\"HandlesIdx\":0}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 61,
+            "name": "I should be redirected to Custom Order Notification Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1513
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw52/custom_notification/edit/ORDER_DELIVERY_STATUS_UPDATE?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw52/custom_notification/edit/ORDER_DELIVERY_STATUS_UPDATE",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 62,
+            "name": "1st html text field should contain 'Order notification email header 简体 test'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1554
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Order notification email header 简体 testcolor background color shop link \",\"expectText\":\"Order notification email header 简体 test\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 63,
+            "name": "1st html text field should contain 'color background color shop link'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1524
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Order notification email header 简体 testcolor background color shop link \",\"expectText\":\"color background color shop link\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 64,
+            "name": "header text count should contain '73/1000'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2356
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"73/1000\",\"expectText\":\"73/1000\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 66,
+            "name": "I click on footer edit button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1655
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div:nth-child(7) > [height=\\\"auto\\\"]:nth-child(1)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 67,
+            "name": "I should see 2 editor toolbar",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1412
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":2,\"expectCount\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 68,
+            "name": "I should see 2 html text field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1199
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":2,\"expectCount\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 69,
+            "name": "I input 'Order notification email footer 简体 test' to 2nd html text field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:203"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5826
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"Order notification email footer 简体 test\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 70,
+            "name": "I click on 2nd bold button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1626
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[title=\\\"Bold\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 71,
+            "name": "I simply fill 'bold ' to 2nd html text field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2122
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"bold \"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 72,
+            "name": "I click on 2nd italic button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1760
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[title=\\\"Italic\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 73,
+            "name": "I simply fill 'italic ' to 2nd html text field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1569
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"italic \"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 74,
+            "name": "I click on 2nd underline button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1582
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[title=\\\"Underline\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 75,
+            "name": "I simply fill 'underline ' to 2nd html text field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1618
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"underline \"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 76,
+            "name": "I click on 2nd font size dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1569
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[title=\\\"Font Size\\\"] .rdw-dropdown-carettoopen\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 77,
+            "name": "I click on font size dropdown option included '18'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7711
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".rdw-fontsize-option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"8\",\"9\",\"10\",\"11\",\"12\",\"14\",\"16\",\"18\",\"24\",\"30\",\"36\",\"48\",\"60\",\"72\",\"96\"],\"text\":\"18\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 78,
+            "name": "I simply fill 'Font Size' to 2nd html text field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1917
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"Font Size\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 80,
+            "name": "I should see 3 bold font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1309
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":3,\"expectCount\":\"3\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 81,
+            "name": "1st bold font should contain 'bold'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1592
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"bold \",\"expectText\":\"bold\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 82,
+            "name": "2nd bold font should contain 'italic'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1806
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"italic \",\"expectText\":\"italic\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 83,
+            "name": "3rd bold font should contain 'underline'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2027
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"underline \",\"expectText\":\"underline\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 84,
+            "name": "I should see 2 italic font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1211
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":2,\"expectCount\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 85,
+            "name": "1st italic font should contain 'italic'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2026
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"italic \",\"expectText\":\"italic\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 86,
+            "name": "2nd italic font should contain 'underline'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1919
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"underline \",\"expectText\":\"underline\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 87,
+            "name": "I should see 1 underline font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1178
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":1,\"expectCount\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 88,
+            "name": "underline font should contain 'underline'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1682
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"underline \",\"expectText\":\"underline\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 89,
+            "name": "I should see 1 eighteen px size font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1274
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":1,\"expectCount\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 90,
+            "name": "eighteen px size font should contain 'Font Size'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1743
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Font Size\",\"expectText\":\"Font Size\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 91,
+            "name": "2nd html text field should contain 'Order notification email footer 简体 test'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1567
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Order notification email footer 简体 testbold italic underline Font Size\",\"expectText\":\"Order notification email footer 简体 test\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 92,
+            "name": "2nd html text field should contain 'bold italic underline Font Size'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1702
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Order notification email footer 简体 testbold italic underline Font Size\",\"expectText\":\"bold italic underline Font Size\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 93,
+            "name": "footer text count should contain '71/1000'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1597
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"71/1000\",\"expectText\":\"71/1000\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 94,
+            "name": "I should see save reminder",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1563
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 95,
+            "name": "save reminder should contain 'Unsaved Changes'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1582
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Unsaved Changes\",\"expectText\":\"Unsaved Changes\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 96,
+            "name": "I click on reminder button included 'SAVE'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3834
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[height=\\\"LARGE\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"\",\"Discard\",\"SAVE\"],\"text\":\"SAVE\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 97,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1350
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 98,
+            "name": "alert should contain 'Saved Successfully'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1510
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Saved Successfully\",\"expectText\":\"Saved Successfully\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 100,
+            "name": "I am on Shop Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7819
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw52.shoplinetest.com/products/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw52.shoplinetest.com/products/?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 101,
+            "name": "I input \"15th Product for Checkout\" to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5921
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"15th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "1st product of products list should contain \"15th Product for Checkout\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1524
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"15th Product for CheckoutNT$25\",\"expectText\":\"15th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 103,
+            "name": "I click on 1st product of products list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2597
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"li.boxify-item.product-item\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 104,
+            "name": "I should be redirected to Shop Product Show Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1508
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw52.shoplinetest.com/products/15th-product-for-checkout",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 105,
+            "name": "I click on add to cart button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1379
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"addItemToCart()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 106,
+            "name": "I should see cart panel",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1346
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 107,
+            "name": "I click on checkout button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3171
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[id=\\\"btn-checkout\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 108,
+            "name": "I should be redirected to Shop Cart Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1506
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw52.shoplinetest.com/cart/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw52.shoplinetest.com/cart",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 109,
+            "name": "I select country dropdown option included \"Taiwan\" of country list dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8995
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-country\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-country\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Hong Kong\",\"Taiwan\"],\"text\":\"Taiwan\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 110,
+            "name": "I wait for 5 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5007
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 111,
+            "name": "I select delivery dropdown option included \"Local Delivery\" of delivery method dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12201
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-method\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-method\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Family Mart Pickup only (C2C)\",\"Family Mart Pickup and pay in store (C2C)\",\"(DBW) No integration 711 Pickup\",\"(DBW) CustomDelivery\",\"(DBW) - LocalDelivery\",\"(DBW) Ezship pickup and pay in store\",\"(DBW) Family Mart B2C - Pickup and pay in store\",\"(DBW) 7-11 C2C - Pickup only\",\"(DBW) 7-11 B2C - Pickup and pay in store\",\"Family Mart Pickup and pay in store (B2C)\",\"Family Mart Pickup only (B2C)\",\"7-11 Pickup only (B2C)\",\"7-11 Pickup and pay in store (B2C)\",\"7-11 Pickup only (C2C)\",\"7-11 Pickup and pay in store (C2C)\",\"Custom Delivery\",\"Family Mart Pickup (no integration)\",\"ezship pickup and pay in store\",\"7-11 Pickup (no integration)\",\"Local Delivery\"],\"text\":\"Local Delivery\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 112,
+            "name": "I wait for 5 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5008
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 113,
+            "name": "I select payment dropdown option included \"Bank Transfer\" of payment method dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10469
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-payment-method\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-payment-method\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"WebATM via O'Pay\",\"ATM via O'Pay\",\"Taishin\",\"CVS via O'Pay\",\"Credit Card via O'Pay\",\"(rollback data) Custom\",\"LINE Pay\",\"Credit Card via ECpay\",\"Barcode via ECpay\",\"CVS via ECpay\",\"(rollback data) Cash on Delivery\",\"Bank Transfer\",\"Credit card or Paypal (Paypal Express)\"],\"text\":\"Bank Transfer\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 114,
+            "name": "I wait for 5 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5008
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 115,
+            "name": "I click on proceed to checkout button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2161
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[href$=\\\"checkout\\\"]:not(.disabled)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 116,
+            "name": "I should be redirected to Shop Checkout Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1551
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw52.shoplinetest.com/checkout",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 117,
+            "name": "I select language dropdown option included '简体' of language dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9551
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"#fixed-menu-container .dropdown-toggle\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"#fixed-menu-container ul.dropdown-menu li\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"English\",\"繁體中文\",\"简体中文\"],\"text\":\"简体\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 118,
+            "name": "I fill name to name field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1583
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"陳小明\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 119,
+            "name": "I fill email to email address field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1593
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 120,
+            "name": "I fill phone to contact number field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1528
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"0912345678\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 121,
+            "name": "I click on same as checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1379
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[name=\\\"order[delivery_data][recipient_is_customer]\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 122,
+            "name": "I select delivery address dropdown option included \"台北市\" of 1st delivery address dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:503"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11971
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[input-name-template=\\\"order[delivery_address][$field_name]\\\"] select\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"div[input-name-template=\\\"order[delivery_address][$field_name]\\\"] select option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"          城市 / 县\\n        \",\"台北市\",\"基隆市\",\"新北市\",\"宜兰县\",\"新竹市\",\"新竹县\",\"桃园市\",\"苗栗县\",\"台中市\",\"彰化县\",\"南投县\",\"嘉义市\",\"嘉义县\",\"云林县\",\"台南市\",\"高雄市\",\"屏东县\",\"台东县\",\"花莲县\",\"          地区\\n        \"],\"text\":\"台北市\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 123,
+            "name": "I select delivery address dropdown option included \"100 中正区\" of 2nd delivery address dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:503"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13868
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[input-name-template=\\\"order[delivery_address][$field_name]\\\"] select\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"div[input-name-template=\\\"order[delivery_address][$field_name]\\\"] select option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"          城市 / 县\\n        \",\"台北市\",\"基隆市\",\"新北市\",\"宜兰县\",\"新竹市\",\"新竹县\",\"桃园市\",\"苗栗县\",\"台中市\",\"彰化县\",\"南投县\",\"嘉义市\",\"嘉义县\",\"云林县\",\"台南市\",\"高雄市\",\"屏东县\",\"台东县\",\"花莲县\",\"          地区\\n        \",\"100 中正区\",\"103 大同区\",\"104 中山区\",\"105 松山区\",\"106 大安区\",\"108 万华区\",\"110 信义区\",\"111 士林区\",\"112 北投区\",\"114 內湖区\",\"115 南港区\",\"116 文山区\"],\"text\":\"100 中正区\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 124,
+            "name": "I fill address to delivery address field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1653
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"14F., No.44, Ln. 11, Guangfu N. Rd.\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 125,
+            "name": "I click on agree terms checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1374
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"policy\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 126,
+            "name": "I click on become member checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1388
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"saveFields[all]\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 127,
+            "name": "I click on place order button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1429
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".btn.btn-success\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 128,
+            "name": "I should be redirected to Shop Order Confirm Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3221
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw52.shoplinetest.com/checkout?locale=zh-cn",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 129,
+            "name": "I select language dropdown option included 'English' of language dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9368
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"#fixed-menu-container .dropdown-toggle\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\".dropdown-menu.menu-button li\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"English\",\"繁體中文\",\"简体中文\"],\"text\":\"English\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 130,
+            "name": "I mark the value of order confirm info as variable order info",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:433"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1512
+            },
+            "embeddings": [
+              {
+                "data": "\"Thank you! Your order has been submitted!\\nOrder No. 20210922040751258\\nAn order confirmation email will be sent to below email:\\ntestu****@shoplineapp.com\"",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 131,
+            "name": "I wait for 150 seconds for mail sent",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149987
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 133,
+            "name": "I am on Google Mail Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8555
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://mail.google.com/mail\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":6,\"displayedElementCount\":4}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 134,
+            "name": "I fill customer email to account field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1613
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 135,
+            "name": "I click on identifier next button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1357
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[id*=\\\"ext\\\"]:not([id*=heading])\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 136,
+            "name": "I should see password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2555
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":2,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 137,
+            "name": "I input account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4912
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 138,
+            "name": "I check and click password next button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52321
+            },
+            "embeddings": [
+              {
+                "data": "\"{\\\"name\\\":\\\"TimeoutError\\\",\\\"remoteStacktrace\\\":\\\"\\\"}\"",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValueFound\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 139,
+            "name": "I should see search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1311
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 140,
+            "name": "I input order number to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5064
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"20210922040751258\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 141,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3006
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 142,
+            "name": "I should see row of mail list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1520
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":2,\"displayedElementCount\":2}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 143,
+            "name": "I click on row of mail list included '谢谢你的订单'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3080
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[role=\\\"main\\\"] td[tabindex=\\\"-1\\\"] [role=\\\"link\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Inbox\\n[New order] Order #20210922040751258 is placed by testuser@shoplineapp.com\\n - \\nOrder notification email header 简体 test color background color shop link [New order] Order #20210922040751258 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment\",\"Inbox\\n[20180126071829978] 谢谢你的订单 #20210922040751258!\\n - \\nOrder notification email header 简体 test color background color shop link [20180126071829978] 谢谢你的订单 #20210922040751258! 订单状态为：处理中 付款状态为：未付款 送货状态为：备货中 有关订单的查询或要联络20180126071829978，请登入以下连结。如果还未设立帐户，请按「忘记\"],\"text\":\"谢谢你的订单\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 144,
+            "name": "I should see mail detail",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1524
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":2,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 145,
+            "name": "mail detail should contain 'Order notification email header 简体 test'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1615
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Order notification email header 简体 testcolor background color shop link[20180126071829978] 谢谢你的订单 #20210922040751258!订单状态为：处理中付款状态为：未付款送货状态为：备货中有关订单的查询或要联络20180126071829978，请登入以下连结。如果还未设立帐户，请按「忘记密码」设立你的帐户。订单连结订单日期2021-09-22 12:07PM GMT+08:00订单号码20210922040751258订单状态处理中商店20180126071829978 (testuser+524480@shoplineapp.com)订购人陳小明 (testuser@shoplineapp.com)电话号码0912345***付款方式銀行轉帳／ATM付款指示testing instruction付款状态未付款送货方式Local Delivery送货详情testing description地址陳小明台湾100台北市 中正区14F., No.44, Ln. 11, Guangfu N. Rd.收件人电话号码0912345***送货状态备货中订单详情15th Product for Checkout1 x NT$25NT$25小计: NT$25运费: NT$10合计: NT$35Order notification email footer 简体 testbold italic underline Font Size20180126071829978您会收到这封电邮是由於您使用这个电邮地址在20180126071829978下了订单。\",\"expectText\":\"Order notification email header 简体 test\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 146,
+            "name": "mail detail should contain 'bold italic underline Font Size'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1593
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Order notification email header 简体 testcolor background color shop link[20180126071829978] 谢谢你的订单 #20210922040751258!订单状态为：处理中付款状态为：未付款送货状态为：备货中有关订单的查询或要联络20180126071829978，请登入以下连结。如果还未设立帐户，请按「忘记密码」设立你的帐户。订单连结订单日期2021-09-22 12:07PM GMT+08:00订单号码20210922040751258订单状态处理中商店20180126071829978 (testuser+524480@shoplineapp.com)订购人陳小明 (testuser@shoplineapp.com)电话号码0912345***付款方式銀行轉帳／ATM付款指示testing instruction付款状态未付款送货方式Local Delivery送货详情testing description地址陳小明台湾100台北市 中正区14F., No.44, Ln. 11, Guangfu N. Rd.收件人电话号码0912345***送货状态备货中订单详情15th Product for Checkout1 x NT$25NT$25小计: NT$25运费: NT$10合计: NT$35Order notification email footer 简体 testbold italic underline Font Size20180126071829978您会收到这封电邮是由於您使用这个电邮地址在20180126071829978下了订单。\",\"expectText\":\"bold italic underline Font Size\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 147,
+            "name": "mail detail should contain 'Order notification email footer 简体 test'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1599
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Order notification email header 简体 testcolor background color shop link[20180126071829978] 谢谢你的订单 #20210922040751258!订单状态为：处理中付款状态为：未付款送货状态为：备货中有关订单的查询或要联络20180126071829978，请登入以下连结。如果还未设立帐户，请按「忘记密码」设立你的帐户。订单连结订单日期2021-09-22 12:07PM GMT+08:00订单号码20210922040751258订单状态处理中商店20180126071829978 (testuser+524480@shoplineapp.com)订购人陳小明 (testuser@shoplineapp.com)电话号码0912345***付款方式銀行轉帳／ATM付款指示testing instruction付款状态未付款送货方式Local Delivery送货详情testing description地址陳小明台湾100台北市 中正区14F., No.44, Ln. 11, Guangfu N. Rd.收件人电话号码0912345***送货状态备货中订单详情15th Product for Checkout1 x NT$25NT$25小计: NT$25运费: NT$10合计: NT$35Order notification email footer 简体 testbold italic underline Font Size20180126071829978您会收到这封电邮是由於您使用这个电邮地址在20180126071829978下了订单。\",\"expectText\":\"Order notification email footer 简体 test\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 148,
+            "name": "mail detail should contain 'color background color shop link'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2191
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Order notification email header 简体 testcolor background color shop link[20180126071829978] 谢谢你的订单 #20210922040751258!订单状态为：处理中付款状态为：未付款送货状态为：备货中有关订单的查询或要联络20180126071829978，请登入以下连结。如果还未设立帐户，请按「忘记密码」设立你的帐户。订单连结订单日期2021-09-22 12:07PM GMT+08:00订单号码20210922040751258订单状态处理中商店20180126071829978 (testuser+524480@shoplineapp.com)订购人陳小明 (testuser@shoplineapp.com)电话号码0912345***付款方式銀行轉帳／ATM付款指示testing instruction付款状态未付款送货方式Local Delivery送货详情testing description地址陳小明台湾100台北市 中正区14F., No.44, Ln. 11, Guangfu N. Rd.收件人电话号码0912345***送货状态备货中订单详情15th Product for Checkout1 x NT$25NT$25小计: NT$25运费: NT$10合计: NT$35Order notification email footer 简体 testbold italic underline Font Size20180126071829978您会收到这封电邮是由於您使用这个电邮地址在20180126071829978下了订单。\",\"expectText\":\"color background color shop link\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 149,
+            "name": "I should see 1 green color font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1385
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":1,\"expectCount\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 150,
+            "name": "green color font should contain 'color'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1656
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"color\",\"expectText\":\"color\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 151,
+            "name": "I should see 3 blue background color font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1387
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":3,\"expectCount\":\"3\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 152,
+            "name": "1st blue background color font should contain 'background color'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1737
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"background color\",\"expectText\":\"background color\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 153,
+            "name": "2nd blue background color font should contain 'shop link'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1600
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"shop link\",\"expectText\":\"shop link\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 154,
+            "name": "I should see 1 link text",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1355
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":1,\"expectCount\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 155,
+            "name": "1st link text should contain 'shop link'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1667
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"shop link\",\"expectText\":\"shop link\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 156,
+            "name": "I click on link text",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1676
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[href*=\\\"https://previewtw52\\\"] span\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 157,
+            "name": "I check and click on proceed button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1008
+            },
+            "embeddings": [
+              {
+                "data": "{\"errorInfo\":\"{}\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 158,
+            "name": "I switch to 3 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7717
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":3,\"HandlesIdx\":2}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 159,
+            "name": "I should be redirected to Shop Home Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1519
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw52.shoplinetest.com/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw52.shoplinetest.com/",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 160,
+            "name": "I switch to 1 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7502
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":3,\"HandlesIdx\":0}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 161,
+            "name": "I should be redirected to Google Mail Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5905
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://mail.google.com/mail\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://mail.google.com/mail/u/0/#search/20210922040751258/WhctKKXGwQNPjffNKPPhHtnHFnvkbMMktJgDgHjXRxzxQKJcSCwhZbvhpkmMWLZQCtFlnLl",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":27,\"displayedElementCount\":7}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 162,
+            "name": "I should see 3 bold font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1174
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":3,\"expectCount\":\"3\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 163,
+            "name": "1st bold font should contain 'bold'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1484
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"bold\",\"expectText\":\"bold\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 164,
+            "name": "2nd bold font should contain 'italic'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1503
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"italic\",\"expectText\":\"italic\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 165,
+            "name": "3rd bold font should contain 'underline'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1516
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"underline\",\"expectText\":\"underline\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 166,
+            "name": "I should see 2 italic font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1179
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":2,\"expectCount\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 167,
+            "name": "1st italic font should contain 'italic'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1515
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"italic\",\"expectText\":\"italic\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 168,
+            "name": "2nd italic font should contain 'underline'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1504
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"underline\",\"expectText\":\"underline\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 169,
+            "name": "I should see 1 ins underline font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1175
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":1,\"expectCount\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 170,
+            "name": "ins underline font should contain 'underline'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1504
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"underline\",\"expectText\":\"underline\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 171,
+            "name": "I should see 1 eighteen px size font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1176
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":1,\"expectCount\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 172,
+            "name": "eighteen px size font should contain 'Font Size'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1508
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Font Size\",\"expectText\":\"Font Size\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 174,
+            "name": "I am on Orders Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8642
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw52/orders?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw52/orders?locale=en&createdBy=admin",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 175,
+            "name": "1st row of order links should contain order number",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:820"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1506
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"20210922040751258\",\"expectText\":\"20210922040751258\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 176,
+            "name": "I click on 1st row of order checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1433
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[ng-model=\\\"orders[$index].selected\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 177,
+            "name": "I should see bulk actions dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1345
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 178,
+            "name": "I select Update Status of bulk actions dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:467"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6800
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"orders-table > div.form-inline.bulk-action-section.row > div > span.dropdown > button\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"li[ng-click=\\\"onChooseBulkEdit()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 179,
+            "name": "I select status dropdown option included 'Order Status' of status type dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9006
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-style=\\\"bulkEditStyle\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"ul.bulk-edit-dropdown a\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"\",\"\",\"Order Status\",\"Payment Status\",\"Delivery Status\"],\"text\":\"Order Status\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 180,
+            "name": "I select status dropdown option included 'Completed' of status item dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9748
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-style=\\\"bulkStatusStyle\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"ul.bulk-edit-dropdown a\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"\",\"\",\"\",\"\",\"\",\"Open\",\"Confirmed\",\"Completed\",\"Cancelled\"],\"text\":\"Completed\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 181,
+            "name": "I should see update button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1347
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 182,
+            "name": "I click on update button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1407
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"updateOrders()\\\"]:not([data-loading])\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 183,
+            "name": "I should see confirm popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1343
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 184,
+            "name": "I click on send notification checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1381
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".modal-footer input\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 185,
+            "name": "I click on OK button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1399
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"confirm()\\\"]:not(.ng-hide)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 186,
+            "name": "1st row of order status should equal to \"Completed\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:965"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1505
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Completed\",\"expectText\":\"Completed\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 187,
+            "name": "I wait for 30 seconds for mail sent",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30004
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 189,
+            "name": "I am on Google Mail Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19273
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://mail.google.com/mail\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://mail.google.com/mail/u/0/#inbox",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":24,\"displayedElementCount\":10}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 190,
+            "name": "I should see search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1522
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 191,
+            "name": "I input order number to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5463
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"20210922040751258\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 192,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2983
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 193,
+            "name": "I should see row of mail list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1681
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":3,\"displayedElementCount\":3}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 194,
+            "name": "I click on row of mail list included '订单状态 更新为: 已完成'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3286
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[role=\\\"main\\\"] td[tabindex=\\\"-1\\\"] [role=\\\"link\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Inbox\\n[20180126071829978] #20210922040751258 订单状态 更新为: 已完成\\n - \\nOrder notification email header 简体 test color background color shop link [20180126071829978] #20210922040751258 订单状态 更新为: 已完成 订单状态为：已完成 付款状态为：未付款 送货状态为：备货中 有关订单的查询或要联络20180126071829978，请登入以下连结。如果还未设立帐户\",\"Inbox\\n[New order] Order #20210922040751258 is placed by testuser@shoplineapp.com\\n - \\nOrder notification email header 简体 test color background color shop link [New order] Order #20210922040751258 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment\",\"Inbox\\n[20180126071829978] 谢谢你的订单 #20210922040751258!\\n - \\nOrder notification email header 简体 test color background color shop link [20180126071829978] 谢谢你的订单 #20210922040751258! 订单状态为：处理中 付款状态为：未付款 送货状态为：备货中 有关订单的查询或要联络20180126071829978，请登入以下连结。如果还未设立帐户，请按「忘记\"],\"text\":\"订单状态 更新为: 已完成\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 195,
+            "name": "I should see mail detail",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1511
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":2,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 196,
+            "name": "mail detail should contain 'Order notification email header 简体 test'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1682
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Order notification email header 简体 testcolor background color shop link[20180126071829978] #20210922040751258 订单状态 更新为: 已完成订单状态为：已完成付款状态为：未付款送货状态为：备货中有关订单的查询或要联络20180126071829978，请登入以下连结。如果还未设立帐户，请按「忘记密码」设立你的帐户。订单连结订单日期2021-09-22 12:07PM GMT+08:00订单号码20210922040751258订单状态已完成商店20180126071829978 (testuser+524480@shoplineapp.com)订购人陳小明 (testuser@shoplineapp.com)电话号码0912345***付款方式銀行轉帳／ATM付款指示testing instruction付款状态未付款送货方式Local Delivery送货详情testing description地址陳小明台湾100台北市 中正区14F., No.44, Ln. 11, Guangfu N. Rd.收件人电话号码0912345***送货状态备货中订单详情15th Product for Checkout1 x NT$25NT$25小计: NT$25运费: NT$10合计: NT$35Order notification email footer 简体 testbold italic underline Font Size20180126071829978您会收到这封电邮是由於您使用这个电邮地址在20180126071829978下了订单。\",\"expectText\":\"Order notification email header 简体 test\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 197,
+            "name": "mail detail should contain 'bold italic underline Font Size'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1650
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Order notification email header 简体 testcolor background color shop link[20180126071829978] #20210922040751258 订单状态 更新为: 已完成订单状态为：已完成付款状态为：未付款送货状态为：备货中有关订单的查询或要联络20180126071829978，请登入以下连结。如果还未设立帐户，请按「忘记密码」设立你的帐户。订单连结订单日期2021-09-22 12:07PM GMT+08:00订单号码20210922040751258订单状态已完成商店20180126071829978 (testuser+524480@shoplineapp.com)订购人陳小明 (testuser@shoplineapp.com)电话号码0912345***付款方式銀行轉帳／ATM付款指示testing instruction付款状态未付款送货方式Local Delivery送货详情testing description地址陳小明台湾100台北市 中正区14F., No.44, Ln. 11, Guangfu N. Rd.收件人电话号码0912345***送货状态备货中订单详情15th Product for Checkout1 x NT$25NT$25小计: NT$25运费: NT$10合计: NT$35Order notification email footer 简体 testbold italic underline Font Size20180126071829978您会收到这封电邮是由於您使用这个电邮地址在20180126071829978下了订单。\",\"expectText\":\"bold italic underline Font Size\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 198,
+            "name": "mail detail should contain 'Order notification email footer 简体 test'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1643
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Order notification email header 简体 testcolor background color shop link[20180126071829978] #20210922040751258 订单状态 更新为: 已完成订单状态为：已完成付款状态为：未付款送货状态为：备货中有关订单的查询或要联络20180126071829978，请登入以下连结。如果还未设立帐户，请按「忘记密码」设立你的帐户。订单连结订单日期2021-09-22 12:07PM GMT+08:00订单号码20210922040751258订单状态已完成商店20180126071829978 (testuser+524480@shoplineapp.com)订购人陳小明 (testuser@shoplineapp.com)电话号码0912345***付款方式銀行轉帳／ATM付款指示testing instruction付款状态未付款送货方式Local Delivery送货详情testing description地址陳小明台湾100台北市 中正区14F., No.44, Ln. 11, Guangfu N. Rd.收件人电话号码0912345***送货状态备货中订单详情15th Product for Checkout1 x NT$25NT$25小计: NT$25运费: NT$10合计: NT$35Order notification email footer 简体 testbold italic underline Font Size20180126071829978您会收到这封电邮是由於您使用这个电邮地址在20180126071829978下了订单。\",\"expectText\":\"Order notification email footer 简体 test\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 199,
+            "name": "mail detail should contain 'color background color shop link'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1764
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Order notification email header 简体 testcolor background color shop link[20180126071829978] #20210922040751258 订单状态 更新为: 已完成订单状态为：已完成付款状态为：未付款送货状态为：备货中有关订单的查询或要联络20180126071829978，请登入以下连结。如果还未设立帐户，请按「忘记密码」设立你的帐户。订单连结订单日期2021-09-22 12:07PM GMT+08:00订单号码20210922040751258订单状态已完成商店20180126071829978 (testuser+524480@shoplineapp.com)订购人陳小明 (testuser@shoplineapp.com)电话号码0912345***付款方式銀行轉帳／ATM付款指示testing instruction付款状态未付款送货方式Local Delivery送货详情testing description地址陳小明台湾100台北市 中正区14F., No.44, Ln. 11, Guangfu N. Rd.收件人电话号码0912345***送货状态备货中订单详情15th Product for Checkout1 x NT$25NT$25小计: NT$25运费: NT$10合计: NT$35Order notification email footer 简体 testbold italic underline Font Size20180126071829978您会收到这封电邮是由於您使用这个电邮地址在20180126071829978下了订单。\",\"expectText\":\"color background color shop link\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 200,
+            "name": "I should see 1 green color font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1176
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":1,\"expectCount\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 201,
+            "name": "green color font should contain 'color'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1522
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"color\",\"expectText\":\"color\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 202,
+            "name": "I should see 3 blue background color font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1173
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":3,\"expectCount\":\"3\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 203,
+            "name": "1st blue background color font should contain 'background color'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1505
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"background color\",\"expectText\":\"background color\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 204,
+            "name": "2nd blue background color font should contain 'shop link'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1511
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"shop link\",\"expectText\":\"shop link\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 205,
+            "name": "I should see 1 link text",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1174
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":1,\"expectCount\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 206,
+            "name": "1st link text should contain 'shop link'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1512
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"shop link\",\"expectText\":\"shop link\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 207,
+            "name": "I click on link text",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1468
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[href*=\\\"https://previewtw52\\\"] span\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 208,
+            "name": "I check and click on proceed button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1009
+            },
+            "embeddings": [
+              {
+                "data": "{\"errorInfo\":\"{}\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 209,
+            "name": "I switch to 4 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7471
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":4,\"HandlesIdx\":3}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 210,
+            "name": "I should be redirected to Shop Home Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1518
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw52.shoplinetest.com/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw52.shoplinetest.com/",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 211,
+            "name": "I switch to 1 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7498
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":4,\"HandlesIdx\":0}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 212,
+            "name": "I should be redirected to Google Mail Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5966
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://mail.google.com/mail\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://mail.google.com/mail/u/0/#search/20210922040751258/WhctKKXGwQNPjfkJhznCtbHxFplwZqSKjVVXPRDZBcFsKvcHnqfGmMWXkZnBZFPVXbbxctb",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":27,\"displayedElementCount\":7}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 213,
+            "name": "I should see 3 bold font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1173
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":3,\"expectCount\":\"3\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 214,
+            "name": "1st bold font should contain 'bold'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1511
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"bold\",\"expectText\":\"bold\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 215,
+            "name": "2nd bold font should contain 'italic'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1507
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"italic\",\"expectText\":\"italic\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 216,
+            "name": "3rd bold font should contain 'underline'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1512
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"underline\",\"expectText\":\"underline\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 217,
+            "name": "I should see 2 italic font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1176
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":2,\"expectCount\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 218,
+            "name": "1st italic font should contain 'italic'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1504
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"italic\",\"expectText\":\"italic\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 219,
+            "name": "2nd italic font should contain 'underline'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1506
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"underline\",\"expectText\":\"underline\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 220,
+            "name": "I should see 1 ins underline font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1176
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":1,\"expectCount\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 221,
+            "name": "ins underline font should contain 'underline'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1483
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"underline\",\"expectText\":\"underline\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 222,
+            "name": "I should see 1 eighteen px size font",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1175
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":1,\"expectCount\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 223,
+            "name": "eighteen px size font should contain 'Font Size'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1515
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Font Size\",\"expectText\":\"Font Size\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 225,
+            "name": "---ROLL BACK---",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:1245"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 226,
+            "name": "I am on Custom Order Notification Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8123
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw52/custom_notification/edit/ORDER_DELIVERY_STATUS_UPDATE?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw52/custom_notification/edit/ORDER_DELIVERY_STATUS_UPDATE?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 227,
+            "name": "I click on language tab included 'Simplified Chinese'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4717
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"react-app > div > div > div > div > div > div > div:nth-child(3) > div > div\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"English\",\"Traditional Chinese\",\"Simplified Chinese\"],\"text\":\"Simplified Chinese\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 228,
+            "name": "I fill '' to 1st html text field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1790
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 229,
+            "name": "header text count should contain '0/1000'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1738
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"0/1000\",\"expectText\":\"0/1000\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 230,
+            "name": "I fill '' to 2nd html text field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1868
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 231,
+            "name": "footer text count should contain '0/1000'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1600
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"0/1000\",\"expectText\":\"0/1000\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 232,
+            "name": "I should see save reminder",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1531
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 233,
+            "name": "I click on reminder button included 'SAVE'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3554
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[height=\\\"LARGE\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"\",\"Discard\",\"SAVE\"],\"text\":\"SAVE\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 234,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1376
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 146
+            },
+            "embeddings": [
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw52/custom_notification/edit/ORDER_DELIVERY_STATUS_UPDATE?locale=en",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

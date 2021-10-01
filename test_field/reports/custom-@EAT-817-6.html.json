@@ -1,0 +1,4775 @@
+[
+  {
+    "description": "  As a merchant\n  I want each product to apply different weight\n  So that delivery fee can be more accurate",
+    "keyword": "Feature",
+    "name": "Variant product checkout without login from product list page (FMT) V1",
+    "line": 3,
+    "id": "variant-product-checkout-without-login-from-product-list-page-(fmt)-v1",
+    "tags": [
+      {
+        "name": "@BaseCase",
+        "line": 1
+      },
+      {
+        "name": "@Admin",
+        "line": 1
+      },
+      {
+        "name": "@Storefront",
+        "line": 1
+      },
+      {
+        "name": "@Product",
+        "line": 1
+      },
+      {
+        "name": "@Checkout",
+        "line": 1
+      },
+      {
+        "name": "@twoProductWithWeightProductIndexPageFMTV1-extraProduct",
+        "line": 1
+      },
+      {
+        "name": "@fixture-payment",
+        "line": 2
+      },
+      {
+        "name": "@fixture-delivery",
+        "line": 2
+      },
+      {
+        "name": "@fixture-product",
+        "line": 2
+      },
+      {
+        "name": "@fixture-shop",
+        "line": 2
+      },
+      {
+        "name": "@EAT-817",
+        "line": 2
+      }
+    ],
+    "uri": "features/component/Checkout/twoProductWithWeightProductIndexPageFMTV1-extraProduct.feature",
+    "elements": [
+      {
+        "id": "variant-product-checkout-without-login-from-product-list-page-(fmt)-v1;i-want-to-buy-products-with-different-weight-and-pay-correct-shipping-fee",
+        "keyword": "Scenario",
+        "line": 98,
+        "name": "I want to buy products with different weight and pay correct shipping fee",
+        "tags": [
+          {
+            "name": "@BaseCase",
+            "line": 1
+          },
+          {
+            "name": "@Admin",
+            "line": 1
+          },
+          {
+            "name": "@Storefront",
+            "line": 1
+          },
+          {
+            "name": "@Product",
+            "line": 1
+          },
+          {
+            "name": "@Checkout",
+            "line": 1
+          },
+          {
+            "name": "@twoProductWithWeightProductIndexPageFMTV1-extraProduct",
+            "line": 1
+          },
+          {
+            "name": "@fixture-payment",
+            "line": 2
+          },
+          {
+            "name": "@fixture-delivery",
+            "line": 2
+          },
+          {
+            "name": "@fixture-product",
+            "line": 2
+          },
+          {
+            "name": "@fixture-shop",
+            "line": 2
+          },
+          {
+            "name": "@EAT-817",
+            "line": 2
+          },
+          {
+            "name": "@EAT-817-6",
+            "line": 97
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "embeddings": [
+              {
+                "data": "{\"account\":{\"email\":\"testuser+4277@shoplineapp.com\",\"notificationEmail\":\"shoplineqa@gmail.com\",\"password\":\"12345678\",\"handle\":\"previewtw2\",\"tags\":[\"non-admin\",\"baseLocation-TW\",\"theme-basic\",\"fixture-payment\",\"fixture-delivery\",\"fixture-product\",\"fixture-addon\",\"fixture-promotion\",\"fixture-shop\",\"fixture-non-basket\"],\"retry\":0}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am on Admin Login Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11035
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/users/sign_in?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://sso-preview.shoplineapp.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I fill correct account email to email field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1568
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser+4277@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I fill correct account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1554
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"12345678\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on login button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3254
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[type=\\\"submit\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see successful login",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1956
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I check intercom message notification frame and click clear intercom message button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3187
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"clear intercom message button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I check intercom message notification frame and click intercom message close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3176
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"intercom message close button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I check new feature alert notification frame and click new feature alert close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3182
+            },
+            "embeddings": [
+              {
+                "data": "{\"frameLength\":0}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"frameNotFound\":\"new feature alert\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I check and click exclude products panel close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1179
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"exclude products panel close button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I check and click no thanks button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1173
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"no thanks button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I am on Product Setting Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7900
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw2/products/settings?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw2/products/settings?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see member price toggle",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1352
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I check and click member price toggle off",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2549
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"toggle-button[model=\\\"productSettings.data.enabled_show_member_price\\\"] [aria-checked=\\\"false\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValueFound\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I check and click member price toggle off",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1171
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"member price toggle off\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I click on update button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1402
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".btn-primary\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1344
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "I am on Product Setting Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7886
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw2/products/settings?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw2/products/settings?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "price range setting block should contain 'Currently using'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1551
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Be first to experience: Display Price Range in Storefront Product List PageIf product with variants have multiple prices, it will display by price range.\\\"Price Range\\\" will be used in the near futureCurrently using\",\"expectText\":\"Currently using\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "I am on Product Create Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8999
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw2/products/new?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw2/products/new?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I pick product photo to product photo selector",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:225"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2707
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"/app/data/1.png\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "I should see delete photo button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1339
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I click on info tab",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1409
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".product-nav-tabs li:nth-child(2)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I fill \"(dirty data) multiple variations\" to english name field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2169
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"(dirty data) multiple variations\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I click on quantity and pricing tab",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1399
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".product-nav-tabs li:nth-child(4)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I fill '200' to regular price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1573
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"200\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I fill '160' to sale price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1590
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"160\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I fill '110' to member price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1589
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"110\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "I click on variations tab",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1427
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".product-nav-tabs li:nth-child(5)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "I click on variations toggle",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1474
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[id=\\\"productForm-variations\\\"] div[ng-click=\\\"toggle()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "I input \"R\" to add options field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5070
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"R\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "I input \"G\" to add options field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5031
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"G\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "I click on add variation button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1472
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[ng-click=\\\"addFieldTitle()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "I input \"S\" to 2nd add options field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:203"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5105
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"S\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I input \"M\" to 2nd add options field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:203"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5072
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"M\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "I click on variations same price checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1485
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"product_same_price\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "I fill \"0\" to 1st row of variation price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1584
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 48,
+            "name": "I fill \"0\" to 2nd row of variation price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1578
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "I fill \"0\" to 3rd row of variation price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1603
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "I fill \"50\" to 4th row of variation price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1694
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"50\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "I fill \"10\" to 1st row of variation sale price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1617
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"10\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "I fill \"20\" to 2nd row of variation sale price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1618
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "I fill \"30\" to 3rd row of variation sale price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1618
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"30\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "I fill \"40\" to 4th row of variation sale price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1618
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"40\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "I fill \"200\" to 1st row of variation quantity field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1826
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"200\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "I fill \"100\" to 2nd row of variation quantity field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1862
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"100\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 57,
+            "name": "I fill \"300\" to 3rd row of variation quantity field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1806
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"300\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "I fill \"400\" to 4th row of variation quantity field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1835
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"400\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 59,
+            "name": "I scroll down to id",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:525"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1385
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 60,
+            "name": "I click on add button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6871
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button.product-submit-btn\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "\"{\\\"name\\\":\\\"WebDriverError\\\",\\\"remoteStacktrace\\\":\\\"\\\"}\"",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 61,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4135
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":4,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 62,
+            "name": "I should be redirected to Product Edit Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1516
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw2/products/614d5b3dc36b05002662f5b4/edit?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 64,
+            "name": "I am on Product Create Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8886
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw2/products/new?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw2/products/new?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "I pick product photo to product photo selector",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:225"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2689
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"/app/data/1.png\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 66,
+            "name": "I should see delete photo button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1343
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "I click on info tab",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2056
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".product-nav-tabs li:nth-child(2)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 68,
+            "name": "I fill \"(dirty data) No variant with weight member price\" to english name field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2590
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"(dirty data) No variant with weight member price\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "I click on quantity and pricing tab",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1517
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".product-nav-tabs li:nth-child(4)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 70,
+            "name": "I fill \"50\" to regular price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1807
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"50\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 71,
+            "name": "I fill '10' to member price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1691
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"10\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 72,
+            "name": "I fill \"15\" to quantity field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1929
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"15\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 73,
+            "name": "I scroll down to id",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:525"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1586
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 74,
+            "name": "I click on settings tab",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1552
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".product-nav-tabs li:nth-child(8)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 75,
+            "name": "I input \"3.4\" to weight field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5412
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"3.4\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 76,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2827
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":1,\"matchedElementCount\":2,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 77,
+            "name": "I should be redirected to Product Edit Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1514
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw2/products/614d5b63c36b05002062f59a/edit?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 79,
+            "name": "I am on Product Create Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8851
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw2/products/new?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw2/products/new?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 80,
+            "name": "I pick product photo to product photo selector",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:225"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2676
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"/app/data/1.png\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 81,
+            "name": "I should see delete photo button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1346
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 82,
+            "name": "I click on info tab",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1384
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".product-nav-tabs li:nth-child(2)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 83,
+            "name": "I fill \"(dirty data) 1 variant member price\" to english name field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2148
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"(dirty data) 1 variant member price\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 84,
+            "name": "I click on variations tab",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1395
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".product-nav-tabs li:nth-child(5)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 85,
+            "name": "I click on variations toggle",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1465
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[id=\\\"productForm-variations\\\"] div[ng-click=\\\"toggle()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 86,
+            "name": "I input \"R\" to add options field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5064
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"R\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 87,
+            "name": "I click on variations same price checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1444
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"product_same_price\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 88,
+            "name": "I fill \"50\" to 1st row of variation price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1702
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"50\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 89,
+            "name": "I fill \"20\" to 1st row of variation sale price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1588
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 90,
+            "name": "I fill '10' to 1st row of variation member price field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1587
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"10\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 91,
+            "name": "I fill \"200\" to 1st row of variation quantity field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1768
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"200\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 92,
+            "name": "I scroll down to id",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:525"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1338
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 93,
+            "name": "I click on add button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6766
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button.product-submit-btn\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "\"{\\\"name\\\":\\\"WebDriverError\\\",\\\"remoteStacktrace\\\":\\\"\\\"}\"",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 94,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3754
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":4,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 95,
+            "name": "I should be redirected to Product Edit Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1472
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw2/products/614d5b90f04f4d001d1f1305/edit?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 99,
+            "name": "I am on Shop Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11285
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw2.shoplinetest.com/products/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw2.shoplinetest.com/products/?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 100,
+            "name": "I should see 2 member price flag",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:784"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1178
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementCount\":2,\"expectCount\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 101,
+            "name": "1st regular price of products list should contain 'NT$50'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1510
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$50\",\"expectText\":\"NT$50\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "1st sale price of products list should contain 'NT$20'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1515
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 103,
+            "name": "I click on 1st product of products list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2592
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"li.boxify-item.product-item\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 104,
+            "name": "I should be redirected to Shop Product Show Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1521
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw2.shoplinetest.com/products/dirty-data-1-variant-member-price",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 105,
+            "name": "product info should contain \"1 variant member price\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1545
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"SHARE(dirty data) 1 variant member priceNT$50NT$20NT$10 Member OnlyColorRQuantityADD TO CARTAdd to Wishlist\",\"expectText\":\"1 variant member price\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 106,
+            "name": "regular price should contain \"NT$50\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1509
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$50\",\"expectText\":\"NT$50\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 107,
+            "name": "sale price should contain 'NT$20'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1506
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 108,
+            "name": "I click on add to cart button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1376
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"addItemToCart()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 109,
+            "name": "I should see cart panel",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1344
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 110,
+            "name": "I click on close cart panel area",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1367
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".modal-backdrop\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 111,
+            "name": "I input \"No variant with weight member price\" to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5654
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"No variant with weight member price\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 112,
+            "name": "I should be redirected to Shop Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1506
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw2.shoplinetest.com/products/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw2.shoplinetest.com/products?query=No%20variant%20with%20weight%20member%20price",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 113,
+            "name": "1st product of products list should contain \"No variant with weight member price\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1509
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Member Price(dirty data) No variant with weight member priceNT$50\",\"expectText\":\"No variant with weight member price\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 114,
+            "name": "1st regular price of products list should contain 'NT$50'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1515
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$50\",\"expectText\":\"NT$50\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 115,
+            "name": "I click on 1st product of products list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4868
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"li.boxify-item.product-item\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 116,
+            "name": "I should be redirected to Shop Product Show Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1506
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw2.shoplinetest.com/products/dirty-data-no-variant-with-weight-member-price",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 117,
+            "name": "product info should contain \"No variant with weight member price\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1536
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"SHARE(dirty data) No variant with weight member priceNT$50NT$10 Member OnlyQUANTITYADD TO CARTAdd to Wishlist\",\"expectText\":\"No variant with weight member price\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 118,
+            "name": "regular price should contain \"NT$50\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1505
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$50\",\"expectText\":\"NT$50\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 119,
+            "name": "I fill '2' to product quantity field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1533
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 120,
+            "name": "I click on add to cart button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1376
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"addItemToCart()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 121,
+            "name": "I should see cart panel",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1346
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 122,
+            "name": "I click on close cart panel area",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1358
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".modal-backdrop\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 123,
+            "name": "I input \"multiple variations\" to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5856
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"multiple variations\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 124,
+            "name": "I should be redirected to Shop Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1715
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw2.shoplinetest.com/products/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw2.shoplinetest.com/products?query=multiple%20variations",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 125,
+            "name": "1st product of products list should contain \"multiple variations\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1861
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"(dirty data) multiple variationsNT$50NT$10 ~ NT$40\",\"expectText\":\"multiple variations\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 126,
+            "name": "1st regular price of products list should contain 'NT$50'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1736
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$50\",\"expectText\":\"NT$50\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 127,
+            "name": "1st sale price of products list should contain 'NT$10 ~ NT$40'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1920
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$10 ~ NT$40\",\"expectText\":\"NT$10 ~ NT$40\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 128,
+            "name": "I click on 1st product of products list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2599
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"li.boxify-item.product-item\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 129,
+            "name": "I should be redirected to Shop Product Show Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1754
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw2.shoplinetest.com/products/dirty-data-multiple-variations",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 130,
+            "name": "product info should contain \"multiple variations\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1630
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"SHARE(dirty data) multiple variationsNT$10ColorRGSizeSMQuantityADD TO CARTAdd to Wishlist\",\"expectText\":\"multiple variations\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 131,
+            "name": "sale price should contain 'NT$10'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1835
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$10\",\"expectText\":\"NT$10\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 132,
+            "name": "I click on dropdown option included 'G'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3784
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-model*=\\\"variationName\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"R\",\"G\",\"S\",\"M\"],\"text\":\"G\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 133,
+            "name": "sale price should contain 'NT$30'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1574
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$30\",\"expectText\":\"NT$30\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 134,
+            "name": "I click on dropdown option included 'M'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3852
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-model*=\\\"variationName\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"R\",\"G\",\"S\",\"M\"],\"text\":\"M\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 135,
+            "name": "sale price should contain 'NT$40'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1499
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$40\",\"expectText\":\"NT$40\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 136,
+            "name": "I click on dropdown option included 'R'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3341
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-model*=\\\"variationName\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"R\",\"G\",\"S\",\"M\"],\"text\":\"R\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 137,
+            "name": "sale price should contain 'NT$20'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1525
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 138,
+            "name": "I fill '2' to product quantity field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1620
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 139,
+            "name": "I click on add to cart button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1406
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"addItemToCart()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 140,
+            "name": "I should see cart panel",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1348
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 141,
+            "name": "I click on checkout button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2384
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[id=\\\"btn-checkout\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 142,
+            "name": "I should be redirected to Shop Cart Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1508
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw2.shoplinetest.com/cart/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw2.shoplinetest.com/cart",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 143,
+            "name": "1st row of unit price should contain \"NT$20\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1519
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20NT$50\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 144,
+            "name": "1st row of subtotal price should contain \"NT$20\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1507
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 145,
+            "name": "1st item quantity field should contain '1'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1511
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"1\",\"expectText\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 146,
+            "name": "1st row of cart item should contain '1 variant member price'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1525
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"(dirty data) 1 variant member priceRNT$20NT$50NT$20\",\"expectText\":\"1 variant member price\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 147,
+            "name": "2nd row of unit price should contain \"NT$50\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1513
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$50\",\"expectText\":\"NT$50\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 148,
+            "name": "2nd row of subtotal price should contain \"NT$100\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1513
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$100\",\"expectText\":\"NT$100\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 149,
+            "name": "2nd item quantity field should contain '2'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1503
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"2\",\"expectText\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 150,
+            "name": "2nd row of cart item should contain 'No variant with weight member price'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1517
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"(dirty data) No variant with weight member priceNT$50NT$100\",\"expectText\":\"No variant with weight member price\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 151,
+            "name": "3rd row of unit price should contain \"NT$20\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1509
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 152,
+            "name": "3rd row of subtotal price should contain \"NT$40\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1511
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$40\",\"expectText\":\"NT$40\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 153,
+            "name": "3rd item quantity field should contain '2'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1498
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"2\",\"expectText\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 154,
+            "name": "3rd row of cart item should contain 'multiple variations'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1518
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"(dirty data) multiple variationsRMNT$20NT$40\",\"expectText\":\"multiple variations\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 155,
+            "name": "I select country dropdown option included \"Taiwan\" of country list dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8403
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-country\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-country\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Hong Kong\",\"Taiwan\"],\"text\":\"Taiwan\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 156,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3005
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 157,
+            "name": "I select delivery dropdown option included \"(DBW) Family Mart B2C - Pickup and pay in store\" of delivery method dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11549
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-method\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-method\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"7-11 Pickup only (C2C)\",\"7-11 Pickup only (B2C)\",\"7-11 Pickup and pay in store (B2C)\",\"Family Mart Pickup only (C2C)\",\"Family Mart Pickup and pay in store (C2C)\",\"(DBW) No integration 711 Pickup\",\"(DBW) Family Mart B2C - Pickup and pay in store\",\"(DBW) Ezship pickup and pay in store\",\"(DBW) - LocalDelivery\",\"(DBW) CustomDelivery\",\"(DBW) 7-11 B2C - Pickup and pay in store\",\"(DBW) 7-11 C2C - Pickup only\",\"Family Mart Pickup and pay in store (B2C)\",\"Family Mart Pickup only (B2C)\",\"7-11 Pickup and pay in store (C2C)\",\"Custom Delivery\",\"Family Mart Pickup (no integration)\",\"7-11 Pickup (no integration)\",\"ezship pickup and pay in store\",\"Local Delivery\"],\"text\":\"(DBW) Family Mart B2C - Pickup and pay in store\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 158,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3006
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 159,
+            "name": "I select payment dropdown option included \"Pay on Family Mart Store Pickup (B2C)\" of payment method dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8216
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-payment-method\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-payment-method\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Pay on Family Mart Store Pickup (B2C)\"],\"text\":\"Pay on Family Mart Store Pickup (B2C)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 160,
+            "name": "cart item subtotal should contain 'NT$160'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1514
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Item Subtotal:NT$160\",\"expectText\":\"NT$160\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 161,
+            "name": "delivery fee should contain 'NT$0'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1512
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Delivery Fee:NT$0\",\"expectText\":\"NT$0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 162,
+            "name": "total should contain 'NT$160'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1517
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Total:NT$160\",\"expectText\":\"NT$160\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 163,
+            "name": "I click on proceed to checkout button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2264
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[href$=\\\"checkout\\\"]:not(.disabled)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 164,
+            "name": "I should be redirected to Shop Checkout Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1531
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw2.shoplinetest.com/checkout",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 165,
+            "name": "I click on cart summary",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1369
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".cart-summary\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 166,
+            "name": "1st row of product items should contain \"1 variant member price\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1513
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"(dirty data) 1 variant member priceRNT$20NT$501NT$20\",\"expectText\":\"1 variant member price\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 167,
+            "name": "1st cart item price should contain 'NT$20'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1510
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20NT$50\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 168,
+            "name": "1st cart item quantity should contain '1'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1501
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"1\",\"expectText\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 169,
+            "name": "1st cart item subtotal should contain 'NT$20'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1503
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 170,
+            "name": "2nd row of product items should contain \"No variant with weight member price\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1504
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"(dirty data) No variant with weight member priceNT$502NT$100\",\"expectText\":\"No variant with weight member price\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 171,
+            "name": "2nd cart item price should contain 'NT$50'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1502
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$50\",\"expectText\":\"NT$50\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 172,
+            "name": "2nd cart item quantity should contain '2'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1514
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"2\",\"expectText\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 173,
+            "name": "2nd cart item subtotal should contain 'NT$100'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1503
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$100\",\"expectText\":\"NT$100\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 174,
+            "name": "3rd row of product items should contain \"multiple variations\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1511
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"(dirty data) multiple variationsRMNT$202NT$40\",\"expectText\":\"multiple variations\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 175,
+            "name": "3rd cart item price should contain 'NT$20'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1505
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 176,
+            "name": "3rd cart item quantity should contain '2'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1513
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"2\",\"expectText\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 177,
+            "name": "3rd cart item subtotal should contain 'NT$40'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1480
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$40\",\"expectText\":\"NT$40\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 178,
+            "name": "total price should contain \"NT$160\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1521
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Total:NT$160\",\"expectText\":\"NT$160\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 179,
+            "name": "order summary should contain 'Item Subtotal:NT$160'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1582
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Item Subtotal:NT$160Delivery Fee:NT$0Total:NT$160\",\"expectText\":\"Item Subtotal:NT$160\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 180,
+            "name": "order summary should contain 'Delivery Fee:NT$0'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1512
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Item Subtotal:NT$160Delivery Fee:NT$0Total:NT$160\",\"expectText\":\"Delivery Fee:NT$0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 181,
+            "name": "order summary should contain 'Total:NT$160'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1503
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Item Subtotal:NT$160Delivery Fee:NT$0Total:NT$160\",\"expectText\":\"Total:NT$160\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 182,
+            "name": "I click on pick store button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1383
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[ng-click=\\\"pickStore()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 183,
+            "name": "I should be redirected to Family Mart Pick Store Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2481
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://mfme.map.com.tw/default.aspx?cvsname=familymart.shoplineapp.com&cvsid=11111111&cvstemp=https://previewtw2.shoplinetest.com&exchange=true",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 184,
+            "name": "I click on name search button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1368
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".menuButtonOff[onclick=\\\"openLightBox(2)\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 185,
+            "name": "I fill store name to store name field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1533
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"013024\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 186,
+            "name": "I click on search button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1542
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"#SearchType input[type=\\\"button\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 187,
+            "name": "I should see row of search store list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1342
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 188,
+            "name": "I click on row of search store list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1641
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"tr[onclick^=\\\"goNext\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 189,
+            "name": "I should see confirm store button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1515
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":2,\"displayedElementCount\":2}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 190,
+            "name": "I click on confirm store button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2443
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".cityList:nth-of-type(1) a\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 191,
+            "name": "I should be redirected to Shop Checkout Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1505
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw2.shoplinetest.com/checkout",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 192,
+            "name": "I fill name to name field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1541
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"陳小明\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 193,
+            "name": "I fill email to email address field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1567
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 194,
+            "name": "I fill phone to contact number field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1562
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"0912345678\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 195,
+            "name": "I click on same as checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1366
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[name=\\\"order[delivery_data][recipient_is_customer]\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 196,
+            "name": "I click on agree terms checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1330
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"policy\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 197,
+            "name": "I click on accept marketing checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1366
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"saveFields[marketing]\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 198,
+            "name": "I click on place order button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1384
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".btn.btn-success\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 199,
+            "name": "I should be redirected to Shop Order Confirm Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5854
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw2.shoplinetest.com/checkout",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 200,
+            "name": "I click on summary collapse",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1588
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div.cart-summary\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 201,
+            "name": "delivery fee should contain \"NT$0\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1887
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Delivery Fee:NT$0\",\"expectText\":\"NT$0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 202,
+            "name": "total should contain \"NT$160\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1650
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Total:NT$160\",\"expectText\":\"NT$160\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 203,
+            "name": "1st row of product unit price should contain \"NT$20\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1684
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20NT$50\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 204,
+            "name": "1st row of product subtotal should contain \"NT$20\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1582
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 205,
+            "name": "1st row of product quantity should equal to \"1\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:965"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1750
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"1\",\"expectText\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 206,
+            "name": "1st row of product items should contain \"1 variant member price\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1698
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"(dirty data) 1 variant member priceRNT$20NT$501NT$20\",\"expectText\":\"1 variant member price\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 207,
+            "name": "2nd row of product unit price should contain \"NT$50\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1607
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$50\",\"expectText\":\"NT$50\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 208,
+            "name": "2nd row of product subtotal should contain \"NT$100\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1703
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$100\",\"expectText\":\"NT$100\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 209,
+            "name": "2nd row of product quantity should equal to \"2\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:965"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1527
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"2\",\"expectText\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 210,
+            "name": "2nd row of product items should contain \"No variant with weight member price\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1724
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"(dirty data) No variant with weight member priceNT$502NT$100\",\"expectText\":\"No variant with weight member price\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 211,
+            "name": "3rd row of product unit price should contain \"NT$20\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1576
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 212,
+            "name": "3rd row of product subtotal should contain \"NT$40\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1730
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$40\",\"expectText\":\"NT$40\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 213,
+            "name": "3rd row of product quantity should equal to \"2\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:965"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1715
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"2\",\"expectText\":\"2\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 214,
+            "name": "3rd row of product items should contain \"multiple variations\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1607
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"(dirty data) multiple variationsRMNT$202NT$40\",\"expectText\":\"multiple variations\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 215,
+            "name": "item subtotal should contain 'NT$160'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1686
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Item Subtotal:NT$160\",\"expectText\":\"NT$160\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 216,
+            "name": "delivery fee should contain 'NT$0'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1513
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Delivery Fee:NT$0\",\"expectText\":\"NT$0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 217,
+            "name": "total should contain 'NT$160'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2069
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Total:NT$160\",\"expectText\":\"NT$160\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 219,
+            "name": "I am on Orders Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8862
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw2/orders?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw2/orders?locale=en&createdBy=admin",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 220,
+            "name": "I click on 1st row of order links",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1630
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"tr[ng-repeat^=\\\"order in order\\\"] a[href*=\\\"/orders/\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 221,
+            "name": "I should be redirected to Orders Show Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2153
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw2/orders/614d5c6d5084000029546f0b",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 222,
+            "name": "delivery fee should contain \"NT$0\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1510
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$0\",\"expectText\":\"NT$0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 223,
+            "name": "total should contain \"NT$160\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1513
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"TotalNT$160\",\"expectText\":\"NT$160\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 224,
+            "name": "product details should contain '1 x NT$20 = NT$20'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1543
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Product DetailsReturn Order Split Edit(dirty data) 1 variant member priceR1 x NT$20 = NT$20(dirty data) No variant with weight member price2 x NT$50 = NT$100(dirty data) multiple variationsRM2 x NT$20 = NT$40SubtotalNT$160Delivery FeeNT$0TotalNT$160\",\"expectText\":\"1 x NT$20 = NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 225,
+            "name": "product details should contain '2 x NT$50 = NT$100'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1531
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Product DetailsReturn Order Split Edit(dirty data) 1 variant member priceR1 x NT$20 = NT$20(dirty data) No variant with weight member price2 x NT$50 = NT$100(dirty data) multiple variationsRM2 x NT$20 = NT$40SubtotalNT$160Delivery FeeNT$0TotalNT$160\",\"expectText\":\"2 x NT$50 = NT$100\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 226,
+            "name": "product details should contain '2 x NT$20 = NT$40'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1498
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Product DetailsReturn Order Split Edit(dirty data) 1 variant member priceR1 x NT$20 = NT$20(dirty data) No variant with weight member price2 x NT$50 = NT$100(dirty data) multiple variationsRM2 x NT$20 = NT$40SubtotalNT$160Delivery FeeNT$0TotalNT$160\",\"expectText\":\"2 x NT$20 = NT$40\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 227,
+            "name": "---ROLL BACK---",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:1245"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 228,
+            "name": "I am on Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8295
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw2/products?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw2/products?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 229,
+            "name": "1st row of product list should contain '1 variant member price'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1527
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$50 NT$20 199 (dirty data) 1 variant member priceUnpublishEdit\",\"expectText\":\"1 variant member price\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 230,
+            "name": "2nd row of product list should contain 'No variant with weight member price'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1521
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$50 13 (dirty data) No variant with weight member priceUnpublishEdit\",\"expectText\":\"No variant with weight member price\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 231,
+            "name": "3rd row of product list should contain 'multiple variations'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1525
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$50 NT$10 998 (dirty data) multiple variationsUnpublishEdit\",\"expectText\":\"multiple variations\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 232,
+            "name": "I click on 1st row of product checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1433
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"span:not(.hide) input[ng-checked=\\\"isChecked(product.id)\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 233,
+            "name": "I click on 2nd row of product checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1390
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"span:not(.hide) input[ng-checked=\\\"isChecked(product.id)\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 234,
+            "name": "I click on 3rd row of product checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1374
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"span:not(.hide) input[ng-checked=\\\"isChecked(product.id)\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 235,
+            "name": "I select delete selected of bulk actions dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:467"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6804
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[id=\\\"menu-bulk\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"li[ng-click=\\\"bulkDeleteRecord()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 236,
+            "name": "I should see delete confirmation popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1347
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 237,
+            "name": "I click on delete checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1389
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".recheckbox label\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 238,
+            "name": "I click on confirm bulk button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1397
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[class=\\\"dialogbox ng-scope\\\"] button.btn-primary[ng-click=\\\"confirm()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 239,
+            "name": "product list should not contain 'multiple variations'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:893"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2573
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 240,
+            "name": "I am on Product Setting Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7865
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw2/products/settings?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw2/products/settings?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 241,
+            "name": "I should see member price toggle",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1345
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 242,
+            "name": "I click on member price toggle",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1411
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"toggle-button[model=\\\"productSettings.data.enabled_show_member_price\\\"] .btn-sl-toggle\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 243,
+            "name": "I click on update button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1387
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".btn-primary\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 244,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1346
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 173
+            },
+            "embeddings": [
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw2/products/settings?locale=en",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

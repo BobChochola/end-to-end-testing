@@ -1,0 +1,169 @@
+@RollbackData @rollbackDataPromotion
+Feature: Rollback data for testing
+  As a QA
+  I need to remove dirty data of promotion
+
+  Background:
+    Given I am on Admin Login Page
+    And I fill correct account email to email field
+    And I fill correct account password to password field
+    And I click on login button
+    Then I should see successful login
+    Then I check intercom message notification frame and click clear intercom message button
+    Then I check intercom message notification frame and click intercom message close button
+    When I check new feature alert notification frame and click new feature alert close button
+    When I check and click exclude products panel close button
+    When I check and click no thanks button
+
+  @RollbackData-BasicPromotion-1 @fixture-promotion
+  Scenario: To rollback data for promotion (for basic)
+    Given I am on Promotion Index Page
+    When I click on select all checkbox
+    Then I should see bulk actions dropdown
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+    When I click on next page button
+    Then I should see row of promotion list
+    When I click on select all checkbox
+    Then I should see bulk actions dropdown
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+    Then I should not see publish item
+
+    When I input 'dirty data' to search field
+    When I check and click select all checkbox
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-BasicPromotion-2 @fixture-promotion @theme-kingsman
+  Scenario: To rollback data for promotion (for kingsman)
+    Given I am on Promotion Index Page
+    When I click on select all checkbox
+    Then I should see bulk actions dropdown
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+    When I click on next page button
+    Then I should see row of promotion list
+    When I click on select all checkbox
+    Then I should see bulk actions dropdown
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+    Then I should not see publish item
+
+    When I input 'dirty data' to search field
+    When I check and click select all checkbox
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-BasicPromotion-3 @fixture-promotion @baseLocation-HK
+  Scenario: To rollback data for promotion (for HK)
+    Given I am on Promotion Index Page
+    When I click on select all checkbox
+    Then I should see bulk actions dropdown
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+    When I click on next page button
+    Then I should see row of promotion list
+    When I click on select all checkbox
+    Then I should see bulk actions dropdown
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+    Then I should not see publish item
+
+    When I input 'dirty data' to search field
+    When I check and click select all checkbox
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-FreeShipping-1 @fixture-promotion
+  Scenario: To rollback data for free shipping (for basic)
+    Given I am on Free Shipping Index Page
+    When I click on select all checkbox
+    Then I should see bulk actions dropdown
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+    Then I should not see publish item
+
+    When I input 'dirty data' to search field
+    When I check and click select all checkbox
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-FreeShipping-2 @fixture-promotion @theme-kingsman
+  Scenario: To rollback data for free shipping (for kingsman)
+    Given I am on Free Shipping Index Page
+    When I click on select all checkbox
+    Then I should see bulk actions dropdown
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+    Then I should not see publish item
+
+    When I input 'dirty data' to search field
+    When I check and click select all checkbox
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-FreeShipping-3 @fixture-promotion @baseLocation-HK
+  Scenario: To rollback data for free shipping (for HK)
+    Given I am on Free Shipping Index Page
+    When I click on select all checkbox
+    Then I should see bulk actions dropdown
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+    Then I should not see publish item
+
+    When I input 'dirty data' to search field
+    When I check and click select all checkbox
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-CartAddOn-1 @fixture-promotion
+  Scenario: To rollback data for cart add-on (for basic)
+    Given I am on Cart Add On Items Index Page
+    When I check and click select all checkbox
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-CartAddOn-2 @fixture-promotion @theme-kingsman
+  Scenario: To rollback data for cart add-on (for kingsman)
+    Given I am on Cart Add On Items Index Page
+    When I check and click select all checkbox
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-BundlePrice-1 @fixture-promotion
+  Scenario: To rollback data for bundle price (for basic)
+    Given I am on Bundle Pricing Index Page
+    When I input 'dirty data' to search field
+    When I check and click select all checkbox
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-BundleGroup-1 @fixture-promotion
+  Scenario: To rollback data for bundle group (for basic)
+    Given I am on Bundle Pricing Index Page
+    And I click on tab included 'Bundle Group Pricing'
+    When I input 'dirty data' to search field
+    When I check and click select all checkbox
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button

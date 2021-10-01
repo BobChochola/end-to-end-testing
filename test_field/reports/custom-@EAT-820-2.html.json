@@ -1,0 +1,2226 @@
+[
+  {
+    "description": "  As a merchant\n  I want to select all customer after using advaned filter",
+    "keyword": "Feature",
+    "name": "Can use customer select all if has advanced filter",
+    "line": 2,
+    "id": "can-use-customer-select-all-if-has-advanced-filter",
+    "tags": [
+      {
+        "name": "@BaseCase",
+        "line": 1
+      },
+      {
+        "name": "@Admin",
+        "line": 1
+      },
+      {
+        "name": "@Storefront",
+        "line": 1
+      },
+      {
+        "name": "@CRM",
+        "line": 1
+      },
+      {
+        "name": "@CustomerSearch",
+        "line": 1
+      },
+      {
+        "name": "@Search",
+        "line": 1
+      },
+      {
+        "name": "@customerAdvancedFilterWithSelectAll",
+        "line": 1
+      },
+      {
+        "name": "@EAT-820",
+        "line": 1
+      },
+      {
+        "name": "@fixture-shop",
+        "line": 1
+      },
+      {
+        "name": "@fixture-import-customer",
+        "line": 1
+      }
+    ],
+    "uri": "features/component/CRM/CustomerSearch/customerAdvancedFilterWithSelectAll.feature",
+    "elements": [
+      {
+        "id": "can-use-customer-select-all-if-has-advanced-filter;test-with-multiple-filter-conditions-applied(gender-+-created_time+-registered_time)",
+        "keyword": "Scenario",
+        "line": 207,
+        "name": "Test with multiple filter conditions applied(Gender + Created_Time+ Registered_Time)",
+        "tags": [
+          {
+            "name": "@BaseCase",
+            "line": 1
+          },
+          {
+            "name": "@Admin",
+            "line": 1
+          },
+          {
+            "name": "@Storefront",
+            "line": 1
+          },
+          {
+            "name": "@CRM",
+            "line": 1
+          },
+          {
+            "name": "@CustomerSearch",
+            "line": 1
+          },
+          {
+            "name": "@Search",
+            "line": 1
+          },
+          {
+            "name": "@customerAdvancedFilterWithSelectAll",
+            "line": 1
+          },
+          {
+            "name": "@EAT-820",
+            "line": 1
+          },
+          {
+            "name": "@fixture-shop",
+            "line": 1
+          },
+          {
+            "name": "@fixture-import-customer",
+            "line": 1
+          },
+          {
+            "name": "@EAT-820-2",
+            "line": 206
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:38"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "embeddings": [
+              {
+                "data": "{\"account\":{\"email\":\"testuser+tw_25@shoplineapp.com\",\"notificationEmail\":\"shoplineqa@gmail.com\",\"password\":\"1234567890\",\"handle\":\"previewtw35\",\"tags\":[\"non-admin\",\"baseLocation-TW\",\"theme-basic\",\"fixture-payment\",\"fixture-delivery\",\"fixture-product\",\"fixture-addon\",\"fixture-promotion\",\"fixture-shop\",\"fixture-import-customer\"],\"retry\":0}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on Admin Login Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11574
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/users/sign_in?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://sso-preview.shoplineapp.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I fill correct account email to email field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1565
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser+tw_25@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I fill correct account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1540
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"1234567890\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click on login button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3314
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[type=\\\"submit\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see successful login",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1589
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I check intercom message notification frame and click clear intercom message button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3175
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"clear intercom message button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I check intercom message notification frame and click intercom message close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3154
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"intercom message close button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I check new feature alert notification frame and click new feature alert close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3171
+            },
+            "embeddings": [
+              {
+                "data": "{\"frameLength\":0}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"frameNotFound\":\"new feature alert\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I check and click exclude products panel close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1362
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"exclude products panel close button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I check and click no thanks button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1210
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"no thanks button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I am on Customer List Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7970
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw35/users?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw35/users?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I select language dropdown option included 'English' of language dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9040
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[class*=\\\"navbar-collapse\\\"] li[class=\\\"dropdown\\\"]:nth-child(1)\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"[aria-labelledby=\\\"menu-languages\\\"] a\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"English\",\"中文(繁)\",\"中文(简)\",\"Tiếng Việt\",\"ไทย\"],\"text\":\"English\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I should see search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1345
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I click on all row of select checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1402
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[ng-model=\\\"bulkToggleState\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I check and click select all button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1176
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"select all button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I select delete selected of bulk action dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:467"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6795
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[class=\\\"btn btn-default dropdown-toggle\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"a[ng-click=\\\"bulkDelete()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "I should see popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1349
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I click on ok button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1378
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"confirm()\\\"]:not(.ng-hide)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I wait for 15 seconds for deleting",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15017
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "I am on Customer List Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7911
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw35/users?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw35/users?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should not see row of select checkbox list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:763"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51144
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "I select import report dropdown option included 'Import Report' of import report dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8695
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a.btn.btn-default.btn-lg.ng-binding.dropdown-toggle\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"li.dropdown.open a[class$=ng-binding]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Import Report\",\"Import History\",\"Bulk Update Customer Tags\"],\"text\":\"Import Report\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "I should be redirected to Customer Bulk Import Update Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1513
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw35/users/import?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw35/users/import",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I pick customer select all bulk upload file to file upload selector",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:225"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2691
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"/app/data/my_customers_import_select_all.xls\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I click on import customer button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1394
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[ng-show*=\\\"&& bulkUploadTotalItems>0\\\"]:not(.ng-hide) button[ng-click=\\\"importBulkUpload()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I should see popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1343
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 35,
+            "name": "I click on ok button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1434
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"confirm()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I wait for 15 seconds for update",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15015
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I should be redirected to Bulk Import Export Progress Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1623
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw35/jobs?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw35/jobs",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I Refresh",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:691"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 173
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "I should see report list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4851
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":20,\"displayedElementCount\":20}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 40,
+            "name": "report list should contain 'Bulk Import Customer'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1568
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Bulk Import Customer Customer Done 2021-09-22 4:01AM 2021-09-22 4:01AM 2021-09-22 4:01AMTotal : 76Successful / Failed : 76 / 0\",\"expectText\":\"Bulk Import Customer\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "report list should contain 'Customer'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1574
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Bulk Import Customer Customer Done 2021-09-22 4:01AM 2021-09-22 4:01AM 2021-09-22 4:01AMTotal : 76Successful / Failed : 76 / 0\",\"expectText\":\"Customer\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "report list should contain Export date",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:806"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1603
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Bulk Import Customer Customer Done 2021-09-22 4:01AM 2021-09-22 4:01AM 2021-09-22 4:01AMTotal : 76Successful / Failed : 76 / 0\",\"expectText\":\"2021-09-22\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 43,
+            "name": "report list should contain 'Total : 76'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1545
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Bulk Import Customer Customer Done 2021-09-22 4:01AM 2021-09-22 4:01AM 2021-09-22 4:01AMTotal : 76Successful / Failed : 76 / 0\",\"expectText\":\"Total : 76\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "report list should contain 'Successful / Failed : 76 / 0'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1574
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Bulk Import Customer Customer Done 2021-09-22 4:01AM 2021-09-22 4:01AM 2021-09-22 4:01AMTotal : 76Successful / Failed : 76 / 0\",\"expectText\":\"Successful / Failed : 76 / 0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 45,
+            "name": "1st row of Status list should equal to 'Done'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:965"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1575
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Done\",\"expectText\":\"Done\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 208,
+            "name": "I am on Customer List Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8409
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw35/users?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw35/users?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 209,
+            "name": "I click on filter dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1528
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".filter-label\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 210,
+            "name": "I select filter type dropdown option included 'Gender' of filter type dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16929
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[options=\\\"filters\\\"] a.sb-toggle\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"[options=\\\"filters\\\"] li\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Birthday\",\"Created Time\",\"Added From\",\"Registered Time\",\"Is a Member\",\"Is Blacklisted\",\"Gender\",\"Accepts Marketing\",\"User Credit Balance\",\"Membership tier\",\"Tag\",\"Membership Expiry Date\",\"Email verification Status\"],\"text\":\"Gender\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 211,
+            "name": "I select filter condition dropdown option included 'Male' of filter condition dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12554
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[options=\\\"vm.conditions\\\"] a.sb-toggle\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"[options=\\\"vm.conditions\\\"] li\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Male\",\"Female\",\"Undisclosed\"],\"text\":\"Male\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 212,
+            "name": "I click on add filter button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2073
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"vm.addFilter()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 213,
+            "name": "I should see apply filter label",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2939
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 214,
+            "name": "apply filter label should contain 'Gender: Male'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1596
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Showing users where: users.query.locale.is: Gender: Male\",\"expectText\":\"Gender: Male\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 216,
+            "name": "I click on filter dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2483
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".filter-label\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 217,
+            "name": "I select filter type dropdown option included 'Created Time' of filter type dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16974
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[options=\\\"filters\\\"] a.sb-toggle\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"[options=\\\"filters\\\"] li\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Birthday\",\"Created Time\",\"Is a Member\",\"Is Blacklisted\",\"Registered Time\",\"Added From\",\"Gender\",\"User Credit Balance\",\"Accepts Marketing\",\"Membership Expiry Date\",\"Membership tier\",\"Tag\",\"Email verification Status\"],\"text\":\"Created Time\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 218,
+            "name": "I select filter condition dropdown option included 'in the last week' of filter condition dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10655
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[options=\\\"vm.conditions\\\"] a.sb-toggle\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"[options=\\\"vm.conditions\\\"] li\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"in the last week\",\"in the last month\",\"in the last year\",\"on or after\",\"on or before\"],\"text\":\"in the last week\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 219,
+            "name": "I click on add filter button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2475
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"vm.addFilter()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 220,
+            "name": "I should see apply filter label",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1390
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 221,
+            "name": "apply filter label should contain 'Created Time:'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1595
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Showing users where: users.query.locale.is: Gender: Male Created Time: 2021-09-15 on or after\",\"expectText\":\"Created Time:\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 223,
+            "name": "I click on filter dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1459
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".filter-label\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 224,
+            "name": "I select filter type dropdown option included 'Registered Time' of filter type dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14360
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[options=\\\"filters\\\"] a.sb-toggle\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"[options=\\\"filters\\\"] li\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Birthday\",\"Created Time\",\"Added From\",\"Registered Time\",\"Is Blacklisted\",\"Is a Member\",\"User Credit Balance\",\"Gender\",\"Membership tier\",\"Membership Expiry Date\",\"Tag\",\"Email verification Status\",\"Accepts Marketing\"],\"text\":\"Registered Time\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 225,
+            "name": "I select filter condition dropdown option included 'in the last week' of filter condition dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12879
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[options=\\\"vm.conditions\\\"] a.sb-toggle\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"[options=\\\"vm.conditions\\\"] li\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"in the last week\",\"in the last month\",\"in the last year\",\"on or after\",\"on or before\"],\"text\":\"in the last week\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 226,
+            "name": "I click on add filter button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2607
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"vm.addFilter()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 227,
+            "name": "I should see apply filter label",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1436
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 228,
+            "name": "apply filter label should contain 'Registered Time:'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1807
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Showing users where: users.query.locale.is: Gender: Male Created Time: 2021-09-15 on or after Registered Time: 2021-09-15 on or after\",\"expectText\":\"Registered Time:\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 230,
+            "name": "I click on all row of select checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1528
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[ng-model=\\\"bulkToggleState\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 231,
+            "name": "I should see select all button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1795
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 232,
+            "name": "select all button should contain 'Select all 25 items'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2194
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Select all 25 items\",\"expectText\":\"Select all 25 items\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 233,
+            "name": "I click on select all button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1702
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"queryAll(true)\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 234,
+            "name": "clear all button should contain 'Clear selection'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2625
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Clear selection\",\"expectText\":\"Clear selection\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 235,
+            "name": "I select delete selected of bulk action dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:467"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6996
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[class=\\\"btn btn-default dropdown-toggle\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"a[ng-click=\\\"bulkDelete()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 236,
+            "name": "I should see popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1407
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 237,
+            "name": "I click on ok button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2454
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"confirm()\\\"]:not(.ng-hide)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 238,
+            "name": "I should see back to customer list button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1400
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 239,
+            "name": "I click on back to customer list button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1430
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[ng-click=\\\"reloadPage()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 240,
+            "name": "I should be redirected to Customer List Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1587
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw35/users?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw35/users?locale=en&gender=male&searchV2&created:on_after=2021-09-15&registered:on_after=2021-09-15",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 241,
+            "name": "I wait for 10 seconds for deleting",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10015
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 243,
+            "name": "I am on Customer List Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8131
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw35/users?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw35/users?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 244,
+            "name": "I click on all row of select checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1421
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[ng-model=\\\"bulkToggleState\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 245,
+            "name": "I should see select all button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1345
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 246,
+            "name": "select all button should contain 'Select all 51 items'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2069
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Select all 51 items\",\"expectText\":\"Select all 51 items\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 249,
+            "name": "---ROLL BACK---",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:1245"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 250,
+            "name": "I am on Customer List Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8410
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw35/users?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw35/users?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 251,
+            "name": "I click on all row of select checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1462
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[ng-model=\\\"bulkToggleState\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 252,
+            "name": "I check and click select all button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2840
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"queryAll(true)\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValueFound\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 253,
+            "name": "I select delete selected of bulk action dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:467"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7108
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[class=\\\"btn btn-default dropdown-toggle\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"a[ng-click=\\\"bulkDelete()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 254,
+            "name": "I should see popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1438
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 255,
+            "name": "I click on ok button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1871
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"confirm()\\\"]:not(.ng-hide)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 256,
+            "name": "I wait for 15 seconds for deleting",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14998
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 257,
+            "name": "I am on Customer List Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8615
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw35/users?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw35/users?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 258,
+            "name": "I should not see row of select checkbox list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:763"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51236
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 260,
+            "name": "I am on Shop Home Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7648
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw35.shoplinetest.com/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw35.shoplinetest.com/?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 261,
+            "name": "I click on sign in button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1866
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a.menu-button[href=\\\"/users/sign_in\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 262,
+            "name": "I should be redirected to Shop Login Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1918
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw35.shoplinetest.com/users/sign_in/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw35.shoplinetest.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":2,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 263,
+            "name": "I click on switch to signup tab button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1449
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".nav-tabs li:nth-child(1) a\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 264,
+            "name": "I should be redirected to Shop Sign Up Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1761
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw35.shoplinetest.com/users/sign_up/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw35.shoplinetest.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 265,
+            "name": "I fill line email to email field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1601
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 266,
+            "name": "I fill '1234567890' to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1572
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"1234567890\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 267,
+            "name": "I fill 'test' to name field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1535
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"test\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 268,
+            "name": "I click on send via mail and sms checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1363
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input.text-left.ng-pristine.ng-untouched.ng-valid.ng-empty\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 269,
+            "name": "I click on agree terms checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1357
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-show^=\\\"featureService.hasFeature\\\"] [type=\\\"checkbox\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 270,
+            "name": "I click on submit button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1393
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-controller=\\\"RegistrationsNewController\\\"] button[ng-click=\\\"formSubmit()\\\"]:not([disabled=\\\"disabled\\\"])\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 271,
+            "name": "I should be redirected to Shop Home Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6779
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw35.shoplinetest.com/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw35.shoplinetest.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 272,
+            "name": "I wait for 10 seconds for mail sent",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10011
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 274,
+            "name": "I am on Customer List Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8193
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw35/users?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw35/users?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 275,
+            "name": "I input email to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5091
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 276,
+            "name": "customer row should contain 'testuser@shoplineapp.com'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1535
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"test testuser@shoplineapp.com 0 - 0 2021-09-22 4:06AM View\",\"expectText\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 171
+            },
+            "embeddings": [
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw35/users?locale=en&query=testuser@shoplineapp.com&searchV2",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

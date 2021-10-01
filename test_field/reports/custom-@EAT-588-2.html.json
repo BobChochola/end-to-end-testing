@@ -1,0 +1,2332 @@
+[
+  {
+    "description": "  As a merchant\n  I want to add an order in backend\n  If the payment/delivery method is not acceptable ,I will see error message",
+    "keyword": "Feature",
+    "name": "Should also block blacklist of payment/delivery in backend",
+    "line": 2,
+    "id": "should-also-block-blacklist-of-payment/delivery-in-backend",
+    "tags": [
+      {
+        "name": "@BaseCase",
+        "line": 1
+      },
+      {
+        "name": "@Admin",
+        "line": 1
+      },
+      {
+        "name": "@Order",
+        "line": 1
+      },
+      {
+        "name": "@ManualOrder",
+        "line": 1
+      },
+      {
+        "name": "@manualOrderCanBlockBlacklistOfPaymentAndDelivery",
+        "line": 1
+      },
+      {
+        "name": "@fixture-payment",
+        "line": 1
+      },
+      {
+        "name": "@fixture-delivery",
+        "line": 1
+      },
+      {
+        "name": "@fixture-product",
+        "line": 1
+      },
+      {
+        "name": "@EAT-588",
+        "line": 1
+      }
+    ],
+    "uri": "features/component/Order/ManualOrder/manualOrderCanBlockBlacklistOfPaymentAndDelivery.feature",
+    "elements": [
+      {
+        "id": "should-also-block-blacklist-of-payment/delivery-in-backend;change-the-exclude-delivery-of-the-product",
+        "keyword": "Scenario",
+        "line": 115,
+        "name": "change the exclude delivery of the product",
+        "tags": [
+          {
+            "name": "@BaseCase",
+            "line": 1
+          },
+          {
+            "name": "@Admin",
+            "line": 1
+          },
+          {
+            "name": "@Order",
+            "line": 1
+          },
+          {
+            "name": "@ManualOrder",
+            "line": 1
+          },
+          {
+            "name": "@manualOrderCanBlockBlacklistOfPaymentAndDelivery",
+            "line": 1
+          },
+          {
+            "name": "@fixture-payment",
+            "line": 1
+          },
+          {
+            "name": "@fixture-delivery",
+            "line": 1
+          },
+          {
+            "name": "@fixture-product",
+            "line": 1
+          },
+          {
+            "name": "@EAT-588",
+            "line": 1
+          },
+          {
+            "name": "@EAT-588-2",
+            "line": 114
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2
+            },
+            "embeddings": [
+              {
+                "data": "{\"account\":{\"email\":\"testuser+0176@shoplineapp.com\",\"password\":\"12345678\",\"handle\":\"testuser0176723\",\"notificationEmail\":\"shoplineqa@gmail.com\",\"tags\":[\"non-admin\",\"baseLocation-TW\",\"theme-basic\",\"fixture-payment\",\"fixture-delivery\",\"fixture-product\",\"fixture-addon\",\"fixture-promotion\"],\"retry\":0}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on Admin Login Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10616
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/users/sign_in?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://sso-preview.shoplineapp.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I fill correct account email to email field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1650
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser+0176@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I fill correct account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1721
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"12345678\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click on login button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3501
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[type=\\\"submit\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should see successful login",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2185
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I check intercom message notification frame and click clear intercom message button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3207
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"clear intercom message button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I check intercom message notification frame and click intercom message close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3200
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"intercom message close button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I check new feature alert notification frame and click new feature alert close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3192
+            },
+            "embeddings": [
+              {
+                "data": "{\"frameLength\":0}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"frameNotFound\":\"new feature alert\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I check and click exclude products panel close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1201
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"exclude products panel close button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I check and click no thanks button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1267
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"no thanks button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 116,
+            "name": "I am on Orders Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8662
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0176723/orders?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/orders?locale=en&createdBy=admin",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 117,
+            "name": "I select export dropdown option included 'Create Order' of export dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10320
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"orders-more-actions:not(.ng-hide) li.dropdown\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\".clearfix .pull-right li.dropdown li\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"\",\"\",\"\",\"\",\"\",\"Create Order\",\"Export Stock Picking List\",\"Export Order Invoice\",\"Export Order Report\",\"Export Packing Slip\"],\"text\":\"Create Order\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 118,
+            "name": "I should be redirected to Orders Create Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1604
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0176723/orders/new?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/orders/new?locale=en&createdBy=admin",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 119,
+            "name": "I click on select customer button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1461
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"onSelectCustomer()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 120,
+            "name": "I should see select popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1408
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 121,
+            "name": "I input email to search customer field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5147
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 122,
+            "name": "I click on 1st row of customer checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1405
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"selectedUser\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 123,
+            "name": "I click on ok save button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1447
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"save()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 124,
+            "name": "I fill phone to phone number field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1604
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"0912345678\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 125,
+            "name": "I click on save phone number checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1409
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-model=\\\"customer.savePhone\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 126,
+            "name": "I click on next button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1466
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"submit()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 127,
+            "name": "I click on select product button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1425
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"openProductPicker()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 128,
+            "name": "I should see select popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1386
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 129,
+            "name": "I input '15th Product for Checkout' to search product field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5120
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"15th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 130,
+            "name": "1st row of select product should contain '15th Product for Checkout'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1578
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"15th Product for Checkout\",\"expectText\":\"15th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 131,
+            "name": "I click on 1st row of select product",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1494
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div.col-xs-3.col-md-3.ng-scope\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 132,
+            "name": "I click on ok save button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1496
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"save()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 133,
+            "name": "row of product should contain '15th Product for Checkout'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1601
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"15th Product for Checkoutx NT$25 = NT$25Unlimited Quantity×\",\"expectText\":\"15th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 134,
+            "name": "I click on product next button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1444
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"prodcutSubmit()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 135,
+            "name": "I should see default null value",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2177
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":5,\"displayedElementCount\":2}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 136,
+            "name": "I select shipping destination dropdown option included 'Taiwan' of shipping destination dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8606
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-model=\\\"delivery.country\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"[ng-model=\\\"delivery.country\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Hong Kong\",\"Taiwan\"],\"text\":\"Taiwan\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 137,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2972
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 138,
+            "name": "I select delivery method dropdown option included 'Custom Delivery' of delivery method dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10483
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-model=\\\"delivery.option\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"[ng-model=\\\"delivery.option\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"\",\"7-11 Pickup only (C2C)\",\"7-11 Pickup and pay in store (B2C)\",\"7-11 Pickup only (B2C)\",\"7-11 Pickup and pay in store (C2C)\",\"(DBW) - LocalDelivery\",\"(DBW) CustomDelivery\",\"(DBW) 7-11 C2C - Pickup only\",\"(DBW) 7-11 B2C - Pickup and pay in store\",\"Custom Delivery\",\"Local Delivery\"],\"text\":\"Custom Delivery\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 139,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3006
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 140,
+            "name": "I click on same as customer info checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1446
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-model=\\\"$parent.sameAsCustomer\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 141,
+            "name": "I click on delivery next button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1423
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"deliverySubmit()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 142,
+            "name": "I should see default null value",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2177
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":5,\"displayedElementCount\":3}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 143,
+            "name": "I select payment method dropdown option included 'Custom' of payment method dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9334
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-model=\\\"$parent.payment\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"[ng-model=\\\"$parent.payment\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"\",\"(dirty data) Edit Me\",\"Custom\",\"Cash on Delivery\",\"Bank Transfer\"],\"text\":\"Custom\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 144,
+            "name": "I click on delivery detail",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1588
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"toggleSection('delivery')\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 146,
+            "name": "I switch to 2 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7786
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":1,\"HandlesIdx\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 147,
+            "name": "I am on Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8195
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0176723/products?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/products?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 148,
+            "name": "I input '15th Product for Checkout' to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5310
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"15th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 149,
+            "name": "1st row of product list should contain '15th Product for Checkout'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1624
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$25 ∞ 15th Product for CheckoutUnpublishEdit\",\"expectText\":\"15th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 150,
+            "name": "I click on 1st row of edit button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1434
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".btn-group .product-action-button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 151,
+            "name": "I should be redirected to Product Edit Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3175
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/products/60095b4f0462f8002f738c21/edit",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 152,
+            "name": "I click on settings tab",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1455
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"//*[@id=\\\"product_form\\\"]/div[1]/div[3]/ul/li[8]/a\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 153,
+            "name": "I scroll down to excluded delivery collapse",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:525"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1398
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 154,
+            "name": "I click on excluded delivery collapse",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1428
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[ng-click=\\\"isSectionCollapsed.delivery_options = !isSectionCollapsed.delivery_options\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 155,
+            "name": "I click on row of excluded delivery list included 'Custom Delivery'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6695
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-class=\\\"{'selected-strikethrough':isDeliverySelected(delivery.key)}\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"7-11 Pickup only (C2C)\",\"7-11 Pickup and pay in store (B2C)\",\"7-11 Pickup only (B2C)\",\"7-11 Pickup and pay in store (C2C)\",\"Family Mart Pickup and pay in store (C2C)\",\"Family Mart Pickup only (C2C)\",\"(DBW) No integration 711 Pickup\",\"(DBW) - LocalDelivery\",\"(DBW) CustomDelivery\",\"(DBW) Family Mart B2C - Pickup and pay in store\",\"(DBW) Ezship pickup and pay in store\",\"(DBW) 7-11 C2C - Pickup only\",\"(DBW) 7-11 B2C - Pickup and pay in store\",\"Family Mart Pickup only (B2C)\",\"Family Mart Pickup and pay in store (B2C)\",\"Family Mart Pickup (no integration)\",\"Custom Delivery\",\"ezship pickup and pay in store\",\"Local Delivery\",\"7-11 Pickup (no integration)\"],\"text\":\"Custom Delivery\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 156,
+            "name": "I should see strikethrough",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1402
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 157,
+            "name": "I click on 2nd update button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1514
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".product-submit-btn:not([data-loading]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 158,
+            "name": "I should be redirected to Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1580
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0176723/products?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/products/60095b4f0462f8002f738c21/edit",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 159,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1400
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 160,
+            "name": "alert should contain 'Changes saved!'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1664
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Changes saved!View 15th Product for Checkout in your store.\",\"expectText\":\"Changes saved!\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 162,
+            "name": "I switch to 1 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7575
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":2,\"HandlesIdx\":0}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 163,
+            "name": "I should be on Orders Create Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:699"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1577
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0176723/orders/new?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/orders/new?locale=en&createdBy=admin",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 164,
+            "name": "I click on create order button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1502
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"confirm()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 165,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2977
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 166,
+            "name": "I should see error message frame",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1390
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 167,
+            "name": "error message frame should contain error message",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:806"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1572
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Selected payment or delivery method is not acceptable, please check setting or re-select it.\",\"expectText\":\"Selected payment or delivery method is not acceptable, please check setting or re-select it.\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 169,
+            "name": "I click on language dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1425
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[class*=\\\"navbar-collapse\\\"] li[class=\\\"dropdown\\\"]:nth-child(1)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 170,
+            "name": "I click on 2nd language dropdown option",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1608
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".dropdown-menu[aria-labelledby=\\\"menu-languages\\\"] li\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 171,
+            "name": "I click on delivery detail",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1430
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"toggleSection('delivery')\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 172,
+            "name": "I select delivery method dropdown option included 'Local Delivery' of delivery method dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10243
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-model=\\\"delivery.option\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"[ng-model=\\\"delivery.option\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"\",\"7-11 取貨不付款 (C2C)\",\"7-11 取貨付款 (B2C)\",\"7-11 取貨不付款 (B2C)\",\"7-11 取貨付款 (C2C)\",\"其他\",\"(DBW) CustomDelivery\",\"7-11 取貨不付款 (C2C)\",\"7-11 取貨付款 (B2C)\",\"Local Delivery\"],\"text\":\"Local Delivery\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 173,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3010
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 174,
+            "name": "I select delivery city dropdown option included '台北市' of delivery city dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12166
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[ng-model=\\\"delivery.city\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[ng-model=\\\"delivery.city\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"城市/市鎮\",\"台北市\",\"基隆市\",\"新北市\",\"宜蘭縣\",\"新竹市\",\"新竹縣\",\"桃園市\",\"苗栗縣\",\"台中市\",\"彰化縣\",\"南投縣\",\"嘉義市\",\"嘉義縣\",\"雲林縣\",\"台南市\",\"高雄市\",\"屏東縣\",\"台東縣\",\"花蓮縣\"],\"text\":\"台北市\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 175,
+            "name": "I select delivery area dropdown option included '105' of delivery area dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10802
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[ng-model=\\\"delivery.address2\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[ng-model=\\\"delivery.address2\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"地區\",\"100 中正區\",\"103 大同區\",\"104 中山區\",\"105 松山區\",\"106 大安區\",\"108 萬華區\",\"110 信義區\",\"111 士林區\",\"112 北投區\",\"114 內湖區\",\"115 南港區\",\"116 文山區\"],\"text\":\"105\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 176,
+            "name": "I fill address to delivery address field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1823
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"14F., No.44, Ln. 11, Guangfu N. Rd.\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 177,
+            "name": "I switch to 2 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7594
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":2,\"HandlesIdx\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 178,
+            "name": "I should be on Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:699"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1592
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0176723/products?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/products?page=1&with_product_set=true&with_flash_price_campaign=true&query=15th%20Product%20for%20Checkout&scope=search",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 179,
+            "name": "I input '15th Product for Checkout' to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5107
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"15th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 180,
+            "name": "1st row of product list should contain '15th Product for Checkout'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1608
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$25 ∞ 15th Product for CheckoutUnpublishEdit\",\"expectText\":\"15th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 181,
+            "name": "I click on 1st row of edit button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2436
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".btn-group .product-action-button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 182,
+            "name": "I should be redirected to Product Edit Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1767
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/products/60095b4f0462f8002f738c21/edit",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 183,
+            "name": "I click on settings tab",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1470
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"//*[@id=\\\"product_form\\\"]/div[1]/div[3]/ul/li[8]/a\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 184,
+            "name": "I click on excluded delivery collapse",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1434
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[ng-click=\\\"isSectionCollapsed.delivery_options = !isSectionCollapsed.delivery_options\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 185,
+            "name": "I scroll down to excluded payment list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:525"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1394
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 186,
+            "name": "I click on row of excluded delivery list included 'Local Delivery'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6692
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-class=\\\"{'selected-strikethrough':isDeliverySelected(delivery.key)}\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"7-11 Pickup only (C2C)\",\"7-11 Pickup and pay in store (B2C)\",\"7-11 Pickup only (B2C)\",\"7-11 Pickup and pay in store (C2C)\",\"Family Mart Pickup and pay in store (C2C)\",\"Family Mart Pickup only (C2C)\",\"(DBW) No integration 711 Pickup\",\"(DBW) - LocalDelivery\",\"(DBW) CustomDelivery\",\"(DBW) Family Mart B2C - Pickup and pay in store\",\"(DBW) Ezship pickup and pay in store\",\"(DBW) 7-11 C2C - Pickup only\",\"(DBW) 7-11 B2C - Pickup and pay in store\",\"Family Mart Pickup only (B2C)\",\"Family Mart Pickup and pay in store (B2C)\",\"Family Mart Pickup (no integration)\",\"Custom Delivery\",\"ezship pickup and pay in store\",\"Local Delivery\",\"7-11 Pickup (no integration)\"],\"text\":\"Local Delivery\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 187,
+            "name": "I should see strikethrough",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1589
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":2,\"displayedElementCount\":2}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 188,
+            "name": "I click on 2nd update button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1531
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".product-submit-btn:not([data-loading]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 189,
+            "name": "I should be redirected to Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1687
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0176723/products?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/products?page=1&with_product_set=true&with_flash_price_campaign=true&query=15th%20Product%20for%20Checkout&scope=search",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 190,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1432
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 191,
+            "name": "alert should contain 'Changes saved!'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1599
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Changes saved!View 15th Product for Checkout in your store.\",\"expectText\":\"Changes saved!\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 193,
+            "name": "I switch to 1 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7525
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":2,\"HandlesIdx\":0}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 194,
+            "name": "I should be on Orders Create Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:699"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1591
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0176723/orders/new?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/orders/new?locale=en&createdBy=admin",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 195,
+            "name": "I click on create order button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1478
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"confirm()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 196,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3005
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 197,
+            "name": "I should see error message frame",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1394
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 198,
+            "name": "error message frame should contain chinese error message",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:806"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1578
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"訂單不適用選取的付款或送貨方式，請確認相關設定或重選。\",\"expectText\":\"訂單不適用選取的付款或送貨方式，請確認相關設定或重選。\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 199,
+            "name": "---ROLL BACK---",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:1245"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 200,
+            "name": "I click on language dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1440
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[class*=\\\"navbar-collapse\\\"] li[class=\\\"dropdown\\\"]:nth-child(1)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 201,
+            "name": "I click on 1st language dropdown option",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1504
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".dropdown-menu[aria-labelledby=\\\"menu-languages\\\"] li\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 202,
+            "name": "I switch to 2 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7598
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":2,\"HandlesIdx\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 203,
+            "name": "I am on Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8268
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0176723/products?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/products?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 204,
+            "name": "I input '15th Product for Checkout' to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5303
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"15th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 205,
+            "name": "1st row of product list should contain '15th Product for Checkout'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1656
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$25 ∞ 15th Product for CheckoutUnpublishEdit\",\"expectText\":\"15th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 206,
+            "name": "I click on 1st row of edit button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1673
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".btn-group .product-action-button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 207,
+            "name": "I should be redirected to Product Edit Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3239
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/products/60095b4f0462f8002f738c21/edit",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 208,
+            "name": "I click on settings tab",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1473
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"//*[@id=\\\"product_form\\\"]/div[1]/div[3]/ul/li[8]/a\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 209,
+            "name": "I click on excluded delivery collapse",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1521
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[ng-click=\\\"isSectionCollapsed.delivery_options = !isSectionCollapsed.delivery_options\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 210,
+            "name": "I click on row of excluded delivery list included 'Custom Delivery'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7177
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-class=\\\"{'selected-strikethrough':isDeliverySelected(delivery.key)}\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"7-11 Pickup only (C2C)\",\"7-11 Pickup and pay in store (B2C)\",\"7-11 Pickup only (B2C)\",\"7-11 Pickup and pay in store (C2C)\",\"Family Mart Pickup and pay in store (C2C)\",\"Family Mart Pickup only (C2C)\",\"(DBW) No integration 711 Pickup\",\"(DBW) - LocalDelivery\",\"(DBW) CustomDelivery\",\"(DBW) Family Mart B2C - Pickup and pay in store\",\"(DBW) Ezship pickup and pay in store\",\"(DBW) 7-11 C2C - Pickup only\",\"(DBW) 7-11 B2C - Pickup and pay in store\",\"Family Mart Pickup only (B2C)\",\"Family Mart Pickup and pay in store (B2C)\",\"Family Mart Pickup (no integration)\",\"Custom Delivery\",\"ezship pickup and pay in store\",\"Local Delivery\",\"7-11 Pickup (no integration)\"],\"text\":\"Custom Delivery\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 211,
+            "name": "I click on row of excluded delivery list included 'Local Delivery'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7063
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-class=\\\"{'selected-strikethrough':isDeliverySelected(delivery.key)}\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"7-11 Pickup only (C2C)\",\"7-11 Pickup and pay in store (B2C)\",\"7-11 Pickup only (B2C)\",\"7-11 Pickup and pay in store (C2C)\",\"Family Mart Pickup and pay in store (C2C)\",\"Family Mart Pickup only (C2C)\",\"(DBW) No integration 711 Pickup\",\"(DBW) - LocalDelivery\",\"(DBW) CustomDelivery\",\"(DBW) Family Mart B2C - Pickup and pay in store\",\"(DBW) Ezship pickup and pay in store\",\"(DBW) 7-11 C2C - Pickup only\",\"(DBW) 7-11 B2C - Pickup and pay in store\",\"Family Mart Pickup only (B2C)\",\"Family Mart Pickup and pay in store (B2C)\",\"Family Mart Pickup (no integration)\",\"Custom Delivery\",\"ezship pickup and pay in store\",\"Local Delivery\",\"7-11 Pickup (no integration)\"],\"text\":\"Local Delivery\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 212,
+            "name": "I should not see strikethrough",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:763"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51163
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 213,
+            "name": "I click on 2nd update button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1586
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".product-submit-btn:not([data-loading]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 214,
+            "name": "I should be redirected to Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1812
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0176723/products?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/products?page=1&with_product_set=true&with_flash_price_campaign=true&query=15th%20Product%20for%20Checkout&scope=search",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 191
+            },
+            "embeddings": [
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0176723/products?page=1&with_product_set=true&with_flash_price_campaign=true&query=15th%20Product%20for%20Checkout&scope=search",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

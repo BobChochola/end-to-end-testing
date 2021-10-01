@@ -1,0 +1,111 @@
+let Page = require('../../framework/models/Page.js')
+
+class ShopProductShowPage extends Page {
+
+  get elements() {
+    return {
+      'id': this.by.css('.product-info:not(.ng-hide)'),
+      'member center button': this.by.css('.member-myaccount-button'),
+      'product quantity field': this.by.css('.form-quantity input'),
+      'addon quantity field': this.by.css('input[ng-model^="addAddonProductQuantity"]'),
+      'cart panel': this.by.css('[id="cart-panel"]'),
+      'cart item list': this.by.css('div[class="cart-item-content"]'),
+      'cart panel price list': this.by.css('div[class="price-details ng-binding"]'),
+      'cart panel image list': this.by.css('.cart-items img'),
+      'checkout button': this.by.css('[id="btn-checkout"]'),
+      'add to cart button': this.by.css('[ng-click="addItemToCart()"]'),
+      'buy together button': this.by.css('#btn-addon-checkout'),
+      'addon item': this.by.css('div#addon-item'),
+      'addon item checkbox': this.by.css('div#addon-item input[type="checkbox"]'),
+      'addon item image': this.by.css('div#addon-item img'),
+      'lightbox image': this.by.css('.lightbox-image img'),
+      'variation dropdown': this.by.css('[ng-model*="variationName"]'),
+      'dropdown option': this.by.css('[ng-model*="variationName"] option'),
+      'variation label': this.by.css('.variation-label'),
+      'remove button': this.by.css('.cart-item .remove a'),
+      'increase button': this.by.css('button[ng-click="incQuantity()"]'),
+      'decrease button': this.by.css('button[ng-click="decQuantity()"]'),
+      'message button': this.by.css('.product-info [ng-click="showMessageForm()"]'),
+      'close cart panel area': this.by.css('.modal-backdrop'),
+      'header search button': this.by.css('.search-button'),
+      'header bar search field': this.by.css('.search-button input[name="query"]'),
+      'add quantity button': this.by.css('button[ng-click^="incQuantity"]'),
+      'variation selector': this.by.css('.product-info .selectpicker'),
+      'variation option': this.by.css('.product-info .selectpicker option'),
+      'addon quantity field': this.by.css('.addon-item-mainInfo input'),
+      'row of product list': this.by.css('.product-list-container ul.boxify-container'),
+      'increase addon quantity button': this.by.css('.quantity-container [ng-click^="incAddonProductQuantity"]'),
+      'disable increase addon quantity button': this.by.css('.quantity-container [ng-click^="incAddonProductQuantity"][disabled="disabled"]'),
+      'addon checkbox': this.by.css('.addon-item-chkbox input'),
+      'sale price': this.by.css('.price-sale.js-price'),
+      'login button': this.by.css('a[class="menu-button signin-signup-button mobile-revamp-navigation"]'),
+      'message list': this.by.css('div[class="messagetobuy dark-secondary"]'),
+      'error message': this.by.css('p.out-of-stock'),
+      'search field': this.by.css('input.desktop-shop-search-input'),
+      'product info': this.by.css('.product-info:not(.ng-hide)'),
+      'description image': this.by.css('.description-container img'),
+      'main product image': this.by.css('[id="sl-product-image"]'),
+      'main product image button': this.by.css('[ng-style="getThumbnailStyle(media)"]'),
+      'regular price field': this.by.css('[label="Regular Price"] input[name="product_price"]'),
+      'additional detail image': this.by.css('[id="product-detail-media"] img'),
+      'product of related products': this.by.css('li.boxify-item.product-item'),
+      'row of related products image': this.by.css('li.boxify-item.product-item div.center-contain'),
+
+      'shop all button': this.by.css('.navbar-menu-wrapper .container a[href="/products"]'),
+      'quantity reminder': this.by.css('.out-of-stock p'),
+      'reminder member price': this.by.css('.member-price-tip:not(.ng-hide) .member-price-tip-content'),
+      'regular price': this.by.css('.price-regular'),
+      'cart panel price list': this.by.css('div[class="price-details ng-binding"]'),
+      'bundle item': this.by.css('div[class="label promotion-label label-default ng-binding"]'),
+      'variation select picture button': this.by.css('div[ng-click="selectVariation($index)"] .Variation-thumb'),
+      'Strikethrough regular price': this.by.css('.price-regular.price-crossed'),
+      'product detail': this.by.css('div[class="col-md-6 add-to-cart "]'),
+      'language dropdown': this.by.css('#fixed-menu-container .dropdown-toggle'),
+      'language dropdown option': this.by.css('.dropdown-menu.menu-button li'),
+      'add to wishlist button': this.by.css('.add-to-cart > :not(.ng-hide) .btn-add-wishlist'),
+      'add to wishlist button on': this.by.css('.add-to-cart > :not(.ng-hide) .btn-add-wishlist.is-active'),
+      'wishlist tips link': this.by.css('.Tooltip-wishlistTooltip[style="display: block;"] a'),
+      'notify when in stock button': this.by.css('button[ng-click="toggleBackInStock()"]'),
+      'promotion campaign information':this.by.css('p[class="Product-promotions-tag"] a'),
+      'notify when in stock button on': this.by.css('.js-btn-back-in-stock.is-active'),
+      'cart button': this.by.css('.cart-panel-button'),
+      'addon decrease button': this.by.css('button[ng-click*="decAddonProductQuantity"]'),
+      'promotion tag': this.by.css('p[class="Product-promotions-tag"] a'),
+      'star in product info': this.by.css('div[class*="product-info"] span[class="fa fa-star"]'),
+
+      //customer review
+      'customer review area': this.by.css('div.product-reviews-container'),
+      'rating source dropdown': this.by.css('select[ng-model="ratingSource"]'),
+      'rating source dropdown option': this.by.css('select[ng-model="ratingSource"] option'),
+      'review number': this.by.css('div.review-summary-info-title'),
+      'product stars': this.by.css('div.review-summary-info-desc'),
+      'five stars percentage': this.by.css('div.review-summary-bars div[ng-repeat*="index"]:nth-child(1)'),
+      'three stars percentage': this.by.css('div.review-summary-bars div[ng-repeat*="index"]:nth-child(3)'),
+      'one stars percentage': this.by.css('div.review-summary-bars div[ng-repeat*="index"]:nth-child(5)'),
+      'row of review': this.by.css('div[ng-repeat*="productReviewComment"]'),
+      'row of author name': this.by.css('[class*="review-comment-author-info-name"]'),
+      'row of left comment date': this.by.css('div[class*="review-comment-author-info-date"]'),
+      'row of comment': this.by.css('[class*="review-comment-message-content"]'),
+      'solid star': this.by.css('.review-comment-message-stars span[class="fa fa-star"]'),
+      'hollow star': this.by.css('.review-comment-message-stars span[class="fa fa-star-o"]'),
+      'star in first row': this.by.css('div[ng-repeat*="productReviewComment"]:nth-child(1) span[class="fa fa-star"]'), 
+      'star in second row': this.by.css('div[ng-repeat*="productReviewComment"]:nth-child(2) span[class="fa fa-star"]'),
+    }
+  }
+
+  get samples() {
+    return {
+      'product photo': `${this.props.sample.sampleImagesPath()}/1.png`,
+      'message lists': 'Please message the shop owner for order details.',
+      'white variants product photo': `${this.props.sample.sampleImagesPath()}/white.jpg`,
+      'yellow variants product photo': `${this.props.sample.sampleImagesPath()}/4.jpg`,
+      'left comment date': `${this.props.sample.genEnglishMonth()} ${this.props.sample.genOnlyDate()}, ${this.props.sample.genYear()}`,
+      'png image': `${this.props.sample.sampleImagesPath()}/2.png`,
+      'jpg image': `${this.props.sample.sampleImagesPath()}/3.jpg`,
+      'product photo': `${this.props.sample.sampleImagesPath()}/1.png`
+    }
+
+  }
+}
+
+module.exports = ShopProductShowPage

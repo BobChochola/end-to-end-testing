@@ -1,0 +1,3227 @@
+@SetupData @premiumFeature
+Feature: Setup data for testing
+  As a QA
+  I need data let auto test verified can be more fast
+
+  Background:
+    Given I am on Admin Login Page
+    And I fill correct account email to email field
+    And I fill correct account password to password field
+    And I click on login button
+    Then I should see successful login
+    Then I check intercom message notification frame and click clear intercom message button
+    Then I check intercom message notification frame and click intercom message close button
+    When I check new feature alert notification frame and click new feature alert close button
+    When I check and click exclude products panel close button
+    When I check and click no thanks button
+
+  @SetupData @SetupData-1
+  Scenario: To Create a full data for checkout for delivery
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Custom' of delivery type dropdown
+    And I click on language tab included 'English'
+    And I fill "Local Delivery" to name field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    And I click on select shipping countries link
+    Then I should see shipping zone settings popup
+    When I click on applicable shipping countries taiwan
+    And I click on right angle bracket button
+    And I click on ok button
+    Then I should not see shipping zone settings popup
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "Local Delivery"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included 'ezship pickup and pay in store'
+    And I click on popover ok button
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "ezship pickup and pay in store"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "7-11 Pickup (no integration)"
+    And I click on popover ok button
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "7-11 Pickup (no integration)"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "Family Mart Pickup (no integration)"
+    And I click on popover ok button
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "Family Mart Pickup (no integration)"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Custom' of delivery type dropdown
+    And I click on requires customer address checkbox
+    And I click on language tab included 'English'
+    And I fill "Custom Delivery" to name field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    And I click on select shipping countries link
+    Then I should see shipping zone settings popup
+    When I click on applicable shipping countries taiwan
+    And I click on right angle bracket button
+    And I click on ok button
+    Then I should not see shipping zone settings popup
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "Custom Delivery"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "7-11 Pickup and pay in store (C2C)"
+    And I click on popover ok button
+    And I fill the 711C2C PicknPay Parent ID to parent id field
+    And I fill the 711 Shop ID to shop id field
+    And I fill the Merchant Name to merchant name field
+    And I fill the Merchant Name to sender chinese name field
+    And I fill the Phone Number to phone number field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "7-11 Pickup and pay in store (C2C)"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "7-11 Pickup only (C2C)"
+    And I click on popover ok button
+    And I fill the 711C2C PickOnly Parent ID to parent id field
+    And I fill the 711 Shop ID to shop id field
+    And I fill the Merchant Name to merchant name field
+    And I fill the Merchant Name to sender chinese name field
+    And I fill the Phone Number to phone number field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "7-11 Pickup only (C2C)"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "7-11 Pickup and pay in store (B2C)"
+    And I click on popover ok button
+    And I fill the 711B2C Parent ID to parent id field
+    And I fill the 711 Shop ID to shop id field
+    And I fill the Merchant Name to merchant name field
+    And I fill the Phone Number to custom support phone number field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "7-11 Pickup and pay in store (B2C)"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "7-11 Pickup only (B2C)"
+    And I click on popover ok button
+    And I fill the 711B2C Parent ID to parent id field
+    And I fill the 711 Shop ID to shop id field
+    And I fill the Merchant Name to merchant name field
+    And I fill the Phone Number to custom support phone number field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "7-11 Pickup only (B2C)"
+
+    Given I am on Return Delivery Create Page
+    When I select delivery type dropdown option included 'Store' of delivery type dropdown
+    Then provider dropdown should contain '7-11 Return Only (C2B)'
+    And I fill the 711C2B Parent ID to parent id field
+    And I fill the 711C2B Shop ID to shop id field
+    And I fill the Merchant Name to merchant name field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of return delivery options list should contain "7-11 Return Only (C2B)"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "Family Mart Pickup and pay in store (B2C)"
+    And I click on popover ok button
+    And I fill the FMTB2C Parent ID to parent id field
+    And I fill the FMTB2C Shop ID to shop id field
+    And I fill the Merchant Name to merchant name field
+    And I fill the Phone Number to custom support phone number field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "Family Mart Pickup and pay in store (B2C)"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "Family Mart Pickup only (B2C)"
+    And I click on popover ok button
+    And I fill the FMTB2C Parent ID to parent id field
+    And I fill the FMTB2C Shop ID to shop id field
+    And I fill the Merchant Name to merchant name field
+    And I fill the Phone Number to custom support phone number field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "Family Mart Pickup only (B2C)"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "7-11 Pickup only (C2C)"
+    And I click on popover ok button
+    And I fill the 711C2C PickOnly Parent ID to parent id field
+    And I fill the 711 Shop ID to shop id field
+    And I fill the Merchant Name to merchant name field
+    And I fill the Merchant Name to sender chinese name field
+    And I fill the Phone Number to phone number field
+    And I fill the description to description field
+    And I click on language tab included 'English'
+    And I fill "(DBW) 7-11 C2C - Pickup only" to name field
+    And I select delivery fee type dropdown option included 'Order Weight' of delivery fee type dropdown
+    And I fill "15" to 1st weight field
+    And I fill "0" to 1st delivery by weight fee field
+    And I fill "15" to 2nd delivery by weight fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    Then 1st row of delivery options list should contain "(DBW) 7-11 C2C - Pickup only"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "7-11 Pickup and pay in store (B2C)"
+    And I click on popover ok button
+    And I fill the 711B2C Parent ID to parent id field
+    And I fill the 711 Shop ID to shop id field
+    And I fill the Merchant Name to merchant name field
+    And I fill the Phone Number to custom support phone number field
+    And I fill the description to description field
+    And I click on language tab included 'English'
+    And I fill "(DBW) 7-11 B2C - Pickup and pay in store" to name field
+    And I select delivery fee type dropdown option included 'Order Weight' of delivery fee type dropdown
+    And I fill "10" to 1st weight field
+    And I fill "0" to 1st delivery by weight fee field
+    And I fill "20" to 2nd delivery by weight fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    Then 1st row of delivery options list should contain "(DBW) 7-11 B2C - Pickup and pay in store"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "Family Mart Pickup and pay in store (B2C)"
+    And I click on popover ok button
+    And I fill the FMTB2C Parent ID to parent id field
+    And I fill the FMTB2C Shop ID to shop id field
+    And I fill the Merchant Name to merchant name field
+    And I fill the Phone Number to custom support phone number field
+    And I fill the description to description field
+    And I click on language tab included 'English'
+    And I fill "(DBW) Family Mart B2C - Pickup and pay in store" to name field
+    And I select delivery fee type dropdown option included 'Order Weight' of delivery fee type dropdown
+    And I fill "10" to 1st weight field
+    And I fill "0" to 1st delivery by weight fee field
+    And I fill "20" to 2nd delivery by weight fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    Then 1st row of delivery options list should contain "(DBW) Family Mart B2C - Pickup and pay in store"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included 'ezship pickup and pay in store'
+    And I click on popover ok button
+    And I fill the description to description field
+    And I click on language tab included 'English'
+    And I fill "(DBW) Ezship pickup and pay in store" to name field
+    And I select delivery fee type dropdown option included 'Order Weight' of delivery fee type dropdown
+    And I fill "15.5" to 1st weight field
+    And I fill "20" to 1st delivery by weight fee field
+    And I fill "30" to 2nd delivery by weight fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    Then 1st row of delivery options list should contain "(DBW) Ezship pickup and pay in store"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Custom' of delivery type dropdown
+    And I click on requires customer address checkbox
+    And I click on language tab included 'English'
+    And I fill "(DBW) CustomDelivery" to name field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Order Weight' of delivery fee type dropdown
+    And I fill "15.5" to 1st weight field
+    And I fill "30" to 1st delivery by weight fee field
+    And I fill "50" to 2nd delivery by weight fee field
+    And I click on select shipping countries link
+    Then I should see shipping zone settings popup
+    And I click on applicable shipping countries taiwan
+    And I click on right angle bracket button
+    And I click on ok button
+    Then I should not see shipping zone settings popup
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    Then 1st row of delivery options list should contain "(DBW) CustomDelivery"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Custom' of delivery type dropdown
+    And I click on language tab included 'English'
+    And I fill "(DBW) - LocalDelivery" to name field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Order Weight' of delivery fee type dropdown
+    And I click on select shipping countries link
+    Then I should see shipping zone settings popup
+    And I click on applicable shipping countries taiwan
+    And I click on right angle bracket button
+    And I click on ok button
+    Then I should not see shipping zone settings popup
+    And I fill "10" to 1st weight field
+    And I fill "10" to 1st delivery by weight fee field
+    And I fill "15" to 2nd delivery by weight fee field
+    And I click on add shipping zone button
+    And I click on 2nd select shipping countries link
+    Then I should see shipping zone settings popup
+    And I click on applicable shipping countries hong kong
+    And I click on right angle bracket button
+    And I click on ok button
+    Then I should not see shipping zone settings popup
+    And I fill "10" to 2nd weight field
+    And I fill "20" to 3rd delivery by weight fee field
+    And I fill "35" to 4th delivery by weight fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    Then 1st row of delivery options list should contain "(DBW) - LocalDelivery"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "7-11 Pickup (no integration)"
+    And I click on popover ok button
+    And I fill the description to description field
+    And I click on language tab included 'English'
+    And I fill "(DBW) No integration 711 Pickup" to name field
+    And I select delivery fee type dropdown option included 'Order Weight' of delivery fee type dropdown
+    And I fill "20" to 1st weight field
+    And I fill "0" to 1st delivery by weight fee field
+    And I fill "15" to 2nd delivery by weight fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    Then 1st row of delivery options list should contain "(DBW) No integration 711 Pickup"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "Family Mart Pickup and pay in store (C2C)"
+    And I click on popover ok button
+    And I fill the Merchant Name to merchant name field
+    And I fill the Merchant Name to sender chinese name field
+    And I fill the Phone Number to phone number field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "Family Mart Pickup and pay in store (C2C)"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Pick-up' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included "Family Mart Pickup only (C2C)"
+    And I click on popover ok button
+    And I fill the Merchant Name to merchant name field
+    And I fill the Merchant Name to sender chinese name field
+    And I fill the Phone Number to phone number field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "Family Mart Pickup only (C2C)"
+
+  @SetupData @SetupData-2
+  Scenario: To Create a full data for checkout for payment
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'PayPal Express' of payment type dropdown
+    And I fill Paypal email to paypal email field
+    And I fill API Username to api username field
+    And I fill API Password to api password field
+    And I fill API Signature to api signature field
+    When I click on language tab included 'English'
+    And I fill "Credit card or Paypal (Paypal Express)" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Credit card or Paypal (Paypal Express)"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'Bank Transfer' of payment type dropdown
+    And I fill instruction to payment instructions field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Bank Transfer"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'Cash on Delivery' of payment type dropdown
+    And I fill instruction to payment instructions field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Cash on Delivery"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'Custom' of payment type dropdown
+    When I click on language tab included 'English'
+    And I fill "Custom" to name field
+    And I fill instruction to payment instructions field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Custom"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'Pay on Store Pickup via ezShip' of payment type dropdown
+    And I fill ezShip ID to id field
+    When I click on language tab included 'English'
+    And I fill "Pay on Store Pickup via ezShip" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Pay on Store Pickup via ezShip"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'LINE Pay' of payment type dropdown
+    And I fill Channel ID to channel id field
+    And I fill Channel Secret Key to channel secret key field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "LINE Pay"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'ECpay' of payment type dropdown
+    And I fill Merchant ID to id field
+    And I fill API HashKey to hashkey field
+    And I fill API HashIV to hashiv field
+    When I select ecpay payments dropdown option included 'Credit Card' of ecpay payments dropdown
+    When I click on language tab included 'English'
+    And I fill "Credit Card via ECpay" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Credit Card via ECpay"
+
+    Given I am on Payment Create Page
+    And I should see ECpay
+    When I select payment type dropdown option included 'ECpay' of payment type dropdown
+    And I fill Merchant ID to id field
+    And I fill API HashKey to hashkey field
+    And I fill API HashIV to hashiv field
+    When I select ecpay payments dropdown option included 'CVS' of ecpay payments dropdown
+    When I click on language tab included 'English'
+    And I fill "CVS via ECpay" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "CVS via ECpay"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'ECpay' of payment type dropdown
+    And I fill Merchant ID to id field
+    And I fill API HashKey to hashkey field
+    And I fill API HashIV to hashiv field
+    When I select ecpay payments dropdown option included 'Barcode' of ecpay payments dropdown
+    When I click on language tab included 'English'
+    And I fill "Barcode via ECpay" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Barcode via ECpay"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included "O'Pay" of payment type dropdown
+    And I fill Merchant ID to id field
+    And I fill API HashKey to hashkey field
+    And I fill API HashIV to hashiv field
+    When I select opay payments dropdown option included 'Credit Card' of opay payments dropdown
+    When I click on language tab included 'English'
+    And I fill "Credit Card via O'Pay" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Credit Card via O'Pay"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included "O'Pay" of payment type dropdown
+    And I fill Merchant ID to id field
+    And I fill API HashKey to hashkey field
+    And I fill API HashIV to hashiv field
+    When I select opay payments dropdown option included 'WebATM' of opay payments dropdown
+    When I click on language tab included 'English'
+    And I fill "WebATM via O'Pay" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "WebATM via O'Pay"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included "O'Pay" of payment type dropdown
+    And I fill Merchant ID to id field
+    And I fill API HashKey to hashkey field
+    And I fill API HashIV to hashiv field
+    When I select opay payments dropdown option included 'ATM' of opay payments dropdown
+    When I click on language tab included 'English'
+    And I fill "ATM via O'Pay" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "ATM via O'Pay"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included "O'Pay" of payment type dropdown
+    And I fill Merchant ID to id field
+    And I fill API HashKey to hashkey field
+    And I fill API HashIV to hashiv field
+    When I select opay payments dropdown option included 'CVS' of opay payments dropdown
+    When I click on language tab included 'English'
+    And I fill "CVS via O'Pay" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "CVS via O'Pay"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'Taishin' of payment type dropdown
+    And I fill Taishin Merchant ID to id field
+    And I fill Taishin TID to tid field
+    When I click on language tab included 'English'
+    And I fill "Taishin" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Taishin"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'Pay on 7-11 Store Pickup (C2C)' of payment type dropdown
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Pay on 7-11 Store Pickup (C2C)"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'Pay on 7-11 Store Pickup (B2C)' of payment type dropdown
+    When I click on language tab included 'English'
+    And I fill "Pay on 7-11 Store Pickup (B2C)" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Pay on 7-11 Store Pickup (B2C)"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'No Pay on 7-11 Return (C2B)' of payment type dropdown
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "No Pay on 7-11 Return (C2B)"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'Pay on Family Mart Store Pickup (B2C)' of payment type dropdown
+    When I click on language tab included 'English'
+    And I fill "Pay on Family Mart Store Pickup (B2C)" to name field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Pay on Family Mart Store Pickup (B2C)"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'Pay on Family Mart Store Pickup (C2C)' of payment type dropdown
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Pay on Family Mart Store Pickup (C2C)"
+
+  @SetupData @SetupData-3
+  Scenario: To Create a full data for product
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "Out Of Stock" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "0" to quantity field
+    Then I scroll down to add button
+    And I click on settings tab
+    And I input "Test" to tag field
+    And I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "1st Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "30" to regular price field
+    And I fill "99998" to quantity field
+    And I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "2nd Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "1" to regular price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "3rd Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "10" to sale price field
+    And I fill "1000000" to quantity field
+    And I scroll down to breadcrumb
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "4th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "10" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "5th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "30" to regular price field
+    And I fill "5000000" to quantity field
+    And I scroll down to breadcrumb
+    And I click on settings tab
+    And I input "6.5" to weight field
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "6th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "59" to regular price field
+    And I fill "10" to cost field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I fill "5000000" to 1st row of variation quantity field
+    And I input '5' to 1st row of variation weight field
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "7th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "100" to regular price field
+    And I fill "49" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on variations tab
+    And I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "8th Product for Checkout" to english name field
+    And I click on variations tab
+    And I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    And I click on unlimited quantity checkbox
+    And I click on variations same price checkbox
+    And I fill "50" to 1st row of variation price field
+    And I fill "30" to 2nd row of variation price field
+    And I scroll down to breadcrumb
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "9th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "150" to regular price field
+    And I fill "99" to sale price field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    When I click on add variation button
+    And I input "S" to 2nd add options field
+    And I input "M" to 2nd add options field
+    And I fill "2000000" to 1st row of variation quantity field
+    And I fill "1900000" to 2nd row of variation quantity field
+    And I fill "3000000" to 3rd row of variation quantity field
+    And I fill "4000000" to 4th row of variation quantity field
+    And I scroll down to breadcrumb
+    And I click on settings tab
+    And I click on excluded payment collapse
+    And I click on row of excluded payment list included "Pay on Family Mart Store Pickup (C2C)"
+    And I click on row of excluded payment list included "Pay on Family Mart Store Pickup (B2C)"
+    And I click on row of excluded payment list included "ATM via O'Pay"
+    And I click on excluded delivery collapse
+    And I click on row of excluded delivery list included "Family Mart Pickup and pay in store (C2C)"
+    And I click on row of excluded delivery list included "(DBW) No integration 711 Pickup"
+    And I click on row of excluded delivery list included "(DBW) CustomDelivery"
+    And I click on row of excluded delivery list included "(DBW) Ezship pickup and pay in store"
+    And I click on row of excluded delivery list included "(DBW) Family Mart B2C - Pickup and pay in store"
+    And I click on row of excluded delivery list included "(DBW) 7-11 B2C - Pickup and pay in store"
+    And I click on row of excluded delivery list included "(DBW) 7-11 C2C - Pickup only"
+    And I click on row of excluded delivery list included "Family Mart Pickup only (B2C)"
+    And I click on row of excluded delivery list included "7-11 Pickup only (B2C)"
+    And I click on row of excluded delivery list included "7-11 Pickup and pay in store (B2C)"
+    And I click on row of excluded delivery list included "7-11 Pickup only (C2C)"
+    And I click on row of excluded delivery list included "7-11 Pickup and pay in store (C2C)"
+    And I click on row of excluded delivery list included "Custom Delivery"
+    And I click on row of excluded delivery list included "Family Mart Pickup (no integration)"
+    And I click on row of excluded delivery list included "7-11 Pickup (no integration)"
+    And I click on row of excluded delivery list included "ezship pickup and pay in store"
+    And I click on row of excluded delivery list included "Local Delivery"
+    Then I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "10th Product for Checkout" to english name field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    When I click on add variation button
+    And I input "S" to 2nd add options field
+    And I input "M" to 2nd add options field
+    And I click on variations same price checkbox
+    And I fill "50" to 1st row of variation price field
+    And I fill "25" to 2nd row of variation price field
+    And I fill "50" to 3rd row of variation price field
+    And I fill "25" to 4th row of variation price field
+    And I fill "2000000" to 1st row of variation quantity field
+    And I fill "1900000" to 2nd row of variation quantity field
+    And I fill "3000000" to 3rd row of variation quantity field
+    And I fill "4000000" to 4th row of variation quantity field
+    Then I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "11th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "150" to regular price field
+    And I fill "99" to sale price field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    When I click on add variation button
+    And I input "S" to 2nd add options field
+    And I input "M" to 2nd add options field
+    And I click on unlimited quantity checkbox
+    And I click on settings tab
+    And I click on excluded payment collapse
+    And I click on row of excluded payment list included "Pay on Family Mart Store Pickup (B2C)"
+    And I click on row of excluded payment list included "No Pay on 7-11 Return (C2B)"
+    And I click on row of excluded payment list included "Pay on 7-11 Store Pickup (B2C)"
+    And I click on row of excluded payment list included "Pay on 7-11 Store Pickup (C2C)"
+    And I click on row of excluded payment list included "Taishin"
+    And I click on row of excluded payment list included "CVS via O'Pay"
+    And I click on row of excluded payment list included "Credit Card via O'Pay"
+    And I click on row of excluded payment list included "ATM via O'Pay"
+    And I click on row of excluded payment list included "WebATM via O'Pay"
+    And I click on row of excluded payment list included "Barcode via ECpay"
+    And I click on row of excluded payment list included "CVS via ECpay"
+    And I click on row of excluded payment list included "Credit Card via ECpay"
+    And I click on row of excluded payment list included "LINE Pay"
+    And I click on row of excluded payment list included "Pay on Store Pickup via ezShip"
+    And I click on row of excluded payment list included "Custom"
+    And I click on row of excluded payment list included "Cash on Delivery"
+    And I click on row of excluded payment list included "Bank Transfer"
+    And I click on row of excluded payment list included "Credit card or Paypal"
+    And I click on excluded delivery collapse
+    And I click on row of excluded delivery list included "Family Mart Pickup only (C2C)"
+    And I click on row of excluded delivery list included "(DBW) No integration 711 Pickup"
+    And I click on row of excluded delivery list included "(DBW) - LocalDelivery"
+    And I click on row of excluded delivery list included "Family Mart Pickup and pay in store (B2C)"
+    Then I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "12th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "10" to regular price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on settings tab
+    And I input "5.5" to weight field
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "13th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "35" to regular price field
+    And I click on unlimited quantity checkbox
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    And I fill '4.2' to 1st row of variation weight field
+    And I input '4.2' to 2nd row of variation weight field
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "14th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "30" to regular price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on settings tab
+    And I input "6" to weight field
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "15th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "25" to regular price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on settings tab
+    And I input "10.1" to weight field
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "16th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "25" to regular price field
+    And I click on unlimited quantity checkbox
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    And I fill '5' to 1st row of variation weight field
+    And I input '5' to 2nd row of variation weight field
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "17th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "100" to regular price field
+    And I fill "10" to sale price field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    And I fill "2000000" to 1st row of variation quantity field
+    And I fill "2000000" to 2nd row of variation quantity field
+    And I fill '6' to 1st row of variation weight field
+    And I input '6' to 2nd row of variation weight field
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "18th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "100" to regular price field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I fill "1600000" to 1st row of variation quantity field
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "19th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "5" to regular price field
+    And I fill "1" to sale price field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I fill "1200000" to 1st row of variation quantity field
+    And I click on settings tab
+    And I click on preorder toggle
+    And I fill "Test" to preorder note field
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "20th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I should see hide price toggle
+    And I click on hide price toggle
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+  @SetupData @SetupData-4
+  Scenario: To Create a full data for add-on item, Based on productSetuped
+    Given I am on Addon Create Page
+    And I click on tab included "Product Level Settings"
+    Then I should see search field
+    And I fill "1st" to search field
+    And I click on search product button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on confirm button
+    Then I should be redirected to Addon Create Page
+    Then I scroll down to add button
+    And I fill "10" to 1st row of addon price field
+    And I click on tab included "Add-on Item Info"
+    Then I should see english name field
+    And I fill "1st Addon for Checkout" to english name field
+    When I pick addon photo to addon photo selector
+    Then I should see delete photo button
+    And I fill "2000000" to addon quantity field
+    And I click on add button
+    # for one
+    # Then I should see confirm popup
+    # And I click on ok button
+    Then I should see alert
+
+    Given I am on Addon Create Page
+    And I click on tab included "Product Level Settings"
+    Then I should see search field
+    And I fill "4th Product for Checkout" to search field
+    And I click on search product button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on confirm button
+    Then I should be redirected to Addon Create Page
+    And I fill "8th Product for Checkout" to search field
+    And I click on search product button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on confirm button
+    Then I should be redirected to Addon Create Page
+    Then I scroll down to add button
+    And I fill "10" to 1st row of addon price field
+    And I fill "10" to 2nd row of addon price field
+    And I click on tab included "Add-on Item Info"
+    Then I should see english name field
+    And I fill "2nd Addon for Checkout" to english name field
+    When I pick addon photo to addon photo selector
+    Then I should see delete photo button
+    And I click on unlimited checkbox
+    And I click on add button
+    # for one
+    # Then I should see confirm popup
+    # And I click on ok button
+    Then I should see alert
+
+    Given I am on Addon Create Page
+    And I click on tab included "Product Level Settings"
+    Then I should see search field
+    And I fill "17th Product for Checkout" to search field
+    And I click on search product button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on confirm button
+    Then I should be redirected to Addon Create Page
+    And I fill "13th Product for Checkout" to search field
+    And I click on search product button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on confirm button
+    Then I should be redirected to Addon Create Page
+    Then I scroll down to add button
+    And I fill "10" to 1st row of addon price field
+    And I fill "10" to 2nd row of addon price field
+    And I click on tab included "Add-on Item Info"
+    Then I should see english name field
+    And I fill "3rd Addon for Checkout" to english name field
+    When I pick addon photo to addon photo selector
+    Then I should see delete photo button
+    And I fill "2000000" to addon quantity field
+    And I fill "000" to SKU field
+    And I fill "5.5" to weight field
+    And I click on add button
+    # for one
+    # Then I should see confirm popup
+    # And I click on ok button
+    Then I should see alert
+
+  @SetupData @SetupData-5
+  Scenario: To Create a full data for checkout for promotion
+    Given I am on Promotion Create Page
+    And I fill "1st Promotion" to name field
+    And I select discount amount of benefit type dropdown
+    And I fill "10" to promotion value field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "2nd Promotion" to name field
+    And I click on subtotal condition checkbox
+    And I select discount amount of benefit type dropdown
+    And I fill "100" to promotion value field
+    And I fill "1000" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "3rd Promotion" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I fill "10" to promotion value field
+    And I fill "3" to promotion condition field
+    And I click on add tier button
+    And I fill "20" to 2nd promotion value field
+    And I fill "5" to 2nd promotion condition field
+    And I click on add tier button
+    And I fill "50" to 3rd promotion value field
+    And I fill "10" to 3rd promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on apply method checkbox included 'codes'
+    Then I should see coupon code field
+    And I fill "shoplinetiers" to coupon code field
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "4th Promotion" to name field
+    And I fill "77" to promotion value field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on apply method checkbox included 'codes'
+    Then I should see coupon code field
+    And I fill "711Only" to coupon code field
+    And I click on 3rd countinue to button
+    And I click on delivery options checkbox included "(DBW) - LocalDelivery"
+    And I click on delivery options checkbox included "(DBW) CustomDelivery"
+    And I click on delivery options checkbox included "(DBW) Ezship pickup and pay in store"
+    And I click on delivery options checkbox included "(DBW) Family Mart B2C - Pickup and pay in store"
+    And I click on delivery options checkbox included "Family Mart Pickup only (B2C)"
+    And I click on delivery options checkbox included "Family Mart Pickup and pay in store (B2C)"
+    And I click on delivery options checkbox included "Custom Delivery"
+    And I click on delivery options checkbox included "Family Mart Pickup (no integration)"
+    And I click on delivery options checkbox included "ezship pickup and pay in store"
+    And I click on delivery options checkbox included "Local Delivery"
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "5th Promotion" to name field
+    And I select discount amount of benefit type dropdown
+    And I fill "99" to promotion value field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on apply method checkbox included 'codes'
+    Then I should see coupon code field
+    And I fill "ExceptECPay" to coupon code field
+    And I click on 3rd countinue to button
+    And I click on payment options checkbox included "Credit Card via ECpay"
+    And I click on payment options checkbox included "CVS via ECpay"
+    And I click on payment options checkbox included "Barcode via ECpay"
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "6th Promotion" to name field
+    And I click on selected products condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I fill "50" to promotion value field
+    And I fill "2" to promotion condition field
+    And I click on add tier button
+    And I fill "60" to 2nd promotion value field
+    And I fill "3" to 2nd promotion condition field
+    And I click on add tier button
+    And I fill "70" to 3rd promotion value field
+    And I fill "4" to 3rd promotion condition field
+    And I fill "2nd Product for Checkout" to search field
+    And I click on search button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should see search field
+    And I fill "3rd Product for Checkout" to search field
+    And I click on search button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should see search field
+    And I fill "7th Product for Checkout" to search field
+    And I click on search button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should see countinue to button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "7th Promotion" to name field
+    And I click on selected products condition checkbox
+    And I fill "60" to promotion value field
+    And I fill "3" to promotion condition field
+    And I click on add tier button
+    And I fill "70" to 2nd promotion value field
+    And I fill "4" to 2nd promotion condition field
+    And I click on add tier button
+    And I fill "20" to 3rd promotion value field
+    And I fill "500" to 3rd promotion condition field
+    And I fill "4th Product for Checkout" to search field
+    And I click on search button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should see countinue to button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on apply method checkbox included 'codes'
+    Then I should see coupon code field
+    And I fill "SelectedProduct" to coupon code field
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "8th Promotion" to name field
+    And I select discount amount of benefit type dropdown
+    And I fill "99" to promotion value field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on apply method checkbox included 'codes'
+    Then I should see coupon code field
+    And I fill "ExceptOPay" to coupon code field
+    And I click on 3rd countinue to button
+    And I click on payment options checkbox included "Credit Card via O'Pay"
+    And I click on payment options checkbox included "WebATM via O'Pay"
+    And I click on payment options checkbox included "ATM via O'Pay"
+    And I click on payment options checkbox included "CVS via O'Pay"
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "9th Promotion" to name field
+    And I select discount amount of benefit type dropdown
+    And I fill "50" to promotion value field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "10th Promotion" to name field
+    And I select discount amount of benefit type dropdown
+    And I fill "99" to promotion value field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on delivery options checkbox included "(DBW) 7-11 C2C - Pickup only"
+    And I click on delivery options checkbox included "(DBW) 7-11 B2C - Pickup and pay in store"
+    And I click on delivery options checkbox included "(DBW) Ezship pickup and pay in store"
+    And I click on delivery options checkbox included "(DBW) CustomDelivery"
+    And I click on delivery options checkbox included "(DBW) - LocalDelivery"
+    And I click on delivery options checkbox included "7-11 Pickup and pay in store (C2C)"
+    And I click on delivery options checkbox included "7-11 Pickup only (C2C)"
+    And I click on delivery options checkbox included "7-11 Pickup and pay in store (B2C)"
+    And I click on delivery options checkbox included "7-11 Pickup only (B2C)"
+    And I click on delivery options checkbox included "ezship pickup and pay in store"
+    And I click on delivery options checkbox included "7-11 Pickup (no integration)"
+    And I click on delivery options checkbox included "Custom Delivery"
+    And I click on delivery options checkbox included "Local Delivery"
+
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "11th Promotion" to name field
+    And I fill "32" to promotion value field
+    And I click on countinue to button
+    And I click on target group checkbox included 'memberOnly'
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "12th Promotion" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I fill "20" to promotion value field
+    And I fill "2" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    And I fill "13th Promotion" to name field
+    And I select discount amount of benefit type dropdown
+    And I fill "25" to promotion value field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on apply method checkbox included 'codes'
+    Then I should see coupon code field
+    And I fill "AmountDiscount" to coupon code field
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Promotion Index Page
+    Then I should see alert
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  @SetupData @SetupData-6
+  Scenario: To Create a full data for checkout, for freeshipping
+    Given I am on Free Shipping Create Page
+    And I fill "1st Free Shipping" to name field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on apply method checkbox included 'codes'
+    Then I should see coupon code field
+    And I fill "EZshipOnly" to coupon code field
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    Given I am on Free Shipping Create Page
+    And I fill "2nd Free Shipping" to name field
+    And I click on countinue to button
+    And I click on target group checkbox included 'memberOnly'
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    Given I am on Free Shipping Create Page
+    And I fill "3rd Free Shipping" to name field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    Given I am on Free Shipping Create Page
+    And I fill "4th Free Shipping" to name field
+    And I click on subtotal condition checkbox
+    And I fill "300" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    Given I am on Free Shipping Create Page
+    And I fill "5th Free Shipping" to name field
+    And I click on subtotal condition checkbox
+    And I fill "600" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    Given I am on Free Shipping Create Page
+    And I fill "6th Free Shipping" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I fill "3" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    Given I am on Free Shipping Create Page
+    And I fill "7th Free Shipping" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I fill "6" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then I should see confirm button
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  @SetupData @SetupData-7
+  Scenario: Sign up a member
+    Given I am on Shop Home Page
+    When I click on sign in button
+    Then I should be redirected to Shop Login Page
+    When I click on switch to signup tab button
+    And I fill email to signup email field
+    And I fill password to signup password field
+    And I fill name to signup name field
+    And I click on agree terms checkbox
+    And I click on signup submit button
+    Then I should be redirected to Sign Up Confirmation Page
+    Then I should be redirected to Shop Home Page
+
+  @SetupData @SetupData-8
+  Scenario: To Create a full data for order, for order
+    Given I am on Shop Product Index Page
+    When I input "1st Product for Checkout" to search field
+    When I click on 1st product of products list
+    Then I should be redirected to Shop Product Show Page
+    And I click on add to cart button
+    Then I should see cart panel
+    When I click on checkout button
+    Then I should be redirected to Shop Cart Page
+    And I select country dropdown option included "Taiwan" of country list dropdown
+    And I wait for 3 seconds for loading
+    And I select delivery dropdown option included "Local Delivery" of delivery method dropdown
+    And I wait for 3 seconds for loading
+    And I select payment dropdown option included "Bank Transfer" of payment method dropdown
+    And I wait for 3 seconds for loading
+    And I click on proceed to checkout button
+    Then I should be redirected to Shop Checkout Page
+    When I fill name to name field
+    And I fill email to email address field
+    And I fill phone to contact number field
+    And I click on same as checkbox
+    And I select delivery address dropdown option included "Taipei City" of 1st delivery address dropdown
+    And I select delivery address dropdown option included "100 Zhongzheng District" of 2nd delivery address dropdown
+    And I fill address to delivery address field
+    And I click on agree terms checkbox
+    And I click on accept marketing checkbox
+    And I click on place order button
+    Then I should be redirected to Shop Order Confirm Page
+
+    Given I am on Shop Product Index Page
+    When I input "1st Product for Checkout" to search field
+    When I click on 1st product of products list
+    Then I should be redirected to Shop Product Show Page
+    And I click on add to cart button
+    Then I should see cart panel
+    When I click on checkout button
+    Then I should be redirected to Shop Cart Page
+    And I select country dropdown option included "Taiwan" of country list dropdown
+    And I wait for 3 seconds for loading
+    And I select delivery dropdown option included "Family Mart Pickup and pay in store (B2C)" of delivery method dropdown
+    And I wait for 3 seconds for loading
+    And I select payment dropdown option included "Pay on Family Mart Store Pickup (B2C)" of payment method dropdown
+    And I wait for 3 seconds for loading
+    And I click on proceed to checkout button
+    Then I should be redirected to Shop Checkout Page
+    When I click on pick store button
+    Then I should be redirected to Family Mart Pick Store Page
+    Then I should see name search button
+    And I click on name search button
+    And I fill store name to store name field
+    And I click on search button
+    And I should see row of search store list
+    And I click on row of search store list
+    And I should see confirm store button
+    And I click on confirm store button
+    Then I should be redirected to Shop Checkout Page
+    When I fill name to name field
+    And I fill email to email address field
+    And I fill phone to contact number field
+    And I click on same as checkbox
+    And I click on agree terms checkbox
+    And I click on accept marketing checkbox
+    And I click on place order button
+    Then I should be redirected to Shop Order Confirm Page
+
+    Given I am on Shop Product Index Page
+    When I input "1st Product for Checkout" to search field
+    When I click on 1st product of products list
+    Then I should be redirected to Shop Product Show Page
+    And I click on add to cart button
+    Then I should see cart panel
+    When I click on checkout button
+    Then I should be redirected to Shop Cart Page
+    And I select country dropdown option included "Taiwan" of country list dropdown
+    And I wait for 3 seconds for loading
+    And I select delivery dropdown option included "7-11 Pickup and pay in store (B2C)" of delivery method dropdown
+    And I wait for 3 seconds for loading
+    And I select payment dropdown option included "Pay on 7-11 Store Pickup (B2C)" of payment method dropdown
+    And I wait for 3 seconds for loading
+    And I click on proceed to checkout button
+    Then I should be redirected to Shop Checkout Page
+    When I click on pick store button
+    Then I should be redirected to Seven Pick Store Page
+    Then I should see id search button
+    When I click on id search button
+    When I switch to main frame frame
+    Then I should see store id field
+    And I fill store id to store id field
+    And I click on search button
+    Then I should see store list
+    And I click on 1st store list
+    When I switch to default frame
+    And I should see store confirm button
+    And I click on store confirm button
+    And I click on agree button
+    And I click on submit button
+    Then I should be redirected to Shop Checkout Page
+    When I fill name to name field
+    And I fill email to email address field
+    And I fill phone to contact number field
+    And I click on same as checkbox
+    And I click on agree terms checkbox
+    And I click on accept marketing checkbox
+    And I click on place order button
+    Then I should be redirected to Shop Order Confirm Page
+
+    Given I am on Shop Product Index Page
+    When I input "1st Product for Checkout" to search field
+    When I click on 1st product of products list
+    Then I should be redirected to Shop Product Show Page
+    And I click on add to cart button
+    Then I should see cart panel
+    When I click on checkout button
+    Then I should be redirected to Shop Cart Page
+    And I select country dropdown option included "Taiwan" of country list dropdown
+    And I wait for 3 seconds for loading
+    And I select delivery dropdown option included "7-11 Pickup and pay in store (C2C)" of delivery method dropdown
+    And I wait for 3 seconds for loading
+    And I select payment dropdown option included "Pay on 7-11 Store Pickup (C2C)" of payment method dropdown
+    And I wait for 3 seconds for loading
+    And I click on proceed to checkout button
+    Then I should be redirected to Shop Checkout Page
+    And I should see pick store button
+    When I click on pick store button
+    Then I should be redirected to Seven Pick Store Page
+    And I should see id search button
+    When I click on id search button
+    When I switch to main frame frame
+    And I should see store id field
+    And I fill store id to store id field
+    And I click on search button
+    And I should see store list
+    And I click on 1st store list
+    When I switch to default frame
+    And I click on store confirm button
+    And I click on agree button
+    And I click on submit button
+    Then I should be redirected to Shop Checkout Page
+    When I fill name to name field
+    And I fill email to email address field
+    And I fill phone to contact number field
+    And I click on same as checkbox
+    And I click on agree terms checkbox
+    And I click on accept marketing checkbox
+    And I click on place order button
+    Then I should be redirected to Shop Order Confirm Page
+
+    Given I am on Shop Product Index Page
+    When I input "1st Product for Checkout" to search field
+    When I click on 1st product of products list
+    Then I should be redirected to Shop Product Show Page
+    And I click on add to cart button
+    Then I should see cart panel
+    When I click on checkout button
+    Then I should be redirected to Shop Cart Page
+    And I select country dropdown option included "Taiwan" of country list dropdown
+    And I wait for 3 seconds for loading
+    And I select delivery dropdown option included "Custom" of delivery method dropdown
+    And I wait for 3 seconds for loading
+    And I select payment dropdown option included "Bank" of payment method dropdown
+    And I wait for 3 seconds for loading
+    And I click on proceed to checkout button
+    Then I should be redirected to Shop Checkout Page
+    And I fill name to name field
+    And I fill email to email address field
+    And I fill phone to contact number field
+    And I click on same as checkbox
+    And I click on agree terms checkbox
+    And I click on accept marketing checkbox
+    And I click on place order button
+    Then I should be redirected to Shop Order Confirm Page
+    Given I am on Orders Page
+    When I click on 1st row of order links
+    Then I should be redirected to Orders Show Page
+    And I should see view return button
+    Then I click on view return button
+    Then I should be redirected to Place Return Order Page
+    When I click on row of product checkbox
+    And I select return delivery dropdown option included '7-11 Return Only (C2B)' of return delivery dropdown
+    And I fill name to recipient name field
+    And I fill phone to recipient phone field
+    And I select return payment dropdown option included 'No Pay on 7-11 Return (C2B)' of return payment dropdown
+    And I click on place return button
+    Then I should see popover
+    And I click on OK button
+    Then I should be redirected to Return Orders Show Page
+
+  @SetupData @SetupData-9
+  Scenario: To Create a full free gift data for checkout for freegift and freegift-promotion
+  #贈品：QA free gift有限數量 (1st Created Free Gift) / 有重量
+    Given I am on Free Gifts Index Page
+    When I click on add button
+    Then I should be redirected to Free Gifts Create Page
+    When I fill "1st Created Free Gift" to english name field
+    And I pick free gift photo to free gift photo selector
+    Then I should see delete photo button
+    And I fill "9999999" to quantity field
+    Then I fill "5" to weight field
+    And I click on add button
+    # for one
+    # Then I should see confirmation popover
+    # And I click on ok button
+    Then I should be redirected to Free Gifts Index Page
+    Then I should see alert
+    Then 1st row of free gift list should contain "1st Created Free Gift"
+    Then 1st row of quantity list should contain "9999"
+    Then 1st row of status list should contain "Published"
+
+  #EAT-322 QA 能送我贈品嗎 無限數量 (2nd Created Free Gift)
+  #for EAT-322 QA free gift 滿5件送贈品(Multiple promotions)
+    Given I am on Free Gifts Index Page
+    When I click on add button
+    Then I should be redirected to Free Gifts Create Page
+    When I fill "2nd Created Free Gift" to english name field
+    And I pick free gift photo to free gift photo selector
+    Then I should see delete photo button
+    And I click on unlimited checkbox
+    And I click on add button
+    # for one
+    # Then I should see confirmation popover
+    # And I click on ok button
+    Then I should be redirected to Free Gifts Index Page
+    Then I should see alert
+    Then 1st row of free gift list should contain "2nd Created Free Gift"
+    Then 1st row of quantity list should contain "∞"
+    Then 1st row of status list should contain "Published"
+
+  #EAT-319 贈品促銷優惠：QA free gift for all
+  #1st Created Free Gift
+    Given I am on Promotion Create Page
+    And I fill "14th Free Gift Promotion" to name field
+    When I select free gift of benefit type dropdown
+    And I click on select button
+    Then I should see select product popup
+    And I click on 2nd checkbox of product list
+    And I click on popup confirm button
+    Then I fill "2" to promotion value field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "14th Free Gift Promotion"
+    Then total usage limit should equal to "Unlimited"
+    Then target group should equal to "All Customers"
+    Then discount summary should equal to "Get 2 Free Gift(s) (1st Created Free Gift) on Entire Order"
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+
+  #EAT-320 贈品優惠：QA free gift 全單滿額送贈品(Coupon Code：freegiftgo)
+  #1st Created Free Gift
+    Given I am on Promotion Create Page
+    And I fill "15th Free Gift Promotion" to name field
+    Then I click on subtotal condition checkbox
+    And I should see benefit type dropdown
+    When I select free gift of benefit type dropdown
+    And I click on select button
+    Then I should see select product popup
+    And I click on 2nd checkbox of product list
+    And I click on popup confirm button
+    Then I fill "3" to promotion value field
+    And I fill "90" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    Then I click on auto apply checkbox
+    And I fill "freegiftgo" to coupon code field
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "15th Free Gift Promotion"
+    Then total usage limit should equal to "Unlimited"
+    Then target group should equal to "All Customers"
+    Then discount summary should equal to "Get 3 Free Gift(s) (1st Created Free Gift) on Entire Order with purchase over NT$90"
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+
+  #EAT-321 贈品優惠：QA free gift 指定商品 滿件送贈品(有限期限)
+  #1st Created Free Gift
+    Given I am on Promotion Create Page
+    And I fill "16th Free Gift Promotion" to name field
+    And I click on selected products condition checkbox
+    And I select minimum items of condition type dropdown
+    When I select free gift of benefit type dropdown
+    And I click on select button
+    Then I should see select product popup
+    And I click on 2nd checkbox of product list
+    And I click on popup confirm button
+    Then I fill "1" to 1st promotion value field
+    And I fill "3" to 1st promotion condition field
+    When I click on add tier button
+    Then I fill "3" to 2nd promotion value field
+    And I fill "5" to 2nd promotion condition field
+    And I click on 2nd select button
+    Then I should see select product popup
+    And I click on 2nd checkbox of product list
+    And I click on popup confirm button
+    When I click on add tier button
+    Then I fill "6" to 3rd promotion value field
+    And I fill "10" to 3rd promotion condition field
+    And I click on 3rd select button
+    Then I should see select product popup
+    And I click on 2nd checkbox of product list
+    And I click on popup confirm button
+
+    When I fill "2nd Product for Checkout" to search field
+    Then I click on search button
+    And I should see select product popup
+    And I click on 1st checkbox of product list
+    Then I click on popup confirm button
+    When I fill "7th Product for Checkout" to search field
+    Then I click on search button
+    And I should see select product popup
+    And I click on 1st checkbox of product list
+    Then I click on popup confirm button
+
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "16th Free Gift Promotion"
+    Then total usage limit should equal to "Unlimited"
+    Then target group should equal to "All Customers"
+    Then discount summary should contain "Get 1 Free Gift(s) (1st Created Free Gift) on Selected Products with purchase of Selected Products over 3 items"
+    Then discount summary should contain "Get 3 Free Gift(s) (1st Created Free Gift) on Selected Products with purchase of Selected Products over 5 items"
+    Then discount summary should contain "Get 6 Free Gift(s) (1st Created Free Gift) on Selected Products with purchase of Selected Products over 10 items"
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+
+  #EAT-322 QA free gift 滿300送兩種贈品(Multiple promotions)
+  #1st Created Free Gift
+    Given I am on Promotion Create Page
+    And I fill "17th Free Gift Promotion" to name field
+    Then I click on subtotal condition checkbox
+    When I select free gift of benefit type dropdown
+    And I click on select button
+    Then I should see select product popup
+    And I click on 2nd checkbox of product list
+    And I click on popup confirm button
+    Then I fill "2" to promotion value field
+    Then I fill "300" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "17th Free Gift Promotion"
+    Then total usage limit should equal to "Unlimited"
+    Then target group should equal to "All Customers"
+    Then discount summary should equal to "Get 2 Free Gift(s) (1st Created Free Gift) on Entire Order with purchase over NT$300"
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+
+  #EAT-322 QA free gift 滿5件送贈品(Multiple promotions)
+  #2nd Created Free Gift
+    Given I am on Promotion Create Page
+    And I fill "18th Free Gift Promotion" to name field
+    And I click on selected products condition checkbox
+    And I select minimum items of condition type dropdown
+    When I select free gift of benefit type dropdown
+    And I click on select button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I fill "1" to 1st promotion value field
+    And I fill "1" to 1st promotion condition field
+    When I click on add tier button
+    Then I fill "3" to 2nd promotion value field
+    And I fill "3" to 2nd promotion condition field
+    And I click on 2nd select button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    When I click on add tier button
+    Then I fill "6" to 3rd promotion value field
+    And I fill "5" to 3rd promotion condition field
+    And I click on 3rd select button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+
+    When I fill "17th Product for Checkout" to search field
+    Then I click on search button
+    And I should see select product popup
+    And I click on 1st checkbox of product list
+    Then I click on popup confirm button
+
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "18th Free Gift Promotion"
+    Then total usage limit should equal to "Unlimited"
+    Then target group should equal to "All Customers"
+    Then discount summary should contain "Get 1 Free Gift(s) (2nd Created Free Gift) on Selected Products with purchase of Selected Products over 1 items"
+    Then discount summary should contain "Get 3 Free Gift(s) (2nd Created Free Gift) on Selected Products with purchase of Selected Products over 3 items"
+    Then discount summary should contain "Get 6 Free Gift(s) (2nd Created Free Gift) on Selected Products with purchase of Selected Products over 5 items"
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+
+    Then I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # the tag would be @fixture-allprice-product after running this scenario
+  @SetupData @SetupData-10 @fixture-allprice-product
+  Scenario: To Create products with member price
+  # price>0 & sale price>0 & member price>0
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "all price product" to english name field
+    And I click on quantity and pricing tab
+    And I fill "50" to regular price field
+    And I fill "30" to sale price field
+    And I fill "10" to member price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on add button
+    Then I should see alert
+    Then I should be redirected to Product Edit Page
+
+  # price>0 & sale price=0 & member price>0
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "sale price=0 Product" to english name field
+    And I click on quantity and pricing tab
+    And I fill "50" to regular price field
+    And I fill "0" to sale price field
+    And I fill "10" to member price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on add button
+    Then I should see alert
+    Then I should be redirected to Product Edit Page
+
+  # price=0 & sale price>0 & member price>0
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "regular price=0 product" to english name field
+    And I click on quantity and pricing tab
+    And I fill "0" to regular price field
+    And I fill "30" to sale price field
+    And I fill "10" to member price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on add button
+    Then I should see alert
+    Then I should be redirected to Product Edit Page
+
+  # regular price=0, sale price=0, member price>0 
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "regular sale price=0 product" to english name field
+    And I click on quantity and pricing tab
+    And I fill "0" to regular price field
+    And I fill "0" to sale price field
+    And I fill "10" to member price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on add button
+    Then I should see alert
+    Then I should be redirected to Product Edit Page
+
+  # variations are same price as main product
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "variations same price as mainProduct" to english name field
+    And I click on quantity and pricing tab
+    And I fill "50" to regular price field
+    And I fill "30" to sale price field
+    And I fill "10" to member price field
+    And I click on variations tab
+    And I click on variations toggle
+    When I input "R" to add options field
+    And I click on variations same price checkbox
+    Then I should see row of variation price field
+    Then I should see row of variation member price field
+    When I click on variations same price checkbox
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on add button
+    Then I should see alert
+    Then I should be redirected to Product Edit Page
+
+  # variations are not same price as main produc price>0 & member price>0
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "var price>0 & member price>0 Product" to english name field
+    And I click on quantity and pricing tab
+    And I fill "50" to regular price field
+    And I fill "30" to sale price field
+    And I fill "10" to member price field
+    And I click on variations tab
+    And I click on variations toggle
+    When I input "R" to add options field
+    And I click on variations same price checkbox
+    Then I should see row of variation price field
+    Then I should see row of variation member price field
+    And I fill "40" to 1st row of variation price field
+    And I fill "5" to 1st row of variation member price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on add button
+    Then I should see alert
+    Then I should be redirected to Product Edit Page
+
+  # variations are not same price as main produc price=0 & member price>0
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "variation price=0 & member price>0 Product" to english name field
+    And I click on quantity and pricing tab
+    And I fill "50" to regular price field
+    And I fill "30" to sale price field
+    And I fill "10" to member price field
+    And I click on variations tab
+    And I click on variations toggle
+    When I input "R" to add options field
+    And I click on variations same price checkbox
+    Then I should see row of variation price field
+    Then I should see row of variation member price field
+    And I fill "0" to 1st row of variation price field
+    And I fill "5" to 1st row of variation member price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on add button
+    Then I should see alert
+    Then I should be redirected to Product Edit Page
+
+  # variations are not same price as main produc price>0 & member price=0
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "variations produc price>0 & member price=0" to english name field
+    And I click on quantity and pricing tab
+    And I fill "50" to regular price field
+    And I fill "30" to sale price field
+    And I fill "10" to member price field
+    And I click on variations tab
+    And I click on variations toggle
+    When I input "R" to add options field
+    And I click on variations same price checkbox
+    Then I should see row of variation price field
+    Then I should see row of variation member price field
+    And I fill "40" to 1st row of variation price field
+    And I fill "0" to 1st row of variation member price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on add button
+    Then I should see alert
+    Then I should be redirected to Product Edit Page
+
+  # variations are not same price as main produc price=0 & member price=0
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "variations price=0 & member price=0 Product" to english name field
+    And I click on quantity and pricing tab
+    And I fill "50" to regular price field
+    And I fill "30" to sale price field
+    And I fill "10" to member price field
+    And I click on variations tab
+    And I click on variations toggle
+    When I input "R" to add options field
+    And I click on variations same price checkbox
+    Then I should see row of variation price field
+    Then I should see row of variation member price field
+    And I fill "0" to 1st row of variation price field
+    And I fill "0" to 1st row of variation member price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on add button
+    Then I should see alert
+    Then I should be redirected to Product Edit Page
+
+  @SetupData @SetupData-11 @fixture-delivery
+  Scenario: Create Delivery - Tcat
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Delivery' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included 'Tcat - Room Temp.'
+    And I click on popover ok button
+    And I fill contract code to contract code field
+    And I fill sender name to sender name field
+    And I fill sender phone to sender phone field
+    And I fill sender address to sender address field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    And I fill Delivery Fee to delivery fee field
+    And I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    Then 1st row of delivery options list should contain "Tcat - Room Temp."
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Delivery' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included 'Tcat - Refrigerated'
+    And I click on popover ok button
+    And I fill contract code to contract code field
+    And I fill sender name to sender name field
+    And I fill sender phone to sender phone field
+    And I fill sender address to sender address field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    And I fill "0" to delivery fee field
+    And I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    Then 1st row of delivery options list should contain "Tcat - Refrigerated"
+
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Delivery' of delivery type dropdown
+    Then shipping from edit button should contain 'Taiwan'
+    Then shipping to edit button should contain 'Taiwan'
+    When I click on search provider button
+    Then I should see popover
+    And I click on popover row of provider included 'Tcat - Room Frozen'
+    And I click on popover ok button
+    And I fill contract code to contract code field
+    And I fill sender name to sender name field
+    And I fill sender phone to sender phone field
+    And I fill sender address to sender address field
+    And I select delivery fee type dropdown option included 'Order Weight' of delivery fee type dropdown
+    And I fill "5" to 1st weight field
+    And I fill "30" to 1st delivery by weight fee field
+    And I click on add zone button
+    And I fill "10" to 2nd weight field
+    And I fill "60" to 2nd delivery by weight fee field
+    And I input "90" to 3rd delivery by weight fee field
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    Then 1st row of delivery options list should contain "Tcat - Frozen"
+
+  @SetupData @SetupData-12
+  Scenario: To Create a full data for product - One Product
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "Out Of Stock" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "0" to quantity field
+    Then I scroll down to add button
+    And I click on settings tab
+    And I input "Test" to tag field
+    And I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "Out Of Stock"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "1st Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "30" to regular price field
+    And I fill "99998" to quantity field
+    And I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "1st Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "2nd Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "1" to regular price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "2nd Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "3rd Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "10" to sale price field
+    And I fill "1000000" to quantity field
+    And I scroll down to breadcrumb
+    And I click on add button
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "3rd Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "4th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "10" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "4th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "5th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "30" to regular price field
+    And I fill "5000000" to quantity field
+    And I scroll down to breadcrumb
+    And I click on settings tab
+    And I input "6.5" to weight field
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "5th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "6th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "59" to regular price field
+    And I fill "10" to cost field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I fill "5000000" to 1st row of variation quantity field
+    And I click on settings tab
+    And I input "5" to weight field
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "6th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "7th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "100" to regular price field
+    And I fill "49" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on variations tab
+    And I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    And I click on add button
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "7th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "8th Product for Checkout" to english name field
+    And I click on variations tab
+    And I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    And I click on unlimited quantity checkbox
+    And I click on variations same price checkbox
+    And I fill "50" to 1st row of variation price field
+    And I fill "30" to 2nd row of variation price field
+    And I scroll down to breadcrumb
+    And I click on add button
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "8th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "9th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "150" to regular price field
+    And I fill "99" to sale price field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    When I click on add variation button
+    And I input "S" to 2nd add options field
+    And I input "M" to 2nd add options field
+    And I fill "2000000" to 1st row of variation quantity field
+    And I fill "1900000" to 2nd row of variation quantity field
+    And I fill "3000000" to 3rd row of variation quantity field
+    And I fill "4000000" to 4th row of variation quantity field
+    And I scroll down to breadcrumb
+    And I click on settings tab
+    And I click on excluded payment collapse
+    And I click on row of excluded payment list included "Pay on Family Mart Store Pickup (B2C)"
+    And I click on row of excluded payment list included "Pay on Family Mart Store Pickup (C2C)"
+    And I click on row of excluded payment list included "ATM via O'Pay"
+    And I click on excluded delivery collapse
+    And I click on row of excluded delivery list included "Family Mart Pickup and pay in store (C2C)"
+    And I click on row of excluded delivery list included "(DBW) No integration 711 Pickup"
+    And I click on row of excluded delivery list included "(DBW) CustomDelivery"
+    And I click on row of excluded delivery list included "(DBW) Ezship pickup and pay in store"
+    And I click on row of excluded delivery list included "(DBW) Family Mart B2C - Pickup and pay in store"
+    And I click on row of excluded delivery list included "(DBW) 7-11 B2C - Pickup and pay in store"
+    And I click on row of excluded delivery list included "(DBW) 7-11 C2C - Pickup only"
+    And I click on row of excluded delivery list included "Family Mart Pickup only (B2C)"
+    And I click on row of excluded delivery list included "7-11 Pickup only (B2C)"
+    And I click on row of excluded delivery list included "7-11 Pickup and pay in store (B2C)"
+    And I click on row of excluded delivery list included "7-11 Pickup only (C2C)"
+    And I click on row of excluded delivery list included "7-11 Pickup and pay in store (C2C)"
+    And I click on row of excluded delivery list included "Custom Delivery"
+    And I click on row of excluded delivery list included "Family Mart Pickup (no integration)"
+    And I click on row of excluded delivery list included "7-11 Pickup (no integration)"
+    And I click on row of excluded delivery list included "ezship pickup and pay in store"
+    And I click on row of excluded delivery list included "Local Delivery"
+    Then I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "9th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "10th Product for Checkout" to english name field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    When I click on add variation button
+    And I input "S" to 2nd add options field
+    And I input "M" to 2nd add options field
+    And I click on variations same price checkbox
+    And I fill "50" to 1st row of variation price field
+    And I fill "25" to 2nd row of variation price field
+    And I fill "50" to 3rd row of variation price field
+    And I fill "25" to 4th row of variation price field
+    And I fill "2000000" to 1st row of variation quantity field
+    And I fill "1900000" to 2nd row of variation quantity field
+    And I fill "3000000" to 3rd row of variation quantity field
+    And I fill "4000000" to 4th row of variation quantity field
+    Then I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "10th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "11th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "150" to regular price field
+    And I fill "99" to sale price field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    When I click on add variation button
+    And I input "S" to 2nd add options field
+    And I input "M" to 2nd add options field
+    And I click on unlimited quantity checkbox
+    And I click on settings tab
+    And I click on excluded payment collapse
+    And I click on row of excluded payment list included "Pay on Family Mart Store Pickup (B2C)"
+    And I click on row of excluded payment list included "No Pay on 7-11 Return (C2B)"
+    And I click on row of excluded payment list included "Pay on 7-11 Store Pickup (B2C)"
+    And I click on row of excluded payment list included "Pay on 7-11 Store Pickup (C2C)"
+    And I click on row of excluded payment list included "Taishin"
+    And I click on row of excluded payment list included "CVS via O'Pay"
+    And I click on row of excluded payment list included "Credit Card via O'Pay"
+    And I click on row of excluded payment list included "ATM via O'Pay"
+    And I click on row of excluded payment list included "WebATM via O'Pay"
+    And I click on row of excluded payment list included "Barcode via ECpay"
+    And I click on row of excluded payment list included "CVS via ECpay"
+    And I click on row of excluded payment list included "Credit Card via ECpay"
+    And I click on row of excluded payment list included "LINE Pay"
+    And I click on row of excluded payment list included "Pay on Store Pickup via ezShip"
+    And I click on row of excluded payment list included "Custom"
+    And I click on row of excluded payment list included "Cash on Delivery"
+    And I click on row of excluded payment list included "Bank Transfer"
+    And I click on row of excluded payment list included "Credit card or Paypal"
+    And I click on excluded delivery collapse
+    And I click on row of excluded delivery list included "Family Mart Pickup only (C2C)"
+    And I click on row of excluded delivery list included "(DBW) No integration 711 Pickup"
+    And I click on row of excluded delivery list included "(DBW) - LocalDelivery"
+    And I click on row of excluded delivery list included "Family Mart Pickup and pay in store (B2C)"
+    Then I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "11th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "12th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "10" to regular price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on settings tab
+    And I input "5.5" to weight field
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "12th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "13th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "35" to regular price field
+    And I click on unlimited quantity checkbox
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    And I scroll down to id
+    And I click on settings tab
+    And I input "4.2" to weight field
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "13th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "14th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "30" to regular price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on settings tab
+    And I input "6" to weight field
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "14th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "15th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "25" to regular price field
+    And I click on unlimited quantity checkbox
+    And I scroll down to id
+    And I click on settings tab
+    And I input "10.1" to weight field
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "15th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "16th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "25" to regular price field
+    And I click on unlimited quantity checkbox
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    And I click on settings tab
+    And I input "5" to weight field
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "16th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "17th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "100" to regular price field
+    And I fill "10" to sale price field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    And I fill "2000000" to 1st row of variation quantity field
+    And I fill "2000000" to 2nd row of variation quantity field
+    And I scroll down to breadcrumb
+    And I click on settings tab
+    And I input "6" to weight field
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "17th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "18th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "100" to regular price field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I fill "1600000" to 1st row of variation quantity field
+    And I click on add button
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "18th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "19th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "5" to regular price field
+    And I fill "1" to sale price field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I fill "1200000" to 1st row of variation quantity field
+    And I click on settings tab
+    And I click on preorder toggle
+    And I fill "Test" to preorder note field
+    And I click on add button
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "19th Product for Checkout"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "20th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I should see hide price toggle
+    And I click on hide price toggle
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Index Page
+    Then popup title should contain "20th Product for Checkout"
+
+  @SetupData @SetupData-13 @fixture-product-for-sales-sorting
+  Scenario: Create 7 different product and checkout for product sales volume sorting
+    Given I am on Delivery Create Page
+    When I select delivery type dropdown option included 'Custom' of delivery type dropdown
+    And I click on requires customer address checkbox
+    And I click on language tab included 'English'
+    And I fill "Custom Delivery" to name field
+    And I fill the description to description field
+    And I select delivery fee type dropdown option included 'Flat Price' of delivery fee type dropdown
+    And I click on select shipping countries link
+    Then I should see shipping zone settings popup
+    When I click on applicable shipping countries taiwan
+    And I click on right angle bracket button
+    And I click on ok button
+    Then I should not see shipping zone settings popup
+    When I fill Delivery Fee to delivery fee field
+    And I click on add button
+    And I click on confirm adding button
+    Then I should be redirected to Delivery Options Page
+    And 1st row of delivery options list should contain "Custom Delivery"
+
+    Given I am on Payment Create Page
+    When I select payment type dropdown option included 'Bank Transfer' of payment type dropdown
+    And I fill instruction to payment instructions field
+    When I click on add button
+    Then I should see confirm adding button
+    And I click on confirm adding button
+    Then I should be redirected to Payment Setting Page
+    And 1st row of payment method list should contain "Bank Transfer"
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "No.1 <No layer>" to english name field
+    And I click on quantity and pricing tab
+    And I fill "10" to regular price field
+    And I fill "5000000" to quantity field
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "No.3 <One layer> <sale price> <Same price as main product> <Same quantity sold as No.2>" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "5" to sale price field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    And I fill "2000000" to 1st row of variation quantity field
+    And I fill "2000000" to 2nd row of variation quantity field
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "No.2 <Two layer> <Member price> <Same price as main product> <Same quantity sold as No.3>" to english name field
+    And I click on quantity and pricing tab
+    And I fill "30" to regular price field
+    And I fill "15" to member price field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    When I click on add variation button
+    And I input "S" to 2nd add options field
+    And I input "M" to 2nd add options field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "No.4 <No layer> <Hidden price>" to english name field
+    And I click on quantity and pricing tab
+    And I fill "40" to regular price field
+    And I fill "5000000" to quantity field
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "No.5 <One layer> <Preset Publish Date> <Different price as main product>" to english name field
+    And I click on variations tab
+    And I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    And I click on unlimited quantity checkbox
+    And I click on variations same price checkbox
+    And I fill "50" to 1st row of variation price field
+    And I fill "50" to 2nd row of variation price field
+    And I scroll down to breadcrumb
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "No.6 <Two layer> <Preorder Product> <Different price as main product>" to english name field
+    And I click on variations tab
+    When I click on variations toggle
+    And I input "Blue" to add options field
+    And I input "Red" to add options field
+    When I click on add variation button
+    And I input "S" to 2nd add options field
+    And I input "M" to 2nd add options field
+    And I click on variations same price checkbox
+    And I fill "60" to 1st row of variation price field
+    And I fill "60" to 2nd row of variation price field
+    And I fill "60" to 3rd row of variation price field
+    And I fill "60" to 4th row of variation price field
+    And I fill "2000000" to 1st row of variation quantity field
+    And I fill "1900000" to 2nd row of variation quantity field
+    And I fill "3000000" to 3rd row of variation quantity field
+    And I fill "4000000" to 4th row of variation quantity field
+    Then I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "No.7 <Sold out>" to english name field
+    And I click on quantity and pricing tab
+    And I fill "70" to regular price field
+    And I fill "0" to quantity field
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Shop Product Index Page
+    When I input "No.1 <No layer>" to search field
+    When I click on 1st product of products list
+    Then I should be redirected to Shop Product Show Page
+    And I fill '100' to product quantity field
+    And I click on add to cart button
+
+    Given I am on Shop Product Index Page
+    When I input "No.3 <One layer> <sale price> <Same price as main product> <Same quantity sold as No.2>" to search field
+    When I click on 1st product of products list
+    Then I should be redirected to Shop Product Show Page
+    And I fill '80' to product quantity field
+    And I click on add to cart button
+
+    Given I am on Shop Product Index Page
+    When I input "No.2 <Two layer> <Member price> <Same price as main product> <Same quantity sold as No.3>" to search field
+    When I click on 1st product of products list
+    Then I should be redirected to Shop Product Show Page
+    And I fill '80' to product quantity field
+    And I click on add to cart button
+
+    Given I am on Shop Product Index Page
+    When I input "No.4 <No layer> <Hidden price>" to search field
+    When I click on 1st product of products list
+    Then I should be redirected to Shop Product Show Page
+    And I fill '70' to product quantity field
+    And I click on add to cart button
+
+    Given I am on Shop Product Index Page
+    When I input "No.5 <One layer> <Preset Publish Date> <Different price as main product>" to search field
+    When I click on 1st product of products list
+    Then I should be redirected to Shop Product Show Page
+    And I fill '60' to product quantity field
+    And I click on add to cart button
+
+    Given I am on Shop Product Index Page
+    When I input "No.6 <Two layer> <Preorder Product> <Different price as main product>" to search field
+    When I click on 1st product of products list
+    Then I should be redirected to Shop Product Show Page
+    And I fill '50' to product quantity field
+    And I click on add to cart button
+    When I click on checkout button
+    Then I should be redirected to Shop Cart Page
+    And I select country dropdown option included "Taiwan" of country list dropdown
+    And I wait for 3 seconds for loading
+    And I select delivery dropdown option included "Custom Delivery" of delivery method dropdown
+    And I wait for 3 seconds for loading
+    And I select payment dropdown option included "Bank Transfer" of payment method dropdown
+    And I wait for 3 seconds for loading
+    And I click on proceed to checkout button
+    Then I should be redirected to Shop Checkout Page
+    When I fill name to name field
+    And I fill email to email address field
+    And I fill phone to contact number field
+    And I click on same as checkbox
+    And I click on agree terms checkbox
+    And I click on accept marketing checkbox
+    And I click on place order button
+    Then I should be redirected to Shop Order Confirm Page
+
+    Given I am on Orders Page
+    When I click on 1st row of order links
+    Then I should be redirected to Orders Show Page
+    When I select Completed of order status dropdown
+    Then I should see popover
+    And I click on OK button
+    When I select Paid of payment status dropdown
+    Then I should see popover
+    And I click on OK button
+    When I select Collected of delivery status dropdown
+    Then I should see popover
+    And I click on OK button
+
+  @SetupData @SetupData-14
+  Scenario: mobile case -create advanced page and express page
+    Given I am on Pages Page
+    When I click on add advanced page button
+    Then I should be redirected to Advanced Select Page
+    When I click on 2th template
+    Then I should be redirected to Page Builder Page
+    Then I should see skip the guide button
+    When I click on skip the guide button
+    When I click on menu button
+    Then I should see single product button
+    When I drag single product button to top location
+    And I check and click empty single product
+    And I wait for 3 seconds for loading
+    Then I should see popup
+    When I input '6th Product for Checkout' to popup search field
+    When I click on popup product included '6th Product for Checkout'
+    And I click on popup save button
+    When I click on menu button
+    Then I should see single product button
+    When I drag single product button to top location
+    And I check and click empty single product
+    And I wait for 3 seconds for loading
+    Then I should see popup
+    When I input '17th Product for Checkout' to popup search field
+    When I click on popup product included '17th Product for Checkout'
+    And I click on popup save button
+    Then I should see 2 single product
+    And I click on menu button
+    Then I should see side menu
+    When I click on page setting button included "Page Title"
+    Then I should see english title field
+    And I fill "6th, 17th Product for mobile test (do not delete)" to english title field
+    And I click on menu button
+    And I click on save button
+    Then I should see view page button
+
+    # create express page
+    Given I am on Express Checkout Pages Page
+    When I click on create button
+    Then I should be redirected to Express Checkout Builder Page
+    Then I should see skip the guide button
+    When I click on skip the guide button
+    Then I should see product picker
+    When I input "6th Product for Checkout" to search field
+    And I click on 1st product of product list
+    And I click on popup save button
+    When I click on side menu button
+    Then I should see page seo button
+    When I click on page seo button included "Page Title"
+    Then I should see page en title field
+    When I fill "6th Product for mobile test (do not delete)" to page en title field
+    And I click on close side menu
+    Then I should see save page button
+    When I click on save page button
+
+  @SetupData @SetupData-14 @fixture-bundle-logic
+  Scenario: Create promotion for bundle split logic
+  # for EAT-992 指定商品折扣優惠
+    Given I am on Promotion Create Page
+    When I fill "(do not delete) 3 Selected products discount 118" to name field
+    And I click on selected products condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I fill "118" to promotion value field
+    And I fill "3" to promotion condition field
+    And I input '6th Product for Checkout' to search field
+    When I click on search button
+    Then I should see checkbox of product list
+    Then 1st product of popover list should contain '6th Product for Checkout'
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I input '9th Product for Checkout' to search field
+    When I click on search button
+    Then I should see checkbox of product list
+    Then 1st product of popover list should contain '9th Product for Checkout'
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I input '12th Product for Checkout' to search field
+    When I click on search button
+    Then I should see checkbox of product list
+    Then 1st product of popover list should contain '12th Product for Checkout'
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should see 3 row of selected product
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "(do not delete) 3 Selected products discount 118"
+    Then discount summary should contain "Get NT$118 off on Selected Products with purchase of Selected Products over 3 items"
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # for EAT-992 指定商品免運
+    Given I am on Free Shipping Create Page
+    And I fill "(do not delete) selected product free ship" to name field
+    And I click on selected products condition checkbox
+    And I fill "10" to promotion condition field
+    And I input '6th Product for Checkout' to search field
+    When I click on search button
+    Then I should see checkbox of product list
+    Then 1st list of popup product should contain '6th Product for Checkout'
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I input '9th Product for Checkout' to search field
+    When I click on search button
+    Then I should see checkbox of product list
+    Then 1st list of popup product should contain '9th Product for Checkout'
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I input '12th Product for Checkout' to search field
+    When I click on search button
+    Then I should see checkbox of product list
+    Then 1st list of popup product should contain '12th Product for Checkout'
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should see 3 row of selected product
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "(do not delete) selected product free ship"
+    Then discount summary should equal to "Enjoy free shipping with purchase of Selected Products over NT$10"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # for EAT-992 全單折扣優惠
+    Given I am on Promotion Create Page
+    When I fill "(do not delete) order 70% off" to name field
+    And I select discount percent of benefit type dropdown
+    And I fill "70" to promotion value field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "(do not delete) order 70% off"
+    Then discount summary should contain "Get 70% off on Entire Order"
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  @SetupData @SetupData-15
+  Scenario: Create staff for testuser@shoplineapp.com
+    Given I am on Staff Setting Add Page
+    When I input 'testuser@shoplineapp.com' to email field
+    Then I should be redirected to Edit Staff Permissions Page
+    When I click on give full access checkbox
+    Then give full access checkbox should be checked
+    When I click on update button
+    Then I should be redirected to Staff Setting Page
+    Then staff of row should contain 'testuser@shoplineapp.com'
+
+  @SetupData @SetupData-16 @fixture-different-promotion-with-product
+  Scenario: For fixture-different-promotion tag
+    Given I am on Promotion Create Page
+    When I fill '(do not delete) Over $100~300 get $1~3 off' to name field
+    And I click on selected categories condition checkbox
+    And I select discount amount of benefit type dropdown
+    And I fill '100' to 1st promotion value field
+    And I fill '1' to 1st promotion condition field
+    And I click on add benefits button
+    And I fill '200' to 2nd promotion value field
+    And I fill '2' to 2nd promotion condition field
+    And I click on add benefits button
+    And I fill '300' to 3rd promotion value field
+    And I fill '3' to 3rd promotion condition field
+    And I click on category checkbox
+    And I should see select exclude product button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should contain 'Get NT$100 off on Selected Categories with purchase of products in Selected Categories over NT$1'
+    Then discount summary should contain 'Get NT$200 off on Selected Categories with purchase of products in Selected Categories over NT$2'
+    Then discount summary should contain 'Get NT$300 off on Selected Categories with purchase of products in Selected Categories over NT$3'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotion list should contain 'Over $100~300 get $1~3 off'
+    Then 1st row of promotion list should contain 'Never expires'
+
+    Given I am on Free Shipping Index Page
+    When I click on add promotion button
+    Then I should be redirected to Free Shipping Create Page
+    When I fill "(do not delete) test Free Shipping" to name field
+    And I click on selected products condition checkbox
+    And I fill '1' to promotion condition field
+    When I fill '6th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of products should contain '6th Product for Checkout'
+    When I fill '8th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 2nd row of products should contain '8th Product for Checkout'
+    When I fill '9th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 3th row of products should contain '9th Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "(do not delete) test Free Shipping"
+    Then coupon code should equal to "N/A"
+    Then promotion limitations end date should contain "Never expires"
+    Then target group should equal to "All Customers"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+    Then row of promotion name should equal to "(do not delete) test Free Shipping"
+
+    Given I am on Promotion Create Page
+    When I fill '(do not delete) Buy selected product for 4~12 items get NT$90~NT$70 off' to name field
+    And I click on selected products condition checkbox
+    And I select condition type dropdown option included 'Minimum items' of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I fill '90' to 1st promotion value field
+    And I fill '4' to 1st promotion condition field
+    And I click on add benefits button
+    And I fill '80' to 2nd promotion value field
+    And I fill '8' to 2nd promotion condition field
+    And I click on add benefits button
+    And I fill '70' to 3rd promotion value field
+    And I fill '12' to 3rd promotion condition field
+    When I input '6th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of products should contain '6th Product for Checkout'
+    When I input '8th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 2nd row of products should contain '8th Product for Checkout'
+    When I input '9th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 3th row of products should contain '9th Product for Checkout'
+    Then I should be redirected to Promotion Create Page
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should contain 'Get NT$90 off on Selected Products with purchase of Selected Products over 4 items'
+    Then discount summary should contain 'Get NT$80 off on Selected Products with purchase of Selected Products over 8 items'
+    Then discount summary should contain 'Get NT$70 off on Selected Products with purchase of Selected Products over 12 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotion list should contain '(do not delete) Buy selected product for 4~12 items get NT$90~NT$70 off'
+    Then 1st row of promotion list should contain 'Never expires'
+
+    Given I am on Promotion Create Page
+    When I fill "(do not delete) Over $50~100 get $9~28 off" to name field
+    And I click on subtotal condition checkbox
+    And I select discount amount of benefit type dropdown
+    And I fill "9" to 1st promotion value field
+    And I fill "50" to 1st promotion condition field
+    And I click on add benefits button
+    And I fill '28' to 2nd promotion value field
+    And I fill '100' to 2nd promotion condition field
+    And I click on countinue to button
+    When I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "(do not delete) Over $50~100 get $9~28 off"
+    Then coupon code should equal to "N/A"
+    Then total usage limit should equal to "Unlimited"
+    Then target group should equal to "All Customers"
+    Then discount summary should contain "Get NT$9 off on Entire Order with purchase over NT$50"
+    Then discount summary should contain "Get NT$28 off on Entire Order with purchase over NT$100"
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then row of promotion list should contain "Over $50~100 get $9~28 off"
+    Then 1st row of promotion list should contain 'Never expires'
+
+    Given I am on Promotion Create Page
+    When I fill '(do not delete) Buy selected products over NT$150~450 get 50~30% off (categories)' to name field
+    And I click on selected categories condition checkbox
+    And I fill '50' to 1st promotion value field
+    And I fill '150' to 1st promotion condition field
+    And I click on add benefits button
+    And I fill '40' to 2nd promotion value field
+    And I fill '300' to 2nd promotion condition field
+    And I click on add benefits button
+    And I fill '30' to 3rd promotion value field
+    And I fill '450' to 3rd promotion condition field
+    And I click on category checkbox
+    And I should see select exclude product button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should contain 'Get 50% off on Selected Categories with purchase of products in Selected Categories over NT$150'
+    Then discount summary should contain 'Get 40% off on Selected Categories with purchase of products in Selected Categories over NT$300'
+    Then discount summary should contain 'Get 30% off on Selected Categories with purchase of products in Selected Categories over NT$450'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotion list should contain '(do not delete) Buy selected products over NT$150~450 get 50~30% off (categories)'
+    Then 1st row of promotion list should contain 'Never expires'
+
+    Given I am on Promotion Create Page
+    When I fill '(do not delete) Buy selected products over NT$100 get 90% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '90' to 1st promotion value field
+    And I fill '100' to 1st promotion condition field
+    When I input '4th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of products should contain '4th Product for Checkout'
+    When I input '5th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 2nd row of products should contain '5th Product for Checkout'
+    When I input '15th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 3rd row of products should contain '15th Product for Checkout'
+    When I input '19th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 4th row of products should contain '19th Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should contain 'Get 90% off on Selected Products with purchase over NT$100'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '(do not delete) Buy selected products over NT$100 get 90% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "(不要刪掉 EAT-793) 25 different items -1" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "15" to sale price field
+    And I fill "100000" to quantity field
+    And I fill "A001" to sku field
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "(不要刪掉 EAT-793) 25 different items -2" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "15" to sale price field
+    And I fill "100000" to quantity field
+    And I fill "A002" to sku field
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "(不要刪掉 EAT-793) 25 different items -3" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "15" to sale price field
+    And I fill "100000" to quantity field
+    And I fill "A003" to sku field
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "(不要刪掉 EAT-793) 25 different items -4" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "15" to sale price field
+    And I fill "100000" to quantity field
+    And I fill "A004" to sku field
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "(不要刪掉 EAT-793) 25 different items -5" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "15" to sale price field
+    And I fill "100000" to quantity field
+    And I fill "A005" to sku field
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "(不要刪掉 EAT-793) 25 different items -6" to english name field
+    And I click on quantity and pricing tab
+    And I fill "20" to regular price field
+    And I fill "10" to sale price field
+    And I fill "100000" to quantity field
+    And I fill "A006" to sku field
+    And I click on add button
+    Then I should be redirected to Product Edit Page

@@ -1,0 +1,1449 @@
+[
+  {
+    "description": "  As a vistor to Shopline website\n  I want to forgot/setup password",
+    "keyword": "Feature",
+    "name": "Normal/Import forgot/setup password",
+    "line": 2,
+    "id": "normal/import-forgot/setup-password",
+    "tags": [
+      {
+        "name": "@BaseCase",
+        "line": 1
+      },
+      {
+        "name": "@Storefront",
+        "line": 1
+      },
+      {
+        "name": "@Import",
+        "line": 1
+      },
+      {
+        "name": "@shopForgotSetupPasswordEmail",
+        "line": 1
+      },
+      {
+        "name": "@fixture-shop",
+        "line": 1
+      }
+    ],
+    "uri": "features/component/Storefront/shopForgotSetupPasswordEmail.feature",
+    "elements": [
+      {
+        "id": "normal/import-forgot/setup-password;email---import-forgot-password",
+        "keyword": "Scenario",
+        "line": 36,
+        "name": "Email - import forgot password",
+        "tags": [
+          {
+            "name": "@BaseCase",
+            "line": 1
+          },
+          {
+            "name": "@Storefront",
+            "line": 1
+          },
+          {
+            "name": "@Import",
+            "line": 1
+          },
+          {
+            "name": "@shopForgotSetupPasswordEmail",
+            "line": 1
+          },
+          {
+            "name": "@fixture-shop",
+            "line": 1
+          },
+          {
+            "name": "@EAT-725",
+            "line": 35
+          },
+          {
+            "name": "@EAT-725-3",
+            "line": 35
+          },
+          {
+            "name": "@smokeTest",
+            "line": 35
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "embeddings": [
+              {
+                "data": "{\"account\":{\"email\":\"testuser+7607@shoplineapp.com\",\"notificationEmail\":\"shoplineqa@gmail.com\",\"password\":\"12345678\",\"handle\":\"previewtw1\",\"tags\":[\"non-admin\",\"baseLocation-TW\",\"theme-basic\",\"fixture-payment\",\"fixture-delivery\",\"fixture-product\",\"fixture-addon\",\"fixture-promotion\",\"fixture-shop\",\"fixture-non-basket\"],\"retry\":0}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 37,
+            "name": "I am on Admin Login Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12006
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/users/sign_in?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://sso-preview.shoplineapp.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I fill correct account email to email field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1590
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser+7607@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "I fill correct account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1561
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"12345678\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I click on login button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3442
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[type=\\\"submit\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I should see successful login",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1552
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "I check intercom message notification frame and click clear intercom message button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3142
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"clear intercom message button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 43,
+            "name": "I check intercom message notification frame and click intercom message close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3194
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"intercom message close button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 44,
+            "name": "I check new feature alert notification frame and click new feature alert close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3172
+            },
+            "embeddings": [
+              {
+                "data": "{\"frameLength\":0}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"frameNotFound\":\"new feature alert\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 45,
+            "name": "I check and click exclude products panel close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1201
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"exclude products panel close button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 46,
+            "name": "I check and click no thanks button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1177
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"no thanks button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 48,
+            "name": "I am on Customer List Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8052
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw1/users?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw1/users?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 49,
+            "name": "I select language dropdown option included 'English' of language dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9046
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[class*=\\\"navbar-collapse\\\"] li[class=\\\"dropdown\\\"]:nth-child(1)\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"[aria-labelledby=\\\"menu-languages\\\"] a\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"English\",\"中文(繁)\",\"中文(简)\",\"Tiếng Việt\",\"ไทย\"],\"text\":\"English\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 50,
+            "name": "I should see search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1352
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 51,
+            "name": "I select import report dropdown option included 'Import Report' of import report dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8808
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a.btn.btn-default.btn-lg.ng-binding.dropdown-toggle\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"li.dropdown.open a[class$=ng-binding]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Import Report\",\"Import History\",\"Bulk Update Customer Tags\"],\"text\":\"Import Report\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I should be redirected to Customer Bulk Import Update Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1523
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw1/users/import?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw1/users/import",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 53,
+            "name": "I pick customer bulk upload file to file upload selector",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:225"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2688
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"/app/data/my_customers_import.xls\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 54,
+            "name": "I should see row of customer preview list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1760
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":3,\"displayedElementCount\":3}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "I click on import customer button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1381
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[ng-show*=\\\"&& bulkUploadTotalItems>0\\\"]:not(.ng-hide) button[ng-click=\\\"importBulkUpload()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "I should see popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1346
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 57,
+            "name": "I click on ok button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1403
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"confirm()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "I should see row of upload list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4704
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":20,\"displayedElementCount\":20}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 59,
+            "name": "I wait for 30 seconds for uploading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29984
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 60,
+            "name": "I Refresh",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:691"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 182
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 61,
+            "name": "I should see row of upload list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4602
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":20,\"displayedElementCount\":20}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 62,
+            "name": "1st row of updated time should contain date",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:820"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1518
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"2021-09-24 3:53AM\",\"expectText\":\"2021-09-24\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 63,
+            "name": "1st row of status should equal to \"Done\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:965"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1483
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Done\",\"expectText\":\"Done\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 65,
+            "name": "I am on Shop Login Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7636
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw1.shoplinetest.com/users/sign_in/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/users/sign_in/?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":2,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 66,
+            "name": "I click on forgot password button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1642
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[href=\\\"/users/password/new\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 67,
+            "name": "I should be redirected to Shop Forgot Password Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1523
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/users/password/new",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 68,
+            "name": "I fill 'testuser+111@shoplineapp.com' to account field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1582
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser+111@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "I click on sent reset password button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1378
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".btn.btn-success\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 70,
+            "name": "I should see success message",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1340
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 71,
+            "name": "I am on Google Mail Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8406
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://mail.google.com/mail\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":6,\"displayedElementCount\":4}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 72,
+            "name": "I should see account field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1352
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 73,
+            "name": "I fill customer email to account field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1625
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 74,
+            "name": "I click on identifier next button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1373
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[id*=\\\"ext\\\"]:not([id*=heading])\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 75,
+            "name": "I should see password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2629
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":2,\"matchedElementCount\":2,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 76,
+            "name": "I input account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4951
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 77,
+            "name": "I check and click password next button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52201
+            },
+            "embeddings": [
+              {
+                "data": "\"{\\\"name\\\":\\\"TimeoutError\\\",\\\"remoteStacktrace\\\":\\\"\\\"}\"",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValueFound\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 78,
+            "name": "I should see search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1310
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 79,
+            "name": "I input 'testuser+111@shoplineapp.com' to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5186
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser+111@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 80,
+            "name": "I should see search mail list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1394
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 81,
+            "name": "I click on row of mail list included 'Password Reset Request'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20502
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[role=\\\"main\\\"] td[tabindex=\\\"-1\\\"] [role=\\\"link\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nDownload Promotion Report\\n - \\nDownload Promotion Report Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are\",\"Inbox\\nDownload Promotion Report\\n - \\nDownload Promotion Report Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are\",\"Inbox\\n[New order] Order #20210915111109764 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210915111109764 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\nDownload Promotion Report\\n - \\nDownload Promotion Report Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are\",\"Inbox\\nDownload Promotion Report\\n - \\nDownload Promotion Report Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are\",\"Inbox\\n[New order] Order #20210915105123862 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210915105123862 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\n[New order] Order #20210913070238667 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210913070238667 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210913052409864 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210913052409864 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210913043645516 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210913043645516 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210913040619334 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210913040619334 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\n[New order] Order #20210908104232625 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210908104232625 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210908102254779 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210908102254779 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210908075350451 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210908075350451 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\nDownload Packing Slip\\n - \\nDownload Packing Slip Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are\",\"Inbox\\nDownload Packing Slip\\n - \\nDownload Packing Slip Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are\",\"Inbox\\nDownload Order Invoice\\n - \\nDownload Order Invoice Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are\",\"Inbox\\nDownload Order Invoice\\n - \\nDownload Order Invoice Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are\",\"Inbox\\nDownload Order Invoice\\n - \\nDownload Order Invoice Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are\",\"Inbox\\n[New order] Order #20210908054427990 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210908054427990 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210907103100701 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210907103100701 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\n[New order] Order #20210302075324269 is placed by bart@shoplineapp.com\\n - \\n[New order] Order #20210302075324269 is placed by bart@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the order\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\n[New order] Order #20210223083646523 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210223083646523 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210223082800601 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210223082800601 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210223081635446 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210223081635446 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210223073653572 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210223073653572 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210223072701908 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210223072701908 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210223071955686 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210223071955686 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\n[New order] Order #20210223063833832 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210223063833832 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210223063310171 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210223063310171 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210223042336353 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210223042336353 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210223041745216 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210223041745216 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210223040446123 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210223040446123 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210223035640481 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210223035640481 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210223035009064 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210223035009064 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\n[New order] Order #20210222085147030 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210222085147030 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\n[New order] Order #20210219103730111 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210219103730111 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\nYour customer from order #20210219102027190 has uploaded transfer detail, please check\\n - \\nYour customer from order #20210219102027190 has uploaded transfer detail, please check Upload Detail Time: 2021-02-19 18:21PM Please verify that you have received the payment and then process shipping\",\"Inbox\\n[New order] Order #20210219102027190 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210219102027190 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210219101835846 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210219101835846 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\nDownload Stock Picking List\\n - \\nDownload Stock Picking List Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You\",\"Inbox\\n[New order] Order #20210219041952665 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210219041952665 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nDownload Promotion Report\\n - \\nDownload Promotion Report Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nPassword Reset Request\\n - \\nHello AAA! Someone has requested a link to change your password, and you can do this through the link below. If you didn't request this, please ignore this email. Your password won't change\",\"Inbox\\nDownload Packing Slip\\n - \\nDownload Packing Slip Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are\",\"Inbox\\nDownload Packing Slip\\n - \\nDownload Packing Slip Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are\",\"Inbox\\nDownload Packing Slip\\n - \\nDownload Packing Slip Hi test shop, Your report is ready, please click the link below to download Download This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are\"],\"text\":\"Password Reset Request\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 82,
+            "name": "I should see mail detail",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1582
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":2,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 83,
+            "name": "I click on set my password button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1412
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[href*=\\\"users/password/edit?reset_password_token\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 84,
+            "name": "I switch to 2 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7506
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":2,\"HandlesIdx\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 85,
+            "name": "I should be redirected to Shop Set Password Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1521
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/users/password/edit?reset_password_token=duwLK4dwF94f7n0LXOOFZQ&reset=true",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 86,
+            "name": "I check name field and fill 'test'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:136"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1175
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"name field\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 87,
+            "name": "I fill password to new password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1561
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"1234567890\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 88,
+            "name": "I fill password to confirm password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1544
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"1234567890\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 89,
+            "name": "I click on change my password button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1376
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".btn.btn-success\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 90,
+            "name": "I should be redirected to Shop Home Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1517
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw1.shoplinetest.com/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw1.shoplinetest.com/users/password/edit?reset_password_token=duwLK4dwF94f7n0LXOOFZQ&reset=true",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 91,
+            "name": "---ROLL BACK---",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:1245"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 92,
+            "name": "I am on Customer List Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8278
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw1/users?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw1/users?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 93,
+            "name": "I click on 1st customer checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1429
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[ng-click=\\\"state.selectByQuery = false; toggleOne(user, user.selected);\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 94,
+            "name": "I click on 2nd customer checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1365
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[ng-click=\\\"state.selectByQuery = false; toggleOne(user, user.selected);\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 95,
+            "name": "I click on 3rd customer checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1380
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[ng-click=\\\"state.selectByQuery = false; toggleOne(user, user.selected);\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 96,
+            "name": "I select delete selected of bulk action dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:467"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6752
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[class=\\\"btn btn-default dropdown-toggle\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"a[ng-click=\\\"bulkDelete()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 97,
+            "name": "I should see popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1344
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 98,
+            "name": "I click on ok button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1379
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"confirm()\\\"]:not(.ng-hide)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 99,
+            "name": "I Refresh",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:691"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1724
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 100,
+            "name": "customer row should not contain \"CCC\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:893"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4162
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 101,
+            "name": "customer row should not contain \"BBB\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:893"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "customer row should not contain \"AAA\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:893"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4162
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 177
+            },
+            "embeddings": [
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw1/users?locale=en",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+FROM jenkins/jenkins:lts
+
+ARG docker_group_id
+
+USER root
+RUN apt-get update \
+ && apt-get install -y sudo \
+ && apt-get install -y libltdl7 \
+ && rm -rf /var/lib/apt/lists/*
+RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
+RUN sudo groupadd --gid $docker_group_id docker
+RUN sudo usermod -aG docker jenkins
+
+
+# drop back to the regular jenkins user - good practice
+USER jenkins

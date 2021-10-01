@@ -1,0 +1,1523 @@
+[
+  {
+    "description": "  As a merchant\n  I want to Bulk Change Payment Status",
+    "keyword": "Feature",
+    "name": "Bulk Change Payment Status",
+    "line": 3,
+    "id": "bulk-change-payment-status",
+    "tags": [
+      {
+        "name": "@PostTest",
+        "line": 1
+      },
+      {
+        "name": "@PreTest",
+        "line": 1
+      },
+      {
+        "name": "@BaseCase",
+        "line": 1
+      },
+      {
+        "name": "@Admin",
+        "line": 1
+      },
+      {
+        "name": "@Storefront",
+        "line": 1
+      },
+      {
+        "name": "@Order",
+        "line": 1
+      },
+      {
+        "name": "@OrderPayment",
+        "line": 1
+      },
+      {
+        "name": "@orderPaymentStatusBulkChange",
+        "line": 1
+      },
+      {
+        "name": "@fixture-delivery",
+        "line": 2
+      },
+      {
+        "name": "@fixture-payment",
+        "line": 2
+      },
+      {
+        "name": "@fixture-shop",
+        "line": 2
+      },
+      {
+        "name": "@fixture-product",
+        "line": 2
+      }
+    ],
+    "uri": "features/component/Order/OrderPayment/orderPaymentStatusBulkChange.feature",
+    "elements": [
+      {
+        "id": "bulk-change-payment-status;bulk-change-payment-status",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Bulk Change Payment Status",
+        "tags": [
+          {
+            "name": "@PostTest",
+            "line": 1
+          },
+          {
+            "name": "@PreTest",
+            "line": 1
+          },
+          {
+            "name": "@BaseCase",
+            "line": 1
+          },
+          {
+            "name": "@Admin",
+            "line": 1
+          },
+          {
+            "name": "@Storefront",
+            "line": 1
+          },
+          {
+            "name": "@Order",
+            "line": 1
+          },
+          {
+            "name": "@OrderPayment",
+            "line": 1
+          },
+          {
+            "name": "@orderPaymentStatusBulkChange",
+            "line": 1
+          },
+          {
+            "name": "@fixture-delivery",
+            "line": 2
+          },
+          {
+            "name": "@fixture-payment",
+            "line": 2
+          },
+          {
+            "name": "@fixture-shop",
+            "line": 2
+          },
+          {
+            "name": "@fixture-product",
+            "line": 2
+          },
+          {
+            "name": "@C3764",
+            "line": 19
+          },
+          {
+            "name": "@C3764-13",
+            "line": 19
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "embeddings": [
+              {
+                "data": "{\"account\":{\"email\":\"testuser+0176@shoplineapp.com\",\"password\":\"12345678\",\"handle\":\"testuser0176723\",\"notificationEmail\":\"shoplineqa@gmail.com\",\"tags\":[\"non-admin\",\"baseLocation-TW\",\"theme-basic\",\"fixture-payment\",\"fixture-delivery\",\"fixture-product\",\"fixture-addon\",\"fixture-promotion\",\"fixture-shop\",\"fixture-non-basket\"],\"retry\":0}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on Admin Login Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11279
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://admin.shoplineapp.com/users/sign_in?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://sso.shoplineapp.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I fill correct account email to email field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1602
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser+0176@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I fill correct account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1640
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"12345678\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click on login button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3228
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[type=\\\"submit\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should see successful login",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1898
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I check intercom message notification frame and click clear intercom message button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3194
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"clear intercom message button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I check intercom message notification frame and click intercom message close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3194
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"intercom message close button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I check new feature alert notification frame and click new feature alert close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3182
+            },
+            "embeddings": [
+              {
+                "data": "{\"frameLength\":0}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"frameNotFound\":\"new feature alert\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I check and click exclude products panel close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1186
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"exclude products panel close button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I check and click no thanks button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1182
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"no thanks button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "I am on Basic Setting Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8088
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://admin.shoplineapp.com/admin/testuser0176723/edit?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://admin.shoplineapp.com/admin/testuser0176723/edit?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I mark the value of shop name field as variable shop name",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:433"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1571
+            },
+            "embeddings": [
+              {
+                "data": "\"testuser0176723\"",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I am on Shop Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7701
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://testuser0176723.shoplineapp.com/products/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://testuser0176723.shoplineapp.com/products/?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I input \"4th Product for Checkout\" to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6124
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"4th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "1st product of products list should contain '4th Product for Checkout'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1578
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"4th Product for CheckoutNT$20NT$10\",\"expectText\":\"4th Product for Checkout\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click on 1st product of products list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2699
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"li.boxify-item.product-item\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "I should be redirected to Shop Product Show Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1545
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://testuser0176723.shoplineapp.com/products/4th-product-for-checkout",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I click on add to cart button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1403
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"addItemToCart()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "I should see cart panel",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1341
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "I click on checkout button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2937
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[id=\\\"btn-checkout\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "I should be redirected to Shop Cart Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1574
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://testuser0176723.shoplineapp.com/cart/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://testuser0176723.shoplineapp.com/cart",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I select country dropdown option included \"Taiwan\" of country list dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8555
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-country\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-country\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Hong Kong\",\"Taiwan\"],\"text\":\"Taiwan\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3014
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I select delivery dropdown option included \"Custom Delivery\" of delivery method dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11886
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-method\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-delivery-method\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"7-11 Pickup only (C2C)\",\"7-11 Pickup and pay in store (B2C)\",\"7-11 Pickup only (B2C)\",\"7-11 Pickup and pay in store (C2C)\",\"Family Mart Pickup and pay in store (C2C)\",\"Family Mart Pickup only (C2C)\",\"(DBW) No integration 711 Pickup\",\"(DBW) - LocalDelivery\",\"(DBW) CustomDelivery\",\"(DBW) Family Mart B2C - Pickup and pay in store\",\"(DBW) Ezship pickup and pay in store\",\"(DBW) 7-11 C2C - Pickup only\",\"(DBW) 7-11 B2C - Pickup and pay in store\",\"Family Mart Pickup only (B2C)\",\"Family Mart Pickup and pay in store (B2C)\",\"Family Mart Pickup (no integration)\",\"Custom Delivery\",\"ezship pickup and pay in store\",\"Local Delivery\",\"7-11 Pickup (no integration)\"],\"text\":\"Custom Delivery\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2981
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I select payment dropdown option included \"Custom\" of payment method dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10852
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-payment-method\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"select[id=\\\"order-payment-method\\\"] option\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"CVS - ECpay with wrong key\",\"Credit Card via O'Pay\",\"CVS via O'Pay\",\"Taishin\",\"ATM via O'Pay\",\"WebATM via O'Pay\",\"Credit Card via ECpay\",\"Custom\",\"Barcode via ECpay\",\"CVS via ECpay\",\"LINE Pay\",\"Cash on Delivery\",\"Credit card or Paypal (Paypal Express)\",\"Bank Transfer\"],\"text\":\"Custom\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3004
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I click on proceed to checkout button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2435
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[href$=\\\"checkout\\\"]:not(.disabled)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "I should be redirected to Shop Checkout Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1555
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://testuser0176723.shoplineapp.com/checkout",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "I fill name to name field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1592
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"陳小明\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "I fill email to email address field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1650
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "I fill phone to contact number field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1593
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"0912345678\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "I click on same as checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1473
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[name=\\\"order[delivery_data][recipient_is_customer]\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "I click on agree terms checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1420
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"policy\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I click on accept marketing checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1406
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"saveFields[marketing]\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "I click on place order button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1431
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".btn.btn-success\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 47,
+            "name": "I should be redirected to Shop Order Confirm Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3128
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://testuser0176723.shoplineapp.com/checkout",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 48,
+            "name": "I am on Orders Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8487
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://admin.shoplineapp.com/admin/testuser0176723/orders?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://admin.shoplineapp.com/admin/testuser0176723/orders?locale=en&createdBy=admin",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "I should see select all checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1384
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "I click on select all checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1445
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[ng-model=\\\"state.selectedPageOrders\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "I should see bulk actions dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1374
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "I select Update Status of bulk actions dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:467"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6858
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"orders-table > div.form-inline.bulk-action-section.row > div > span.dropdown > button\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"li[ng-click=\\\"onChooseBulkEdit()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "I select status dropdown option included 'Payment Status' of status type dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9166
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-style=\\\"bulkEditStyle\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"ul.bulk-edit-dropdown a\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"\",\"\",\"Order Status\",\"Payment Status\",\"Delivery Status\"],\"text\":\"Payment Status\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "I select status dropdown option included 'Paid' of status item dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10045
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-style=\\\"bulkStatusStyle\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"ul.bulk-edit-dropdown a\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"\",\"\",\"\",\"\",\"\",\"Unpaid\",\"Paid\",\"Refunding\",\"Refunded\",\"Partially Refunded\"],\"text\":\"Paid\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "I click on update button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1421
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"updateOrders()\\\"]:not([data-loading])\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 56,
+            "name": "I should see confirm popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1396
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 57,
+            "name": "I click on send notification checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1436
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".modal-footer input\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "I click on OK button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1914
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"confirm()\\\"]:not(.ng-hide)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 59,
+            "name": "I should see row of payment status",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7884
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":24,\"displayedElementCount\":24}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 60,
+            "name": "I should not see loading icon",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:763"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51149
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 61,
+            "name": "1st row of payment status should equal to \"Paid\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:965"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1550
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Paid\",\"expectText\":\"Paid\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 62,
+            "name": "I wait for 200 seconds for mail sent",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 199952
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 63,
+            "name": "I am on Google Mail Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8441
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://mail.google.com/mail\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":6,\"displayedElementCount\":4}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 64,
+            "name": "I should see account field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1400
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "I fill customer email to account field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1651
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 66,
+            "name": "I click on identifier next button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1406
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[id*=\\\"ext\\\"]:not([id*=heading])\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 67,
+            "name": "I should see password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4464
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":7,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 68,
+            "name": "I input account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4960
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "I check and click password next button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57627
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"#passwordNext,#signIn\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "\"{\\\"name\\\":\\\"WebDriverError\\\",\\\"remoteStacktrace\\\":\\\"\\\"}\"",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"errorInfo\":\"{\\\"name\\\":\\\"TimeoutError\\\",\\\"remoteStacktrace\\\":\\\"\\\"}\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 70,
+            "name": "I should see search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1352
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 71,
+            "name": "I input shop name to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5616
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser0176723\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 72,
+            "name": "I should see search mail list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1582
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 73,
+            "name": "search mail list should contain \"Payment status is updated to: Paid\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4712
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"testuser0176723Inbox[testuser0176723] #20210827104438067 Payment status is updated to: Paid - [testuser0176723] #20210827104438067 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210830085454179 Payment status is updated to: Paid - [testuser0176723] #20210830085454179 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820110203422 Payment status is updated to: Paid - [testuser0176723] #20210820110203422 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210826100406845 Payment status is updated to: Paid - [testuser0176723] #20210826100406845 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210831105500501 Payment status is updated to: Paid - [testuser0176723] #20210831105500501 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210824072128898 Payment status is updated to: Paid - [testuser0176723] #20210824072128898 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820104612285 Payment status is updated to: Paid - [testuser0176723] #20210820104612285 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210824021501509 Payment status is updated to: Paid - [testuser0176723] #20210824021501509 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820102737160 Payment status is updated to: Paid - [testuser0176723] #20210820102737160 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820100319236 Payment status is updated to: Paid - [testuser0176723] #20210820100319236 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820105316213 Payment status is updated to: Paid - [testuser0176723] #20210820105316213 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820103459214 Payment status is updated to: Paid - [testuser0176723] #20210820103459214 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820101746223 Payment status is updated to: Paid - [testuser0176723] #20210820101746223 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820093042297 Payment status is updated to: Paid - [testuser0176723] #20210820093042297 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820092952667 Payment status is updated to: Paid - [testuser0176723] #20210820092952667 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820054048338 Payment status is updated to: Paid - [testuser0176723] #20210820054048338 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820033546823 Payment status is updated to: Paid - [testuser0176723] #20210820033546823 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820094508558 Payment status is updated to: Paid - [testuser0176723] #20210820094508558 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210818084851958 Payment status is updated to: Paid - [testuser0176723] #20210818084851958 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210813042649544 Payment status is updated to: Paid - [testuser0176723] #20210813042649544 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210813031924469 Payment status is updated to: Paid - [testuser0176723] #20210813031924469 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210819075342396 Payment status is updated to: Paid - [testuser0176723] #20210819075342396 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210813031438067 Payment status is updated to: Paid - [testuser0176723] #20210813031438067 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210819073448138 Payment status is updated to: Paid - [testuser0176723] #20210819073448138 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[New order] Order #20210831105500501 is placed by testuser@shoplineapp.com - [New order] Order #20210831105500501 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  10:55 AMtestuser0176723Inbox[testuser0176723] Thank you for your order #20210831105500501! - [testuser0176723] Thank you for your order #20210831105500501! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  10:55 AMtestuser0176723InboxYou got messaged on testuser0176723! - You got messaged on testuser0176723! testuser+332770 Woah new store! Congrats! 2021-08-31 18:53PM REPLY  10:53 AMtestuser0176723Inbox[testuser0176723] Thank you for your order #20210830085454179! - [testuser0176723] Thank you for your order #20210830085454179! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Aug 30testuser0176723Inbox[New order] Order #20210830085454179 is placed by testuser@shoplineapp.com - [New order] Order #20210830085454179 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Aug 30testuser0176723Inbox[testuser0176723] #20210315125909365 Order has been split - [testuser0176723] #20210315125909365 Order has been split Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox[New order] Order #20210315125909365 is placed by testuser@shoplineapp.com - [New order] Order #20210315125909365 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315125909365! - [testuser0176723] Thank you for your order #20210315125909365! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox[New order] Order #20210315125157102 is placed by testuser@shoplineapp.com - [New order] Order #20210315125157102 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315125157102! - [testuser0176723] Thank you for your order #20210315125157102! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox[New order] Order #20210315124549846 is placed by testuser@shoplineapp.com - [New order] Order #20210315124549846 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315124549846! - [testuser0176723] Thank you for your order #20210315124549846! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox[New order] Order #20210315124220541 is placed by testuser@shoplineapp.com - [New order] Order #20210315124220541 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315124220541! - [testuser0176723] Thank you for your order #20210315124220541! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723InboxYou got messaged on testuser0176723! - You got messaged on testuser0176723! testuser+958795 Woah new store! Congrats! 2021-03-15 20:40PM REPLY  Mar 15testuser0176723InboxYour order #20210315123833833 has a new comment! - Your order #20210315123833833 has a new comment! 陳小明 C4084 2021-03-15 20:38PM REPLY  Mar 15testuser0176723Inbox[New order] Order #20210315123833833 is placed by testuser@shoplineapp.com - [New order] Order #20210315123833833 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315123833833! - [testuser0176723] Thank you for your order #20210315123833833! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315122746223! - [testuser0176723] Thank you for your order #20210315122746223! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox[New order] Order #20210315122746223 is placed by testuser@shoplineapp.com - [New order] Order #20210315122746223 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[New order] Order #20210315122313193 is placed by testuser@shoplineapp.com - [New order] Order #20210315122313193 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315122313193! - [testuser0176723] Thank you for your order #20210315122313193! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox下載 商品銷量報表 - 下載 商品銷量報表 你好 testuser, 你的報表已經準備好，請點���以下連結下載 下載 This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are receiving this e-mail because you have signed up for an account  Mar 15testuser0176723Inbox下載 商品銷量報表 - 下載 商品銷量報表 你好 testuser, 你的報表已經準備好，請點擊以下連結下載 下載 This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are receiving this e-mail because you have signed up for an account  Mar 15testuser0176723InboxYou have been given credits at testuser0176723! - You have been given credits at testuser0176723! Hi 陳小明, Congratulations! You have been given 20 credits at testuser0176723! You now have a total of 20 credits. Use the credits for your next purchase!  Mar 12testuser0176723Inbox[New order] Order #20210312112038267 is placed by testuser@shoplineapp.com - [New order] Order #20210312112038267 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about the  Mar 12testuser0176723Inbox[testuser0176723] Thank you for your order #20210312112038267! - [testuser0176723] Thank you for your order #20210312112038267! Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 12testuser0176723Inbox[New order] Order #20210312093100701 is placed by testuser@shoplineapp.com - [New order] Order #20210312093100701 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 12testuser0176723Inbox[testuser0176723] #20210312093100701 Product Details are updated - [testuser0176723] #20210312093100701 Product Details are updated Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the  Mar 12testuser0176723Inbox[New order] Order #20210312092834839 is placed by testuser@shoplineapp.com - [New order] Order #20210312092834839 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 12testuser0176723Inbox[testuser0176723] #20210312092834839 Product Details are updated - [testuser0176723] #20210312092834839 Product Details are updated Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the  Mar 12testuser0176723Inbox[New order] Order #20210312044638467 is placed by testuser@shoplineapp.com - [New order] Order #20210312044638467 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 12testuser0176723Inbox[testuser0176723] Thank you for your order #20210312044638467! - [testuser0176723] Thank you for your order #20210312044638467! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 12testuser0176723InboxYour customer from order #20210311045415906 has uploaded transfer detail, please check - Your customer from order #20210311045415906 has uploaded transfer detail, please check Upload Detail Time: 2021-03-11 12:56PM Please verify that you have received the payment and then process shipping  Mar 11testuser0176723Inbox[testuser0176723] Received transfer detail from order #20210311045415906, waiting for confirmation. - [testuser0176723] Received transfer detail from order #20210311045415906, waiting for confirmation. We have received your proof of payment. Your order will be shipped shortly once the payment is  Mar 11testuser0176723Inbox[New order] Order #20210311045415906 is placed by testuser@shoplineapp.com - [New order] Order #20210311045415906 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 11testuser0176723Inbox[testuser0176723] Thank you for your order #20210311045415906! - [testuser0176723] Thank you for your order #20210311045415906! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 11testuser0176723Inbox[testuser0176723] Thank you for your order #20210311043544810! - [testuser0176723] Thank you for your order #20210311043544810! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 11testuser0176723Inbox[New order] Order #20210311043544810 is placed by testuser@shoplineapp.com - [New order] Order #20210311043544810 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 11testuser0176723InboxYour customer from order #20210311035714999 has uploaded transfer detail, please check - Your customer from order #20210311035714999 has uploaded transfer detail, please check Upload Detail Time: 2021-03-11 11:57AM Please verify that you have received the payment and then process shipping  Mar 11testuser0176723Inbox[testuser0176723] Received transfer detail from order #20210311035714999, waiting for confirmation. - [testuser0176723] Received transfer detail from order #20210311035714999, waiting for confirmation. We have received your proof of payment. Your order will be shipped shortly once the payment is  Mar 11testuser0176723Inbox[testuser0176723] Thank you for your order #20210311035714999! - [testuser0176723] Thank you for your order #20210311035714999! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 11testuser0176723Inbox[New order] Order #20210311035714999 is placed by testuser@shoplineapp.com - [New order] Order #20210311035714999 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 11testuser0176723Inbox[New order] Order #20210311035404830 is placed by testuser@shoplineapp.com - [New order] Order #20210311035404830 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 11testuser0176723Inbox[testuser0176723] #20210311035404830 Product Details are updated - [testuser0176723] #20210311035404830 Product Details are updated Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the  Mar 11testuser0176723Inbox[New order] Order #20210311035136953 is placed by testuser@shoplineapp.com - [New order] Order #20210311035136953 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 11testuser0176723Inbox[testuser0176723] #20210311035136953 Product Details are updated - [testuser0176723] #20210311035136953 Product Details are updated Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the  Mar 11testuser0176723Inbox[New order] Order #20210310071624369 is placed by testuser@shoplineapp.com - [New order] Order #20210310071624369 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 10testuser0176723Inbox[testuser0176723] Thank you for your order #20210310071624369! - [testuser0176723] Thank you for your order #20210310071624369! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 10testuser0176723Inbox[testuser0176723] #20210309085549846 Product Details are updated - [testuser0176723] #20210309085549846 Product Details are updated Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the  Mar 9testuser0176723Inbox[New order] Order #20210309085549846 is placed by testuser@shoplineapp.com - [New order] Order #20210309085549846 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 9testuser0176723Inbox[New order] Order #20210309085325276 is placed by testuser@shoplineapp.com - [New order] Order #20210309085325276 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 9testuser0176723Inbox[testuser0176723] #20210309085325276 Product Details are updated - [testuser0176723] #20210309085325276 Product Details are updated Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the  Mar 9testuser0176723InboxYou got messaged on testuser0176723! - You got messaged on testuser0176723! 陳小明 Woah new store! Congrats! 2021-03-09 16:14PM REPLY  Mar 9testuser0176723InboxWelcome to testuser0176723! - Hello 陳小明! You're now a member of testuser0176723. Thanks for joining us, and happy shopping! Go shopping testuser0176723 This email was sent to testuser+407544@shoplineapp.com. You are receiving  Mar 9testuser0176723InboxYou have been given points at testuser0176723! - You have been given points at testuser0176723! Hi 陳小明, Congratulations! You have been given 1 points at testuser0176723! You now have a total of 1 points. Use the points for your next purchase! Happy  Mar 8testuser0176723InboxYou have been given credits at testuser0176723! - You have been given credits at testuser0176723! Hi 陳小明, Congratulations! You have been given 1 credits at testuser0176723! You now have a total of 1 credits. Use the credits for your next purchase!  Mar 8testuser0176723Inbox[New order] Order #20210308103239674 is placed by testuser@shoplineapp.com - [New order] Order #20210308103239674 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 8testuser0176723Inbox[testuser0176723] Thank you for your order #20210308103239674! - [testuser0176723] Thank you for your order #20210308103239674! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 8testuser0176723InboxYou got messaged on testuser0176723! - You got messaged on testuser0176723! testuser+649219 Woah new store! Congrats! 2021-03-08 17:46PM REPLY  Mar 8testuser0176723InboxWelcome to testuser0176723! - Hello 陳小明! You're now a member of testuser0176723. Thanks for joining us, and happy shopping! Go shopping testuser0176723 This email was sent to testuser+626061@shoplineapp.com. You are receiving  Mar 8testuser0176723Inbox[testuser0176723] #20210302072626384 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302072626384 Delivery status is updated to: Unfulfilled Order status: Confirmed Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or  Mar 8testuser0176723Inbox[testuser0176723] #20210302073520643 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302073520643 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210226113419936 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210226113419936 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210226114248737 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210226114248737 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210304102136954 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210304102136954 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210302073442097 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302073442097 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210302092233632 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302092233632 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210302082241688 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302082241688 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210302072626384A Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302072626384A Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210302091432026 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302091432026 Delivery status is updated to: Unfulfilled Order status: Confirmed Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or  Mar 8testuser0176723Inbox[testuser0176723] #20210302091432026A Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302091432026A Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210303101752266 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210303101752266 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210303073247730 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210303073247730 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210304031706944 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210304031706944 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210303075945617 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210303075945617 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8\",\"expectText\":\"Payment status is updated to: Paid\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 236
+            },
+            "embeddings": [
+              {
+                "data": "https://mail.google.com/mail/u/0/#search/testuser0176723",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

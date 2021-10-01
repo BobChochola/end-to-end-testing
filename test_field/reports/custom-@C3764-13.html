@@ -1,0 +1,2982 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cucumber Feature Report</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" >
+    <style type="text/css">
+      .panel-heading {
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .pull-right-lg {
+        float: left;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.metadata {
+    overflow: auto;
+    letter-spacing: 0.2px;
+    border-color: white;
+    line-height: 1.6;
+    color: #4d4d4d;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding-bottom: 3px;
+}
+
+.panel-heading a {
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+.panel-heading i.glyphicon-chevron-down {
+    display: none;
+}
+
+.panel-heading i.glyphicon-chevron-right {
+    display: inline-block;
+}
+
+.panel-heading.open i.glyphicon-chevron-down {
+    display: inline-block;
+}
+
+.panel-heading.open i.glyphicon-chevron-right {
+    display: none;
+}
+
+.generated-on {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.panel-title b {
+    padding-right: 10px;
+}
+
+.panel-heading .label-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.panel-heading .label-container label {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.navbar .label-container {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.navbar .label {
+    font-size: 20px;
+}
+
+.navbar .project-name {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tags {
+    margin-left: 18px;
+    margin-right: 20px;
+    padding-top: 5px;
+    margin-bottom: -4px;
+}
+
+.tag {
+    font-size: 13px;
+    color: #696969;
+    letter-spacing: 0.3px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.chart {
+    padding-bottom: 15px;
+}
+
+div.chart div div svg rect {
+    fill: #f5f5f5;
+}
+
+.arguments {
+    margin-left: 30px;
+    margin-top: 1em;
+}
+
+#directory {
+    background-color: #f0f0f0;
+}
+
+.screenshot {
+    padding: 2% 0 2% 0;
+}
+
+.description {
+    background-color: white;
+    border-color: white;
+    line-height: 1.6;
+    color: #6f6f6f;
+    font-weight: 400;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 0.1em 0.5em 1.2em 1.5em
+}
+
+#scenario-description {
+    padding-bottom: 1em;
+    padding-left: 0.2em;
+}
+
+.scrollBar {
+    overflow-x: scroll;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f5f5f5;
+    color: black;
+}
+
+.info {
+    background-color: #fbfbfb;
+}
+
+pre {
+    display: block;
+    padding: 10px;
+    margin-top: 1em;
+    margin-right: 3em;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.step-duration {
+    float: right;
+    color: #BDBDBD;
+}
+
+.footer-div {
+    text-align: right;
+    vertical-align: middle;
+    height: 3.5%;
+    width: 100%;
+}
+
+.footer-container {
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 18%;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.footer-link {
+    font-size: 13px;
+    float: right;
+}
+
+.footer-link:hover {
+    color: darkgray;
+}
+
+.steps {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -4px;
+}
+
+.all-features {
+    padding-top: 0.6em;
+}
+
+.keyword {
+    color: #616161;
+}
+
+    </style>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+        
+          <a class="navbar-brand">Cucumberjs Report</a>
+          <div class="project-name visible-md visible-lg">testFramework</div>
+          <div class="label-container">
+            <span class="label label-success" title=scenarios>Passed: 1</span>
+            <span class="label label-danger" title=scenarios>Failed: 0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="generated-on">Tue Aug 31 2021 11:01:44 GMT+0000 (UTC)</div>
+
+      <div class="row">
+        <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
+        <div class="chart col-lg-6 col-md-6" id="piechart_scenarios"></div>
+      </div>
+
+      
+
+      
+
+<div class="row">
+    
+    <div class="col-lg-6 col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <div class="tags"> <span class="tag">@PostTest</span>  <span class="tag">@PreTest</span>  <span class="tag">@BaseCase</span>  <span class="tag">@Admin</span>  <span class="tag">@Storefront</span>  <span class="tag">@Order</span>  <span class="tag">@OrderPayment</span>  <span class="tag">@orderPaymentStatusBulkChange</span>  <span class="tag">@fixture-delivery</span>  <span class="tag">@fixture-payment</span>  <span class="tag">@fixture-shop</span>  <span class="tag">@fixture-product</span>  </div>
+                    <a data-toggle="collapse" href="#collapseFeaturetest_ramework0">
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <b>Feature:</b>Bulk Change Payment Status
+                        <span class="label-container">
+              <span class="label label-success" title="1 Scenarios Passed">1</span>
+              
+              
+              
+              
+              
+            </span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFeaturetest_ramework0" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="description">  As a merchant<br />  I want to Bulk Change Payment Status</div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                <div class="tags"> <span class="tag"> @C3764</span>  <span class="tag"> @C3764-13</span>  </div>
+                                <a data-toggle="collapse" href="#collapseScenariotest_ramework0_0">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>Bulk Change Payment Status
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success" title="65 Steps Passed">65</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenariotest_ramework0_0" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                
+                                
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Before</span>
+                          <span> </span>
+                          
+                              <span class="step-duration">
+                               1ms
+                              </span>
+                            
+                         
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_03" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_03" class="collapse">
+                                        <pre class=info>{"account":{"email":"testuser+0176@shoplineapp.com","password":"12345678","handle":"testuser0176723","notificationEmail":"shoplineqa@gmail.com","tags":["non-admin","baseLocation-TW","theme-basic","fixture-payment","fixture-delivery","fixture-product","fixture-addon","fixture-promotion","fixture-shop","fixture-non-basket"],"retry":0}}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> I am on Admin Login Page</span>
+                          
+                              <span class="step-duration">
+                               11s 279ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_04" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_04" class="collapse">
+                                        <pre class=info>{"url":"https://admin.shoplineapp.com/users/sign_in?locale=en"}<br>{"name":"TimeoutError","remoteStacktrace":""}<br>https://sso.shoplineapp.com/users/sign_in<br>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I fill correct account email to email field</span>
+                          
+                              <span class="step-duration">
+                               1s 602ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_05" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_05" class="collapse">
+                                        <pre class=info>{"value":"testuser+0176@shoplineapp.com"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I fill correct account password to password field</span>
+                          
+                              <span class="step-duration">
+                               1s 640ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_06" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_06" class="collapse">
+                                        <pre class=info>{"value":"12345678"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I click on login button</span>
+                          
+                              <span class="step-duration">
+                               3s 228ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_07" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_07" class="collapse">
+                                        <pre class=info>{"selectorValue":"button[type=\"submit\"]"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should see successful login</span>
+                          
+                              <span class="step-duration">
+                               1s 898ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_08" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_08" class="collapse">
+                                        <pre class=info>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I check intercom message notification frame and click clear intercom message button</span>
+                          
+                              <span class="step-duration">
+                               3s 194ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_09" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_09" class="collapse">
+                                        <pre class=info>{"elementId":"clear intercom message button","errorInfo":{"name":"InvalidSelectorError","remoteStacktrace":""}}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I check intercom message notification frame and click intercom message close button</span>
+                          
+                              <span class="step-duration">
+                               3s 194ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_010" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_010" class="collapse">
+                                        <pre class=info>{"elementId":"intercom message close button","errorInfo":{"name":"InvalidSelectorError","remoteStacktrace":""}}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I check new feature alert notification frame and click new feature alert close button</span>
+                          
+                              <span class="step-duration">
+                               3s 182ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_011" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_011" class="collapse">
+                                        <pre class=info>{"frameLength":0}<br>{"frameNotFound":"new feature alert"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I check and click exclude products panel close button</span>
+                          
+                              <span class="step-duration">
+                               1s 186ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_012" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_012" class="collapse">
+                                        <pre class=info>{"selectorValueNotFound":"exclude products panel close button"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I check and click no thanks button</span>
+                          
+                              <span class="step-duration">
+                               1s 182ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_013" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_013" class="collapse">
+                                        <pre class=info>{"selectorValueNotFound":"no thanks button"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> I am on Basic Setting Page</span>
+                          
+                              <span class="step-duration">
+                               8s 88ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_014" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_014" class="collapse">
+                                        <pre class=info>{"url":"https://admin.shoplineapp.com/admin/testuser0176723/edit?locale=en"}<br>{"name":"TimeoutError","remoteStacktrace":""}<br>https://admin.shoplineapp.com/admin/testuser0176723/edit?locale=en<br>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I mark the value of shop name field as variable shop name</span>
+                          
+                              <span class="step-duration">
+                               1s 571ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_015" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_015" class="collapse">
+                                        <pre class=info>"testuser0176723"</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> I am on Shop Product Index Page</span>
+                          
+                              <span class="step-duration">
+                               7s 701ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_016" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_016" class="collapse">
+                                        <pre class=info>{"url":"https://testuser0176723.shoplineapp.com/products/?locale=en"}<br>{"name":"TimeoutError","remoteStacktrace":""}<br>https://testuser0176723.shoplineapp.com/products/?locale=en<br>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I input &quot;4th Product for Checkout&quot; to search field</span>
+                          
+                              <span class="step-duration">
+                               6s 124ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_017" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_017" class="collapse">
+                                        <pre class=info>{"value":"4th Product for Checkout"}<br>{"value":""}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> 1st product of products list should contain &#39;4th Product for Checkout&#39;</span>
+                          
+                              <span class="step-duration">
+                               1s 578ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_018" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_018" class="collapse">
+                                        <pre class=info>{"elementText":"4th Product for CheckoutNT$20NT$10","expectText":"4th Product for Checkout"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I click on 1st product of products list</span>
+                          
+                              <span class="step-duration">
+                               2s 699ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_019" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_019" class="collapse">
+                                        <pre class=info>{"selectorValue":"li.boxify-item.product-item"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should be redirected to Shop Product Show Page</span>
+                          
+                              <span class="step-duration">
+                               1s 545ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_020" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_020" class="collapse">
+                                        <pre class=info>{"url":""}<br>https://testuser0176723.shoplineapp.com/products/4th-product-for-checkout<br>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I click on add to cart button</span>
+                          
+                              <span class="step-duration">
+                               1s 403ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_021" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_021" class="collapse">
+                                        <pre class=info>{"selectorValue":"[ng-click=\"addItemToCart()\"]"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should see cart panel</span>
+                          
+                              <span class="step-duration">
+                               1s 341ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_022" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_022" class="collapse">
+                                        <pre class=info>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I click on checkout button</span>
+                          
+                              <span class="step-duration">
+                               2s 937ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_023" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_023" class="collapse">
+                                        <pre class=info>{"selectorValue":"[id=\"btn-checkout\"]"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should be redirected to Shop Cart Page</span>
+                          
+                              <span class="step-duration">
+                               1s 574ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_024" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_024" class="collapse">
+                                        <pre class=info>{"url":"https://testuser0176723.shoplineapp.com/cart/?locale=en"}<br>https://testuser0176723.shoplineapp.com/cart<br>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I select country dropdown option included &quot;Taiwan&quot; of country list dropdown</span>
+                          
+                              <span class="step-duration">
+                               8s 555ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_025" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_025" class="collapse">
+                                        <pre class=info>{"selectorValue":"select[id=\"order-delivery-country\"]"}<br>{"selectorValue":"select[id=\"order-delivery-country\"] option"}<br>{"retryCount":1,"elementTexts":["Hong Kong","Taiwan"],"text":"Taiwan"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I wait for 3 seconds for loading</span>
+                          
+                              <span class="step-duration">
+                               3s 14ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I select delivery dropdown option included &quot;Custom Delivery&quot; of delivery method dropdown</span>
+                          
+                              <span class="step-duration">
+                               11s 886ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_027" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_027" class="collapse">
+                                        <pre class=info>{"selectorValue":"select[id=\"order-delivery-method\"]"}<br>{"selectorValue":"select[id=\"order-delivery-method\"] option"}<br>{"retryCount":1,"elementTexts":["7-11 Pickup only (C2C)","7-11 Pickup and pay in store (B2C)","7-11 Pickup only (B2C)","7-11 Pickup and pay in store (C2C)","Family Mart Pickup and pay in store (C2C)","Family Mart Pickup only (C2C)","(DBW) No integration 711 Pickup","(DBW) - LocalDelivery","(DBW) CustomDelivery","(DBW) Family Mart B2C - Pickup and pay in store","(DBW) Ezship pickup and pay in store","(DBW) 7-11 C2C - Pickup only","(DBW) 7-11 B2C - Pickup and pay in store","Family Mart Pickup only (B2C)","Family Mart Pickup and pay in store (B2C)","Family Mart Pickup (no integration)","Custom Delivery","ezship pickup and pay in store","Local Delivery","7-11 Pickup (no integration)"],"text":"Custom Delivery"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I wait for 3 seconds for loading</span>
+                          
+                              <span class="step-duration">
+                               2s 981ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I select payment dropdown option included &quot;Custom&quot; of payment method dropdown</span>
+                          
+                              <span class="step-duration">
+                               10s 852ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_029" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_029" class="collapse">
+                                        <pre class=info>{"selectorValue":"select[id=\"order-payment-method\"]"}<br>{"selectorValue":"select[id=\"order-payment-method\"] option"}<br>{"retryCount":1,"elementTexts":["CVS - ECpay with wrong key","Credit Card via O'Pay","CVS via O'Pay","Taishin","ATM via O'Pay","WebATM via O'Pay","Credit Card via ECpay","Custom","Barcode via ECpay","CVS via ECpay","LINE Pay","Cash on Delivery","Credit card or Paypal (Paypal Express)","Bank Transfer"],"text":"Custom"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I wait for 3 seconds for loading</span>
+                          
+                              <span class="step-duration">
+                               3s 4ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I click on proceed to checkout button</span>
+                          
+                              <span class="step-duration">
+                               2s 435ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_031" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_031" class="collapse">
+                                        <pre class=info>{"selectorValue":"a[href$=\"checkout\"]:not(.disabled)"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should be redirected to Shop Checkout Page</span>
+                          
+                              <span class="step-duration">
+                               1s 555ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_032" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_032" class="collapse">
+                                        <pre class=info>{"url":""}<br>https://testuser0176723.shoplineapp.com/checkout<br>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I fill name to name field</span>
+                          
+                              <span class="step-duration">
+                               1s 592ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_033" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_033" class="collapse">
+                                        <pre class=info>{"value":"陳小明"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I fill email to email address field</span>
+                          
+                              <span class="step-duration">
+                               1s 650ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_034" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_034" class="collapse">
+                                        <pre class=info>{"value":"testuser@shoplineapp.com"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I fill phone to contact number field</span>
+                          
+                              <span class="step-duration">
+                               1s 593ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_035" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_035" class="collapse">
+                                        <pre class=info>{"value":"0912345678"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I click on same as checkbox</span>
+                          
+                              <span class="step-duration">
+                               1s 473ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_036" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_036" class="collapse">
+                                        <pre class=info>{"selectorValue":"[name=\"order[delivery_data][recipient_is_customer]\"]"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I click on agree terms checkbox</span>
+                          
+                              <span class="step-duration">
+                               1s 420ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_037" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_037" class="collapse">
+                                        <pre class=info>{"selectorValue":"input[name=\"policy\"]"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I click on accept marketing checkbox</span>
+                          
+                              <span class="step-duration">
+                               1s 406ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_038" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_038" class="collapse">
+                                        <pre class=info>{"selectorValue":"input[name=\"saveFields[marketing]\"]"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I click on place order button</span>
+                          
+                              <span class="step-duration">
+                               1s 431ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_039" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_039" class="collapse">
+                                        <pre class=info>{"selectorValue":".btn.btn-success"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should be redirected to Shop Order Confirm Page</span>
+                          
+                              <span class="step-duration">
+                               3s 128ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_040" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_040" class="collapse">
+                                        <pre class=info>{"url":""}<br>https://testuser0176723.shoplineapp.com/checkout<br>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> I am on Orders Page</span>
+                          
+                              <span class="step-duration">
+                               8s 487ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_041" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_041" class="collapse">
+                                        <pre class=info>{"url":"https://admin.shoplineapp.com/admin/testuser0176723/orders?locale=en"}<br>{"name":"TimeoutError","remoteStacktrace":""}<br>https://admin.shoplineapp.com/admin/testuser0176723/orders?locale=en&createdBy=admin<br>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I should see select all checkbox</span>
+                          
+                              <span class="step-duration">
+                               1s 384ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_042" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_042" class="collapse">
+                                        <pre class=info>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I click on select all checkbox</span>
+                          
+                              <span class="step-duration">
+                               1s 445ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_043" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_043" class="collapse">
+                                        <pre class=info>{"selectorValue":"input[ng-model=\"state.selectedPageOrders\"]"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I should see bulk actions dropdown</span>
+                          
+                              <span class="step-duration">
+                               1s 374ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_044" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_044" class="collapse">
+                                        <pre class=info>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I select Update Status of bulk actions dropdown</span>
+                          
+                              <span class="step-duration">
+                               6s 858ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_045" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_045" class="collapse">
+                                        <pre class=info>{"selectorValue":"orders-table > div.form-inline.bulk-action-section.row > div > span.dropdown > button"}<br>{"selectorValue":"li[ng-click=\"onChooseBulkEdit()\"]"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I select status dropdown option included &#39;Payment Status&#39; of status type dropdown</span>
+                          
+                              <span class="step-duration">
+                               9s 166ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_046" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_046" class="collapse">
+                                        <pre class=info>{"selectorValue":"button[ng-style=\"bulkEditStyle\"]"}<br>{"selectorValue":"ul.bulk-edit-dropdown a"}<br>{"retryCount":1,"elementTexts":["","","Order Status","Payment Status","Delivery Status"],"text":"Payment Status"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I select status dropdown option included &#39;Paid&#39; of status item dropdown</span>
+                          
+                              <span class="step-duration">
+                               10s 45ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_047" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_047" class="collapse">
+                                        <pre class=info>{"selectorValue":"button[ng-style=\"bulkStatusStyle\"]"}<br>{"selectorValue":"ul.bulk-edit-dropdown a"}<br>{"retryCount":1,"elementTexts":["","","","","","Unpaid","Paid","Refunding","Refunded","Partially Refunded"],"text":"Paid"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I click on update button</span>
+                          
+                              <span class="step-duration">
+                               1s 421ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_048" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_048" class="collapse">
+                                        <pre class=info>{"selectorValue":"[ng-click=\"updateOrders()\"]:not([data-loading])"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should see confirm popover</span>
+                          
+                              <span class="step-duration">
+                               1s 396ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_049" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_049" class="collapse">
+                                        <pre class=info>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I click on send notification checkbox</span>
+                          
+                              <span class="step-duration">
+                               1s 436ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_050" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_050" class="collapse">
+                                        <pre class=info>{"selectorValue":".modal-footer input"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I click on OK button</span>
+                          
+                              <span class="step-duration">
+                               1s 914ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_051" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_051" class="collapse">
+                                        <pre class=info>{"selectorValue":"button[ng-click=\"confirm()\"]:not(.ng-hide)"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should see row of payment status</span>
+                          
+                              <span class="step-duration">
+                               7s 884ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_052" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_052" class="collapse">
+                                        <pre class=info>{"retry":0,"matchedElementCount":24,"displayedElementCount":24}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should not see loading icon</span>
+                          
+                              <span class="step-duration">
+                               51s 149ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> 1st row of payment status should equal to &quot;Paid&quot;</span>
+                          
+                              <span class="step-duration">
+                               1s 550ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_054" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_054" class="collapse">
+                                        <pre class=info>{"elementText":"Paid","expectText":"Paid"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I wait for 200 seconds for mail sent</span>
+                          
+                              <span class="step-duration">
+                               3m 19s 952ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> I am on Google Mail Page</span>
+                          
+                              <span class="step-duration">
+                               8s 441ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_056" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_056" class="collapse">
+                                        <pre class=info>{"url":"https://mail.google.com/mail"}<br>{"name":"TimeoutError","remoteStacktrace":""}<br>https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin<br>{"retry":0,"matchedElementCount":6,"displayedElementCount":4}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should see account field</span>
+                          
+                              <span class="step-duration">
+                               1s 400ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_057" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_057" class="collapse">
+                                        <pre class=info>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I fill customer email to account field</span>
+                          
+                              <span class="step-duration">
+                               1s 651ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_058" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_058" class="collapse">
+                                        <pre class=info>{"value":"testuser@shoplineapp.com"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I click on identifier next button</span>
+                          
+                              <span class="step-duration">
+                               1s 406ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_059" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_059" class="collapse">
+                                        <pre class=info>{"selectorValue":"[id*=\"ext\"]:not([id*=heading])"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should see password field</span>
+                          
+                              <span class="step-duration">
+                               4s 464ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_060" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_060" class="collapse">
+                                        <pre class=info>{"retry":7,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I input account password to password field</span>
+                          
+                              <span class="step-duration">
+                               4s 960ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_061" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_061" class="collapse">
+                                        <pre class=info>{"value":"testuser"}<br>{"value":""}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I check and click password next button</span>
+                          
+                              <span class="step-duration">
+                               57s 627ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_062" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_062" class="collapse">
+                                        <pre class=info>{"selectorValue":"#passwordNext,#signIn"}<br>"{\"name\":\"WebDriverError\",\"remoteStacktrace\":\"\"}"<br>{"errorInfo":"{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I should see search field</span>
+                          
+                              <span class="step-duration">
+                               1s 352ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_063" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_063" class="collapse">
+                                        <pre class=info>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I input shop name to search field</span>
+                          
+                              <span class="step-duration">
+                               5s 616ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_064" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_064" class="collapse">
+                                        <pre class=info>{"value":"testuser0176723"}<br>{"value":""}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I should see search mail list</span>
+                          
+                              <span class="step-duration">
+                               1s 582ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_065" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_065" class="collapse">
+                                        <pre class=info>{"retry":0,"matchedElementCount":1,"displayedElementCount":1}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> search mail list should contain &quot;Payment status is updated to: Paid&quot;</span>
+                          
+                              <span class="step-duration">
+                               4s 712ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_066" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_066" class="collapse">
+                                        <pre class=info>{"elementText":"testuser0176723Inbox[testuser0176723] #20210827104438067 Payment status is updated to: Paid - [testuser0176723] #20210827104438067 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210830085454179 Payment status is updated to: Paid - [testuser0176723] #20210830085454179 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820110203422 Payment status is updated to: Paid - [testuser0176723] #20210820110203422 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210826100406845 Payment status is updated to: Paid - [testuser0176723] #20210826100406845 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210831105500501 Payment status is updated to: Paid - [testuser0176723] #20210831105500501 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210824072128898 Payment status is updated to: Paid - [testuser0176723] #20210824072128898 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820104612285 Payment status is updated to: Paid - [testuser0176723] #20210820104612285 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210824021501509 Payment status is updated to: Paid - [testuser0176723] #20210824021501509 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820102737160 Payment status is updated to: Paid - [testuser0176723] #20210820102737160 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820100319236 Payment status is updated to: Paid - [testuser0176723] #20210820100319236 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820105316213 Payment status is updated to: Paid - [testuser0176723] #20210820105316213 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820103459214 Payment status is updated to: Paid - [testuser0176723] #20210820103459214 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820101746223 Payment status is updated to: Paid - [testuser0176723] #20210820101746223 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820093042297 Payment status is updated to: Paid - [testuser0176723] #20210820093042297 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820092952667 Payment status is updated to: Paid - [testuser0176723] #20210820092952667 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820054048338 Payment status is updated to: Paid - [testuser0176723] #20210820054048338 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820033546823 Payment status is updated to: Paid - [testuser0176723] #20210820033546823 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210820094508558 Payment status is updated to: Paid - [testuser0176723] #20210820094508558 Payment status is updated to: Paid Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the  10:55 AMtestuser0176723Inbox[testuser0176723] #20210818084851958 Payment status is updated to: Paid - [testuser0176723] #20210818084851958 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210813042649544 Payment status is updated to: Paid - [testuser0176723] #20210813042649544 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210813031924469 Payment status is updated to: Paid - [testuser0176723] #20210813031924469 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210819075342396 Payment status is updated to: Paid - [testuser0176723] #20210819075342396 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210813031438067 Payment status is updated to: Paid - [testuser0176723] #20210813031438067 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[testuser0176723] #20210819073448138 Payment status is updated to: Paid - [testuser0176723] #20210819073448138 Payment status is updated to: Paid Order status: Confirmed Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check  10:55 AMtestuser0176723Inbox[New order] Order #20210831105500501 is placed by testuser@shoplineapp.com - [New order] Order #20210831105500501 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  10:55 AMtestuser0176723Inbox[testuser0176723] Thank you for your order #20210831105500501! - [testuser0176723] Thank you for your order #20210831105500501! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  10:55 AMtestuser0176723InboxYou got messaged on testuser0176723! - You got messaged on testuser0176723! testuser+332770 Woah new store! Congrats! 2021-08-31 18:53PM REPLY  10:53 AMtestuser0176723Inbox[testuser0176723] Thank you for your order #20210830085454179! - [testuser0176723] Thank you for your order #20210830085454179! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Aug 30testuser0176723Inbox[New order] Order #20210830085454179 is placed by testuser@shoplineapp.com - [New order] Order #20210830085454179 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Aug 30testuser0176723Inbox[testuser0176723] #20210315125909365 Order has been split - [testuser0176723] #20210315125909365 Order has been split Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox[New order] Order #20210315125909365 is placed by testuser@shoplineapp.com - [New order] Order #20210315125909365 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315125909365! - [testuser0176723] Thank you for your order #20210315125909365! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox[New order] Order #20210315125157102 is placed by testuser@shoplineapp.com - [New order] Order #20210315125157102 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315125157102! - [testuser0176723] Thank you for your order #20210315125157102! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox[New order] Order #20210315124549846 is placed by testuser@shoplineapp.com - [New order] Order #20210315124549846 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315124549846! - [testuser0176723] Thank you for your order #20210315124549846! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox[New order] Order #20210315124220541 is placed by testuser@shoplineapp.com - [New order] Order #20210315124220541 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315124220541! - [testuser0176723] Thank you for your order #20210315124220541! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723InboxYou got messaged on testuser0176723! - You got messaged on testuser0176723! testuser+958795 Woah new store! Congrats! 2021-03-15 20:40PM REPLY  Mar 15testuser0176723InboxYour order #20210315123833833 has a new comment! - Your order #20210315123833833 has a new comment! 陳小明 C4084 2021-03-15 20:38PM REPLY  Mar 15testuser0176723Inbox[New order] Order #20210315123833833 is placed by testuser@shoplineapp.com - [New order] Order #20210315123833833 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315123833833! - [testuser0176723] Thank you for your order #20210315123833833! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315122746223! - [testuser0176723] Thank you for your order #20210315122746223! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox[New order] Order #20210315122746223 is placed by testuser@shoplineapp.com - [New order] Order #20210315122746223 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[New order] Order #20210315122313193 is placed by testuser@shoplineapp.com - [New order] Order #20210315122313193 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 15testuser0176723Inbox[testuser0176723] Thank you for your order #20210315122313193! - [testuser0176723] Thank you for your order #20210315122313193! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 15testuser0176723Inbox下載 商品銷量報表 - 下載 商品銷量報表 你好 testuser, 你的報表已經準備好，請點���以下連結下載 下載 This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are receiving this e-mail because you have signed up for an account  Mar 15testuser0176723Inbox下載 商品銷量報表 - 下載 商品銷量報表 你好 testuser, 你的報表已經準備好，請點擊以下連結下載 下載 This e-mail was sent by SHOPLINE. A product by Starling Labs Limited in Hong Kong. You are receiving this e-mail because you have signed up for an account  Mar 15testuser0176723InboxYou have been given credits at testuser0176723! - You have been given credits at testuser0176723! Hi 陳小明, Congratulations! You have been given 20 credits at testuser0176723! You now have a total of 20 credits. Use the credits for your next purchase!  Mar 12testuser0176723Inbox[New order] Order #20210312112038267 is placed by testuser@shoplineapp.com - [New order] Order #20210312112038267 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about the  Mar 12testuser0176723Inbox[testuser0176723] Thank you for your order #20210312112038267! - [testuser0176723] Thank you for your order #20210312112038267! Order status: Open Payment status: Paid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 12testuser0176723Inbox[New order] Order #20210312093100701 is placed by testuser@shoplineapp.com - [New order] Order #20210312093100701 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 12testuser0176723Inbox[testuser0176723] #20210312093100701 Product Details are updated - [testuser0176723] #20210312093100701 Product Details are updated Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the  Mar 12testuser0176723Inbox[New order] Order #20210312092834839 is placed by testuser@shoplineapp.com - [New order] Order #20210312092834839 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 12testuser0176723Inbox[testuser0176723] #20210312092834839 Product Details are updated - [testuser0176723] #20210312092834839 Product Details are updated Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the  Mar 12testuser0176723Inbox[New order] Order #20210312044638467 is placed by testuser@shoplineapp.com - [New order] Order #20210312044638467 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 12testuser0176723Inbox[testuser0176723] Thank you for your order #20210312044638467! - [testuser0176723] Thank you for your order #20210312044638467! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 12testuser0176723InboxYour customer from order #20210311045415906 has uploaded transfer detail, please check - Your customer from order #20210311045415906 has uploaded transfer detail, please check Upload Detail Time: 2021-03-11 12:56PM Please verify that you have received the payment and then process shipping  Mar 11testuser0176723Inbox[testuser0176723] Received transfer detail from order #20210311045415906, waiting for confirmation. - [testuser0176723] Received transfer detail from order #20210311045415906, waiting for confirmation. We have received your proof of payment. Your order will be shipped shortly once the payment is  Mar 11testuser0176723Inbox[New order] Order #20210311045415906 is placed by testuser@shoplineapp.com - [New order] Order #20210311045415906 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 11testuser0176723Inbox[testuser0176723] Thank you for your order #20210311045415906! - [testuser0176723] Thank you for your order #20210311045415906! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 11testuser0176723Inbox[testuser0176723] Thank you for your order #20210311043544810! - [testuser0176723] Thank you for your order #20210311043544810! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 11testuser0176723Inbox[New order] Order #20210311043544810 is placed by testuser@shoplineapp.com - [New order] Order #20210311043544810 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 11testuser0176723InboxYour customer from order #20210311035714999 has uploaded transfer detail, please check - Your customer from order #20210311035714999 has uploaded transfer detail, please check Upload Detail Time: 2021-03-11 11:57AM Please verify that you have received the payment and then process shipping  Mar 11testuser0176723Inbox[testuser0176723] Received transfer detail from order #20210311035714999, waiting for confirmation. - [testuser0176723] Received transfer detail from order #20210311035714999, waiting for confirmation. We have received your proof of payment. Your order will be shipped shortly once the payment is  Mar 11testuser0176723Inbox[testuser0176723] Thank you for your order #20210311035714999! - [testuser0176723] Thank you for your order #20210311035714999! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 11testuser0176723Inbox[New order] Order #20210311035714999 is placed by testuser@shoplineapp.com - [New order] Order #20210311035714999 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 11testuser0176723Inbox[New order] Order #20210311035404830 is placed by testuser@shoplineapp.com - [New order] Order #20210311035404830 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 11testuser0176723Inbox[testuser0176723] #20210311035404830 Product Details are updated - [testuser0176723] #20210311035404830 Product Details are updated Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the  Mar 11testuser0176723Inbox[New order] Order #20210311035136953 is placed by testuser@shoplineapp.com - [New order] Order #20210311035136953 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 11testuser0176723Inbox[testuser0176723] #20210311035136953 Product Details are updated - [testuser0176723] #20210311035136953 Product Details are updated Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the  Mar 11testuser0176723Inbox[New order] Order #20210310071624369 is placed by testuser@shoplineapp.com - [New order] Order #20210310071624369 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 10testuser0176723Inbox[testuser0176723] Thank you for your order #20210310071624369! - [testuser0176723] Thank you for your order #20210310071624369! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 10testuser0176723Inbox[testuser0176723] #20210309085549846 Product Details are updated - [testuser0176723] #20210309085549846 Product Details are updated Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the  Mar 9testuser0176723Inbox[New order] Order #20210309085549846 is placed by testuser@shoplineapp.com - [New order] Order #20210309085549846 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 9testuser0176723Inbox[New order] Order #20210309085325276 is placed by testuser@shoplineapp.com - [New order] Order #20210309085325276 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 9testuser0176723Inbox[testuser0176723] #20210309085325276 Product Details are updated - [testuser0176723] #20210309085325276 Product Details are updated Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the  Mar 9testuser0176723InboxYou got messaged on testuser0176723! - You got messaged on testuser0176723! 陳小明 Woah new store! Congrats! 2021-03-09 16:14PM REPLY  Mar 9testuser0176723InboxWelcome to testuser0176723! - Hello 陳小明! You're now a member of testuser0176723. Thanks for joining us, and happy shopping! Go shopping testuser0176723 This email was sent to testuser+407544@shoplineapp.com. You are receiving  Mar 9testuser0176723InboxYou have been given points at testuser0176723! - You have been given points at testuser0176723! Hi 陳小明, Congratulations! You have been given 1 points at testuser0176723! You now have a total of 1 points. Use the points for your next purchase! Happy  Mar 8testuser0176723InboxYou have been given credits at testuser0176723! - You have been given credits at testuser0176723! Hi 陳小明, Congratulations! You have been given 1 credits at testuser0176723! You now have a total of 1 credits. Use the credits for your next purchase!  Mar 8testuser0176723Inbox[New order] Order #20210308103239674 is placed by testuser@shoplineapp.com - [New order] Order #20210308103239674 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the  Mar 8testuser0176723Inbox[testuser0176723] Thank you for your order #20210308103239674! - [testuser0176723] Thank you for your order #20210308103239674! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,  Mar 8testuser0176723InboxYou got messaged on testuser0176723! - You got messaged on testuser0176723! testuser+649219 Woah new store! Congrats! 2021-03-08 17:46PM REPLY  Mar 8testuser0176723InboxWelcome to testuser0176723! - Hello 陳小明! You're now a member of testuser0176723. Thanks for joining us, and happy shopping! Go shopping testuser0176723 This email was sent to testuser+626061@shoplineapp.com. You are receiving  Mar 8testuser0176723Inbox[testuser0176723] #20210302072626384 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302072626384 Delivery status is updated to: Unfulfilled Order status: Confirmed Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or  Mar 8testuser0176723Inbox[testuser0176723] #20210302073520643 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302073520643 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210226113419936 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210226113419936 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210226114248737 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210226114248737 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210304102136954 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210304102136954 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210302073442097 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302073442097 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210302092233632 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302092233632 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210302082241688 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302082241688 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210302072626384A Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302072626384A Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210302091432026 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302091432026 Delivery status is updated to: Unfulfilled Order status: Confirmed Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or  Mar 8testuser0176723Inbox[testuser0176723] #20210302091432026A Delivery status is updated to: Unfulfilled - [testuser0176723] #20210302091432026A Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210303101752266 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210303101752266 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210303073247730 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210303073247730 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210304031706944 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210304031706944 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8testuser0176723Inbox[testuser0176723] #20210303075945617 Delivery status is updated to: Unfulfilled - [testuser0176723] #20210303075945617 Delivery status is updated to: Unfulfilled Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to  Mar 8","expectText":"Payment status is updated to: Paid"}</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">After</span>
+                          <span> </span>
+                          
+                              <span class="step-duration">
+                               236ms
+                              </span>
+                            
+                         
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+                                    <a href="#info0_067" data-toggle="collapse">+ Show Info</a>
+                                    <div id="info0_067" class="collapse">
+                                        <pre class=info>https://mail.google.com/mail/u/0/#search/testuser0176723</pre>
+                                    </div>
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+    </div>
+
+    <div class="navbar-fixed-bottom row-fluid footer-div ">
+      <div class="navbar-inner">
+        <div class="footer-container">
+          <a  target="_blank" href="https://www.npmjs.com/package/cucumber-html-reporter">
+            <div class="text-muted footer-link">
+              generated by @cucumber-html-reporter
+            </div>
+             </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages: ["corechart"]});
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Features",
+                                                            "failed" : 0,
+                                                            "passed" : 1,
+                                                            "ambiguous" : 0
+                                                        })
+                                            });
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Scenarios",
+                                                            "failed" : 0,
+                                                            "passed" : 1,
+                                                            "notdefined" : 0,
+                                                            "pending" : 0,
+                                                            "skipped" : 0,
+                                                            "ambiguous" : 0
+                                                        })
+                                            });
+    </script>
+    <script>
+      $(document).ready(function() {
+    $('.collapse').on('hide.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().removeClass('open');
+    }).on('show.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().addClass('open');
+    });
+
+    var $generated = $('.generated-on');
+
+    $generated.text('Generated ' + moment($generated.text()).fromNow());
+});
+
+      function drawChart(chartData) {
+    var data = google.visualization.arrayToDataTable([
+        ['Task', 'Cucumber Results'],
+        ['Passed', chartData.passed],
+        ['Failed', chartData.failed],
+        ['Pending', chartData.pending],
+        ['Undefined', chartData.notdefined],
+        ['Ambiguous', chartData.ambiguous],
+        ['Skipped', chartData.skipped]        
+    ]);
+
+    var total = chartData.passed + chartData.failed + (chartData.pending || 0) + (chartData.notdefined || 0) + (chartData.ambiguous || 0) + (chartData.skipped || 0);
+    var title;
+
+    if (total === 1) {
+        title = total + ' ' + chartData.title.slice(0, -1)
+    } else {
+        title = total + ' ' + chartData.title;
+    }
+
+    var options = {
+        width: '100%',
+        height: 240,
+        title: title,
+        is3D: true,
+        colors: ['#5cb85c', '#d9534f', '#999', '#5bc0de', '#428bca', '#f0ad4e'],
+        fontSize: '13',
+        fontName: '"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif',
+        slices: {
+            1: {offset: 0.4},
+            2: {offset: 0.4},
+            3: {offset: 0.4},
+            4: {offset: 0.4},
+            5: {offset: 0.4},
+            6: {offset: 0.4}
+        },
+        titleTextStyle: {
+            fontSize: '13',
+            color: '#5e5e5e'
+        }
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_' + chartData.title.toLowerCase()));
+    chart.draw(data, options);
+}
+      $('a.toggle').on('click', function() {
+    if ($(this).text() === 'Screenshot -') {
+        $(this).text('Screenshot +');
+        $(this).next('a.screenshot').find('img').hide();
+    } else {
+        $(this).text('Screenshot -');
+        $(this).next('a.screenshot').find('img').show();
+    }
+});
+
+    </script>
+  </body>
+</html>

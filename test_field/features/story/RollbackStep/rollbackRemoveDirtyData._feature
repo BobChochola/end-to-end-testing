@@ -1,0 +1,317 @@
+@RollbackData @rollbackRemoveDirtyData @premiumFeature
+Feature: Rollback data for testing
+  As a QA
+  I need to remove dirty data of product/addon/free gift/delivery/payment/membership tier/category
+
+  Background:
+    Given I am on Admin Login Page
+    And I fill correct account email to email field
+    And I fill correct account password to password field
+    And I click on login button
+    Then I should see successful login
+    Then I check intercom message notification frame and click clear intercom message button
+    Then I check intercom message notification frame and click intercom message close button
+    When I check new feature alert notification frame and click new feature alert close button
+    When I check and click exclude products panel close button
+    When I check and click no thanks button
+
+  @RollbackData-Product-1
+  Scenario: To rollback data for product (for new account)
+    Given I am on Product Index Page
+    When I input 'dirty data' to search field
+    When I check and click select all button
+    And I check and click bulk actions dropdown
+    And I check and click delete selected
+    When I check and click delete checkbox
+    And I check and click confirm bulk button
+
+  @RollbackData-Product-2 @fixture-shop
+  Scenario: To rollback data for product (for basic)
+    Given I am on Product Index Page
+    When I input 'dirty data' to search field
+    When I check and click select all button
+    And I check and click bulk actions dropdown
+    And I check and click delete selected
+    When I check and click delete checkbox
+    And I check and click confirm bulk button
+
+  @RollbackData-Product-3 @fixture-shop @theme-kingsman
+  Scenario: To rollback data for product (for kingsman)
+    Given I am on Product Index Page
+    When I input 'dirty data' to search field
+    When I check and click select all button
+    And I check and click bulk actions dropdown
+    And I check and click delete selected
+    When I check and click delete checkbox
+    And I check and click confirm bulk button
+
+  @RollbackData-Product-4 @fixture-shop @baseLocation-HK
+  Scenario: To rollback data for product (for HK)
+    Given I am on Product Index Page
+    When I input 'dirty data' to search field
+    When I check and click select all button
+    And I check and click bulk actions dropdown
+    And I check and click delete selected
+    When I check and click delete checkbox
+    And I check and click confirm bulk button
+
+  @RollbackData-Addon-1
+  Scenario: To rollback data for add-on (for new account)
+    Given I am on Addon Index Page
+    When I click select checkbox of addon list for the same order of row of addon list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click select checkbox of addon list for the same order of row of addon list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click select checkbox of addon list for the same order of row of addon list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-Addon-2 @fixture-shop
+  Scenario: To rollback data for add-on (for basic)
+    Given I am on Addon Index Page
+    When I click select checkbox of addon list for the same order of row of addon list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click select checkbox of addon list for the same order of row of addon list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click select checkbox of addon list for the same order of row of addon list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-Addon-3 @fixture-shop @theme-kingsman
+  Scenario: To rollback data for add-on (for kingsman)
+    Given I am on Addon Index Page
+    When I click select checkbox of addon list for the same order of row of addon list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click select checkbox of addon list for the same order of row of addon list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click select checkbox of addon list for the same order of row of addon list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-FreeGift-1
+  Scenario: To rollback data for free gift (for new account)
+    Given I am on Free Gifts Index Page
+    When I click row of select checkbox list for the same order of row of free gift list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click row of select checkbox list for the same order of row of free gift list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click row of select checkbox list for the same order of row of free gift list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-FreeGift-2 @fixture-shop
+  Scenario: To rollback data for free gift (for basic)
+    Given I am on Free Gifts Index Page
+    When I click row of select checkbox list for the same order of row of free gift list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click row of select checkbox list for the same order of row of free gift list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click row of select checkbox list for the same order of row of free gift list included 'dirty data'
+    And I check and click bulk actions dropdown
+    And I check and click delete
+    When I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-Delivery-1
+  Scenario: To rollback data for delivery (for new account)
+    Given I am on Delivery Options Page
+    When I click delete button of delivery method list for the same order of row of delivery options list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of delivery method list for the same order of row of delivery options list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of delivery method list for the same order of row of delivery options list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-Delivery-2 @fixture-shop
+  Scenario: To rollback data for delivery (for basic)
+    Given I am on Delivery Options Page
+    When I click delete button of delivery method list for the same order of row of delivery options list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of delivery method list for the same order of row of delivery options list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of delivery method list for the same order of row of delivery options list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-Delivery-3 @baseLocation-HK
+  Scenario: To rollback data for delivery (for HK new account)
+    Given I am on Delivery Options Page
+    When I click delete button of delivery method list for the same order of row of delivery options list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of delivery method list for the same order of row of delivery options list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of delivery method list for the same order of row of delivery options list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-Delivery-4 @fixture-shop @baseLocation-HK
+  Scenario: To rollback data for delivery (for HK)
+    Given I am on Delivery Options Page
+    When I click delete button of delivery method list for the same order of row of delivery options list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of delivery method list for the same order of row of delivery options list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of delivery method list for the same order of row of delivery options list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-Payment-1
+  Scenario: To rollback data for payment (for new account)
+    Given I am on Payment Setting Page
+    When I click delete button of payment method list for the same order of row of payment method list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of payment method list for the same order of row of payment method list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of payment method list for the same order of row of payment method list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-Payment-2 @fixture-shop
+  Scenario: To rollback data for payment (for basic)
+    Given I am on Payment Setting Page
+    When I click delete button of payment method list for the same order of row of payment method list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of payment method list for the same order of row of payment method list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of payment method list for the same order of row of payment method list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-Payment-3 @baseLocation-HK
+  Scenario: To rollback data for payment (for HK new account)
+    Given I am on Payment Setting Page
+    When I click delete button of payment method list for the same order of row of payment method list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of payment method list for the same order of row of payment method list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of payment method list for the same order of row of payment method list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-Payment-4 @fixture-shop @baseLocation-HK
+  Scenario: To rollback data for payment (for HK)
+    Given I am on Payment Setting Page
+    When I click delete button of payment method list for the same order of row of payment method list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of payment method list for the same order of row of payment method list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of payment method list for the same order of row of payment method list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-MembershipTier-1
+  Scenario: To rollback data for membership tier (for new account)
+    Given I am on Membership Tier Setting Page
+    When I click dropdown button for the same order of row of membership list included 'dirty data'
+    And I check dropdown option and click included 'Delete'
+    And I check and click delete button
+    And I Refresh
+    When I click dropdown button for the same order of row of membership list included 'dirty data'
+    And I check dropdown option and click included 'Delete'
+    And I check and click delete button
+    And I Refresh
+    When I click dropdown button for the same order of row of membership list included 'dirty data'
+    And I check dropdown option and click included 'Delete'
+    And I check and click delete button
+
+  @RollbackData-MembershipTier-2 @fixture-shop
+  Scenario: To rollback data for membership tier (for basic)
+    Given I am on Membership Tier Setting Page
+    When I click dropdown button for the same order of row of membership list included 'dirty data'
+    And I check dropdown option and click included 'Delete'
+    And I check and click delete button
+    And I Refresh
+    When I click dropdown button for the same order of row of membership list included 'dirty data'
+    And I check dropdown option and click included 'Delete'
+    And I check and click delete button
+    And I Refresh
+    When I click dropdown button for the same order of row of membership list included 'dirty data'
+    And I check dropdown option and click included 'Delete'
+    And I check and click delete button
+
+  @RollbackData-Category-1
+  Scenario: To rollback data for category (for new account)
+    Given I am on Category List Page
+    When I click delete subcategory button of categories list for the same order of row of subcategories list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of categories list for the same order of row of categories list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of categories list for the same order of row of categories list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of categories list for the same order of row of categories list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+
+  @RollbackData-Category-2 @fixture-shop
+  Scenario: To rollback data for category (for basic)
+    Given I am on Category List Page
+    When I click delete subcategory button of categories list for the same order of row of subcategories list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of categories list for the same order of row of categories list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of categories list for the same order of row of categories list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button
+    When I click delete button of categories list for the same order of row of categories list included 'dirty data'
+    And I check and click delete checkbox
+    And I check and click confirm delete button

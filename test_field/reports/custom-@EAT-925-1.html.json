@@ -1,0 +1,2001 @@
+[
+  {
+    "description": "  As a merchant\n  I want to assign credits to the customer by using select all",
+    "keyword": "Feature",
+    "name": "Bulk assign credit with select all should send notification",
+    "line": 2,
+    "id": "bulk-assign-credit-with-select-all-should-send-notification",
+    "tags": [
+      {
+        "name": "@BaseCase",
+        "line": 1
+      },
+      {
+        "name": "@Admin",
+        "line": 1
+      },
+      {
+        "name": "@CRM",
+        "line": 1
+      },
+      {
+        "name": "@Credit",
+        "line": 1
+      },
+      {
+        "name": "@bulkCreditAssignWithSelectAll",
+        "line": 1
+      },
+      {
+        "name": "@fixture-mobile-signup-p2-with-newAccunt",
+        "line": 1
+      },
+      {
+        "name": "@EAT-925",
+        "line": 1
+      }
+    ],
+    "uri": "features/component/CRM/Credit/bulkCreditAssignWithSelectAll.feature",
+    "elements": [
+      {
+        "id": "bulk-assign-credit-with-select-all-should-send-notification;select-a-part-of-customer",
+        "keyword": "Scenario",
+        "line": 41,
+        "name": "Select a part of customer",
+        "tags": [
+          {
+            "name": "@BaseCase",
+            "line": 1
+          },
+          {
+            "name": "@Admin",
+            "line": 1
+          },
+          {
+            "name": "@CRM",
+            "line": 1
+          },
+          {
+            "name": "@Credit",
+            "line": 1
+          },
+          {
+            "name": "@bulkCreditAssignWithSelectAll",
+            "line": 1
+          },
+          {
+            "name": "@fixture-mobile-signup-p2-with-newAccunt",
+            "line": 1
+          },
+          {
+            "name": "@EAT-925",
+            "line": 1
+          },
+          {
+            "name": "@EAT-925-1",
+            "line": 40
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "embeddings": [
+              {
+                "data": "{\"account\":{\"email\":\"testuser+2531@shoplineapp.com\",\"notificationEmail\":\"shoplineqa@gmail.com\",\"password\":\"12345678\",\"handle\":\"testuser0080\",\"tags\":[\"non-admin\",\"baseLocation-TW\",\"theme-basic\",\"fixture-mobile-signup-p2-with-newAccunt\"],\"retry\":0}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on Admin Login Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8456
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/users/sign_in?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://sso-preview.shoplineapp.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I fill correct account email to email field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1522
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser+2531@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I fill correct account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1536
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"12345678\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click on login button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3356
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[type=\\\"submit\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see successful login",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1724
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I check intercom message notification frame and click clear intercom message button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3180
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"clear intercom message button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I check intercom message notification frame and click intercom message close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3176
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"intercom message close button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I check new feature alert notification frame and click new feature alert close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3172
+            },
+            "embeddings": [
+              {
+                "data": "{\"frameLength\":0}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"frameNotFound\":\"new feature alert\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I check and click exclude products panel close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1172
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"exclude products panel close button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I check and click no thanks button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1177
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"no thanks button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I am on Basic Setting Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8109
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0080/edit?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0080/edit?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I mark the value of shop name field as variable shop name",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:433"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1525
+            },
+            "embeddings": [
+              {
+                "data": "\"20180131135744964\"",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "I am on Customer List Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7838
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0080/users?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0080/users?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I select import report dropdown option included 'Import Report' of import report dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:479"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8671
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a.btn.btn-default.btn-lg.ng-binding.dropdown-toggle\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"li.dropdown.open a[class$=ng-binding]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Import Report\",\"Import History\",\"Bulk Update Customer Tags\"],\"text\":\"Import Report\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I should be redirected to Customer Bulk Import Update Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1522
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0080/users/import?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0080/users/import",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I pick customer select all bulk upload file to file upload selector",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:225"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2687
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"/app/data/my_customers_import_select_all.xls\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I should see import customer button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1350
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click on import customer button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1458
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[ng-show*=\\\"&& bulkUploadTotalItems>0\\\"]:not(.ng-hide) button[ng-click=\\\"importBulkUpload()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I should see popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1343
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I click on ok button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1381
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"confirm()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "I wait for 25 seconds for update",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24982
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "I should be redirected to Bulk Import Export Progress Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1514
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0080/jobs?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0080/jobs",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I Refresh",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:691"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 165
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "I should see report list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4651
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":20,\"displayedElementCount\":20}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "report list should contain 'Bulk Import Customer'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1529
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Bulk Import Customer Customer Done 2021-09-24 4:16AM 2021-09-24 4:16AM 2021-09-24 4:16AMTotal : 76Successful / Failed : 76 / 0\",\"expectText\":\"Bulk Import Customer\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "report list should contain 'Customer'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1507
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Bulk Import Customer Customer Done 2021-09-24 4:16AM 2021-09-24 4:16AM 2021-09-24 4:16AMTotal : 76Successful / Failed : 76 / 0\",\"expectText\":\"Customer\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 35,
+            "name": "report list should contain Export date",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:806"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1478
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Bulk Import Customer Customer Done 2021-09-24 4:16AM 2021-09-24 4:16AM 2021-09-24 4:16AMTotal : 76Successful / Failed : 76 / 0\",\"expectText\":\"2021-09-24\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "report list should contain 'Total : 76'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1505
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Bulk Import Customer Customer Done 2021-09-24 4:16AM 2021-09-24 4:16AM 2021-09-24 4:16AMTotal : 76Successful / Failed : 76 / 0\",\"expectText\":\"Total : 76\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "report list should contain 'Successful / Failed : 76 / 0'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1510
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Bulk Import Customer Customer Done 2021-09-24 4:16AM 2021-09-24 4:16AM 2021-09-24 4:16AMTotal : 76Successful / Failed : 76 / 0\",\"expectText\":\"Successful / Failed : 76 / 0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 38,
+            "name": "1st row of Status list should equal to 'Done'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:965"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1515
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Done\",\"expectText\":\"Done\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 42,
+            "name": "I am on Customer List Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7840
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0080/users?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0080/users?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "I input 'testuser+0001' to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4982
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser+0001\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "1st customer row should contain 'testuser+0001'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1526
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"testuser+0001 testuser+0001@shoplineapp.com 0911111111 0 - 0 - View\",\"expectText\":\"testuser+0001\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I should see row of select checkbox list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1379
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 46,
+            "name": "I click on all row of select checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1412
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[ng-model=\\\"bulkToggleState\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 48,
+            "name": "I select add credits selected of bulk action dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:467"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6799
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[class=\\\"btn btn-default dropdown-toggle\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"a[ng-click=\\\"bulkAssignUserCredit()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 49,
+            "name": "I should see add credits popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1320
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 50,
+            "name": "I fill '10' to amount of credit field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1540
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"10\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "I click on never expired checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1371
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"never_expires\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "I fill 'Select a part of customer' to reason field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1594
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"Select a part of customer\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "I click on send sms checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1394
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"send_user_import_sms\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 54,
+            "name": "send sms checkbox should be checked",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:1091"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1505
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[name=\\\"send_user_import_sms\\\"]\",\"matchedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 55,
+            "name": "I click on add credits save button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1408
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div.modal-footer button[type=\\\"submit\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 57,
+            "name": "I click on view button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6731
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[ng-click=\\\"viewUser(user._id)\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "\"{\\\"name\\\":\\\"WebDriverError\\\",\\\"remoteStacktrace\\\":\\\"\\\"}\"",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 58,
+            "name": "I should be redirected to Customer Detail Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1527
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0080/users/614d5125f0d0eb000183e059",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 59,
+            "name": "I should see row of credit list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1348
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 60,
+            "name": "row of credit list should contain 'Select a part of customer'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1572
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"2021-09-24 4:17AMSelect a part of customer+ 10 Never Expires 10\",\"expectText\":\"Select a part of customer\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 61,
+            "name": "I click on view credit log button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1519
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[href$=\\\"/user_credits/action_logs\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 62,
+            "name": "I should be redirected to Store Credit Logs Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1511
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0080/users/614d5125f0d0eb000183e059/user_credits/action_logs",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 63,
+            "name": "I should see row of credit log",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1353
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 64,
+            "name": "row of credit log should contain 'Select a part of customer'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1511
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Sep24Select a part of customerAdded by 20180131135744964 2021-09-24 04:17\",\"expectText\":\"Select a part of customer\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 66,
+            "name": "I am on Every8d Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 138287
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://tw.every8d.com/every8d30/report/SearchMemberSend.aspx\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://tw.every8d.com/E8DPortal/login.aspx",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 67,
+            "name": "I check and click close intercom button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2538
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"#cboxClose\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "\"{\\\"name\\\":\\\"ElementNotVisibleError\\\",\\\"remoteStacktrace\\\":\\\"\\\"}\"",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValueFound\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 68,
+            "name": "I fill every8d account to account field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1544
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"24973192\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "I input every8d password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4900
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"shopline123\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 70,
+            "name": "I modify attribute value and click login button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:1236"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58855
+            },
+            "embeddings": [
+              {
+                "data": "\"{\\\"name\\\":\\\"TimeoutError\\\",\\\"remoteStacktrace\\\":\\\"\\\"}\"",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 71,
+            "name": "I click on search sms button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2028
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[name=\\\"FM_OPT_IMG_SMS_SEARCH\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 72,
+            "name": "I should see phone search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1360
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 73,
+            "name": "I fill '0911111111' to phone search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2329
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"0911111111\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 74,
+            "name": "I should see phone search checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1471
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 75,
+            "name": "I click on phone search checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1568
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"#SearchMemberSend_SearchSend_box_phone\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 76,
+            "name": "I click on search button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1575
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"th span[onclick]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 77,
+            "name": "I should see row of mail content",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1606
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":2,\"displayedElementCount\":2}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 78,
+            "name": "1st row of mail content should contain 'Congratulations! You have been given 10 credits at'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1754
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Congratulations! You have been given 10 credits at 20180131135744964 https://shln.me/W9RLm! You now have a total of 10 credits. \",\"expectText\":\"Congratulations! You have been given 10 credits at\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 80,
+            "name": "I am on Google Mail Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8978
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://mail.google.com/mail\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":6,\"displayedElementCount\":4}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 81,
+            "name": "I fill customer email to account field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1836
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 82,
+            "name": "I click on identifier next button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1528
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[id*=\\\"ext\\\"]:not([id*=heading])\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 83,
+            "name": "I should see password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2095
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":1,\"matchedElementCount\":2,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 84,
+            "name": "I input account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5408
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 85,
+            "name": "I check and click password next button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 173139
+            },
+            "embeddings": [
+              {
+                "data": "\"{\\\"name\\\":\\\"TimeoutError\\\",\\\"remoteStacktrace\\\":\\\"\\\"}\"",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValueFound\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 86,
+            "name": "I should see search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1873
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 87,
+            "name": "I input shop name to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5388
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"20180131135744964\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 88,
+            "name": "I should see search mail list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1533
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 89,
+            "name": "I click on row of mail list included \"You have been given credits\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29127
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[role=\\\"main\\\"] td[tabindex=\\\"-1\\\"] [role=\\\"link\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0001, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0075! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0073! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0076! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0069! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0071! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0072! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0074! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0068! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0070! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0065! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0064! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0067! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0066! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0061! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0063! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0062! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0056! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0055! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0057! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0060! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0058! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0053! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0059! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0054! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0052! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0051! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0024! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0025! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0021! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0022! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0005! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0023! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0014! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0001! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0011! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0004! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0018! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0003! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0006! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0002! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0008! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0010! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0007! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0009! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0020! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0015! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0013! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0017! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0019! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0016! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0012! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0009, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0014, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0023, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0008, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0003, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0013, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0021, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0010, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0015, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0020, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0005, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0004, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0002, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0012, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0016, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0007, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0025, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0006, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0011, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0022, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0019, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0018, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0017, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0024, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nYou have been given credits at 20180131135744964!\\n - \\nYou have been given credits at 20180131135744964! Hi testuser+0001, Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0071! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0076! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0074! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0072! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0075! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0069! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0073! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0070! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0068! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0067! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0059! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0065! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0062! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0063! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0066! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0064! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0058! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0061! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0060! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0057! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0051! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0055! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\",\"Inbox\\nComplete your member account setup at 20180131135744964!\\n - \\nHello testuser+0054! Only one step left to complete your member account setup. Press the button below to update your account info and set a new password. Set my password Password reset link will expire\"],\"text\":\"You have been given credits\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 90,
+            "name": "mail detail should contain \"10 credits\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1742
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"You have been given credits at 20180131135744964!Hi testuser+0001,Congratulations! You have been given 10 credits at 20180131135744964! You now have a total of 10 credits. Use the credits for your next purchase!Happy shopping!*Credits may have expiry date. Please login to your account to check.VIEW STORE CREDITS\",\"expectText\":\"10 credits\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 91,
+            "name": "I should see info box button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1380
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 92,
+            "name": "I click on info box button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1609
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".acZ.xD .ajy\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 93,
+            "name": "row of info box list should not contain 'bcc'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:893"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5427
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 95,
+            "name": "---ROLL BACK---",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:1245"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 96,
+            "name": "I am on Customer List Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8501
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/testuser0080/users?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0080/users?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 97,
+            "name": "I click on all row of select checkbox",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1429
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"input[ng-model=\\\"bulkToggleState\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 98,
+            "name": "I check and click select all button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2569
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-click=\\\"queryAll(true)\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValueFound\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 99,
+            "name": "I select delete selected of bulk action dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:467"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6843
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[class=\\\"btn btn-default dropdown-toggle\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"a[ng-click=\\\"bulkDelete()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 100,
+            "name": "I should see popover",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1352
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 101,
+            "name": "I click on ok button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1346
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[ng-click=\\\"confirm()\\\"]:not(.ng-hide)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "I should see back to customer list button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1347
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 103,
+            "name": "I click on back to customer list button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1376
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[ng-click=\\\"reloadPage()\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 104,
+            "name": "I wait for 10 seconds for sync",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10018
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 105,
+            "name": "I Refresh",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:691"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 106,
+            "name": "I should see no customers found",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1641
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 167
+            },
+            "embeddings": [
+              {
+                "data": "https://w0.shoplineapp.com/admin/testuser0080/users?locale=en",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

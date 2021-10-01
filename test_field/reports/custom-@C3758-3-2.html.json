@@ -1,0 +1,689 @@
+[
+  {
+    "description": "  As a user of Shopline\n  I want to update product's inventory\n  So that I can keep inventory of those product in correct quantity",
+    "keyword": "Feature",
+    "name": "inventory Filter Unpublish",
+    "line": 2,
+    "id": "inventory-filter-unpublish",
+    "tags": [
+      {
+        "name": "@PostTest",
+        "line": 1
+      },
+      {
+        "name": "@PreTest",
+        "line": 1
+      },
+      {
+        "name": "@BaseCase",
+        "line": 1
+      },
+      {
+        "name": "@Admin",
+        "line": 1
+      },
+      {
+        "name": "@Search",
+        "line": 1
+      },
+      {
+        "name": "@Inventory",
+        "line": 1
+      },
+      {
+        "name": "@InventorySearch",
+        "line": 1
+      },
+      {
+        "name": "@inventoryFilterUnpublish",
+        "line": 1
+      }
+    ],
+    "uri": "features/component/Inventory/InventorySearch/inventoryFilterUnpublish.feature",
+    "elements": [
+      {
+        "id": "inventory-filter-unpublish;filter-status---unpublish",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Filter status - Unpublish",
+        "tags": [
+          {
+            "name": "@PostTest",
+            "line": 1
+          },
+          {
+            "name": "@PreTest",
+            "line": 1
+          },
+          {
+            "name": "@BaseCase",
+            "line": 1
+          },
+          {
+            "name": "@Admin",
+            "line": 1
+          },
+          {
+            "name": "@Search",
+            "line": 1
+          },
+          {
+            "name": "@Inventory",
+            "line": 1
+          },
+          {
+            "name": "@InventorySearch",
+            "line": 1
+          },
+          {
+            "name": "@inventoryFilterUnpublish",
+            "line": 1
+          },
+          {
+            "name": "@C3758",
+            "line": 19
+          },
+          {
+            "name": "@C3758-3",
+            "line": 19
+          },
+          {
+            "name": "@C3758-3-2",
+            "line": 19
+          },
+          {
+            "name": "@fixture-product",
+            "line": 19
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29
+            },
+            "embeddings": [
+              {
+                "data": "{\"account\":{\"email\":\"testuser+0176@shoplineapp.com\",\"password\":\"12345678\",\"handle\":\"testuser0176723\",\"notificationEmail\":\"shoplineqa@gmail.com\",\"tags\":[\"non-admin\",\"baseLocation-TW\",\"theme-basic\",\"fixture-payment\",\"fixture-delivery\",\"fixture-product\",\"fixture-addon\",\"fixture-promotion\",\"fixture-shop\",\"fixture-non-basket\"],\"retry\":0}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on Admin Login Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12086
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://admin.shoplineapp.com/users/sign_in?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://sso.shoplineapp.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I fill correct account email to email field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1555
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser+0176@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I fill correct account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1533
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"12345678\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click on login button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3381
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[type=\\\"submit\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should see successful login",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:775"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4167
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I check intercom message notification frame and click clear intercom message button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:380"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3184
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"clear intercom message button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I check intercom message notification frame and click intercom message close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:380"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3177
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"intercom message close button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I check new feature alert notification frame and click new feature alert close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:380"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3172
+            },
+            "embeddings": [
+              {
+                "data": "{\"frameLength\":0}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"frameNotFound\":\"new feature alert\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I check and click exclude products panel close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:319"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1176
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"exclude products panel close button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I check and click no thanks button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:319"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1141
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"no thanks button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "I am on Inventory Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8513
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://admin.shoplineapp.com/admin/testuser0176723/products/inventory?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://admin.shoplineapp.com/admin/testuser0176723/products/inventory?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I select published of status dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:488"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7449
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"selectbox[options=\\\"statusFilters\\\"] a[ng-click=\\\"vm.toggle()\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"ul[ng-show=\\\"vm.active\\\"] a[title=\\\"Published\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I wait for 10 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:684"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10016
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I click on 1st row of select checkbox list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:268"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2035
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-model=\\\"product.selected\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I select unpublish selected of bulk action dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:488"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7021
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button.btn.btn-default.bulk-action-btn\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"li[ng-click=\\\"bulkAction(products, 'status', 'draft')\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I wait for 10 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:684"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10007
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I select unpublished of status dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:488"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7705
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"selectbox[options=\\\"statusFilters\\\"] a[ng-click=\\\"vm.toggle()\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"ul[ng-show=\\\"vm.active\\\"] a[title=\\\"Unpublished\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "I wait for 10 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:684"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9970
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "1st row of product list should contain \"Unpublished\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:867"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1546
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"19th Product for Checkout Unpublished OFF 1199992Blue 1199992Add SetSave\",\"expectText\":\"Unpublished\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "---ROLL BACK---",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:1286"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 31,
+            "name": "I am on Inventory Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8846
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://admin.shoplineapp.com/admin/testuser0176723/products/inventory?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://admin.shoplineapp.com/admin/testuser0176723/products/inventory?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I select unpublished of status dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:488"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7140
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"selectbox[options=\\\"statusFilters\\\"] a[ng-click=\\\"vm.toggle()\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"ul[ng-show=\\\"vm.active\\\"] a[title=\\\"Unpublished\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I wait for 10 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:684"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9978
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I click on 1st row of select checkbox list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:268"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1445
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[ng-model=\\\"product.selected\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I select publish selected of bulk action dropdown",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:488"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6803
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button.btn.btn-default.bulk-action-btn\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValue\":\"li[ng-click=\\\"bulkAction(products, 'status', 'active')\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I wait for 10 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:684"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10008
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 168
+            },
+            "embeddings": [
+              {
+                "data": "https://admin.shoplineapp.com/admin/testuser0176723/products/inventory?page=1&scope=unpublished",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

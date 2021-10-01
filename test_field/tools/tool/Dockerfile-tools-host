@@ -1,0 +1,17 @@
+FROM node:6.11.2
+
+ENV APP_DIR=/app
+
+COPY package.json $APP_DIR/package.json
+
+RUN cd $APP_DIR \
+    && npm install
+
+COPY . $APP_DIR
+
+WORKDIR $APP_DIR
+
+RUN node ./framework/scripts/js/genStepList.js
+
+CMD node ./framework/scripts/js/tools.js
+

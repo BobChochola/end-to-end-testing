@@ -1,0 +1,3340 @@
+@PromotionBasecaseSetupData @premiumFeature
+Feature: Promotion basecase setup data for testing
+  As a QA
+  I need data let auto test verified can be more fast
+
+  Background:
+    Given I am on Admin Login Page
+    And I fill correct account email to email field
+    And I fill correct account password to password field
+    And I click on login button
+    Then I should see successful login
+    Then I check intercom message notification frame and click clear intercom message button
+    Then I check intercom message notification frame and click intercom message close button
+    When I check new feature alert notification frame and click new feature alert close button
+    When I check and click exclude products panel close button
+    When I check and click no thanks button
+
+  # 滿額或滿件商店都需要加的條件
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-1
+  Scenario: To Create a full data for checkout for promotions
+    #購物車加購品100元
+    Given I am on Cart Add On Items Create Page
+    And I fill "[promotion basecase phase 1] - Add-on Item" to english name field
+    When I click on select add on items button
+    Then I should see search add on items field
+    And I input "1st Addon for Checkout" to search add on items field
+    When I click on search button
+    Then add on items name should contain "1st Addon for Checkout"
+    And I click on 1st add on items checkbox
+    When I click on add on items save button
+    Then I should see add on items price field
+    And I fill '100' to add on items price field
+    And I click on unlimited checkbox
+    When I click on save button
+    Then I should be redirected to Cart Add On Items Index Page
+    Then I should see alert
+    Then 1st row of cart addon list should contain "[promotion basecase phase 1] - Add-on Item"
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    # 21st Product for Checkout
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "21st Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "10" to regular price field
+    And I click on unlimited quantity checkbox
+    And I click on settings tab
+    And I input "Test" to tag field
+    And I scroll down to id
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    #任選甲
+    #任選3件30
+    Given I am on Bundle Pricing Create Page
+    And I fill '[promotion basecase phase 1] - Buy 3 for $30' to name field
+    And I fill '3' to promotion value field
+    And I fill '30' to discounted price field
+    And I fill '4th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 1st row of selected product should contain '4th Product for Checkout'
+    And I fill '15th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 2nd row of selected product should contain '15th Product for Checkout'
+    And I fill '5th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 3rd row of selected product should contain '5th Product for Checkout'
+    And I fill '12th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 4th row of selected product should contain '12th Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    When I click on preview button
+    Then discount summary should equal to 'Purchase 3 items of Selected Products for NT$30'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Buy 3 for $30'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #任選乙
+    #任選3件90
+    Given I am on Bundle Pricing Create Page
+    And I fill '[promotion basecase phase 1] - Buy 3 for $90' to name field
+    And I fill '3' to promotion value field
+    And I fill '90' to discounted price field
+    And I fill '14th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 1st row of selected product should contain '14th Product for Checkout'
+    And I fill '13th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 2nd row of selected product should contain '13th Product for Checkout'
+    And I fill '7th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 3rd row of selected product should contain '7th Product for Checkout'
+    And I fill '6th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 4th row of selected product should contain '6th Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    When I click on preview button
+    Then discount summary should equal to 'Purchase 3 items of Selected Products for NT$90'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Buy 3 for $90'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #紅配綠乙
+    #紅配綠-紅2綠1，3件90
+    Given I am on Bundle Group Create Page
+    And I fill '[promotion basecase phase 1] - Buy 2 in Group A & 1 in Group B for $90' to name field
+    And I click on stackable off checkbox
+    When I fill '2' to group a field
+    When I fill '1' to group b field
+    When I fill '90' to price field
+    Then discount summary should contain 'Purchase 2 items of Selected Products in Group A and 1 items of Selected Products in Group B for NT$90'
+    And I should see group a tab
+    Then select product button should contain 'Select Products in Group A'
+    When I click on select product button
+    Then I should see select product popup
+    Then I input '1st Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    Then I input '8th Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 1st row of selected product should contain '1st Product for Checkout'
+    Then 2nd row of selected product should contain '8th Product for Checkout'
+    When I click on group b tab
+    Then select product button should contain 'Select Products in Group B'
+    When I click on select product button
+    Then I should see select product popup
+    When I input '9th Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    When I input '18th Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 1st row of selected product should contain '9th Product for Checkout'
+    Then 2nd row of selected product should contain '18th Product for Checkout'
+    When I click on 1st countinue to button
+    When I click on 2nd countinue to button
+    When I click on 3rd countinue to button
+    When I click on preview button
+    Then target group should contain 'All Customers'
+    Then stackable pricing should contain 'Off'
+    Then promotion name should contain '[promotion basecase phase 1] - Buy 2 in Group A & 1 in Group B for $90'
+    When I click on preview group a tab
+    Then preview selected products should contain '1st Product for Checkout'
+    Then preview selected products should contain '8th Product for Checkout'
+    When I click on preview group b tab
+    Then preview selected products should contain '9th Product for Checkout'
+    Then preview selected products should contain '18th Product for Checkout'
+    When I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Buy 2 in Group A & 1 in Group B for $90'
+    Then 1st row of promotions should contain 'All Customers'
+    Then 1st row of promotions should contain 'Unlimited'
+
+    #紅配綠甲
+    #紅配綠-紅2綠1，3件30
+    Given I am on Bundle Group Create Page
+    And I fill '[promotion basecase phase 1] - Buy 2 in Group A & 1 in Group B for $30' to name field
+    And I click on stackable off checkbox
+    When I fill '2' to group a field
+    When I fill '1' to group b field
+    When I fill '30' to price field
+    Then discount summary should contain 'Purchase 2 items of Selected Products in Group A and 1 items of Selected Products in Group B for NT$30'
+    And I should see group a tab
+    Then select product button should contain 'Select Products in Group A'
+    When I click on select product button
+    Then I should see select product popup
+    Then I input '3rd Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    Then I input '16th Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 1st row of selected product should contain '3rd Product for Checkout'
+    Then 2nd row of selected product should contain '16th Product for Checkout'
+    When I click on group b tab
+    Then select product button should contain 'Select Products in Group B'
+    When I click on select product button
+    Then I should see select product popup
+    When I input '10th Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    When I input '21st Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 1st row of selected product should contain '10th Product for Checkout'
+    Then 2nd row of selected product should contain '21st Product for Checkout'
+    When I click on 1st countinue to button
+    When I click on 2nd countinue to button
+    When I click on 3rd countinue to button
+    When I click on preview button
+    Then target group should contain 'All Customers'
+    Then stackable pricing should contain 'Off'
+    Then promotion name should contain '[promotion basecase phase 1] - Buy 2 in Group A & 1 in Group B for $30'
+    When I click on preview group a tab
+    Then preview selected products should contain '3rd Product for Checkout'
+    Then preview selected products should contain '16th Product for Checkout'
+    When I click on preview group b tab
+    Then preview selected products should contain '10th Product for Checkout'
+    Then preview selected products should contain '21st Product for Checkout'
+    When I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Buy 2 in Group A & 1 in Group B for $30'
+    Then 1st row of promotions should contain 'All Customers'
+    Then 1st row of promotions should contain 'Unlimited'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # 滿件商店需要的條件
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-2 @fixture-promotion-basecase-minimum-items
+  Scenario: To Create a full data for checkout for promotions with minimum items
+    #指定丁
+    #全單滿8件，指定商品85折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over 8 items selected products get 15% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '15' to promotion value field
+    And I fill '8' to promotion condition field
+    And I input '15th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain '15th Product for Checkout'
+    And I input '5th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 2nd row of selected product should contain '5th Product for Checkout'
+    And I input '12th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 3rd row of selected product should contain '12th Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 15% off on Selected Products with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over 8 items selected products get 15% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #指定戊
+    #全單滿8件，指定分類8折
+    Given I am on Product Index Page
+    When I click on select all button
+    And I select assign to categories of bulk actions dropdown
+    And I click on categories checkbox
+    And I click on assign button
+    And I should see confirmation popover
+    And I click on confirm bulk button
+    Then I should see alert
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over 8 items selected categories get 20% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select selected category of benefit applies dropdown
+    And I fill '20' to promotion value field
+    And I fill '8' to promotion condition field
+    And I click on 1st category checkbox
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 20% off on Selected Categories with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over 8 items selected categories get 20% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單己
+    #全單滿8件，打9折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over 8 items get 10% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '10' to promotion value field
+    And I fill '8' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 10% off on Entire Order with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over 8 items get 10% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單己1
+    #全單滿8件，減13元
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over 8 items get NT$13 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '13' to promotion value field
+    And I fill '8' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$13 off on Entire Order with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over 8 items get NT$13 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單庚
+    #全單滿8件，送1個贈品
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over 8 items get 1 free gift' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '8' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Entire Order with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over 8 items get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #全單辛
+    #全單滿8件，免運費
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase phase 1] - Entire order over 8 items get free shipping" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I fill "8" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase phase 1] - Entire order over 8 items get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase over 8 items"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # 滿額(任選&任選)商店需要的條件
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-3 @fixture-promotion-basecase-minimum-amounts-bundle
+  Scenario: To Create a full data for checkout for promotions with minimum amounts
+    #指定丁
+    #全單滿NT$260，指定商品85折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over NT$260 selected products get 15% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '15' to promotion value field
+    And I fill '260' to promotion condition field
+    When I input '15th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain '15th Product for Checkout'
+    When I input '5th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 2nd row of selected product should contain '5th Product for Checkout'
+    When I input '12th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 3rd row of selected product should contain '12th Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 15% off on Selected Products with purchase over NT$260'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over NT$260 selected products get 15% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #指定戊
+    #全單滿NT$258，指定分類8折
+    Given I am on Product Index Page
+    When I click on select all button
+    And I select assign to categories of bulk actions dropdown
+    And I click on categories checkbox
+    And I click on assign button
+    And I should see confirmation popover
+    And I click on confirm bulk button
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over NT$258 selected categories get 20% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select selected category of benefit applies dropdown
+    And I fill '20' to promotion value field
+    And I fill '258' to promotion condition field
+    And I click on 1st category checkbox
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 20% off on Selected Categories with purchase over NT$258'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over NT$258 selected categories get 20% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單己
+    #全單滿NT$252，打9折
+    Given I am on Promotion Create Page
+    Then I should see name field
+    When I fill '[promotion basecase phase 1] - Entire order over NT$252 get 10% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '10' to promotion value field
+    And I fill '252' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 10% off on Entire Order with purchase over NT$252'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over NT$252 get 10% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單庚
+    #全單滿NT$237，送1個贈品
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over NT$237 get 1 free gift' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '237' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Entire Order with purchase over NT$237'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over NT$237 get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單己1
+    #全單滿NT$252，減13元
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over NT$252 get NT$13 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amounts of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '13' to promotion value field
+    And I fill '252' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$13 off on Entire Order with purchase over NT$252'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over NT$252 get NT$13 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #全單辛
+    #全單滿225，免運
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase phase 1] - Entire order over NT$225 get free shipping" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I fill "225" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase phase 1] - Entire order over NT$225 get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase over NT$225"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # 滿額(任選&紅配綠)商店需要的條件
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-4 @fixture-promotion-basecase-minimum-amounts-bundle-group
+  Scenario: To Create a full data for checkout for promotions with minimum amounts
+    #指定丁
+    #全單滿NT$329，指定商品85折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over NT$329 selected products get 15% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '15' to promotion value field
+    And I fill '329' to promotion condition field
+    When I input '15th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain '15th Product for Checkout'
+    When I input '5th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 2nd row of selected product should contain '5th Product for Checkout'
+    When I input '12th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 3rd row of selected product should contain '12th Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 15% off on Selected Products with purchase over NT$329'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over NT$329 selected products get 15% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #指定戊
+    #全單滿NT$327，指定分類8折
+    Given I am on Product Index Page
+    When I click on select all button
+    And I select assign to categories of bulk actions dropdown
+    And I click on categories checkbox
+    And I click on assign button
+    And I should see confirmation popover
+    And I click on confirm bulk button
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over NT$327 selected categories get 20% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select selected category of benefit applies dropdown
+    And I fill '20' to promotion value field
+    And I fill '327' to promotion condition field
+    And I click on 1st category checkbox
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 20% off on Selected Categories with purchase over NT$327'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over NT$327 selected categories get 20% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單己
+    #全單滿NT$307，打9折
+    Given I am on Promotion Create Page
+    Then I should see name field
+    When I fill '[promotion basecase phase 1] - Entire order over NT$307 get 10% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '10' to promotion value field
+    And I fill '307' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 10% off on Entire Order with purchase over NT$307'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over NT$307 get 10% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單庚
+    #全單滿NT$286，送1個贈品
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over NT$286 get 1 free gift' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '286' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Entire Order with purchase over NT$286'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over NT$286 get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單己1
+    #全單滿NT$307，減13元
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over NT$307 get NT$13 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amounts of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '13' to promotion value field
+    And I fill '307' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$13 off on Entire Order with purchase over NT$307'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over NT$307 get NT$13 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #全單辛
+    #全單滿271，免運
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase phase 1] - Entire order over NT$271 get free shipping" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I fill "271" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase phase 1] - Entire order over NT$271 get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase over NT$271"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # 滿額或滿件商店都需要的條件
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-5 @baseLocation-HK
+  Scenario: To Create a full data for product - HK
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "4th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "11" to regular price field
+    And I fill "10.99" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "5th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "26" to regular price field
+    And I fill "25.99" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "6th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "51" to regular price field
+    And I fill "50.99" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "7th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "11" to regular price field
+    And I fill "10.99" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "8th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "31" to regular price field
+    And I fill "30.99" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "9th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "51" to regular price field
+    And I fill "50.99" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "10th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "100" to regular price field
+    And I fill "99.99" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "11th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "101" to regular price field
+    And I fill "100.99" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "12nd Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "31" to regular price field
+    And I fill "30.99" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "13rd Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "36" to regular price field
+    And I fill "35.99" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "14th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "50" to regular price field
+    And I fill "49.99" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "15th Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "60" to regular price field
+    And I fill "59.99" to sale price field
+    And I click on unlimited quantity checkbox
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+  # 滿額或滿件商店都需要的條件
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-6 @baseLocation-HK
+  Scenario: To Create a full data for add-on item, Based on productSetuped - HK
+    Given I am on Addon Create Page
+    And I click on tab included "Product Level Settings"
+    Then I should see search field
+    And I fill "1st" to search field
+    And I click on search product button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on confirm button
+    Then I should be redirected to Addon Create Page
+    Then I scroll down to add button
+    And I fill "10" to 1st row of addon price field
+    And I click on tab included "Add-on Item Info"
+    Then I should see english name field
+    And I fill "[promotion basecase phase 1] - 1st Addon for Checkout" to english name field
+    When I pick addon photo to addon photo selector
+    Then I should see delete photo button
+    And I fill "2000000" to addon quantity field
+    And I click on add button
+    Then I should see alert
+
+  # 滿額或滿件商店都需要的條件
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-7 @baseLocation-HK
+  Scenario: To Create a full data for checkout for promotions - HK
+    #購物車加購品100元
+    Given I am on Cart Add On Items Create Page
+    And I fill "[promotion basecase phase 1] - Add-on Item" to english name field
+    When I click on select add on items button
+    Then I should see search add on items field
+    And I input "1st Addon for Checkout" to search add on items field
+    When I click on search button
+    Then add on items name should contain "1st Addon for Checkout"
+    And I click on 1st add on items checkbox
+    When I click on add on items save button
+    Then I should see add on items price field
+    And I fill '100.99' to add on items price field
+    And I click on unlimited checkbox
+    When I click on save button
+    Then I should be redirected to Cart Add On Items Index Page
+    Then I should see alert
+    Then 1st row of cart addon list should contain "[promotion basecase phase 1] - Add-on Item"
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #任選甲
+    #任選3件30.99
+    Given I am on Bundle Pricing Create Page
+    And I fill '[promotion basecase phase 1] - Buy 3 for $30.99' to name field
+    And I fill '3' to promotion value field
+    And I fill '30.99' to discounted price field
+    And I fill '4th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 1st row of selected product should contain '4th Product for Checkou'
+    And I fill '5th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 2nd row of selected product should contain '5th Product for Checkout'
+    And I fill '6th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 3rd row of selected product should contain '6th Product for Checkout'
+    And I fill '7th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 4th row of selected product should contain '7th Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    When I click on preview button
+    Then discount summary should equal to 'Purchase 3 items of Selected Products for HK$30.99'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Buy 3 for $30.99'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #紅配綠乙
+    #紅配綠-紅2綠1，3件90.99
+    Given I am on Bundle Group Create Page
+    And I fill '[promotion basecase phase 1] - Buy 2 in Group A & 1 in Group B for $90.99' to name field
+    And I click on stackable off checkbox
+    When I fill '2' to group a field
+    When I fill '1' to group b field
+    When I fill '90.99' to price field
+    Then discount summary should contain 'Purchase 2 items of Selected Products in Group A and 1 items of Selected Products in Group B for HK$90.99'
+    And I should see group a tab
+    Then select product button should contain 'Select Products in Group A'
+    When I click on select product button
+    Then I should see select product popup
+    Then I input '8th Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    Then I input '9th Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    Then I input '10th Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 1st row of selected product should contain '8th Product for Checkout'
+    Then 2nd row of selected product should contain '9th Product for Checkout'
+    Then 3rd row of selected product should contain '10th Product for Checkout'
+    When I click on group b tab
+    Then select product button should contain 'Select Products in Group B'
+    When I click on select product button
+    Then I should see select product popup
+    When I input '11th Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 1st row of selected product should contain '11th Product for Checkout'
+    When I click on 1st countinue to button
+    When I click on 2nd countinue to button
+    When I click on 3rd countinue to button
+    When I click on preview button
+    Then target group should contain 'All Customers'
+    Then stackable pricing should contain 'Off'
+    Then promotion name should contain '[promotion basecase phase 1] - Buy 2 in Group A & 1 in Group B for $90.99'
+    When I click on preview group a tab
+    Then preview selected products should contain '8th Product for Checkout'
+    Then preview selected products should contain '9th Product for Checkout'
+    Then preview selected products should contain '10th Product for Checkout'
+    When I click on preview group b tab
+    Then preview selected products should contain '11th Product for Checkout'
+    When I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Buy 2 in Group A & 1 in Group B for $90.99'
+    Then 1st row of promotions should contain 'All Customers'
+    Then 1st row of promotions should contain 'Unlimited'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #任選乙
+    #任選3件90.99
+    Given I am on Bundle Pricing Create Page
+    And I fill '[promotion basecase phase 1] - Buy 3 for $90.99' to name field
+    And I fill '3' to promotion value field
+    And I fill '90.99' to discounted price field
+    And I fill '12nd Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 1st row of selected product should contain '12nd Product for Checkou'
+    And I fill '13rd Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 2nd row of selected product should contain '13rd Product for Checkout'
+    And I fill '14th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 3rd row of selected product should contain '14th Product for Checkout'
+    And I fill '15th Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 4th row of selected product should contain '15th Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    When I click on preview button
+    Then discount summary should equal to 'Purchase 3 items of Selected Products for HK$90.99'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Buy 3 for $90.99'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # 滿額或滿件商店都需要的條件
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-8 @baseLocation-HK
+  Scenario: To Create a full free gift data for checkout for freegift - HK
+  #贈品：QA free gift有限數量 (1st Created Free Gift) / 有重量
+    Given I am on Free Gifts Index Page
+    When I click on add button
+    Then I should be redirected to Free Gifts Create Page
+    When I fill "[promotion basecase phase 1] - 1st Created Free Gift" to english name field
+    And I pick free gift photo to free gift photo selector
+    Then I should see delete photo button
+    And I fill "9999999" to quantity field
+    Then I fill "5" to weight field
+    And I click on add button
+    Then I should be redirected to Free Gifts Index Page
+    Then I should see alert
+    Then 1st row of free gift list should contain "[promotion basecase phase 1] - 1st Created Free Gift"
+    Then 1st row of quantity list should contain "9999"
+    Then 1st row of status list should contain "Published"
+
+  # 滿件商店需要的條件
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-9 @baseLocation-HK @fixture-promotion-basecase-minimum-items
+  Scenario: To Create a full data for checkout for promotions with minimum items - HK
+    #指定丁
+    #全單滿8件，指定商品85折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over 8 items selected products get 15% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '15' to promotion value field
+    And I fill '8' to promotion condition field
+    And I input '5th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain '5th Product for Checkout'
+    And I input '6th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 2nd row of selected product should contain '6th Product for Checkout'
+    And I input '7th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 3rd row of selected product should contain '7th Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 15% off on Selected Products with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over 8 items selected products get 15% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #指定戊
+    #全單滿8件，指定分類8折
+    Given I am on Product Index Page
+    When I click on select all button
+    And I select assign to categories of bulk actions dropdown
+    And I click on categories checkbox
+    And I click on assign button
+    And I should see confirmation popover
+    And I click on confirm bulk button
+    Then I should see alert
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over 8 items selected categories get 20% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select selected category of benefit applies dropdown
+    And I fill '20' to promotion value field
+    And I fill '8' to promotion condition field
+    And I click on 1st category checkbox
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 20% off on Selected Categories with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over 8 items selected categories get 20% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單己
+    #全單滿8件，打9折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over 8 items get 10% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '10' to promotion value field
+    And I fill '8' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 10% off on Entire Order with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over 8 items get 10% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單己1
+    #全單滿8件，減13.44元
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over 8 items get HK$-13.44 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '13.44' to promotion value field
+    And I fill '8' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get HK$13.44 off on Entire Order with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over 8 items get HK$-13.44 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單庚
+    #全單滿8件，送1個贈品
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over 8 items get 1 free gift' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '8' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) ([promotion basecase phase 1] - 1st Created Free Gift) on Entire Order with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over 8 items get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #全單辛
+    #全單滿8件，免運費
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase phase 1] - Entire order over 8 items get free shipping" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I fill "8" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase phase 1] - Entire order over 8 items get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase over 8 items"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # 滿額(任選&任選)商店需要的條件
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-10 @baseLocation-HK @fixture-promotion-basecase-minimum-amounts-bundle
+  Scenario: To Create a full data for checkout for promotions with minimum amounts - HK
+    #指定丁
+    #全單滿HK$264.95，指定商品85折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over HK$264.95 selected products get 15% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '15' to promotion value field
+    And I fill '264.95' to promotion condition field
+    When I input '5th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain '5th Product for Checkout'
+    When I input '6th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 2nd row of selected product should contain '6th Product for Checkout'
+    When I input '7th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 3rd row of selected product should contain '7th Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 15% off on Selected Products with purchase over HK$264.95'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over HK$264.95 selected products get 15% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #指定戊
+    #全單滿HK$263.30，指定分類8折
+    Given I am on Product Index Page
+    When I click on select all button
+    And I select assign to categories of bulk actions dropdown
+    And I click on categories checkbox
+    And I click on assign button
+    And I should see confirmation popover
+    And I click on confirm bulk button
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over HK$263.30 selected categories get 20% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select selected category of benefit applies dropdown
+    And I fill '20' to promotion value field
+    And I fill '263.30' to promotion condition field
+    And I click on 1st category checkbox
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 20% off on Selected Categories with purchase over HK$263.30'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over HK$263.30 selected categories get 20% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單己
+    #全單滿HK$257.10，打9折
+    Given I am on Promotion Create Page
+    Then I should see name field
+    When I fill '[promotion basecase phase 1] - Entire order over HK$257.10 get 10% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '10' to promotion value field
+    And I fill '257.10' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 10% off on Entire Order with purchase over HK$257.10'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over HK$257.10 get 10% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單庚
+    #全單滿HK$241.49，送1個贈品
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over HK$241.49 get 1 free gift' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '241.49' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) ([promotion basecase phase 1] - 1st Created Free Gift) on Entire Order with purchase over HK$241.49'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over HK$241.49 get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單己1
+    #全單滿HK$257.10，減15.60元
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over HK$257.10 get HK$15.60 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amounts of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '15.60' to promotion value field
+    And I fill '257.10' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get HK$15.60 off on Entire Order with purchase over HK$257.10'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over HK$257.10 get HK$15.60 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #全單辛
+    #全單滿HK$228.49，免運
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase phase 1] - Entire order over HK$228.49 get free shipping" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I fill "228.49" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase phase 1] - Entire order over HK$228.49 get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase over HK$228.49"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+   
+  # 滿額(任選&紅配綠)商店需要的條件
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-11 @baseLocation-HK @fixture-promotion-basecase-minimum-amounts-bundle-group
+  Scenario: To Create a full data for checkout for promotions with minimum amounts - HK
+    #指定丁
+    #全單滿HK$264.95，指定商品85折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over HK$264.95 selected products get 15% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '15' to promotion value field
+    And I fill '264.95' to promotion condition field
+    When I input '5th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain '5th Product for Checkout'
+    When I input '6th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 2nd row of selected product should contain '6th Product for Checkout'
+    When I input '7th Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 3rd row of selected product should contain '7th Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 15% off on Selected Products with purchase over HK$264.95'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over HK$264.95 selected products get 15% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #指定戊
+    #全單滿HK$263.30，指定分類8折
+    Given I am on Product Index Page
+    When I click on select all button
+    And I select assign to categories of bulk actions dropdown
+    And I click on categories checkbox
+    And I click on assign button
+    And I should see confirmation popover
+    And I click on confirm bulk button
+    Then I should see alert
+
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over HK$263.30 selected categories get 20% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select selected category of benefit applies dropdown
+    And I fill '20' to promotion value field
+    And I fill '263.30' to promotion condition field
+    And I click on 1st category checkbox
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 20% off on Selected Categories with purchase over HK$263.30'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over HK$263.30 selected categories get 20% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單己
+    #全單滿HK$257.10，打9折
+    Given I am on Promotion Create Page
+    Then I should see name field
+    When I fill '[promotion basecase phase 1] - Entire order over HK$257.10 get 10% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '10' to promotion value field
+    And I fill '257.10' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 10% off on Entire Order with purchase over HK$257.10'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over HK$257.10 get 10% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單庚
+    #全單滿HK$241.48，送1個贈品
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over HK$241.48 get 1 free gift' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '241.48' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) ([promotion basecase phase 1] - 1st Created Free Gift) on Entire Order with purchase over HK$241.48'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over HK$241.48 get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #全單己1    
+    #全單滿HK$257.10，減15.62元
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase phase 1] - Entire order over HK$257.10 get HK$15.62 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amounts of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '15.62' to promotion value field
+    And I fill '257.10' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get HK$15.62 off on Entire Order with purchase over HK$257.10'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase phase 1] - Entire order over HK$257.10 get HK$15.62 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #全單辛
+    #全單滿HK$228.48，免運
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase phase 1] - Entire order over HK$228.48 get free shipping" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I fill "228.48" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase phase 1] - Entire order over HK$228.48 get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase over HK$228.48"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # 滿額或滿件商店都需要加的條件
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-12
+  Scenario: To Create a full data for checkout for promotions
+    #分類A
+    Given I am on Category Create Page
+    And I fill '[promotion basecase preview] A Category' to category name field
+    And I click on add button
+    Then I should be redirected to Category List Page
+    And I click on 1st subcategory button of categories list
+    Then 1st row of categories list should contain '[promotion basecase preview] A Category'
+
+    #分類B
+    Given I am on Category Create Page
+    And I fill '[promotion basecase preview] B Category' to category name field
+    And I click on add button
+    Then I should be redirected to Category List Page
+    Then 2nd row of categories list should contain '[promotion basecase preview] B Category'
+
+    #商品A~Z
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "A Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "35" to regular price field
+    And I click on unlimited quantity checkbox
+    When I click on categories tab
+    And I click on 1st row of categories checkbox
+    And I scroll down to add button
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "B Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "36" to regular price field
+    And I click on unlimited quantity checkbox
+    When I click on categories tab
+    And I click on 1st row of categories checkbox
+    And I scroll down to add button
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "C Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "37" to regular price field
+    And I click on unlimited quantity checkbox
+    When I click on categories tab
+    And I click on 1st row of categories checkbox
+    And I scroll down to add button
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "D Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "55" to regular price field
+    And I click on unlimited quantity checkbox
+    When I click on categories tab
+    And I click on 1st row of categories checkbox
+    And I scroll down to add button
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "E Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "56" to regular price field
+    And I click on unlimited quantity checkbox
+    When I click on categories tab
+    And I click on 1st row of categories checkbox
+    And I scroll down to add button
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "F Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "57" to regular price field
+    And I click on unlimited quantity checkbox
+    When I click on categories tab
+    And I click on 1st row of categories checkbox
+    And I scroll down to add button
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "G Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "58" to regular price field
+    And I click on unlimited quantity checkbox
+    When I click on categories tab
+    And I click on 1st row of categories checkbox
+    And I scroll down to add button
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "K Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "29" to regular price field
+    And I click on unlimited quantity checkbox
+    When I click on categories tab
+    And I click on 1st row of categories checkbox
+    And I scroll down to add button
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "X Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "50" to regular price field
+    And I click on unlimited quantity checkbox
+    When I click on categories tab
+    And I click on 2nd row of categories checkbox
+    When I click on settings tab
+    And I click on not applicable to order-level discount toggle
+    Then not applicable to order-level discount toggle should be checked
+    And I scroll down to add button
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "Y Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "50" to regular price field
+    And I click on unlimited quantity checkbox
+    When I click on categories tab
+    And I click on 2nd row of categories checkbox
+    When I click on settings tab
+    And I click on not applicable to order-level discount toggle
+    Then not applicable to order-level discount toggle should be checked
+    And I scroll down to add button
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    Given I am on Product Create Page
+    When I pick product photo to product photo selector
+    Then I should see delete photo button
+    And I click on info tab
+    And I fill "Z Product for Checkout" to english name field
+    And I click on quantity and pricing tab
+    And I fill "50" to regular price field
+    And I click on unlimited quantity checkbox
+    When I click on categories tab
+    And I click on 2nd row of categories checkbox
+    When I click on settings tab
+    And I click on not applicable to order-level discount toggle
+    Then not applicable to order-level discount toggle should be checked
+    And I scroll down to add button
+    And I click on add button
+    Then I should be redirected to Product Edit Page
+
+    #主商品加購品
+    Given I am on Addon Create Page
+    And I click on tab included "Product Level Settings"
+    And I should see search field
+    And I fill "A Product for Checkout" to search field
+    And I click on search product button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on confirm button
+    Then I should not see checkbox of product list
+    And I click on same addon price checkbox
+    And I fill "50" to addon price field
+    And I click on tab included "Add-on Item Info"
+    Then I should see english name field
+    And I fill "[promotion basecase preview] - Add-on Item" to english name field
+    When I pick addon photo to addon photo selector
+    Then I should see delete photo button
+    And I click on unlimited checkbox
+    Then I click on add button
+    Then I should see alert
+
+    #任選甲
+    #任選3件100
+    Given I am on Bundle Pricing Create Page
+    And I fill '[promotion basecase preview] - Buy 3 for $100' to name field
+    And I fill '3' to promotion value field
+    And I fill '100' to discounted price field
+    And I fill 'A Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 1st row of selected product should contain 'A Product for Checkout'
+    And I fill 'B Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 2nd row of selected product should contain 'B Product for Checkout'
+    And I fill 'C Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 3rd row of selected product should contain 'C Product for Checkout'
+    And I fill 'K Product for Checkout' to search field
+    And I click on search product button
+    Then I should see select product popup
+    And I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 4th row of selected product should contain 'K Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    When I click on preview button
+    Then discount summary should equal to 'Purchase 3 items of Selected Products for NT$100'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Buy 3 for $100'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #紅配綠乙
+    #紅配綠-紅2綠1，3件150
+    Given I am on Bundle Group Create Page
+    And I fill '[promotion basecase preview] - Buy 2 in Group A & 1 in Group B for $150' to name field
+    And I click on stackable off checkbox
+    When I fill '2' to group a field
+    When I fill '1' to group b field
+    When I fill '150' to price field
+    Then discount summary should contain 'Purchase 2 items of Selected Products in Group A and 1 items of Selected Products in Group B for NT$150'
+    And I should see group a tab
+    Then select product button should contain 'Select Products in Group A'
+    When I click on select product button
+    Then I should see select product popup
+    Then I input 'D Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    Then I input 'E Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    Then I input 'F Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 1st row of selected product should contain 'D Product for Checkout'
+    Then 2nd row of selected product should contain 'E Product for Checkout'
+    Then 3rd row of selected product should contain 'F Product for Checkout'
+    When I click on group b tab
+    Then select product button should contain 'Select Products in Group B'
+    When I click on select product button
+    Then I should see select product popup
+    When I input 'G Product for Checkout' to search field
+    Then I click on 1st checkbox of product list
+    When I click on popup confirm button
+    Then 1st row of selected product should contain 'G Product for Checkout'
+    When I click on 1st countinue to button
+    When I click on 2nd countinue to button
+    When I click on 3rd countinue to button
+    When I click on preview button
+    Then target group should contain 'All Customers'
+    Then stackable pricing should contain 'Off'
+    Then promotion name should contain '[promotion basecase preview] - Buy 2 in Group A & 1 in Group B for $150'
+    When I click on preview group a tab
+    Then preview selected products should contain 'D Product for Checkout'
+    Then preview selected products should contain 'E Product for Checkout'
+    Then preview selected products should contain 'F Product for Checkout'
+    When I click on preview group b tab
+    Then preview selected products should contain 'G Product for Checkout'
+    When I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Bundle Pricing Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Buy 2 in Group A & 1 in Group B for $150'
+    Then 1st row of promotions should contain 'All Customers'
+    Then 1st row of promotions should contain 'Unlimited'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # 滿件，折抵%
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-13
+  @fixture-promotion-basecase-minimum-item-discount-percent
+  Scenario: To Create a full data for checkout for promotions with minimum items and discount percent
+    #會員等級
+    Given I am on Membership Tier New Page
+    When I fill "[promotion basecase preview] - VIP" to membership tier name field
+    And I select membership upgrade condition option included "Single purchase" of membership upgrade condition select button
+    And I fill "10000" to membership upgrade rules field
+    And I fill "10" to member offer field
+    And I should see submit button
+    And I click on submit button
+    Then I should be redirected to Membership Tier Setting Page
+    Then I should see row of membership list
+    Then 1st row of membership list should contain '[promotion basecase preview] - VIP'
+
+    #A戊
+    #全單 購買 滿11件，指定分類 即享 8折->>>a分類
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over 11 items selected categories get 20% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select selected category of benefit applies dropdown
+    And I fill '20' to promotion value field
+    And I fill '11' to promotion condition field
+    And I click on 2nd category checkbox
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 20% off on Selected Categories with purchase over 11 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over 11 items selected categories get 20% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #A戊1
+    #購買 指定分類 的商品 滿1 件，指定分類 即享 8 折->>>b分類,分類排除商品X
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected categories over 1 items selected categories get 20% off' to name field
+    And I click on selected categories condition checkbox
+    And I select minimum items of condition type dropdown
+    And I fill '20' to promotion value field
+    And I fill '1' to promotion condition field
+    And I click on 3rd category checkbox
+    Then I should see select excluded product
+    When I click on select excluded product
+    Then I should see select product popup
+    When I input 'X Product for Checkout' to popup search field
+    Then I should see product of popover list
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'X Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 20% off on Selected Categories with purchase of products in Selected Categories over 1 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected categories over 1 items selected categories get 20% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #A丁
+    #全單 購買 滿11件，指定商品(BCK ） 即享 85折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over 11 items selected products get 15% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '15' to promotion value field
+    And I fill '11' to promotion condition field
+    And I input 'B Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain 'B Product for Checkout'
+    And I input 'C Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 2nd row of selected product should contain 'C Product for Checkout'
+    And I input 'K Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 3rd row of selected product should contain 'K Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 15% off on Selected Products with purchase over 11 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over 11 items selected products get 15% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #A丁1
+    #購買 指定商品 滿1 件，指定商品Y 即享 85 折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected products over 1 items selected products get 15% off' to name field
+    And I click on selected products condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '15' to promotion value field
+    And I fill '1' to promotion condition field
+    And I input 'Y Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain 'Y Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 15% off on Selected Products with purchase of Selected Products over 1 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected products over 1 items selected products get 15% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #A己
+    #全單 購買 滿8件， 即享 95折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over 8 items get 5% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '5' to promotion value field
+    And I fill '8' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 5% off on Entire Order with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over 8 items get 5% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #A己1
+    #全單 購買 滿8件， 即減 17
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over 8 items get NT$17 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '17' to promotion value field
+    And I fill '8' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$17 off on Entire Order with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over 8 items get NT$17 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #A庚
+    #全單 購買 滿11件， 即享 1件贈品 (贈品)
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over 11 items get 1 free gift' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '11' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Entire Order with purchase over 11 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over 11 items get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #A庚1
+    #購買 指定分類 的商品 滿2 件，指定分類 即享 1件贈品 (贈品)->>>b分類,分類排除商品X
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected category over 2 items get 1 free gift' to name field
+    And I click on selected categories condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '2' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    When I click on 3rd category checkbox
+    Then I should see select excluded product
+    When I click on select excluded product
+    Then I should see select product popup
+    When I input 'X Product for Checkout' to popup search field
+    Then I should see product of popover list
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'X Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Selected Categories with purchase of products in Selected Categories over 2 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected category over 2 items get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #A庚2
+    #購買 指定商品AZ 滿2 件，指定商品 即享 1件贈品 (贈品)
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected products over 2 items get 1 free gift' to name field
+    And I click on selected products condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '2' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    When I input 'A Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'A Product for Checkout'
+    When I input 'Z Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see 2 row of selected product
+    Then 2nd row of selected product should contain 'Z Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Selected Products with purchase of Selected Products over 2 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected products over 2 items get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #A辛
+    #全單 購買 滿11件，即享 免運 優惠
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase preview] - Entire order over 11 items get free shipping" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I fill "11" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase preview] - Entire order over 11 items get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase over 11 items"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    #A辛1
+    #指定商品ＡZ 滿2件，即享 免運 優惠
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase preview] - Selected products over 2 items get free shipping" to name field
+    And I click on selected products condition checkbox
+    And I select minimum items of condition type dropdown
+    And I fill "2" to promotion condition field
+    When I input 'A Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'A Product for Checkout'
+    When I input 'Z Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see 2 row of selected product
+    Then 2nd row of selected product should contain 'Z Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase preview] - Selected products over 2 items get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase of Selected Products over 2 items"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    #A辛2
+    #指定分類 購買 滿2件，即享 免運 優惠->>>全單排除商品分類,分類排除商品X
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase preview] - Selected category over 2 items get free shipping" to name field
+    And I click on selected categories condition checkbox
+    And I select minimum items of condition type dropdown
+    And I fill "2" to promotion condition field
+    And I click on category dropdown option included 'B Category'
+    Then I should see select excluded product
+    When I click on select excluded product
+    Then I should see select product popup
+    When I input 'X Product for Checkout' to popup search field
+    Then I should see checkbox of product list
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'X Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase preview] - Selected category over 2 items get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase of products in Selected Categories over 2 items"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # 滿件，折抵固定金額
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-14 @fixture-promotion-basecase-minimum-item-discount-amount
+  Scenario: To Create a full data for checkout for promotions with minimum items and discount amount
+    #會員等級
+    Given I am on Membership Tier New Page
+    When I fill "[promotion basecase preview] - VIP" to membership tier name field
+    And I select membership upgrade condition option included "Single purchase" of membership upgrade condition select button
+    And I fill "10000" to membership upgrade rules field
+    And I fill "5" to member offer field
+    And I should see submit button
+    And I click on submit button
+    Then I should be redirected to Membership Tier Setting Page
+    Then I should see row of membership list
+    Then 1st row of membership list should contain '[promotion basecase preview] - VIP'
+
+    #C戊
+    #全單 購買 滿11件，指定分類 即減 NT$11->>>a分類
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over 11 items selected categories get NT$11 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select selected category of benefit applies dropdown
+    And I fill '11' to promotion value field
+    And I fill '11' to promotion condition field
+    And I click on 2nd category checkbox
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$11 off on Selected Categories with purchase over 11 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over 11 items selected categories get NT$11 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #C戊1
+    #購買 指定分類 的商品 滿1 件，指定分類 即減 NT$51->>>b分類,分類排除商品X<金額設定超過可折抵金額>
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected categories over 1 items selected categories get NT$51 off' to name field
+    And I click on selected categories condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I fill '51' to promotion value field
+    And I fill '1' to promotion condition field
+    And I click on 3rd category checkbox
+    Then I should see select excluded product
+    When I click on select excluded product
+    Then I should see select product popup
+    When I input 'X Product for Checkout' to popup search field
+    Then I should see product of popover list
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'X Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$51 off on Selected Categories with purchase of products in Selected Categories over 1 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected categories over 1 items selected categories get NT$51 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #C丁
+    #全單 購買 滿11件，指定商品(BCK ）即減 NT$4
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over 11 items selected products get NT$4 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '4' to promotion value field
+    And I fill '11' to promotion condition field
+    And I input 'B Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain 'B Product for Checkout'
+    And I input 'C Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 2nd row of selected product should contain 'C Product for Checkout'
+    And I input 'K Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 3rd row of selected product should contain 'K Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$4 off on Selected Products with purchase over 11 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over 11 items selected products get NT$4 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #C丁1
+    #購買 指定商品 滿1 件，指定商品Y 即減 NT$51<金額設定超過可折抵金額>
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected products over 1 items selected products get NT$51 off' to name field
+    And I click on selected products condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '51' to promotion value field
+    And I fill '1' to promotion condition field
+    And I input 'Y Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain 'Y Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$51 off on Selected Products with purchase of Selected Products over 1 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected products over 1 items selected products get NT$51 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #C己
+    #全單 購買 滿8件， 即減 NT$33
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over 8 items get NT$33 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '33' to promotion value field
+    And I fill '8' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$33 off on Entire Order with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over 8 items get NT$33 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #C己1
+    #全單 購買 滿8件， 即享9折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over 8 items get 10% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select discount percent of benefit type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '10' to promotion value field
+    And I fill '8' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 10% off on Entire Order with purchase over 8 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over 8 items get 10% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #C庚
+    #全單 購買 滿11件， 即享 1件贈品 (贈品)
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over 11 items get 1 free gift' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '11' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Entire Order with purchase over 11 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over 11 items get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #C庚1
+    #購買 指定分類 的商品 滿2 件，指定分類 即享 1件贈品 (贈品)->>>b分類,分類排除商品X
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected category over 2 items get 1 free gift' to name field
+    And I click on selected categories condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '2' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    When I click on 3rd category checkbox
+    Then I should see select excluded product
+    When I click on select excluded product
+    Then I should see select product popup
+    When I input 'X Product for Checkout' to popup search field
+    Then I should see product of popover list
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'X Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Selected Categories with purchase of products in Selected Categories over 2 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected category over 2 items get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #C庚2
+    #購買 指定商品AZ 滿2 件，指定商品 即享 1件贈品 (贈品)
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected products over 2 items get 1 free gift' to name field
+    And I click on selected products condition checkbox
+    And I select minimum items of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '2' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    When I input 'A Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'A Product for Checkout'
+    When I input 'Z Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see 2 row of selected product
+    Then 2nd row of selected product should contain 'Z Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Selected Products with purchase of Selected Products over 2 items'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected products over 2 items get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #C辛
+    #指定分類 購買 滿2件，即享 免運 優惠->>>全單排除商品分類,分類排除商品X
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase preview] - Selected category over 2 items get free shipping" to name field
+    And I click on selected categories condition checkbox
+    And I select minimum items of condition type dropdown
+    And I fill "2" to promotion condition field
+    And I click on category dropdown option included 'B Category'
+    Then I should see select excluded product
+    When I click on select excluded product
+    Then I should see select product popup
+    When I input 'X Product for Checkout' to popup search field
+    Then I should see checkbox of product list
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'X Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase preview] - Selected category over 2 items get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase of products in Selected Categories over 2 items"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    #C辛1
+    #指定商品ＡZ 滿2件，即享 免運 優惠
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase preview] - Selected products over 2 items get free shipping" to name field
+    And I click on selected products condition checkbox
+    And I select minimum items of condition type dropdown
+    And I fill "2" to promotion condition field
+    When I input 'A Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'A Product for Checkout'
+    When I input 'Z Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see 2 row of selected product
+    Then 2nd row of selected product should contain 'Z Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase preview] - Selected products over 2 items get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase of Selected Products over 2 items"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    #C辛2
+    #全單 購買 滿11件，即享 免運 優惠
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase preview] - Entire order over 11 items get free shipping" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum items of condition type dropdown
+    And I fill "11" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase preview] - Entire order over 11 items get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase over 11 items"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # 滿額，折抵固定金額
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-15 @fixture-promotion-basecase-minimum-amount-discount-amount
+  Scenario: To Create a full data for checkout for promotions with minimum amounts and discount amount
+    #會員等級
+    Given I am on Membership Tier New Page
+    When I fill "[promotion basecase preview] - VIP" to membership tier name field
+    And I select membership upgrade condition option included "Single purchase" of membership upgrade condition select button
+    And I fill "10000" to membership upgrade rules field
+    And I fill "5" to member offer field
+    And I should see submit button
+    And I click on submit button
+    Then I should be redirected to Membership Tier Setting Page
+    Then I should see row of membership list
+    Then 1st row of membership list should contain '[promotion basecase preview] - VIP'
+
+    #D戊
+    #全單 購買 滿NT$530，指定分類 即享 即減 NT$11->>>a分類
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over NT$530 selected categories get NT$11 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select selected category of benefit applies dropdown
+    And I fill '11' to promotion value field
+    And I fill '530' to promotion condition field
+    And I click on 2nd category checkbox
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$11 off on Selected Categories with purchase over NT$530'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over NT$530 selected categories get NT$11 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #D戊1
+    #購買 指定分類 的商品 滿NT$50，指定分類 即減 NT$51->>>b分類,分類排除商品X<金額設定超過可折抵金額>
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected categories over NT$50 selected categories get NT$51 off' to name field
+    And I click on selected categories condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I fill '51' to promotion value field
+    And I fill '50' to promotion condition field
+    And I click on 3rd category checkbox
+    Then I should see select excluded product
+    When I click on select excluded product
+    Then I should see select product popup
+    When I input 'X Product for Checkout' to popup search field
+    Then I should see product of popover list
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'X Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$51 off on Selected Categories with purchase of products in Selected Categories over NT$50'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected categories over NT$50 selected categories get NT$51 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #D丁
+    #全單 購買 滿NT$584，指定商品（任選優惠甲ＢＣＫ） 即減 NT$4
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over NT$584 selected products get NT$4 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '4' to promotion value field
+    And I fill '584' to promotion condition field
+    And I input 'B Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain 'B Product for Checkout'
+    And I input 'C Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 2nd row of selected product should contain 'C Product for Checkout'
+    And I input 'K Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 3rd row of selected product should contain 'K Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$4 off on Selected Products with purchase over NT$584'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over NT$584 selected products get NT$4 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #D丁1
+    #購買 指定商品 滿NT$50，指定商品Y 即減 NT$51<金額設定超過可折抵金額>
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected products over NT$50 selected products get NT$51 off' to name field
+    And I click on selected products condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '51' to promotion value field
+    And I fill '50' to promotion condition field
+    And I input 'Y Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain 'Y Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$51 off on Selected Products with purchase of Selected Products over NT$50'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected products over NT$50 selected products get NT$51 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #D己
+    #全店 即減 NT$500<金額設定超過可折抵金額>
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order get NT$500 off' to name field
+    And I select discount amount of benefit type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '500' to promotion value field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$500 off on Entire Order'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order get NT$500 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #D己1
+    #全單 購買 滿NT$419， 即減 NT$ 31
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over NT$419 get NT$31 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '31' to promotion value field
+    And I fill '419' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$31 off on Entire Order with purchase over NT$419'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over NT$419 get NT$31 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #D庚
+    #全單 購買 滿NT$150， 即享 1件贈品 (贈品)
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over NT$150 get 1 free gift' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '150' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Entire Order with purchase over NT$150'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over NT$150 get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #D庚1
+    #購買 指定分類 的商品 滿NT$100，指定分類 即享 1件贈品->>>b分類,分類排除商品X
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected category over NT$100 get 1 free gift' to name field
+    And I click on selected categories condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '100' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    When I click on 3rd category checkbox
+    Then I should see select excluded product
+    When I click on select excluded product
+    Then I should see select product popup
+    When I input 'X Product for Checkout' to popup search field
+    Then I should see product of popover list
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'X Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Selected Categories with purchase of products in Selected Categories over NT$100'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected category over NT$100 get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #D庚2
+    #購買 指定商品AZ 滿NT$85，指定商品 即享 1件贈品
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected products over NT$85 get 1 free gift' to name field
+    And I click on selected products condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '85' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    When I input 'A Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'A Product for Checkout'
+    When I input 'Z Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see 2 row of selected product
+    Then 2nd row of selected product should contain 'Z Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Selected Products with purchase of Selected Products over NT$85'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected products over NT$85 get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #D辛
+    #即享 免運 優惠->>>免運先建立
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase preview] - Get free shipping" to name field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase preview] - Get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    #D辛1 
+    #全單 購買 滿NT$140，即享 免運 優惠
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase preview] - Entire order over NT$140 get free shipping" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I fill "140" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase preview] - Entire order over NT$140 get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase over NT$140"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+  # 滿額，折抵％
+  @PromotionBasecaseSetupData @PromotionBasecaseSetupData-16
+  @fixture-promotion-basecase-minimum-amount-discount-percent
+  Scenario: To Create a full data for checkout for promotions with minimum amounts and discount amount
+    #會員等級
+    Given I am on Membership Tier New Page
+    When I fill "[promotion basecase preview] - VIP" to membership tier name field
+    And I select membership upgrade condition option included "Single purchase" of membership upgrade condition select button
+    And I fill "10000" to membership upgrade rules field
+    And I fill "5" to member offer field
+    And I should see submit button
+    And I click on submit button
+    Then I should be redirected to Membership Tier Setting Page
+    Then I should see row of membership list
+    Then 1st row of membership list should contain '[promotion basecase preview] - VIP'
+
+    #B戊
+    #全單 購買 滿NT$572，指定分類 即享 8折->>>a分類
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over NT$572 selected categories get 20% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select discount percent of benefit type dropdown
+    And I select selected category of benefit applies dropdown
+    And I fill '20' to promotion value field
+    And I fill '572' to promotion condition field
+    And I click on 2nd category checkbox
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 20% off on Selected Categories with purchase over NT$572'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over NT$572 selected categories get 20% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #B戊1
+    #購買 指定分類 的商品 滿NT$50，指定分類 即享 8 折->>>b分類,分類排除商品X
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected categories over NT$50 selected categories get 20% off' to name field
+    And I click on selected categories condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select discount percent of benefit type dropdown
+    And I fill '20' to promotion value field
+    And I fill '50' to promotion condition field
+    And I click on 3rd category checkbox
+    Then I should see select excluded product
+    When I click on select excluded product
+    Then I should see select product popup
+    When I input 'X Product for Checkout' to popup search field
+    Then I should see product of popover list
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'X Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 20% off on Selected Categories with purchase of products in Selected Categories over NT$50'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected categories over NT$50 selected categories get 20% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #B丁
+    #全單 購買 滿NT$584，指定商品（任選優惠甲ＢＣＫ） 即享 85折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over NT$584 selected products get 15% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select discount percent of benefit type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '15' to promotion value field
+    And I fill '584' to promotion condition field
+    And I input 'B Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain 'B Product for Checkout'
+    And I input 'C Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 2nd row of selected product should contain 'C Product for Checkout'
+    And I input 'K Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 3rd row of selected product should contain 'K Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 15% off on Selected Products with purchase over NT$584'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over NT$584 selected products get 15% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #B丁1
+    #購買 指定商品 滿NT$50，指定商品Y 即享 85 折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected products over NT$50 selected products get 15% off' to name field
+    And I click on selected products condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select discount percent of benefit type dropdown
+    And I select selected product of benefit applies dropdown
+    And I fill '15' to promotion value field
+    And I fill '50' to promotion condition field
+    And I input 'Y Product for Checkout' to search field
+    And I click on search button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then 1st row of selected product should contain 'Y Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 15% off on Selected Products with purchase of Selected Products over NT$50'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected products over NT$50 selected products get 15% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #B己
+    #全單 購買 滿NT$419， 即享 9折
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over NT$419 get 10% off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select discount percent of benefit type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '10' to promotion value field
+    And I fill '419' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 10% off on Entire Order with purchase over NT$419'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over NT$419 get 10% off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #B己1 
+    #全單 購買 滿NT$419， 即減NT$31
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over NT$419 get NT$31 off' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select discount amount of benefit type dropdown
+    And I select all product of benefit applies dropdown
+    And I fill '31' to promotion value field
+    And I fill '419' to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get NT$31 off on Entire Order with purchase over NT$419'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over NT$419 get NT$31 off'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #B庚
+    #全單 購買 滿NT$519， 即享 1件贈品 (贈品)
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Entire order over NT$519 get 1 free gift' to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '519' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Entire Order with purchase over NT$519'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Entire order over NT$519 get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #B庚1
+    #購買 指定分類 的商品 滿NT$100，指定分類 即享 1件贈品->>>b分類,分類排除商品X
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected category over NT$100 get 1 free gift' to name field
+    And I click on selected categories condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '100' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    When I click on 3rd category checkbox
+    Then I should see select excluded product
+    When I click on select excluded product
+    Then I should see select product popup
+    When I input 'X Product for Checkout' to popup search field
+    Then I should see product of popover list
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'X Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Selected Categories with purchase of products in Selected Categories over NT$100'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected category over NT$100 get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    #B庚2
+    #購買 指定商品AZ 滿NT$85，指定商品 即享 1件贈品
+    Given I am on Promotion Create Page
+    When I fill '[promotion basecase preview] - Selected products over NT$85 get 1 free gift' to name field
+    And I click on selected products condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I select free gift of benefit type dropdown
+    And I fill '1' to promotion value field
+    And I fill '85' to promotion condition field
+    And I click on select button
+    And I should see checkbox of product list
+    And I input '1st Created Free Gift' to search free gift field
+    And I click on search free gift button
+    And I should see checkbox of product list
+    And I click on 1st checkbox of product list
+    And I click on popup confirm button
+    When I input 'A Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'A Product for Checkout'
+    When I input 'Z Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see 2 row of selected product
+    Then 2nd row of selected product should contain 'Z Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then discount summary should equal to 'Get 1 Free Gift(s) (1st Created Free Gift) on Selected Products with purchase of Selected Products over NT$85'
+    And I click on confirm button
+    Then I should see alert
+    Then I should be redirected to Promotion Index Page
+    Then 1st row of promotions should contain '[promotion basecase preview] - Selected products over NT$85 get 1 free gift'
+    Then 1st row of promotions should contain 'Never expires'
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert
+
+    #B辛
+    #指定商品AZ 滿NT$85，即享 免運 優惠->>>免運先建立
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase preview] - Selected products over NT$85 get free shipping" to name field
+    And I click on selected products condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I fill "85" to promotion condition field
+    When I input 'A Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'A Product for Checkout'
+    When I input 'Z Product for Checkout' to search field
+    And I click on search button
+    Then I should see select product popup
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see 2 row of selected product
+    Then 2nd row of selected product should contain 'Z Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase preview] - Selected products over NT$85 get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase of Selected Products over NT$85"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    #B辛1
+    #全單 購買 滿NT$480，即享 免運 優惠
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase preview] - Entire order over NT$480 get free shipping" to name field
+    And I click on subtotal condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I fill "480" to promotion condition field
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase preview] - Entire order over NT$480 get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase over NT$480"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    #B辛2
+    #全單 購買 滿NT$100，即享 免運 優惠->>>全單排除商品分類,分類排除商品X
+    Given I am on Free Shipping Create Page
+    And I fill "[promotion basecase preview] - Selected category over NT$100 get free shipping" to name field
+    And I click on selected categories condition checkbox
+    And I select minimum amount of condition type dropdown
+    And I fill "100" to promotion condition field
+    And I click on category dropdown option included 'B Category'
+    Then I should see select excluded product
+    When I click on select excluded product
+    Then I should see select product popup
+    When I input 'X Product for Checkout' to popup search field
+    Then I should see checkbox of product list
+    When I click on 1st checkbox of product list
+    And I click on popup confirm button
+    Then I should not see select product popup
+    Then I should see row of selected product
+    Then 1st row of selected product should contain 'X Product for Checkout'
+    And I click on countinue to button
+    And I click on 2nd countinue to button
+    And I click on 3rd countinue to button
+    And I click on preview button
+    Then promotion name should equal to "[promotion basecase preview] - Selected category over NT$100 get free shipping"
+    Then promotion limitations end date should contain "Never expires"
+    Then discount summary should equal to "Enjoy free shipping with purchase of products in Selected Categories over NT$100"
+    And I click on confirm button
+    Then I should be redirected to Free Shipping Index Page
+    Then I should see alert
+
+    When I click on select all checkbox
+    And I select unpublish of bulk actions dropdown
+    Then I should see alert

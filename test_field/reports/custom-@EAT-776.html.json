@@ -1,0 +1,2574 @@
+[
+  {
+    "description": "  As a merchant\n  I will receive an email when the items are back in stock",
+    "keyword": "Feature",
+    "name": "Receive an email notification when the item is removed from the shelf",
+    "line": 2,
+    "id": "receive-an-email-notification-when-the-item-is-removed-from-the-shelf",
+    "tags": [
+      {
+        "name": "@BaseCase",
+        "line": 1
+      },
+      {
+        "name": "@BackInStockNotifyCase",
+        "line": 1
+      },
+      {
+        "name": "@Admin",
+        "line": 1
+      },
+      {
+        "name": "@Storefront",
+        "line": 1
+      },
+      {
+        "name": "@productPublishMailNotify",
+        "line": 1
+      },
+      {
+        "name": "@fixture-product",
+        "line": 1
+      },
+      {
+        "name": "@theme-kingsman",
+        "line": 1
+      },
+      {
+        "name": "@fixture-shop",
+        "line": 1
+      }
+    ],
+    "uri": "features/component/Message/BackInStockNotifyCase/productPublishMailNotify.feature",
+    "elements": [
+      {
+        "id": "receive-an-email-notification-when-the-item-is-removed-from-the-shelf;will-receive-an-email-when-the-items-are-back-in-stock",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Will receive an email when the items are back in stock",
+        "tags": [
+          {
+            "name": "@BaseCase",
+            "line": 1
+          },
+          {
+            "name": "@BackInStockNotifyCase",
+            "line": 1
+          },
+          {
+            "name": "@Admin",
+            "line": 1
+          },
+          {
+            "name": "@Storefront",
+            "line": 1
+          },
+          {
+            "name": "@productPublishMailNotify",
+            "line": 1
+          },
+          {
+            "name": "@fixture-product",
+            "line": 1
+          },
+          {
+            "name": "@theme-kingsman",
+            "line": 1
+          },
+          {
+            "name": "@fixture-shop",
+            "line": 1
+          },
+          {
+            "name": "@EAT-776",
+            "line": 23
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2
+            },
+            "embeddings": [
+              {
+                "data": "{\"account\":{\"email\":\"testuser+tw_30@shoplineapp.com\",\"notificationEmail\":\"shoplineqa@gmail.com\",\"password\":\"1234567890\",\"handle\":\"previewtw40\",\"tags\":[\"non-admin\",\"baseLocation-TW\",\"theme-kingsman\",\"fixture-payment\",\"fixture-delivery\",\"fixture-product\",\"fixture-addon\",\"fixture-promotion\",\"fixture-shop\",\"fixture-layout-engine\",\"fixture-layout-v2\"],\"retry\":0}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on Admin Login Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12159
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/users/sign_in?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://sso-preview.shoplineapp.com/users/sign_in",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I fill correct account email to email field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1886
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser+tw_30@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I fill correct account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1899
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"1234567890\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click on login button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3360
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[type=\\\"submit\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I should see successful login",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2289
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I check intercom message notification frame and click clear intercom message button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3238
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"clear intercom message button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I check intercom message notification frame and click intercom message close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3204
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementId\":\"intercom message close button\",\"errorInfo\":{\"name\":\"InvalidSelectorError\",\"remoteStacktrace\":\"\"}}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I check new feature alert notification frame and click new feature alert close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3474
+            },
+            "embeddings": [
+              {
+                "data": "{\"frameLength\":0}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"frameNotFound\":\"new feature alert\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I check and click exclude products panel close button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1336
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"exclude products panel close button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I check and click no thanks button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1243
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValueNotFound\":\"no thanks button\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I am on Basic Setting Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9038
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw40/edit?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw40/edit?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I mark the value of shop name field as variable shop name",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:433"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1621
+            },
+            "embeddings": [
+              {
+                "data": "\"testusertw40\"",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I click on basic info update button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1701
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"form[name=\\\"merchantForm\\\"] button[type=\\\"submit\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should be redirected to Dashboard Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1857
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw40/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw40/edit?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 25,
+            "name": "I am on Shop Login Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8291
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw40.shoplineapp.com/users/sign_in?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/users/sign_in?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I fill email to email field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1696
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I fill password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1855
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"1234567890\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I click on submit button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1568
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div.tab-pane.ng-scope.active>div>div.form-container>form>div.actions>button:not(.ng-hide)\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "I should be redirected to Shop Home Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2591
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw40.shoplineapp.com/?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 31,
+            "name": "I am on Shop Product Index Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8480
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw40.shoplineapp.com/products?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/products?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I hover over kingsman search icon",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:535"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2026
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I input \"Out Of Stock\" to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6256
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "1st kingsman product of products list should contain 'Out Of Stock'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1750
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Out Of StockNT$20\",\"expectText\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I click on 1st kingsman product of products list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3486
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".Product-item.ng-isolate-scope\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I should be redirected to Shop Product Show Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1751
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/products/out-of-stock",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I should see sold out",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1438
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 38,
+            "name": "I should see notify when in stock button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1619
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 39,
+            "name": "I click on notify when in stock button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1597
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[id=\\\"back-in-stock-content\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 40,
+            "name": "I should see alert",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1683
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "alert should contain \"When product is back in stock, there will be email notification.\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1807
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"When product is back in stock, there will be email notification.\",\"expectText\":\"When product is back in stock, there will be email notification.\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "I should see add to wishlist button on",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1457
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 44,
+            "name": "I am on Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9055
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw40/products?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw40/products?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 45,
+            "name": "I input \"Out Of Stock\" to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5447
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 46,
+            "name": "1st row of product list should contain 'Out Of Stock'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1799
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20 0 Out Of StockUnpublishEdit\",\"expectText\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 47,
+            "name": "I should see row of publish button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1420
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 48,
+            "name": "I click on 1st row of publish button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1598
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button:not(.ng-hide)[ng-click*=\\\"publish(product\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 49,
+            "name": "1st row of publish button should contain \"Publish\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1619
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Publish\",\"expectText\":\"Publish\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "I wait for 30 seconds for sync",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29982
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 52,
+            "name": "I am on Shop Product Index Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8359
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw40.shoplineapp.com/products?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/products?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 53,
+            "name": "I hover over kingsman search icon",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:535"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1629
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "I input \"Out Of Stock\" to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6055
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 55,
+            "name": "I Refresh",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:691"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 524
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 56,
+            "name": "I should not see kingsman product of products list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:763"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51021
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 58,
+            "name": "I click on kingsman member center button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2468
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"svg[class=\\\"icons icon-user\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 59,
+            "name": "I should be redirected to Shop User Profile Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1673
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/users/5d567467859ee829483e8f9f/edit",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 60,
+            "name": "I click on member center tab included 'Wishlist'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4336
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div.Tab-label\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Profile\",\"Store Credits\",\"Messages\",\"Orders\",\"Wishlist\"],\"text\":\"Wishlist\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 61,
+            "name": "I should be redirected to Shop Wishlist Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1815
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/users/5d567467859ee829483e8f9f/edit",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 62,
+            "name": "1st row of wishlist should contain 'Out Of Stock'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1754
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Out Of StockNT$20UNAVAILABLE\",\"expectText\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 63,
+            "name": "1st row of product price should contain 'NT$20'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1893
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 64,
+            "name": "1st row of wishlist should contain \"UNAVAILABLE\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2099
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Out Of StockNT$20UNAVAILABLE\",\"expectText\":\"UNAVAILABLE\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 66,
+            "name": "I am on Inventory Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8807
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw40/products/inventory?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw40/products/inventory?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "I input \"Out Of Stock\" to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6086
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 68,
+            "name": "I should see row of product list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1430
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 69,
+            "name": "1st row of product list should contain \"Out Of Stock\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1827
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Out Of Stock Unpublished OFF 0Add SetSave\",\"expectText\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 70,
+            "name": "I should see apply search label",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1575
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 71,
+            "name": "I click on 1st set button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1489
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"td:not(.ng-hide) [ng-click^=\\\"inventorySetActions\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 72,
+            "name": "I fill \"1\" to 1st row of quantity field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1862
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 73,
+            "name": "I click on 1st save button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1470
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\":not([disabled])[ng-click^=\\\"updateInventory\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 74,
+            "name": "row of product list should contain \"1\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1804
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Out Of Stock Unpublished OFF 1Add SetSave\",\"expectText\":\"1\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 76,
+            "name": "I am on Product Index Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8579
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw40/products?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw40/products?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 77,
+            "name": "I input \"Out Of Stock\" to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5380
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 78,
+            "name": "1st row of product list should contain 'Out Of Stock'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1852
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20 1 Out Of StockPublishEdit\",\"expectText\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 79,
+            "name": "I should see row of publish button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1587
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 80,
+            "name": "I click on 1st row of publish button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1611
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button:not(.ng-hide)[ng-click*=\\\"publish(product\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 81,
+            "name": "1st row of publish button should contain \"Unpublish\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1824
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Unpublish\",\"expectText\":\"Unpublish\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 82,
+            "name": "I wait for 100 seconds for mail sent",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 99966
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 84,
+            "name": "I am on Google Mail Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8978
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://mail.google.com/mail\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":6,\"displayedElementCount\":4}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 85,
+            "name": "I fill customer email to account field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1880
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser@shoplineapp.com\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 86,
+            "name": "I click on identifier next button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1470
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"[id*=\\\"ext\\\"]:not([id*=heading])\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 87,
+            "name": "I should see password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2187
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":1,\"matchedElementCount\":2,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 88,
+            "name": "I input account password to password field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5549
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testuser\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 89,
+            "name": "I check and click password next button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52503
+            },
+            "embeddings": [
+              {
+                "data": "\"{\\\"name\\\":\\\"TimeoutError\\\",\\\"remoteStacktrace\\\":\\\"\\\"}\"",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"selectorValueFound\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 90,
+            "name": "I should see search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1607
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 91,
+            "name": "I input shop name to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5376
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"testusertw40\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 92,
+            "name": "I wait for 5 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5001
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 93,
+            "name": "I should see row of mail list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26804
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":100,\"displayedElementCount\":100}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 94,
+            "name": "I click on row of mail list included 'your wishlist is back in stock'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30692
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div[role=\\\"main\\\"] td[tabindex=\\\"-1\\\"] [role=\\\"link\\\"]\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Inbox\\n[testusertw40] A Product in your wishlist is back in stock. Check it out now!\\n - \\nHi 陳小明， The product in your wishlist is back in stock Out Of Stock NT$20 Get It Now Please pay attention: The product information and pricing suggested in the email might vary. Please look up in\",\"Inbox\\n[New order] Order #20210827030728097 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210827030728097 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210827030728097!\\n - \\n[testusertw40] Thank you for your order #20210827030728097! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210826105819735 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210826105819735 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210826105819735!\\n - \\n[testusertw40] Thank you for your order #20210826105819735! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210826103723062 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210826103723062 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210826103723062!\\n - \\n[testusertw40] Thank you for your order #20210826103723062! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[testusertw40] Thank you for your order #20210826102944609!\\n - \\n[testusertw40] Thank you for your order #20210826102944609! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210826102944609 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210826102944609 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210826095751258!\\n - \\n[testusertw40] Thank you for your order #20210826095751258! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210826095751258 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210826095751258 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210823065854979 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210823065854979 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210823065854979!\\n - \\n[testusertw40] Thank you for your order #20210823065854979! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210823031551859 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210823031551859 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210823031551859!\\n - \\n[testusertw40] Thank you for your order #20210823031551859! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\nIn Stock Subscription Report\\n - \\nHi testusertw40, People are interested in your products! 1 of your products have been subscribed by customers.Check out the report and replenish your products, we will notify your customers when a\",\"Inbox\\nGet your first welcome gift at testusertw40!\\n - \\nGet your first welcome gift at testusertw40! Hi 陳小明, Congratulations to becoming a new member at testusertw40! You have been given 100 credits* as a welcome gift. Use your credits and shop now! Happy\",\"Inbox\\nWelcome to testusertw40!\\n - \\nHello 陳小明! You're now a member of testusertw40. Thanks for joining us, and happy shopping! Go shopping testusertw40 This email was sent to testuser+447665@shoplineapp.com. You are receiving this\",\"Inbox\\n[New order] Order #20210820091036254 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210820091036254 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210820091036254!\\n - \\n[testusertw40] Thank you for your order #20210820091036254! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210820090607250 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210820090607250 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210820090607250!\\n - \\n[testusertw40] Thank you for your order #20210820090607250! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\nWelcome to testusertw40!\\n - \\nHello 陳小明! You're now a member of testusertw40. Thanks for joining us, and happy shopping! Go shopping testusertw40 This email was sent to testuser+440148@shoplineapp.com. You are receiving this\",\"Inbox\\nGet your first welcome gift at testusertw40!\\n - \\nGet your first welcome gift at testusertw40! Hi 陳小明, Congratulations to becoming a new member at testusertw40! You have been given 100 credits* as a welcome gift. Use your credits and shop now! Happy\",\"Inbox\\n[testusertw40] Thank you for your order #20210820034908358!\\n - \\n[testusertw40] Thank you for your order #20210820034908358! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210820034908358 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210820034908358 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210820034516613 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210820034516613 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210820034516613!\\n - \\n[testusertw40] Thank you for your order #20210820034516613! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210820031458208 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210820031458208 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210820031458208!\\n - \\n[testusertw40] Thank you for your order #20210820031458208! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210813110821749 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210813110821749 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210813110821749!\\n - \\n[testusertw40] Thank you for your order #20210813110821749! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[testusertw40] #20210813102814703 Order status is updated to: Completed\\n - \\n[testusertw40] #20210813102814703 Order status is updated to: Completed Order status: Completed Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to\",\"Inbox\\n[testusertw40] #20210813102610273 Order status is updated to: Completed\\n - \\n[testusertw40] #20210813102610273 Order status is updated to: Completed Order status: Completed Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to\",\"Inbox\\n[New order] Order #20210813102814703 is placed by testuser+428435@shoplineapp.com\\n - \\n[New order] Order #20210813102814703 is placed by testuser+428435@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions\",\"Inbox\\n[testusertw40] Thank you for your order #20210813102814703!\\n - \\n[testusertw40] Thank you for your order #20210813102814703! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210813102610273 is placed by testuser+428435@shoplineapp.com\\n - \\n[New order] Order #20210813102610273 is placed by testuser+428435@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions\",\"Inbox\\n[testusertw40] Thank you for your order #20210813102610273!\\n - \\n[testusertw40] Thank you for your order #20210813102610273! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\nWelcome to testusertw40!\\n - \\nHello 只會寫Product Review的陳小明! You're now a member of testusertw40. Thanks for joining us, and happy shopping! Go shopping testusertw40 This email was sent to testuser+428435@shoplineapp.com. You are\",\"Inbox\\nWelcome to testusertw40!\\n - \\nHello 陳小明! You're now a member of testusertw40. Thanks for joining us, and happy shopping! Go shopping testusertw40 This email was sent to testuser+318749@shoplineapp.com. You are receiving this\",\"Inbox\\nGet your first welcome gift at testusertw40!\\n - \\nGet your first welcome gift at testusertw40! Hi 陳小明, Congratulations to becoming a new member at testusertw40! You have been given 100 credits* as a welcome gift. Use your credits and shop now! Happy\",\"Inbox\\n[testusertw40] Thank you for your order #20210813025752265!\\n - \\n[testusertw40] Thank you for your order #20210813025752265! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210813025752265 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210813025752265 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210813022314199!\\n - \\n[testusertw40] Thank you for your order #20210813022314199! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210813022314199 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210813022314199 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210805131529705 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210805131529705 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210805131529705!\\n - \\n[testusertw40] Thank you for your order #20210805131529705! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210805125347430 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210805125347430 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210805125347430!\\n - \\n[testusertw40] Thank you for your order #20210805125347430! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210805124609267 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210805124609267 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210805124609267!\\n - \\n[testusertw40] Thank you for your order #20210805124609267! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210805123023163 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210805123023163 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210805123023163!\\n - \\n[testusertw40] Thank you for your order #20210805123023163! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210802072935546 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210802072935546 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210802072935546!\\n - \\n[testusertw40] Thank you for your order #20210802072935546! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\nGet your first welcome gift at testusertw40!\\n - \\nGet your first welcome gift at testusertw40! Hi 陳小明, Congratulations to becoming a new member at testusertw40! You have been given 100 credits* as a welcome gift. Use your credits and shop now! Happy\",\"Inbox\\nWelcome to testusertw40!\\n - \\nHello 陳小明! You're now a member of testusertw40. Thanks for joining us, and happy shopping! Go shopping testusertw40 This email was sent to testuser+036159@shoplineapp.com. You are receiving this\",\"Inbox\\n[New order] Order #20210802041804630 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210802041804630 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210802041804630!\\n - \\n[testusertw40] Thank you for your order #20210802041804630! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210802040120842 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210802040120842 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210802040120842!\\n - \\n[testusertw40] Thank you for your order #20210802040120842! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210730041211480 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210730041211480 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210730041211480!\\n - \\n[testusertw40] Thank you for your order #20210730041211480! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210729122542796 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210729122542796 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210729122542796!\\n - \\n[testusertw40] Thank you for your order #20210729122542796! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\nWelcome to testusertw40!\\n - \\nHello 陳小明! You're now a member of testusertw40. Thanks for joining us, and happy shopping! Go shopping testusertw40 This email was sent to testuser+327349@shoplineapp.com. You are receiving this\",\"Inbox\\nGet your first welcome gift at testusertw40!\\n - \\nGet your first welcome gift at testusertw40! Hi 陳小明, Congratulations to becoming a new member at testusertw40! You have been given 100 credits* as a welcome gift. Use your credits and shop now! Happy\",\"Inbox\\n[New order] Order #20210729115748240 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210729115748240 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210729115748240!\\n - \\n[testusertw40] Thank you for your order #20210729115748240! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210729114056393 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210729114056393 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210729114056393!\\n - \\n[testusertw40] Thank you for your order #20210729114056393! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210729111451159 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210729111451159 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210729111451159!\\n - \\n[testusertw40] Thank you for your order #20210729111451159! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210729104251758 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210729104251758 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210729104251758!\\n - \\n[testusertw40] Thank you for your order #20210729104251758! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210723051950652 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210723051950652 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210723051950652!\\n - \\n[testusertw40] Thank you for your order #20210723051950652! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210722124939575 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210722124939575 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210722124939575!\\n - \\n[testusertw40] Thank you for your order #20210722124939575! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210719100505537 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210719100505537 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210719100505537!\\n - \\n[testusertw40] Thank you for your order #20210719100505537! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\nWelcome to testusertw40!\\n - \\nHello 陳小明! You're now a member of testusertw40. Thanks for joining us, and happy shopping! Go shopping testusertw40 This email was sent to testuser+017819@shoplineapp.com. You are receiving this\",\"Inbox\\nGet your first welcome gift at testusertw40!\\n - \\nGet your first welcome gift at testusertw40! Hi 陳小明, Congratulations to becoming a new member at testusertw40! You have been given 100 credits* as a welcome gift. Use your credits and shop now! Happy\",\"Inbox\\n[New order] Order #20210719093550852 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210719093550852 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210719093550852!\\n - \\n[testusertw40] Thank you for your order #20210719093550852! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210719093037264 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210719093037264 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210719093037264!\\n - \\n[testusertw40] Thank you for your order #20210719093037264! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210716033659615 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210716033659615 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210716033659615!\\n - \\n[testusertw40] Thank you for your order #20210716033659615! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\nWelcome to testusertw40!\\n - \\nHello 陳小明! You're now a member of testusertw40. Thanks for joining us, and happy shopping! Go shopping testusertw40 This email was sent to testuser+158343@shoplineapp.com. You are receiving this\",\"Inbox\\nGet your first welcome gift at testusertw40!\\n - \\nGet your first welcome gift at testusertw40! Hi 陳小明, Congratulations to becoming a new member at testusertw40! You have been given 100 credits* as a welcome gift. Use your credits and shop now! Happy\",\"Inbox\\n[New order] Order #20210716030758307 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210716030758307 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210716030758307!\\n - \\n[testusertw40] Thank you for your order #20210716030758307! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210716030204430 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210716030204430 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210716030204430!\\n - \\n[testusertw40] Thank you for your order #20210716030204430! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[testusertw40] Thank you for your order #20210716024628397!\\n - \\n[testusertw40] Thank you for your order #20210716024628397! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210716024628397 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210716024628397 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[New order] Order #20210709093540782 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210709093540782 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\",\"Inbox\\n[testusertw40] Thank you for your order #20210709093540782!\\n - \\n[testusertw40] Thank you for your order #20210709093540782! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about your order or want to check the status,\",\"Inbox\\n[New order] Order #20210709075056395 is placed by testuser@shoplineapp.com\\n - \\n[New order] Order #20210709075056395 is placed by testuser@shoplineapp.com You have a new order! Order status: Open Payment status: Unpaid Delivery status: Unfulfilled If you have questions about the\"],\"text\":\"your wishlist is back in stock\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 95,
+            "name": "I should see mail detail",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1888
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":2,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 96,
+            "name": "mail detail should contain \"Out Of Stock\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1911
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Hi 陳小明，The product in your wishlist is back in stockOut Of StockNT$20GET IT NOWPlease pay attention: The product information and pricing suggested in the email might vary. Please look up in official store for more accurate results.\",\"expectText\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 97,
+            "name": "I should see get it now button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1407
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 98,
+            "name": "I click on get it now button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1884
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"a[href*=\\\"com/products/\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 99,
+            "name": "I switch to 2 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7914
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":2,\"HandlesIdx\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 100,
+            "name": "I should be redirected to Shop Product Show Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1673
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/products/out-of-stock?utm_campaign=back-stock-notify&utm_medium=Email&utm_source=SHOPLINE",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 101,
+            "name": "I switch to 1 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7764
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":2,\"HandlesIdx\":0}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "I should be redirected to Google Mail Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8250
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://mail.google.com/mail\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://mail.google.com/mail/u/0/#search/testusertw40/WhctKKWxdMhmGJGPtrQTwBZwtZmWJPTsWpHqVPRMzvMnzlTvwDnjtbfRnmwLMbsNLZtntRl",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":27,\"displayedElementCount\":7}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 103,
+            "name": "I click on delete button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1516
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"//*[@id=\\\":4\\\"]/div[3]/div[1]/div/div[2]/div[3]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 104,
+            "name": "I switch to 2 of tabs",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:597"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7582
+            },
+            "embeddings": [
+              {
+                "data": "{\"allHandles\":2,\"HandlesIdx\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 105,
+            "name": "I should be redirected to Shop Product Show Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1832
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/products/out-of-stock?utm_campaign=back-stock-notify&utm_medium=Email&utm_source=SHOPLINE",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 106,
+            "name": "product list should contain \"Out Of Stock\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1789
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Out Of Stock\",\"expectText\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 107,
+            "name": "I click on kingsman member center button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2198
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"svg[class=\\\"icons icon-user\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 109,
+            "name": "I should be redirected to Shop User Profile Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1867
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/users/5d567467859ee829483e8f9f/edit",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 110,
+            "name": "I click on member center tab included 'Wishlist'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4222
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div.Tab-label\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Profile\",\"Store Credits\",\"Messages\",\"Orders\",\"Wishlist\"],\"text\":\"Wishlist\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 111,
+            "name": "I should be redirected to Shop Wishlist Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1761
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/users/5d567467859ee829483e8f9f/edit",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 112,
+            "name": "row of wishlist should contain 'Out Of Stock'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1902
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Out Of StockNT$20ADD TO CART\",\"expectText\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 113,
+            "name": "row of product price should contain 'NT$20'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1733
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"NT$20\",\"expectText\":\"NT$20\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 114,
+            "name": "---ROLL BACK---",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:1245"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 115,
+            "name": "I am on Shop Product Index Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8355
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://previewtw40.shoplineapp.com/products?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/products?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 116,
+            "name": "I click on kingsman member center button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2461
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"svg[class=\\\"icons icon-user\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 117,
+            "name": "I should be redirected to Shop User Profile Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1650
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/users/5d567467859ee829483e8f9f/edit",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 118,
+            "name": "I click on member center tab included 'Wishlist'",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:278"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4331
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"div.Tab-label\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retryCount\":1,\"elementTexts\":[\"Profile\",\"Store Credits\",\"Messages\",\"Orders\",\"Wishlist\"],\"text\":\"Wishlist\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 119,
+            "name": "I should be redirected to Shop Wishlist Layout V Two Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:714"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1840
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://previewtw40.shoplinetest.com/users/5d567467859ee829483e8f9f/edit",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 120,
+            "name": "I click on 1st row of delete button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1581
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\".Button-wishlistRemove\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 121,
+            "name": "I should see popup",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1438
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 122,
+            "name": "I click on confirm button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:257"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1448
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"button[class=\\\"btn-confirm ng-binding\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 123,
+            "name": "I wait for 3 seconds for loading",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:663"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3006
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 124,
+            "name": "I should see continue shopping button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1534
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 126,
+            "name": "I am on Inventory Page",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8839
+            },
+            "embeddings": [
+              {
+                "data": "{\"url\":\"https://w0.shoplineapp.com/admin/previewtw40/products/inventory?locale=en\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"name\":\"TimeoutError\",\"remoteStacktrace\":\"\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw40/products/inventory?locale=en",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 127,
+            "name": "I input \"Out Of Stock\" to search field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5734
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "{\"value\":\"\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 128,
+            "name": "I should see row of product list",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1504
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 129,
+            "name": "1st row of product list should contain \"Out Of Stock\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:846"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1811
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Out Of Stock Published OFF 1Add SetSave\",\"expectText\":\"Out Of Stock\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 130,
+            "name": "I should see apply search label",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:754"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1428
+            },
+            "embeddings": [
+              {
+                "data": "{\"retry\":0,\"matchedElementCount\":1,\"displayedElementCount\":1}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 131,
+            "name": "I click on 1st set button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1664
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\"td:not(.ng-hide) [ng-click^=\\\"inventorySetActions\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 132,
+            "name": "I fill \"0\" to 1st row of quantity field",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1702
+            },
+            "embeddings": [
+              {
+                "data": "{\"value\":\"0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 133,
+            "name": "I click on 1st save button",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:247"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1664
+            },
+            "embeddings": [
+              {
+                "data": "{\"selectorValue\":\":not([disabled])[ng-click^=\\\"updateInventory\\\"]\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 134,
+            "name": "row of product list should contain \"0\"",
+            "match": {
+              "location": "features/step_definitions/browser_steps.js:832"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1845
+            },
+            "embeddings": [
+              {
+                "data": "{\"elementText\":\"Out Of Stock Published OFF 0Add SetSave\",\"expectText\":\"0\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 245
+            },
+            "embeddings": [
+              {
+                "data": "https://w0.shoplineapp.com/admin/previewtw40/products/inventory?page=1&query=Out%20Of%20Stock&scope=search",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

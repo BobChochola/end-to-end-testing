@@ -1,0 +1,25 @@
+docker stop $(docker ps -a -q ) && docker rm $(docker ps -a -q)
+docker run -d -p 4444:4444 --net grid --name selenium-hub selenium/hub:latest
+docker run -d --net grid -e HUB_HOST=selenium-hub -v $(pwd):/app -v /dev/shm:/dev/shm selenium/node-chrome:latest
+
+clear cache:
+sync; echo 3 | sudo tee /proc/sys/vm/drop_caches 
+
+
+  下載 mongodb 的映象檔  
+--> docker pull mongo:4.1 
+terminal 移到專安根目錄後，建立容器且執行 mongo 容器 
+--> docker run --name mongo4 -v $(pwd)/data:/data/db -d -p 27017:27017 --rm mongo:4.1 
+ 確認容器有執行  
+-->docker ps
+確認 mongodb 資料庫有運行 
+--> docker exec mongo4 mongo --eval "print(version())" 
+
+因為 mongo 容器中除了資料庫的執行檔還有包含 shell client，所以進入容器就可以使用 mongo 指令，也不用擔心本機端安裝的 shell clinet 版本號不合資料庫版本號。
+--> docker exec -it mongo4 bash   就可以進入容器
+__________________________________________________________________________________
+若需要停止容器 (關掉 mongodb 資料庫)，請輸入 ` docker stop mongo4 `
+
+
+report產出亂碼
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")

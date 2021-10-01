@@ -1,0 +1,15 @@
+FROM node:8.11
+MAINTAINER Ted Cheng
+
+ENV APP_DIR=/app
+
+COPY package.json $APP_DIR/package.json
+
+RUN cd $APP_DIR \
+    && npm install
+
+COPY . $APP_DIR
+
+WORKDIR $APP_DIR
+
+CMD set -o errexit; ./node_modules/.bin/cucumber-js --dry-run $(if [ -z "$TEST_TAG" ]; then echo ""; else echo "-t $TEST_TAG"; fi ) ; NODE_OPTIONS="--max_old_space_size=4096" ./node_modules/.bin/protractor protractor.conf.js || true; ls *.resource.tmp || true
